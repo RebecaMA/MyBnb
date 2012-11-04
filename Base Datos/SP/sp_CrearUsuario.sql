@@ -31,3 +31,22 @@ declare @pidPersona int;
 						
 				
 END
+
+ @pnombre nvarchar(20),
+ @papellido nvarchar(25),
+ @pfechaNacimiento date,
+ @pemail nvarchar(40),
+ @ptelefono nvarchar(40),
+ @pgenero nvarchar(15),
+ @ppais nvarchar(30),
+ @plogin nvarchar(25),
+ @ppassword nvarchar(50),
+ @pfechaInscripcion datetime,
+ @descripcion nvarchar(200),
+ @ptipousuario nvarchar(20)
+
+--exec spcrearUsuario 'Rebeca','Moreno','1991/06/07','ree_ma91@hotmail.com',null, 'Femenino',
+--					'Costa Rica','ree','mimi91','2012/11/04 11:40:00',null, 'Viajero';
+
+--select * from Usuario;
+--select * from Persona;

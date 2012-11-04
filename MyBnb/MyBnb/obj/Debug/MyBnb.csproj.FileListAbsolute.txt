@@ -3,3 +3,23 @@ c:\users\rebeca\documents\visual studio 2010\Projects\MyBnb\MyBnb\bin\MyBnb.pdb
 c:\users\rebeca\documents\visual studio 2010\Projects\MyBnb\MyBnb\obj\Debug\ResolveAssemblyReference.cache
 c:\users\rebeca\documents\visual studio 2010\Projects\MyBnb\MyBnb\obj\Debug\MyBnb.dll
 c:\users\rebeca\documents\visual studio 2010\Projects\MyBnb\MyBnb\obj\Debug\MyBnb.pdb
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\obj\Debug\MyBnb.dll
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\obj\Debug\MyBnb.pdb
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\MyBnb.dll
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\MyBnb.pdb
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.Unity.dll
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.Unity.Interception.dll
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.pdb
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.xml
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.Unity.pdb
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.Unity.Interception.pdb
