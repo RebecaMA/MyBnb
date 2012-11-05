@@ -75,6 +75,28 @@ namespace MyBnb.Acceso_Datos
         }
 
 
+        // Retorna el IDataReader para que sea procesado por el DataAccess especifico
+        public IDataReader leer(String pStoredProcedure, String[] pNombreParametros, params String[] pValorParametros)
+        {
+            cmd = new SqlCommand(pStoredProcedure);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            for (int i = 0; i < pValorParametros.Length; i++)
+            {
+                if (pValorParametros[i] == null)
+                {
+                    cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i])).Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i]));
+                }
+            }
+
+            IDataReader reader = _SIADB.ExecuteReader(cmd);
+            return reader;
+        }
+
 
         public void escribirDB(String pSPname, String[] pnombreparametros, params String[] plistaParametros)
         {
@@ -122,26 +144,6 @@ namespace MyBnb.Acceso_Datos
             return resultado;
         }
 
-        // Retorna el IDataReader para que sea procesado por el DataAccess especifico
-        public IDataReader leer(String pStoredProcedure, String[] pNombreParametros, params String[] pValorParametros)
-        {
-            cmd = new SqlCommand(pStoredProcedure);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            for (int i = 0; i < pValorParametros.Length; i++)
-            {
-                if (pValorParametros[i] == null)
-                {
-                    cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i])).Value = DBNull.Value;
-                }
-                else
-                {
-                    cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i]));
-                }
-            }
-
-            IDataReader reader = _SIADB.ExecuteReader(cmd);
-            return reader;
-        }
+    
     }
 }

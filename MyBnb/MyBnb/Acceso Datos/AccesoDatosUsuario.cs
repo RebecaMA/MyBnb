@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using MyBnb.LibreriaClases;
+using System.Data;
 
 namespace MyBnb.Acceso_Datos
 {
@@ -18,18 +19,25 @@ namespace MyBnb.Acceso_Datos
                                                         "@ptelefono","@pgenero","@ppais","@plogin","@ppassword",
                                                          "@pfechaInscripcion","@descripcion","@ptipousuario"};
 
-            Boolean _bool = _accesoDatos.escribir("spcrearUsuario", _nombreparametros, ppersona.Nombre, ppersona.Apellido,
+             _accesoDatos.escribirDB("spcrearUsuario", _nombreparametros, ppersona.Nombre, ppersona.Apellido,
                                                      ppersona.FechaNacimiento, ppersona.Email, ppersona.Telefono, ppersona.Genero,
                                                      ppersona.Pais, pusuario.Login, pusuario.Password, pusuario.FechaInscripcion,
                                                      pusuario.Descripcion, pusuario.TipoUsuario);
-            if (_bool)
-            {
-                _retorno = "Usuario Creado";
-            }
-            else
-                _retorno = "No se pudo crear el usuario";
 
+             _retorno = "Usuario Creado";
             return _retorno;
+        }
+
+        public String auntentificarUsuario(String plogin, String pcontrasseña)
+        {
+            String[] _nombreparametros = new String[2]{"@pusuario","@ppassw"};
+            IDataReader reader = _accesoDatos.leer("spautentificarUsuario", _nombreparametros, plogin, pcontrasseña);
+            String retorno = null;
+            if (reader.Read())
+            {
+                retorno = reader.GetString(0);
+            }
+            return retorno;
         }
     }
 }

@@ -1,0 +1,2 @@
+Ahi en lo de login no se si la especificacion es solo para usuarios viajeros o se registran usuarios administradores 
+y lo que hace es mandar a otras pantallas supongo que es asi 

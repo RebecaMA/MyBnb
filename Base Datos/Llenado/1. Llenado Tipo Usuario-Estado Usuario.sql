@@ -1,3 +1,4 @@
+
 insert into TipoUsuario (tipousuario) values ('Viajero');
 insert into TipoUsuario (tipousuario) values ('Administrador');
 

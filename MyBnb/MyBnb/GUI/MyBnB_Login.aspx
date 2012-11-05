@@ -19,7 +19,7 @@
         <asp:Button ID="Button_Login" runat="server" BackColor="#7AB428" 
             BorderColor="#CCCCCC" Height="30px" 
             style="text-align: center; margin-top: 8px;" Text="Login" 
-            Width="85px" />
+            Width="85px" onclick="Button_Login_Click" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Image ID="Image_LogoMyBnB" runat="server"  ImageAlign="Left" 
             Height="114px" Width="459px" ImageUrl="~/Images/MyBnB.PNG" 
@@ -60,6 +60,9 @@
             <asp:Button ID="Button_Registrarse" runat="server" BackColor="#7AB428" 
                 Text="Registrarse" Height="30px" style="margin-left: 0px; margin-top: 2px" 
                 Width="90px" onclick="Button_Registrarse_Click" />
+            <br />
+            <br />
+            <asp:Label ID="LabelError" runat="server" Text="Label"></asp:Label>
         </asp:Panel>
     </asp:Panel>
 </asp:Content>

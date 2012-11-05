@@ -28,7 +28,18 @@ namespace MyBnb.GUI
                 Response.Redirect("http://localhost:51088/GUI/MyBnB_Register.aspx");
             }
             else //Label de error
-            { }
+            {
+                LabelError.Text = "Contraseñas no coinciden";
+            }
+        }
+
+        protected void Button_Login_Click(object sender, EventArgs e)
+        {
+           String login = TextBox_NombreUsuario.Text;
+            String contraseña = TextBox_Contraseña.Text;
+            _controllerUsuario = new ControllerUsuario(login, contraseña);
+            LabelError.Text = _controllerUsuario.autentificarUsuario();
+
         }
     }
 }

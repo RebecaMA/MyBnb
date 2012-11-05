@@ -27,6 +27,10 @@ namespace MyBnb.Controller
             return _usuario.registarUsuario(pdatos);
         }
 
+        public String autentificarUsuario()
+        {
+            return _usuario.autentificarUsuario(_login, _contraseña);
+        }
         public String getLogin()
         {
             return _login;

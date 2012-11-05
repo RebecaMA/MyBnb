@@ -36,5 +36,10 @@ namespace MyBnb.Logica_Negocio
             return _accesoDatos.registrarUsuario(pusuario, ppersona);
 
         }
+
+        public String autentificarUsuario(String plogin, String pcontraseña)
+        {
+            return _accesoDatos.auntentificarUsuario(plogin, pcontraseña);
+        }
     }
 }
