@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Login.aspx.cs" Inherits="MyBnb.GUI.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Login.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -42,11 +42,18 @@
                 style="margin-left: 0px" Width="200px"></asp:TextBox>
             <br />
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label_RegistrarContraseña" runat="server" Text="Contraseña:"></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBox_RegistrarContraseña" runat="server" Width="200px" 
                 TextMode="Password"></asp:TextBox>
+
+                <br />
+
+                <asp:Label ID="Label_VerificarContraseña" runat="server" 
+                Text="Verificar contraseña:"></asp:Label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox_verificarContraseña" runat="server" 
+                TextMode="Password" Width="200px"></asp:TextBox>
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

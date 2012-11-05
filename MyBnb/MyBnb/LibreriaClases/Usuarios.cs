@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MyBnb.LibreriaClases
 {
-    public class Usuario
+    public class Usuarios
     {
         private String login;
         private String password;

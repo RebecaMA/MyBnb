@@ -4,11 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MyBnb.Controller;
 
 namespace MyBnb.GUI
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class MyBnB_Login: System.Web.UI.Page
     {
+        ControllerUsuario _controllerUsuario;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -16,7 +18,17 @@ namespace MyBnb.GUI
 
         protected void Button_Registrarse_Click(object sender, EventArgs e)
         {
-            Console.Write("sdfsd");
+            String login = TextBox_RegistrarNombreUsuario.Text;
+            String contraseña = TextBox_RegistrarContraseña.Text;
+            String verificar = TextBox_verificarContraseña.Text;
+
+            if (contraseña.Equals(verificar))
+            {
+                _controllerUsuario = new ControllerUsuario(login, contraseña);
+                Response.Redirect("http://localhost:51088/GUI/MyBnB_Register.aspx");
+            }
+            else //Label de error
+            { }
         }
     }
 }

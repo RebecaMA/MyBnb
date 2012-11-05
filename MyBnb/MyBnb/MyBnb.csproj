@@ -97,7 +97,7 @@
       <DependentUpon>MyBnB_Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="LibreriaClases\Persona.cs" />
-    <Compile Include="LibreriaClases\Usuario.cs" />
+    <Compile Include="LibreriaClases\Usuarios.cs" />
     <Compile Include="Logica Negocio\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\Site.Master.cs">

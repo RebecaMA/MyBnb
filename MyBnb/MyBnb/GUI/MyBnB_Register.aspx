@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Register.aspx.cs" Inherits="MyBnb.GUI.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Register.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Register" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -28,7 +28,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label_Apellidos" runat="server" Text="Apellidos:"></asp:Label>
             &nbsp;&nbsp;
-            <asp:TextBox ID="TextBox3" runat="server" Width="200px"></asp:TextBox>
+            <asp:TextBox ID="TextBox_Apellido" runat="server" Width="200px"></asp:TextBox>
             &nbsp;&nbsp;
             <br />
             <br />
@@ -42,7 +42,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label_Email" runat="server" Text="Email:"></asp:Label>
             &nbsp;&nbsp;
-            <asp:TextBox ID="TextBox_Country" runat="server" Width="200px"></asp:TextBox>
+            <asp:TextBox ID="TextBox_Email" runat="server" Width="200px"></asp:TextBox>
             &nbsp;
             <br />
             <br />
@@ -70,33 +70,12 @@
             &nbsp;&nbsp;
             <br />
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label_Nickname" runat="server" Text="Nickname:"></asp:Label>
-            &nbsp;&nbsp;
-            <asp:TextBox ID="TextBox_RegistrarNombreUsuario" runat="server" 
-                style="margin-left: 0px" Width="200px"></asp:TextBox>
-            &nbsp;&nbsp;
-            <br />
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label_RegistrarContraseña" runat="server" Text="Contraseña:"></asp:Label>
-            &nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox_RegistrarContraseña" runat="server" 
-                TextMode="Password" Width="200px"></asp:TextBox>
-&nbsp;
-            <br />
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label_VerificarContraseña" runat="server" 
-                Text="Verificar contraseña:"></asp:Label>
-            &nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox_VerificarContraseña" runat="server" 
-                TextMode="Password" Width="200px"></asp:TextBox>
-            <br />
+            &nbsp;&nbsp;<br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label_Descripcion" runat="server" Text="Descripcion:"></asp:Label>
             &nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox1" runat="server" Height="80px" TextMode="MultiLine" 
+            <asp:TextBox ID="TextBoxDescripcion" runat="server" Height="80px" TextMode="MultiLine" 
                 Width="200px"></asp:TextBox>
             <br />
             <br />
