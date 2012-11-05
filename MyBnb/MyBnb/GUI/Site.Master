@@ -12,10 +12,10 @@
 <body>
     <form runat="server">
     <div class="page">
-        <div class="header">
-            <div class="title">
-                <h1>
-                    Mi aplicación ASP.NET
+        <div class="header" style="color: #000000; background-color: #CCCCCC">
+            <div class="title" align="right" style="color: #000000">
+                <h1 align="right" style="color: #000000">
+                    MyBnB
                 </h1>
             </div>
             <div class="loginDisplay">
@@ -30,11 +30,6 @@
                 </asp:LoginView>
             </div>
             <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-
-                    </Items>
-                </asp:Menu>
             </div>
         </div>
         <div class="main">

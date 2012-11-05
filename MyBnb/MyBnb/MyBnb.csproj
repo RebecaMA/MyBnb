@@ -59,6 +59,9 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUI\MyBnB_Login.aspx" />
+    <Content Include="GUI\MyBnB_Register.aspx" />
+    <Content Include="Images\MyBnB.PNG" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -78,6 +81,20 @@
     <Compile Include="Controller\ControllerUsuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MyBnB_Login.aspx.cs">
+      <DependentUpon>MyBnB_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\MyBnB_Login.aspx.designer.cs">
+      <DependentUpon>MyBnB_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MyBnB_Register.aspx.cs">
+      <DependentUpon>MyBnB_Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\MyBnB_Register.aspx.designer.cs">
+      <DependentUpon>MyBnB_Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="LibreriaClases\Persona.cs" />
     <Compile Include="LibreriaClases\Usuario.cs" />
