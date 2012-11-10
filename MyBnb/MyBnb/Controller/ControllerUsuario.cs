@@ -10,17 +10,16 @@ namespace MyBnb.Controller
     {
         Usuario _usuario = new Usuario();
         static String _login, _contraseña;
-
-       
-
+      
         public ControllerUsuario() { }
+
         public ControllerUsuario(String plogin,String pcontraseña) 
         {
             _login = plogin;
             _contraseña = pcontraseña;
         }
 
-        // Aqui nc si tiene q armar los objetos el controller o el usuario
+
 
         public String registrarUsuario(String[] pdatos) 
         {
