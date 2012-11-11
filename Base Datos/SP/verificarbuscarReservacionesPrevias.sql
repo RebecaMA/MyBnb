@@ -67,5 +67,7 @@ SELECT [MyBnB_BD].[dbo].[verificarReservacionesPrevias] (
 2,'2012/10/05','2012/12/05')
 GO
 
+select * from reservacion
+
 
 
