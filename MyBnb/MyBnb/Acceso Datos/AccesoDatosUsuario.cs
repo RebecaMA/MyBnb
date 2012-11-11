@@ -12,7 +12,7 @@ namespace MyBnb.Acceso_Datos
         AccesoDatos _accesoDatos = new AccesoDatos();
         public AccesoDatosUsuario() { }
 
-        public String registrarUsuario(Usuarios pusuario, Persona ppersona)
+        public String registrarUsuario(Usuario pusuario, Persona ppersona)
         {
             String _retorno = null;
             String[] _nombreparametros = new String[12]{"@pnombre","@papellido","@pfechaNacimiento","@pemail",
@@ -31,6 +31,7 @@ namespace MyBnb.Acceso_Datos
         public String auntentificarUsuario(String plogin, String pcontrasseña)
         {
             String[] _nombreparametros = new String[2]{"@pusuario","@ppassw"};
+
             IDataReader reader = _accesoDatos.leer("spautentificarUsuario", _nombreparametros, plogin, pcontrasseña);
             String retorno = null;
             if (reader.Read())
