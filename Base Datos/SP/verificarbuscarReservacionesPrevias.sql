@@ -18,7 +18,7 @@ GO
 -- Create date: <Create Date, ,>
 -- Description:	<Description, ,>
 -- =============================================
-CREATE FUNCTION verificarReservacionesPrevias 
+alter FUNCTION verificarReservacionesPrevias 
 (
 	@pidPropiedad int,
 	@pfechainicio date,
@@ -62,4 +62,3 @@ RETURN @retorno
 END
 GO
 
-select verificarReservacionesPrevias  (2,'2012/11/02','2012/12/02')
