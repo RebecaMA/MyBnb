@@ -49,9 +49,17 @@ WHILE @@fetch_status = 0
 BEGIN
 set @diainicioreserv =  (SELECT DATEPART(dy,@fechainicioreserv));
 set @diafinalreserv =  (SELECT DATEPART(dy,@fechafinalreserv));
-if (@diainicioreserv  <= @diainicio) AND (@diainicio <= @diafinalreserv) OR (@diainicioreserv <= @diafinal) AND (@diafinal <= @diafinalreserv)
-set @retorno += 1
-else set @retorno += 0
+if (@diainicio < @diainicioreserv)
+begin
+	if (@diafinal > @diainicioreserv)
+	set @retorno +=1
+end
+else if (@diainicio > @diainicioreserv)
+begin
+	if (@diafinal > @diainicioreserv)
+	set @retorno +=1
+end
+
 FETCH NEXT FROM cursorobtenerReservaciones
 INTO @fechainicioreserv,@fechafinalreserv
 END
@@ -66,6 +74,8 @@ GO
 SELECT [MyBnB_BD].[dbo].[verificarReservacionesPrevias] (
 2,'2012/10/05','2012/12/05')
 GO
+
+----select * from reservacion
 
 
 

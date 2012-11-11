@@ -59,7 +59,7 @@ FETCH NEXT FROM cursorobtenerPropiedades
 INTO @idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches 
 END
 
-select titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches 
+select idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches 
 from #PropiedadesTemporal
 
 END
@@ -70,4 +70,4 @@ END
 select * from Localidad
 select * from propiedad
 select * from reservacion
-EXEC spmostrarPropiedadesDisponibles '2012/10/05','2012/12/15','SCLU'--verificar la de reservaciones bien, la logica no sirve siempre
+EXEC spmostrarPropiedadesDisponibles '2012/10/03','2012/10/05','SCLU'--verificar la de reservaciones bien, la logica no sirve siempre

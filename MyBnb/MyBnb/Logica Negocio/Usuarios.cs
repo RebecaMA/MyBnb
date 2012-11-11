@@ -7,15 +7,15 @@ using MyBnb.LibreriaClases;
 
 namespace MyBnb.Logica_Negocio
 {
-    public class Usuario
+    public class Usuarios
     {
         AccesoDatosUsuario _accesoDatos = new AccesoDatosUsuario();
-        public Usuario() { }
+        public Usuarios() { }
 
         public String registarUsuario(String[] pdatos)
         {
             
-            Usuarios pusuario = new Usuarios();
+            Usuario pusuario = new Usuario();
             Persona ppersona = new Persona();
             ppersona.Nombre = pdatos[0];
             ppersona.Apellido = pdatos[1];
