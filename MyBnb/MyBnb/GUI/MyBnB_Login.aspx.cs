@@ -29,7 +29,7 @@ namespace MyBnb.GUI
             }
             else //Label de error
             {
-                LabelError.Text = "Contraseñas no coinciden";
+                LabelError.Text = "Contraseñas no coinciden";                
             }
         }
 

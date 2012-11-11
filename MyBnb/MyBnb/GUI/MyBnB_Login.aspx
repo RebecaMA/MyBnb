@@ -62,7 +62,7 @@
                 Width="90px" onclick="Button_Registrarse_Click" />
             <br />
             <br />
-            <asp:Label ID="LabelError" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="LabelError" runat="server"></asp:Label>
         </asp:Panel>
     </asp:Panel>
 </asp:Content>

@@ -74,8 +74,13 @@ namespace MyBnb.Acceso_Datos
             return listaResultado;
         }
 
-
-        // Retorna el IDataReader para que sea procesado por el DataAccess especifico
+        /// <summary>
+        /// Retorna el IDataReader para que sea procesado por el DataAccess especifico
+        /// </summary>
+        /// <param name="pStoredProcedure"></param>
+        /// <param name="pNombreParametros"></param>
+        /// <param name="pValorParametros"></param>
+        /// <returns></returns>
         public IDataReader leer(String pStoredProcedure, String[] pNombreParametros, params String[] pValorParametros)
         {
             cmd = new SqlCommand(pStoredProcedure);
@@ -119,8 +124,14 @@ namespace MyBnb.Acceso_Datos
                 _SIADB.ExecuteReader(cmd);
             }
         }
-
-        // Igual que el anterior pero devuelve un boolean para saber si la operación tuvo éxito o no
+        
+        /// <summary>
+        /// Devuelve un boolean para saber si la operación tuvo éxito o no
+        /// </summary>
+        /// <param name="pStoredProcedure"></param>
+        /// <param name="pNombreParametros"></param>
+        /// <param name="pValorParametros"></param>
+        /// <returns></returns>
         public Boolean escribir(String pStoredProcedure, String[] pNombreParametros, params String[] pValorParametros)
         {
             cmd = new SqlCommand(pStoredProcedure);
@@ -142,8 +153,6 @@ namespace MyBnb.Acceso_Datos
             Boolean resultado = reader.GetBoolean(0);
 
             return resultado;
-        }
-
-    
+        }    
     }
 }

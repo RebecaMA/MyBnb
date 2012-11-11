@@ -31,10 +31,8 @@ namespace MyBnb.GUI
              _datos[9] = DateTime.Today.Year + "/" + DateTime.Today.Month + "/"+ DateTime.Today.Day + " " +DateTime.Today.Hour + ":00:00";
              _datos[10] = TextBoxDescripcion.Text;
              _datos[11] = "Viajero";
-
+            
              _controllerUsuario.registrarUsuario(_datos);
-
-
         }
     }
 }

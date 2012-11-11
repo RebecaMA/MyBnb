@@ -59,30 +59,31 @@
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label_Sexo" runat="server" Text="Sexo:"></asp:Label>
-            &nbsp;&nbsp;&nbsp;
-            <asp:DropDownList ID="DropDownList_Sexo" runat="server" Width="200px">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label_Sexo" runat="server" 
+                Text="Genero:"></asp:Label>
+            &nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList_Sexo" runat="server" Width="200px">
                 <asp:ListItem></asp:ListItem>
                 <asp:ListItem>Femenino</asp:ListItem>
                 <asp:ListItem>Masculino</asp:ListItem>
             </asp:DropDownList>
-            &nbsp;&nbsp;
-            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:Panel ID="Panel2" runat="server" Height="99px">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label_Descripcion0" runat="server" Text="Descripcion:"></asp:Label>
+                &nbsp;&nbsp;
+                <asp:TextBox ID="TextBoxDescripcion" runat="server" Height="80px" 
+                    TextMode="MultiLine" Width="200px"></asp:TextBox>
+            </asp:Panel>
+&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button_Registrarse" runat="server" BackColor="#7AB428" 
+                Height="30px" onclick="Button_Registrarse_Click" 
+                style="margin-left: 0px; margin-top: 2px" Text="Registrarse" Width="90px" />
             <br />
             &nbsp;&nbsp;<br />
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label_Descripcion" runat="server" Text="Descripcion:"></asp:Label>
-            &nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBoxDescripcion" runat="server" Height="80px" TextMode="MultiLine" 
-                Width="200px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-            <asp:Button ID="Button_Registrarse" runat="server" BackColor="#7AB428" 
-                Text="Registrarse" Height="30px" style="margin-left: 0px; margin-top: 2px" 
-                Width="90px" onclick="Button_Registrarse_Click" />
         </asp:Panel>
     </asp:Panel>
 </asp:Content>
