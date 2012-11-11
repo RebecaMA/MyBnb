@@ -59,7 +59,7 @@ FETCH NEXT FROM cursorobtenerPropiedades
 INTO @idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches 
 END
 
-select titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches 
+select idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches 
 from #PropiedadesTemporal
 
 END
