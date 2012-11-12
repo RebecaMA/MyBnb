@@ -35,7 +35,7 @@ namespace MyBnb.GUI
 
         protected void Button_Login_Click(object sender, EventArgs e)
         {
-            String login = TextBox_NombreUsuario.Text;
+           String login = TextBox_NombreUsuario.Text;
             String contraseña = TextBox_Contraseña.Text;
             _controllerUsuario = new ControllerUsuario(login, contraseña);
             LabelError.Text = _controllerUsuario.autentificarUsuario();

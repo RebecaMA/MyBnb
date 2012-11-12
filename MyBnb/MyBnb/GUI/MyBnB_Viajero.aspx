@@ -144,8 +144,11 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:Label ID="Label_Capacidad" runat="server" Text="Capacidad:"></asp:Label>
                           &nbsp;&nbsp;
-                          <asp:TextBox ID="TextBox_PrecioVolumen1" runat="server" Width="100px"></asp:TextBox>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <asp:DropDownList ID="DropDownList_Capacidad_ListarPropiedad" runat="server" 
+                              Width="200px" AutoPostBack="True">
+                              <asp:ListItem></asp:ListItem>
+                          </asp:DropDownList>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
                           <br />
                           <asp:Label ID="Label_Descripcion2" runat="server" Text="Descripcion:"></asp:Label>
@@ -272,56 +275,72 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
                           <br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label_FechaInicio_Reservar" runat="server" 
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label_FechaInicio_Reservar" runat="server" 
                               Text="Fecha Inicio:"></asp:Label>
-                          &nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox_FechaInicio_Reservar" runat="server" Width="100px"></asp:TextBox>
-                          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
                           <br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:Label ID="Label_FechaFin" runat="server" Text="Fecha Fin:"></asp:Label>
-                          &nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox_FechaFin_Reservar" runat="server" Width="100px"></asp:TextBox>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <br />
+                          <br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:Label ID="Label_Localidad" runat="server" Text="Localidad:"></asp:Label>
                           &nbsp;&nbsp;
                           <asp:DropDownList ID="DropDownList_Localidad_Reervar" runat="server" 
                               Width="200px">
                               <asp:ListItem></asp:ListItem>
                           </asp:DropDownList>
-                          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Button ID="Button_Buscar_ListarPropiedad" runat="server" 
-                              BackColor="#5093CF" ForeColor="White" Height="30px" 
-                              style="margin-left: 0px; margin-top: 2px" 
-                              Text="Buscar" Width="90px" 
-                              onclick="Button_Buscar_ListarPropiedad_Click" />
-                          &nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                           <br />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:GridView ID="GridView_Reservar" runat="server" AutoGenerateColumns="False" 
-                              CellSpacing="1" Height="16px" HorizontalAlign="Center" ShowFooter="True" 
-                              style="margin-left: 0px" Width="784px">
+                              CellSpacing="1" HorizontalAlign="Center" 
+                              onrowcommand="GridView_Reservar_RowCommand" ShowFooter="True">
                               <Columns>
                                   <asp:TemplateField HeaderText="Titulo" SortExpression="Titulo">
-                                  </asp:TemplateField>
-                                  <asp:TemplateField HeaderText="Tipo" SortExpression="Tipo"></asp:TemplateField>
-                                  <asp:TemplateField HeaderText="Localidad" SortExpression="Localidad">
-                                  </asp:TemplateField>
-                                  <asp:TemplateField HeaderText="Capacidad" SortExpression="Capacidad">
-                                      <FooterStyle Width="70px" />
-                                  </asp:TemplateField>
-                                  <asp:TemplateField HeaderText="Precio" SortExpression="Precio">
-                                      <FooterStyle Width="70px" />
-                                  </asp:TemplateField>
-                                  <asp:TemplateField HeaderText="Reservar">
                                       <EditItemTemplate>
-                                          <asp:CheckBox ID="CheckBox1" runat="server" />
+                                          <asp:TextBox ID="TextBox1" runat="server" Text="Titulo"></asp:TextBox>
                                       </EditItemTemplate>
                                       <ItemTemplate>
-                                          <asp:CheckBox ID="CheckBox1" runat="server" />
+                                          <asp:Label ID="Label1" runat="server" Text="Titulo"></asp:Label>
                                       </ItemTemplate>
-                                      <FooterStyle Width="20px" />
-                                      <ItemStyle HorizontalAlign="Center" />
+                                  </asp:TemplateField>
+                                  <asp:TemplateField HeaderText="Tipo" SortExpression="Tipo">
+                                      <EditItemTemplate>
+                                          <asp:TextBox ID="TextBox2" runat="server" Text="Tipo"></asp:TextBox>
+                                      </EditItemTemplate>
+                                      <ItemTemplate>
+                                          <asp:Label ID="Label2" runat="server" Text="Tipo"></asp:Label>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
+                                  <asp:TemplateField HeaderText="Localidad" SortExpression="Localidad">
+                                      <EditItemTemplate>
+                                          <asp:TextBox ID="TextBox3" runat="server" Text="Localidad"></asp:TextBox>
+                                      </EditItemTemplate>
+                                      <ItemTemplate>
+                                          <asp:Label ID="Label3" runat="server" Text="Localidad"></asp:Label>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
+                                  <asp:TemplateField HeaderText="Capacidad" SortExpression="Capacidad">
+                                      <EditItemTemplate>
+                                          <asp:TextBox ID="TextBox4" runat="server" Text="Capacidad"></asp:TextBox>
+                                      </EditItemTemplate>
+                                      <ItemTemplate>
+                                          <asp:Label ID="Label4" runat="server" Text="Capacidad"></asp:Label>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
+                                  <asp:TemplateField HeaderText="Precio" SortExpression="Precio">
+                                      <EditItemTemplate>
+                                          <asp:TextBox ID="TextBox5" runat="server" Text="Precio"></asp:TextBox>
+                                      </EditItemTemplate>
+                                      <ItemTemplate>
+                                          <asp:Label ID="Label5" runat="server" Text="Precio"></asp:Label>
+                                      </ItemTemplate>
                                   </asp:TemplateField>
                               </Columns>
                           </asp:GridView>

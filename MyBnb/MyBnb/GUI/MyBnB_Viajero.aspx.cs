@@ -10,18 +10,18 @@ namespace MyBnb.GUI
 {
     public partial class MyBnB_Viajero : System.Web.UI.Page
     {
-        //ControllerPropiedades _controllerPropiedad = new ControllerPropiedades();
+        ControllerPropiedades _controllerPropiedad = new ControllerPropiedades();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) 
             {
                 MultiViewTabControl.ActiveViewIndex = 0;
-                //DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
-                //DropDownList_Tipo_ListarPropiedad.DataBind();
-                //DropDownList_Hospedaje_ListarPropiedad0.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
-                //DropDownList_Hospedaje_ListarPropiedad0.DataBind();
-                //DropDownList_Pais_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
-                //DropDownList_Pais_ListarPropiedad.DataBind();
+                DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
+                DropDownList_Tipo_ListarPropiedad.DataBind();
+                DropDownList_Hospedaje_ListarPropiedad0.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
+                DropDownList_Hospedaje_ListarPropiedad0.DataBind();
+                DropDownList_Pais_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
+                DropDownList_Pais_ListarPropiedad.DataBind();
             }
         }
 
@@ -80,83 +80,78 @@ namespace MyBnb.GUI
 
         #region Reservar Viaje
 
-        //struct Persona
-        //{
-        //    public string Titulo;
-        //    public string Tipo;
-        //}
+        struct Persona
+        {
+            public string Id;
+            public string Nombre;
+        }
 
-        //private List<Persona> ObtenerNuevaLista()
-        //{
-        //    List<Persona> lista = new List<Persona>();
+        private List<Persona> ObtenerNuevaLista()
+        {
+            List<Persona> lista = new List<Persona>();
 
-        //    Persona p1 = new Persona();
-        //    p1.Titulo = "1";
-        //    p1.Tipo = "Luisa";
+            Persona p1 = new Persona();
+            p1.Id = "1";
+            p1.Nombre = "Luisa";
 
-        //    Persona p2 = new Persona();
-        //    p2.Titulo = "2";
-        //    p2.Tipo = "Karla";
+            Persona p2 = new Persona();
+            p2.Id = "2";
+            p2.Nombre = "Karla";
 
-        //    lista.Add(p1);
-        //    lista.Add(p2);
+            lista.Add(p1);
+            lista.Add(p2);
 
-        //    return lista;
+            return lista;
 
-        //}
+        }
 
-        //private List<Persona> GuardarLista(Persona persona)
-        //{
-        //    if (Session["lista"] == null)
-        //    {
-        //        List<Persona> p = this.ObtenerNuevaLista();
-        //        p.Add(persona);
-        //        Session["lista"] = p;
-        //    }
-        //    else
-        //    {
-        //        List<Persona> p = (List<Persona>)Session["lista"];
-        //        p.Add(persona);
-        //        Session["lista"] = p;
-        //    }
-        //    return (List<Persona>)Session["lista"];
-        //}
+        private List<Persona> GuardarLista(Persona persona)
+        {
+            if (Session["lista"] == null)
+            {
+                List<Persona> p = this.ObtenerNuevaLista();
+                p.Add(persona);
+                Session["lista"] = p;
+            }
+            else
+            {
+                List<Persona> p = (List<Persona>)Session["lista"];
+                p.Add(persona);
+                Session["lista"] = p;
+            }
+            return (List<Persona>)Session["lista"];
+        }
 
-        //private List<Persona> ObtenerLista()
-        //{
-        //    if (Session["lista"] == null)
-        //    {
-        //        return this.ObtenerNuevaLista();
-        //    }
-        //    else
-        //    {
-        //        return (List<Persona>)Session["lista"];
-        //    }
-        //}
+        private List<Persona> ObtenerLista()
+        {
+            if (Session["lista"] == null)
+            {
+                return this.ObtenerNuevaLista();
+            }
+            else
+            {
+                return (List<Persona>)Session["lista"];
+            }
+        }
 
-        //protected void GridView_Reservar_RowCommand(object sender, GridViewCommandEventArgs e)
-        //{
-        //    if (e.CommandName.Equals("AddNew"))
-        //    {
-        //        TextBox txtNewName = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewName");
-        //        TextBox txtNewId = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewId");
+        protected void GridView_Reservar_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName.Equals("AddNew"))
+            {
+                TextBox txtNewName = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewName");
+                TextBox txtNewId = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewId");
 
-        //        Persona p = new Persona();
-        //        p.Titulo = txtNewId.Text;
-        //        p.Tipo = txtNewName.Text;
+                Persona p = new Persona();
+                p.Id = txtNewId.Text;
+                p.Nombre = txtNewName.Text;
 
-        //        this.GuardarLista(p);
-        //        this.GridView_Reservar.DataSource = this.ObtenerLista();
-        //        this.GridView_Reservar.DataBind();
-        //    }
-        //}
+                this.GuardarLista(p);
+                this.GridView_Reservar.DataSource = this.ObtenerLista();
+                this.GridView_Reservar.DataBind();
+            }
+        }
 
         #endregion
-
-        protected void Button_Buscar_ListarPropiedad_Click(object sender, EventArgs e)
-        {
-            //http://www.youtube.com/watch?v=QdJUZzBgwrU
-        }
 
         #region Solicitar Anfitrion
 
