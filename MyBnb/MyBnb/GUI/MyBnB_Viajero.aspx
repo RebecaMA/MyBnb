@@ -155,13 +155,13 @@
                           &nbsp;&nbsp;
                           <asp:TextBox ID="TextBox_Descripcion_ListarPropiedad" runat="server" 
                               Height="80px" TextMode="MultiLine" Width="200px"></asp:TextBox>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;*&nbsp;&nbsp;
                           <br />
                           <br />
                           <asp:Label ID="Label_Fotografia_ListarPropiedad" runat="server" 
                               Text="Fotografia:"></asp:Label>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <br />
+                          &nbsp;&nbsp;&nbsp;<asp:FileUpload ID="FileUpload1" runat="server" />
+                          &nbsp;<br />
                           <br />
                           &nbsp;&nbsp;&nbsp;
                           <asp:Label ID="Label_HoraEntrada" runat="server" Text="Hora Entrada:"></asp:Label>
@@ -234,12 +234,8 @@
                           <br />
                           <asp:Label ID="Label_CantidadMinima" runat="server" 
                               Text="Cantidad de noches minima:"></asp:Label>
-                          &nbsp;&nbsp;
-                          <asp:DropDownList ID="DropDownList_CantidadNoches_ListarPropiedad" runat="server" 
-                              Width="100px">
-                              <asp:ListItem></asp:ListItem>
-                          </asp:DropDownList>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp; &nbsp;<asp:TextBox ID="TextBox_PrecioVolumen0" runat="server" Width="100px"></asp:TextBox>
+                          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                           <br />
@@ -302,10 +298,54 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                           <br />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <asp:GridView ID="GridView_Reservar" runat="server" AutoGenerateColumns="False" 
+                              CellSpacing="1" HorizontalAlign="Center" 
+                              onrowcommand="GridView_Reservar_RowCommand" ShowFooter="True">
+                              <Columns>
+                                  <asp:TemplateField HeaderText="Titulo" SortExpression="Titulo">
+                                      <EditItemTemplate>
+                                          <asp:TextBox ID="TextBox1" runat="server" Text="Titulo"></asp:TextBox>
+                                      </EditItemTemplate>
+                                      <ItemTemplate>
+                                          <asp:Label ID="Label1" runat="server" Text="Titulo"></asp:Label>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
+                                  <asp:TemplateField HeaderText="Tipo" SortExpression="Tipo">
+                                      <EditItemTemplate>
+                                          <asp:TextBox ID="TextBox2" runat="server" Text="Tipo"></asp:TextBox>
+                                      </EditItemTemplate>
+                                      <ItemTemplate>
+                                          <asp:Label ID="Label2" runat="server" Text="Tipo"></asp:Label>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
+                                  <asp:TemplateField HeaderText="Localidad" SortExpression="Localidad">
+                                      <EditItemTemplate>
+                                          <asp:TextBox ID="TextBox3" runat="server" Text="Localidad"></asp:TextBox>
+                                      </EditItemTemplate>
+                                      <ItemTemplate>
+                                          <asp:Label ID="Label3" runat="server" Text="Localidad"></asp:Label>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
+                                  <asp:TemplateField HeaderText="Capacidad" SortExpression="Capacidad">
+                                      <EditItemTemplate>
+                                          <asp:TextBox ID="TextBox4" runat="server" Text="Capacidad"></asp:TextBox>
+                                      </EditItemTemplate>
+                                      <ItemTemplate>
+                                          <asp:Label ID="Label4" runat="server" Text="Capacidad"></asp:Label>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
+                                  <asp:TemplateField HeaderText="Precio" SortExpression="Precio">
+                                      <EditItemTemplate>
+                                          <asp:TextBox ID="TextBox5" runat="server" Text="Precio"></asp:TextBox>
+                                      </EditItemTemplate>
+                                      <ItemTemplate>
+                                          <asp:Label ID="Label5" runat="server" Text="Precio"></asp:Label>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
+                              </Columns>
+                          </asp:GridView>
                           <br />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                          <br />
-                          <br />
                           <br />
                           <br />
                           <br />

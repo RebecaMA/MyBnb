@@ -42,7 +42,10 @@ namespace MyBnb.GUI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-      
+        protected void Button_Modificar_Click(object sender, EventArgs e)
+        {
+
+        }
 
         /// <summary>
         /// Se encarga de desacticar el perfil del usuario.
@@ -65,9 +68,7 @@ namespace MyBnb.GUI
         }   
 
         #endregion
-
-       
-
+      
         #region Listar Propiedad
 
         protected void Button_ListarPropiedad_ListarPropiedad_Click(object sender, EventArgs e)
@@ -77,8 +78,78 @@ namespace MyBnb.GUI
 
         #endregion
 
-
         #region Reservar Viaje
+
+        struct Persona
+        {
+            public string Id;
+            public string Nombre;
+        }
+
+        private List<Persona> ObtenerNuevaLista()
+        {
+            List<Persona> lista = new List<Persona>();
+
+            Persona p1 = new Persona();
+            p1.Id = "1";
+            p1.Nombre = "Luisa";
+
+            Persona p2 = new Persona();
+            p2.Id = "2";
+            p2.Nombre = "Karla";
+
+            lista.Add(p1);
+            lista.Add(p2);
+
+            return lista;
+
+        }
+
+        private List<Persona> GuardarLista(Persona persona)
+        {
+            if (Session["lista"] == null)
+            {
+                List<Persona> p = this.ObtenerNuevaLista();
+                p.Add(persona);
+                Session["lista"] = p;
+            }
+            else
+            {
+                List<Persona> p = (List<Persona>)Session["lista"];
+                p.Add(persona);
+                Session["lista"] = p;
+            }
+            return (List<Persona>)Session["lista"];
+        }
+
+        private List<Persona> ObtenerLista()
+        {
+            if (Session["lista"] == null)
+            {
+                return this.ObtenerNuevaLista();
+            }
+            else
+            {
+                return (List<Persona>)Session["lista"];
+            }
+        }
+
+        protected void GridView_Reservar_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName.Equals("AddNew"))
+            {
+                TextBox txtNewName = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewName");
+                TextBox txtNewId = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewId");
+
+                Persona p = new Persona();
+                p.Id = txtNewId.Text;
+                p.Nombre = txtNewName.Text;
+
+                this.GuardarLista(p);
+                this.GridView_Reservar.DataSource = this.ObtenerLista();
+                this.GridView_Reservar.DataBind();
+            }
+        }
 
         #endregion
 
