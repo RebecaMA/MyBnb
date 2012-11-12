@@ -274,13 +274,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_Capacidad;
         
         /// <summary>
-        /// DropDownList_Capacidad_ListarPropiedad control.
+        /// TextBox_PrecioVolumen1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Capacidad_ListarPropiedad;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_PrecioVolumen1;
         
         /// <summary>
         /// Label_Descripcion2 control.
@@ -526,6 +526,15 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_FechaInicio_Reservar;
         
         /// <summary>
+        /// TextBox_FechaInicio_Reservar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_FechaInicio_Reservar;
+        
+        /// <summary>
         /// Label_FechaFin control.
         /// </summary>
         /// <remarks>
@@ -533,6 +542,15 @@ namespace MyBnb.GUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_FechaFin;
+        
+        /// <summary>
+        /// TextBox_FechaFin_Reservar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_FechaFin_Reservar;
         
         /// <summary>
         /// Label_Localidad control.
@@ -551,6 +569,15 @@ namespace MyBnb.GUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList_Localidad_Reervar;
+        
+        /// <summary>
+        /// Button_Buscar_ListarPropiedad control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_Buscar_ListarPropiedad;
         
         /// <summary>
         /// GridView_Reservar control.
