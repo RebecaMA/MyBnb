@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Viajero.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Viajero" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Viajero.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Viajero" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -135,7 +134,8 @@
                           <asp:Label ID="Label_Tipo" runat="server" Text="Tipo:"></asp:Label>
                           &nbsp;&nbsp;
                           <asp:DropDownList ID="DropDownList_Tipo_ListarPropiedad" runat="server" 
-                              Width="200px">
+                              Width="200px" AutoPostBack="True" 
+                              >
                               <asp:ListItem></asp:ListItem>
                           </asp:DropDownList>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -145,7 +145,7 @@
                           <asp:Label ID="Label_Capacidad" runat="server" Text="Capacidad:"></asp:Label>
                           &nbsp;&nbsp;
                           <asp:DropDownList ID="DropDownList_Capacidad_ListarPropiedad" runat="server" 
-                              Width="200px">
+                              Width="200px" AutoPostBack="True">
                               <asp:ListItem></asp:ListItem>
                           </asp:DropDownList>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -160,10 +160,7 @@
                           <br />
                           <asp:Label ID="Label_Fotografia_ListarPropiedad" runat="server" 
                               Text="Fotografia:"></asp:Label>
-                          &nbsp;&nbsp;
-                          <asp:TextBox ID="TextBox_Fotografia_ListarPropiedad" runat="server" 
-                              Width="200px"></asp:TextBox>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
                           <br />
                           &nbsp;&nbsp;&nbsp;
@@ -175,7 +172,7 @@
                           </asp:DropDownList>
                           &nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:DropDownList ID="DropDownList_TiempoEntrada_ListarPropiedad" 
-                              runat="server" Width="75px">
+                              runat="server" Width="75px" AutoPostBack="True">
                               <asp:ListItem></asp:ListItem>
                               <asp:ListItem>AM</asp:ListItem>
                               <asp:ListItem>PM</asp:ListItem>
@@ -186,13 +183,13 @@
                           <br />
                           <asp:Label ID="Label_HoraSalida" runat="server" Text="Hora Salida:"></asp:Label>
                           &nbsp;&nbsp;
-                          <asp:DropDownList ID="DropDownList_HoraEntrada_ListarPropiedad0" runat="server" 
-                              Width="75px">
+                          <asp:DropDownList ID="DropDownList_HoraSalida_ListarPropiedad0" runat="server" 
+                              Width="75px" AutoPostBack="True">
                               <asp:ListItem></asp:ListItem>
                           </asp:DropDownList>
                           &nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:DropDownList ID="DropDownList_TiempoSalida_ListarPropiedad3" 
-                              runat="server" Width="75px">
+                              runat="server" Width="75px" AutoPostBack="True">
                               <asp:ListItem></asp:ListItem>
                               <asp:ListItem>AM</asp:ListItem>
                               <asp:ListItem>PM</asp:ListItem>
@@ -200,7 +197,7 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
                           <br />
-                          <asp:Label ID="Label_Pais_ListarPropiedad" runat="server" Text="Pais:"></asp:Label>
+                          <asp:Label ID="Label_Pais_ListarPropiedad" runat="server" Text="Localidad:"></asp:Label>
                           &nbsp;&nbsp;
                           <asp:DropDownList ID="DropDownList_Pais_ListarPropiedad" runat="server" 
                               Width="200px">
@@ -212,7 +209,7 @@
                           <asp:Label ID="Label_TipoHospedaje_ListarPropiedad" runat="server" 
                               Text="Tipo de Hospedaje:"></asp:Label>
                           &nbsp;&nbsp;
-                          <asp:DropDownList ID="DropDownList_Pais_ListarPropiedad0" runat="server" 
+                          <asp:DropDownList ID="DropDownList_Hospedaje_ListarPropiedad0" runat="server" 
                               Width="200px">
                               <asp:ListItem></asp:ListItem>
                           </asp:DropDownList>
@@ -238,7 +235,7 @@
                           <asp:Label ID="Label_CantidadMinima" runat="server" 
                               Text="Cantidad de noches minima:"></asp:Label>
                           &nbsp;&nbsp;
-                          <asp:DropDownList ID="DropDownList_HoraEntrada_ListarPropiedad1" runat="server" 
+                          <asp:DropDownList ID="DropDownList_CantidadNoches_ListarPropiedad" runat="server" 
                               Width="100px">
                               <asp:ListItem></asp:ListItem>
                           </asp:DropDownList>
@@ -251,8 +248,9 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                           <asp:Button ID="Button_ListarPropiedad_ListarPropiedad" runat="server" 
                               BackColor="#7AB428" ForeColor="White" Height="30px" 
-                              onclick="Button_Modificar_Click" style="margin-left: 0px; margin-top: 2px" 
-                              Text="Registrar" Width="90px" />
+                               style="margin-left: 0px; margin-top: 2px" 
+                              Text="Registrar" Width="90px" 
+                              onclick="Button_ListarPropiedad_ListarPropiedad_Click" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
                           <br />
@@ -347,37 +345,3 @@
 </div>
 
 </asp:Content>
-=======
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Viajero.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Viajero" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    
-<div>    
-    <asp:Menu ID="MenuTabControl" runat="server" OnMenuItemClick="MenuTabControl_MenuItemClick" Orientation="Horizontal"
-              style="left: 1px; position: relative; top: 30px" Height="38px" Width="127px" >
-              <StaticMenuStyle HorizontalPadding="0px" VerticalPadding="0px" />
-              <StaticSelectedStyle BackColor="#C0C0FF" BorderColor="#C0C0FF" />
-              <Items>
-                    <asp:MenuItem Text="tab1" Value="0" Selected="True"></asp:MenuItem>
-                    <asp:MenuItem Text="tab2" Value="1"></asp:MenuItem>
-                    <asp:MenuItem Text="tab3" Value="2"></asp:MenuItem>
-              </Items>
-              <StaticHoverStyle BackColor="Silver" />
-              <StaticMenuItemStyle BorderColor="#404040" BorderStyle="Solid" BorderWidth="1px" />
-    </asp:Menu>
-</div>
-
-<div style="width: 429px; height: 191px; background-color: #C0C0FF;">
-            <asp:MultiView ID="MultiViewTabControl" runat="server">
-                 <asp:View ID="View1" runat="server">
-                      <br /> CONTENTS OF TAB1 (view1).</asp:View>
-                 <asp:View ID="View2" runat="server">
-                      <br /> CONTENTS OF TAB2(view2)<br /></asp:View>
-                <asp:View ID="View3" runat="server">
-                      <br />CONTENTS OF TAB3(view3)</asp:View>
-            </asp:MultiView>
-</div>
-
-</asp:Content>
->>>>>>> b21ca561e53e8865c9f233995891436bf45474df

@@ -10,12 +10,18 @@ namespace MyBnb.GUI
 {
     public partial class MyBnB_Viajero : System.Web.UI.Page
     {
-        
+        ControllerPropiedades _controllerPropiedad = new ControllerPropiedades();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) 
             {
                 MultiViewTabControl.ActiveViewIndex = 0;
+                DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
+                DropDownList_Tipo_ListarPropiedad.DataBind();
+                DropDownList_Hospedaje_ListarPropiedad0.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
+                DropDownList_Hospedaje_ListarPropiedad0.DataBind();
+                DropDownList_Pais_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
+                DropDownList_Pais_ListarPropiedad.DataBind();
             }
         }
 
@@ -36,10 +42,7 @@ namespace MyBnb.GUI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void Button_Modificar_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         /// <summary>
         /// Se encarga de desacticar el perfil del usuario.
@@ -63,13 +66,17 @@ namespace MyBnb.GUI
 
         #endregion
 
+       
+
         #region Listar Propiedad
+
+        protected void Button_ListarPropiedad_ListarPropiedad_Click(object sender, EventArgs e)
+        {
+
+        }
 
         #endregion
 
-        #region Listar Propiedad
-        
-        #endregion
 
         #region Reservar Viaje
 

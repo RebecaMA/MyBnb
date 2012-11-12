@@ -15,6 +15,39 @@ namespace MyBnb.LibreriaClases
         private String horaSalida;
         private float precioNoche;
         private int cantidadMinimaNoches;
+        private String tipoPropiedad;
+        private String tipoHospedaje;
+        private String localidad;
+        private float precioVolumen;
+
+        public float PrecioVolumen
+        {
+            get { return precioVolumen; }
+            set { precioVolumen = value; }
+        }
+
+        public String Localidad
+        {
+            get { return localidad; }
+            set { localidad = value; }
+        }
+
+      
+
+
+
+        public String TipoHospedaje
+        {
+            get { return tipoHospedaje; }
+            set { tipoHospedaje = value; }
+        }
+
+        public String TipoPropiedad
+        {
+            get { return tipoPropiedad; }
+            set { tipoPropiedad = value; }
+        }
+
 
         public int CantidadMinimaNoches
         {

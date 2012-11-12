@@ -21,7 +21,7 @@ namespace MyBnb.Logica_Negocio
         public String[] obtenerPropiedades(String ptipoBusqueda, String[] pdatos)
         {
             String[] _informacionPropiedades =null;
-            String _informacionpropiedad;
+            
 
             _listaPropiedades = _accesoDatosPropiedad.obtenerPropiedades(ptipoBusqueda, pdatos);
             _informacionPropiedades = new String[_listaPropiedades.Count];
@@ -34,6 +34,18 @@ namespace MyBnb.Logica_Negocio
 
          return _informacionPropiedades;
              
+        }
+
+        public List<String> obtenerTipo(String pTipo)
+        {
+            return _accesoDatosPropiedad.obtenerTipo(pTipo);
+        }
+
+        public String listarPropiedad(String pdatos)
+        {
+            Propiedad _propiedad = null;
+
+            return _accesoDatosPropiedad.listarPropiedad(_propiedad);
         }
 
        

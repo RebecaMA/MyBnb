@@ -102,6 +102,15 @@ namespace MyBnb.Acceso_Datos
             return reader;
         }
 
+        public IDataReader leer(String pStoredProcedure)
+        {
+            cmd = new SqlCommand(pStoredProcedure);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            IDataReader reader = _SIADB.ExecuteReader(cmd);
+            return reader;
+        }
+
 
         public void escribirDB(String pSPname, String[] pnombreparametros, params String[] plistaParametros)
         {

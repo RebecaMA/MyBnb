@@ -21,6 +21,10 @@ namespace MyBnb.Controller
             return _propiedades.obtenerPropiedades(ptipoBusqueda,pdatos);
         }
 
+        public List<String> obtenerTipo(String pTipo)
+        {
+            return _propiedades.obtenerTipo(pTipo);
+        }
         
         
     }
