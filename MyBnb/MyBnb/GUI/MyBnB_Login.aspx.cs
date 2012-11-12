@@ -37,8 +37,14 @@ namespace MyBnb.GUI
         {
            String login = TextBox_NombreUsuario.Text;
             String contraseña = TextBox_Contraseña.Text;
+            String resultado;
             _controllerUsuario = new ControllerUsuario(login, contraseña);
-            LabelError.Text = _controllerUsuario.autentificarUsuario();
+            
+            resultado = _controllerUsuario.autentificarUsuario();
+            if (resultado.Equals("Viajero"))
+            {
+                Response.Redirect("http://localhost:51088/GUI/MyBnB_Viajero.aspx"); 
+            }
 
         }
     }

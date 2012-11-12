@@ -33,6 +33,7 @@ namespace MyBnb.GUI
              _datos[11] = "Viajero";
             
              _controllerUsuario.registrarUsuario(_datos);
+             Response.Redirect("http://localhost:51088/GUI/MyBnB_Viajero.aspx"); 
         }
     }
 }

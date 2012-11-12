@@ -28,8 +28,7 @@ namespace MyBnb.Controller
 
         public String listarPropiedad(String[] pdatos)
         {
-            return _propiedades.listarPropiedad(pdatos);
-            
+            return _propiedades.listarPropiedad(pdatos);            
         }
 
     }

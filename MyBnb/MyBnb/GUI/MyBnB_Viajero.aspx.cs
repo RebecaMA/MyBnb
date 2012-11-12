@@ -69,7 +69,7 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void Button_LogOut_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("http://localhost:51088/GUI/MyBnB_Login.aspx"); 
         }   
 
         #endregion
