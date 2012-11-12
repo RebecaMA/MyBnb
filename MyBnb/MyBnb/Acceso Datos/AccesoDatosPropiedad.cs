@@ -10,14 +10,14 @@ namespace MyBnb.Acceso_Datos
     public class AccesoDatosPropiedad
     {
         AccesoDatos _accesoDatos;
-        public AccesoDatosPropiedad() 
+        public AccesoDatosPropiedad()
         {
             _accesoDatos = new AccesoDatos();
         }
 
 
         public List<Propiedad> obtenerPropiedades(String ptipoBusqueda, String[] pdatos)
-        { 
+        {
             List<Propiedad> _listaPropiedades = new List<Propiedad>();
             String[] _nombreparametros;
             IDataReader _reader = null;
@@ -26,7 +26,7 @@ namespace MyBnb.Acceso_Datos
             if (ptipoBusqueda.Equals("Propiedades Disponibles"))
             {
                 _nombreparametros = new String[3] { "@pfechainicio", "@pfechafinal", "@pCodigoLocalidad" };
-                _reader = _accesoDatos.leer("spmostrarPropiedadesDisponibles", _nombreparametros,pdatos);
+                _reader = _accesoDatos.leer("spmostrarPropiedadesDisponibles", _nombreparametros, pdatos);
             }
 
             while (_reader.Read())
@@ -53,7 +53,7 @@ namespace MyBnb.Acceso_Datos
         public List<String> obtenerTipo(String ptipo)
         {
             List<String> _resultados = new List<String>();
-            
+
             IDataReader _reader = null;
 
 
@@ -63,8 +63,8 @@ namespace MyBnb.Acceso_Datos
             { _reader = _accesoDatos.leer("spObtenerTipoPropiedad"); }
             else if (ptipo.Equals("ObtenerLocalidad"))
             { _reader = _accesoDatos.leer("spObtenerLocalidades"); }
-            
-            
+
+
 
             while (_reader.Read())
             {
@@ -75,7 +75,7 @@ namespace MyBnb.Acceso_Datos
             return _resultados;
         }
 
-        public String listarPropiedad(Propiedad ppropiedad)
+        public String listarPropiedad(String[] pdatos)
         {
 
             String _retorno = null;
@@ -83,9 +83,7 @@ namespace MyBnb.Acceso_Datos
                 "@pHoraSalida","@pCodigoLocalidad","@pTipoHospedaje","@pprecioPorNoche","@pprecioVolumen","@pcantidadMinimaNoches"};
             IDataReader _reader = null;
 
-            _reader = _accesoDatos.leer("spListarPropiedad",_nombreparametros,ppropiedad.TipoPropiedad,ppropiedad.CantidadMaximaPersonas.ToString(),ppropiedad.Titulo,
-                                        ppropiedad.Descripcion,null,ppropiedad.HoraEntrada,ppropiedad.HoraSalida,ppropiedad.Localidad, ppropiedad.TipoHospedaje,
-                                        ppropiedad.PrecioNoche.ToString(),ppropiedad.PrecioVolumen.ToString(),ppropiedad.CantidadMinimaNoches.ToString());
+            _reader = _accesoDatos.leer("spListarPropiedad", _nombreparametros,pdatos);
 
             if (_reader.Read())
             {

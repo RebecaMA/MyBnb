@@ -9,23 +9,28 @@ namespace MyBnb.Controller
 {
     public class ControllerPropiedades
     {
-        Propiedades _propiedades;
+        private Propiedades _propiedades;
 
-        public ControllerPropiedades() 
+        public ControllerPropiedades()
         {
-           _propiedades = new Propiedades();
+            _propiedades = new Propiedades();
         }
 
-        public String[] obtenerPropiedades(String ptipoBusqueda, String[] pdatos) 
+        public String[] obtenerPropiedades(String ptipoBusqueda, String[] pdatos)
         {
-            return _propiedades.obtenerPropiedades(ptipoBusqueda,pdatos);
+            return _propiedades.obtenerPropiedades(ptipoBusqueda, pdatos);
         }
 
         public List<String> obtenerTipo(String pTipo)
         {
             return _propiedades.obtenerTipo(pTipo);
         }
-        
-        
+
+        public String listarPropiedad(String[] pdatos)
+        {
+            return _propiedades.listarPropiedad(pdatos);
+            
+        }
+
     }
 }

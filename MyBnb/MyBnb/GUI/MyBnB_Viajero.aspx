@@ -17,7 +17,7 @@
                     <asp:MenuItem Text="Modificar Usuario" Value="0" Selected="True"></asp:MenuItem>
                     <asp:MenuItem Text="Listar Propiedad" Value="1"></asp:MenuItem>
                     <asp:MenuItem Text="Reservar Viaje" Value="2"></asp:MenuItem>
-                    <asp:MenuItem Text="Solicitar Anfitrión" Value="3"></asp:MenuItem>
+                    <asp:MenuItem Text="Solicitar Anfitrion" Value="3"></asp:MenuItem>
                     <asp:MenuItem Text="Administrar Wishlist" Value="4"></asp:MenuItem>
               </Items>
               <StaticHoverStyle BackColor="Silver" />
@@ -132,30 +132,24 @@
                           <br />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:Label ID="Label_Tipo" runat="server" Text="Tipo:"></asp:Label>
-                          &nbsp;&nbsp;
-                          <asp:DropDownList ID="DropDownList_Tipo_ListarPropiedad" runat="server" 
-                              Width="200px" AutoPostBack="True" 
-                              >
+                          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:DropDownList ID="DropDownList_Tipo_ListarPropiedad" runat="server" 
+                              AutoPostBack="True" style="margin-top: 5px; margin-left: 0px;" Width="200px">
                               <asp:ListItem></asp:ListItem>
                           </asp:DropDownList>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
                           <br />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:Label ID="Label_Capacidad" runat="server" Text="Capacidad:"></asp:Label>
-                          &nbsp;&nbsp;
-                          <asp:DropDownList ID="DropDownList_Capacidad_ListarPropiedad" runat="server" 
-                              Width="200px" AutoPostBack="True">
-                              <asp:ListItem></asp:ListItem>
-                          </asp:DropDownList>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <br />
+                          &nbsp;&nbsp; &nbsp;<asp:TextBox ID="TextBox_Capacidad_ListarPropiedad0" runat="server" 
+                              Width="200px"></asp:TextBox>
+                          &nbsp;&nbsp;&nbsp;<br />
                           <br />
                           <asp:Label ID="Label_Descripcion2" runat="server" Text="Descripcion:"></asp:Label>
                           &nbsp;&nbsp;
                           <asp:TextBox ID="TextBox_Descripcion_ListarPropiedad" runat="server" 
                               Height="80px" TextMode="MultiLine" Width="200px"></asp:TextBox>
-                          &nbsp;&nbsp;*&nbsp;&nbsp;
+                          &nbsp;&nbsp;**&nbsp;&nbsp;
                           <br />
                           <br />
                           <asp:Label ID="Label_Fotografia_ListarPropiedad" runat="server" 
@@ -199,8 +193,8 @@
                           <br />
                           <asp:Label ID="Label_Pais_ListarPropiedad" runat="server" Text="Localidad:"></asp:Label>
                           &nbsp;&nbsp;
-                          <asp:DropDownList ID="DropDownList_Pais_ListarPropiedad" runat="server" 
-                              Width="200px">
+                          <asp:DropDownList ID="DropDownList_Localidad_ListarPropiedad" runat="server" 
+                              Width="200px" AutoPostBack="True">
                               <asp:ListItem></asp:ListItem>
                           </asp:DropDownList>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -234,7 +228,8 @@
                           <br />
                           <asp:Label ID="Label_CantidadMinima" runat="server" 
                               Text="Cantidad de noches minima:"></asp:Label>
-                          &nbsp; &nbsp;<asp:TextBox ID="TextBox_PrecioVolumen0" runat="server" Width="100px"></asp:TextBox>
+                          &nbsp; &nbsp;<asp:TextBox ID="TextBox_CantidadNoches" runat="server" 
+                              Width="100px"></asp:TextBox>
                           &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
@@ -258,6 +253,9 @@
                           &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
                           <br />
                           &nbsp;&nbsp;<br /> * Precio en dolares estadounidenses.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                          <br />
+                          <br /> **Dato opcional.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                           <br />
                           <br />
@@ -288,8 +286,8 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:Label ID="Label_Localidad" runat="server" Text="Localidad:"></asp:Label>
                           &nbsp;&nbsp;
-                          <asp:DropDownList ID="DropDownList_Localidad_Reervar" runat="server" 
-                              Width="200px">
+                          <asp:DropDownList ID="DropDownList_Localidad_Reservar" runat="server" 
+                              Width="200px" AutoPostBack="True">
                               <asp:ListItem></asp:ListItem>
                           </asp:DropDownList>
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

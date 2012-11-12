@@ -20,8 +20,13 @@ namespace MyBnb.GUI
                 DropDownList_Tipo_ListarPropiedad.DataBind();
                 DropDownList_Hospedaje_ListarPropiedad0.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
                 DropDownList_Hospedaje_ListarPropiedad0.DataBind();
-                DropDownList_Pais_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
-                DropDownList_Pais_ListarPropiedad.DataBind();
+                DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
+                DropDownList_Localidad_ListarPropiedad.DataBind();
+                DropDownList_HoraEntrada_ListarPropiedad.DataSource = new int[]{1,2,3,4,5,6,7,8,9,10,11,12};
+                DropDownList_HoraEntrada_ListarPropiedad.DataBind();
+                DropDownList_HoraSalida_ListarPropiedad0.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+                DropDownList_HoraSalida_ListarPropiedad0.DataBind();
+
             }
         }
 
@@ -73,6 +78,28 @@ namespace MyBnb.GUI
 
         protected void Button_ListarPropiedad_ListarPropiedad_Click(object sender, EventArgs e)
         {
+            //{"@pTipoPropiedad","@pcantidadMaximaPersonas","@pTitulo","@pdescripcion","@pfoto","@phoraEntrada",
+            //    "@pHoraSalida","@pCodigoLocalidad","@pTipoHospedaje","@pprecioPorNoche","@pprecioVolumen","@pcantidadMinimaNoches"};
+
+            String[] _datos = new String[12];
+            _datos[0] = DropDownList_Tipo_ListarPropiedad.SelectedItem.ToString();
+            _datos[1] = TextBox_Capacidad_ListarPropiedad0.Text;
+            _datos[2] = TextBox_Titulo_ListarPropiedad.Text;
+            _datos[3] = TextBox_Descripcion_ListarPropiedad.Text;
+            _datos[4] = null;
+            _datos[5] = DropDownList_HoraEntrada_ListarPropiedad.SelectedItem.ToString() + " " + DropDownList_TiempoEntrada_ListarPropiedad.SelectedItem.ToString();
+            _datos[6] = DropDownList_HoraSalida_ListarPropiedad0.SelectedItem.ToString() + " " + DropDownList_TiempoSalida_ListarPropiedad3.SelectedItem.ToString();
+            _datos[7] = DropDownList_Localidad_ListarPropiedad.SelectedItem.ToString();
+            _datos[8] = DropDownList_Hospedaje_ListarPropiedad0.SelectedItem.ToString();
+            _datos[9] = TextBox_PrecioNoche_ListarPropiedad.Text;
+            _datos[10] = TextBox_PrecioVolumen.Text;
+            _datos[11] = TextBox_CantidadNoches.Text;
+
+           TextBox_Titulo_ListarPropiedad.Text =  _controllerPropiedad.listarPropiedad(_datos);
+    
+            
+
+
 
         }
 
