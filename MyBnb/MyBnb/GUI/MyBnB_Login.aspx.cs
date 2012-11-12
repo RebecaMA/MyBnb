@@ -43,6 +43,7 @@ namespace MyBnb.GUI
             resultado = _controllerUsuario.autentificarUsuario();
             if (resultado.Equals("Viajero"))
             {
+                _controllerUsuario.setLogin(login);
                 Response.Redirect("http://localhost:51088/GUI/MyBnB_Viajero.aspx"); 
             }
 

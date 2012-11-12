@@ -32,6 +32,21 @@
                           style="margin-left: 0px; margin-top: 0px; margin-right: 0px;" 
                           BackColor="White" BorderStyle="Groove">
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                           <asp:Label ID="Label_Login" runat="server" Text="Login:"></asp:Label>
+                          &nbsp;&nbsp;
+                          <asp:TextBox ID="TextBox_Login_ModificarUsuario" runat="server" Width="200px"></asp:TextBox>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <br />
+                          <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <asp:Label ID="Label_Contrasena" runat="server" Text="Password:"></asp:Label>
+                          &nbsp;&nbsp;
+                          <asp:TextBox ID="TextBox_Contrasena_ModificarUsuario" runat="server" Width="200px" TextMode="Password"></asp:TextBox>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <br />
+                          <br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         
                           <asp:Label ID="Label_Nombre" runat="server" Text="Nombre:"></asp:Label>
                           &nbsp;&nbsp;
                           <asp:TextBox ID="TextBox_Nombre_ModificarUsuario" runat="server" Width="200px"></asp:TextBox>
@@ -97,8 +112,9 @@
                           <br />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<asp:Button ID="Button_Desactivar_ModificarUsuario" 
                               runat="server" BackColor="#7AB428" ForeColor="White" Height="30px" 
-                              onclick="Button_Modificar_Click" style="margin-left: 0px; margin-top: 2px" 
-                              Text="Desactivar" Width="90px" />
+                               style="margin-left: 0px; margin-top: 2px" 
+                              Text="Desactivar" Width="90px" 
+                              onclick="Button_Desactivar_ModificarUsuario_Click" />
                           &nbsp; &nbsp;
                           <asp:Button ID="Button_Modificar_ModificarUsuario" runat="server" BackColor="#7AB428" 
                               ForeColor="White" Height="30px" onclick="Button_Modificar_Click" 
@@ -352,13 +368,14 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:Button ID="Button_Ver_ListarPropiedad0" runat="server" 
                               BackColor="#7AB428" ForeColor="White" Height="30px" 
-                              onclick="Button_Modificar_Click" style="margin-left: 0px; margin-top: 2px" 
-                              Text="Ver" Width="90px" />
+                              style="margin-left: 0px; margin-top: 2px" 
+                              Text="Mostrar Propiedades" Width="150px" 
+                              onclick="Button_Ver_ListarPropiedad0_Click" />
                           &nbsp;&nbsp;&nbsp;&nbsp;
-                          <asp:Button ID="Button_Reservar_ListarPropiedad1" runat="server" 
+                          <asp:Button ID="Button_Reservar_ListarPropiedad" runat="server" 
                               BackColor="#7AB428" ForeColor="White" Height="30px" 
-                              onclick="Button_Modificar_Click" style="margin-left: 0px; margin-top: 2px" 
-                              Text="Reservar" Width="90px" />
+                               style="margin-left: 0px; margin-top: 2px" 
+                              Text="Reservar" Width="150px" />
                           <br />
                           <br />
                           <br />

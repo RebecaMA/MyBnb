@@ -49,6 +49,42 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Panel Panel_ModificarUsuario;
         
         /// <summary>
+        /// Control Label_Login.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Login;
+        
+        /// <summary>
+        /// Control TextBox_Login_ModificarUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Login_ModificarUsuario;
+        
+        /// <summary>
+        /// Control Label_Contrasena.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Contrasena;
+        
+        /// <summary>
+        /// Control TextBox_Contrasena_ModificarUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Contrasena_ModificarUsuario;
+        
+        /// <summary>
         /// Control Label_Nombre.
         /// </summary>
         /// <remarks>
@@ -571,13 +607,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Button Button_Ver_ListarPropiedad0;
         
         /// <summary>
-        /// Control Button_Reservar_ListarPropiedad1.
+        /// Control Button_Reservar_ListarPropiedad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_Reservar_ListarPropiedad1;
+        protected global::System.Web.UI.WebControls.Button Button_Reservar_ListarPropiedad;
         
         /// <summary>
         /// Control Button_LogOut_ListarPropiedad0.

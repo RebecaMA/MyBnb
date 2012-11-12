@@ -11,6 +11,7 @@ namespace MyBnb.GUI
     public partial class MyBnB_Viajero : System.Web.UI.Page
     {
         ControllerPropiedades _controllerPropiedad = new ControllerPropiedades();
+        ControllerUsuario _controllerUsuario = new ControllerUsuario();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) 
@@ -26,6 +27,10 @@ namespace MyBnb.GUI
                 DropDownList_HoraEntrada_ListarPropiedad.DataBind();
                 DropDownList_HoraSalida_ListarPropiedad0.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
                 DropDownList_HoraSalida_ListarPropiedad0.DataBind();
+
+                // Reservar 
+                DropDownList_Localidad_Reservar.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
+                DropDownList_Localidad_Reservar.DataBind();
 
             }
         }
@@ -49,18 +54,52 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void Button_Modificar_Click(object sender, EventArgs e)
         {
+            //String[] _nombreparametros = new String[12] {"@pusuario","@plogin","@ppassword","@descripcion","@pnombre",
+            //                                            "@papellido","@pfechaNacimiento","@pemail","@ptelefono","@pgenero","@ppais","@pestadoUsuario" };
+
+            String[] datos = new String[12];
+            datos[0] = _controllerUsuario.getLogin();
+            datos[1] = TextBox_Login_ModificarUsuario.Text;
+            datos[2] = TextBox_Contrasena_ModificarUsuario.Text;
+            datos[3] = TextBox_Descripcion_ModificarUsuario.Text;
+            datos[4] = TextBox_Nombre_ModificarUsuario.Text;
+            datos[5] = TextBox_Apellidos_ModificarUsuario.Text;
+            datos[6] = "";
+            datos[7] = TextBox_Email_ModificarUsuario.Text;
+            datos[8] = TextBox_Telefono_ModificarUsuario.Text;
+            datos[9] = DropDownList_Sexo_ModificarUsuario.SelectedValue.ToString();
+            datos[10] = TextBox_Pais_ModificarUsuario.Text;
+            datos[11] = "";
+
+            _controllerUsuario.modificarUsuario(datos);
 
         }
+
 
         /// <summary>
         /// Se encarga de desacticar el perfil del usuario.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void Button_Desactivar_Click(object sender, EventArgs e)
+        protected void Button_Desactivar_ModificarUsuario_Click(object sender, EventArgs e)
         {
+            String[] datos = new String[12];
+            datos[0] = _controllerUsuario.getLogin();
+            datos[1] = TextBox_Login_ModificarUsuario.Text;
+            datos[2] = TextBox_Contrasena_ModificarUsuario.Text;
+            datos[3] = TextBox_Descripcion_ModificarUsuario.Text;
+            datos[4] = TextBox_Nombre_ModificarUsuario.Text;
+            datos[5] = TextBox_Apellidos_ModificarUsuario.Text;
+            datos[6] = "";
+            datos[7] = TextBox_Email_ModificarUsuario.Text;
+            datos[8] = TextBox_Telefono_ModificarUsuario.Text;
+            datos[9] = DropDownList_Sexo_ModificarUsuario.SelectedValue.ToString();
+            datos[10] = TextBox_Pais_ModificarUsuario.Text;
+            datos[11] = "Inactivo";
 
+            _controllerUsuario.modificarUsuario(datos);
         }
+
 
         /// <summary>
         /// Se encarga de cerrar sesion del usuario.
@@ -178,8 +217,16 @@ namespace MyBnb.GUI
             }
         }
 
+        protected void Button_Ver_ListarPropiedad0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         #endregion
 
+       
+       
         #region Solicitar Anfitrion
 
         #endregion

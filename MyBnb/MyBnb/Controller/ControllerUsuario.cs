@@ -10,7 +10,8 @@ namespace MyBnb.Controller
     {
         Usuarios _usuario = new Usuarios();
         static String _login, _contraseña;
-      
+
+           
         public ControllerUsuario() 
         {
 
@@ -33,6 +34,11 @@ namespace MyBnb.Controller
         {
             return _usuario.autentificarUsuario(_login, _contraseña);
         }
+
+        public void modificarUsuario(String[] pdatos) 
+        {
+            _usuario.modificarUsuario(pdatos);
+        }
         public String getLogin()
         {
             return _login;
@@ -41,6 +47,11 @@ namespace MyBnb.Controller
         public String getContraseña()
         {
             return _contraseña;
+        }
+
+        public void setLogin(String plogin)
+        {
+            _login = plogin;
         }
     }
 }

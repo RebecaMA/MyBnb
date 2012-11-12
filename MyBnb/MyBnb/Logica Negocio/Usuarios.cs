@@ -41,5 +41,20 @@ namespace MyBnb.Logica_Negocio
         {
             return _accesoDatos.auntentificarUsuario(plogin, pcontraseña);
         }
+
+
+        public void modificarUsuario(String[] pdatos)
+        {
+
+            for (int i = 2; i < 12; i++)
+            { 
+                if(pdatos[i].Equals(""))
+                {
+                    pdatos[i] = null;   
+                }
+            }
+
+            _accesoDatos.modificarUsuario(pdatos);
+        }
     }
 }

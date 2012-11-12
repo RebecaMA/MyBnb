@@ -40,5 +40,13 @@ namespace MyBnb.Acceso_Datos
             }
             return retorno;
         }
+
+        public void modificarUsuario(String[] pdatos)
+        { 
+             String[] _nombreparametros = new String[12] {"@pusuario","@plogin","@ppassword","@descripcion","@pnombre",
+                                                        "@papellido","@pfechaNacimiento","@pemail","@ptelefono","@pgenero","@ppais","@pestadoUsuario" };
+
+            _accesoDatos.escribir("spmodificarUsuario", _nombreparametros, pdatos);
+        }
     }
 }
