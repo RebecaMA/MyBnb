@@ -16,9 +16,10 @@
               <Items>
                     <asp:MenuItem Text="Modificar Usuario" Value="0" Selected="True"></asp:MenuItem>
                     <asp:MenuItem Text="Listar Propiedad" Value="1"></asp:MenuItem>
-                    <asp:MenuItem Text="Reservar Viaje" Value="2"></asp:MenuItem>
-                    <asp:MenuItem Text="Solicitar Anfitrion" Value="3"></asp:MenuItem>
-                    <asp:MenuItem Text="Administrar Wishlist" Value="4"></asp:MenuItem>
+                    <asp:MenuItem Text="Crear Viaje" Value="2"></asp:MenuItem>
+                    <asp:MenuItem Text="Propiedades" Value="3"></asp:MenuItem>
+                    <asp:MenuItem Text="Solicitar Anfitrion" Value="4"></asp:MenuItem>
+                    <asp:MenuItem Text="Administrar Wishlist" Value="5"></asp:MenuItem>
               </Items>
               <StaticHoverStyle BackColor="Silver" />
               <StaticMenuItemStyle BorderColor="#404040" BorderStyle="Solid" BorderWidth="1px" />
@@ -278,7 +279,7 @@
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                       </asp:Panel>
                  </asp:View>
-                <asp:View ID="ViewReservarViaje" runat="server">
+                <asp:View ID="ViewCrearViaje" runat="server">
                       <asp:Panel ID="Panel_ListarPropiedad0" runat="server" BackColor="White" 
                           BorderStyle="Groove" HorizontalAlign="Left" ScrollBars="Vertical" 
                           style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
@@ -291,95 +292,157 @@
                           <br />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label_FechaInicio_Reservar" runat="server" 
                               Text="Fecha Inicio:"></asp:Label>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList_FechaInicioDia_Reservar" runat="server">
+                              <asp:ListItem>- Dia -</asp:ListItem>
+                              <asp:ListItem>1</asp:ListItem>
+                              <asp:ListItem>2</asp:ListItem>
+                              <asp:ListItem>3</asp:ListItem>
+                              <asp:ListItem>4</asp:ListItem>
+                              <asp:ListItem>5</asp:ListItem>
+                              <asp:ListItem>6</asp:ListItem>
+                              <asp:ListItem>7</asp:ListItem>
+                              <asp:ListItem>8</asp:ListItem>
+                              <asp:ListItem>9</asp:ListItem>
+                              <asp:ListItem>10</asp:ListItem>
+                              <asp:ListItem>11</asp:ListItem>
+                              <asp:ListItem>12</asp:ListItem>
+                              <asp:ListItem>13</asp:ListItem>
+                              <asp:ListItem>14</asp:ListItem>
+                              <asp:ListItem>15</asp:ListItem>
+                              <asp:ListItem>16</asp:ListItem>
+                              <asp:ListItem>17</asp:ListItem>
+                              <asp:ListItem>18</asp:ListItem>
+                              <asp:ListItem>19</asp:ListItem>
+                              <asp:ListItem>20</asp:ListItem>
+                              <asp:ListItem>21</asp:ListItem>
+                              <asp:ListItem>22</asp:ListItem>
+                              <asp:ListItem>23</asp:ListItem>
+                              <asp:ListItem>24</asp:ListItem>
+                              <asp:ListItem>25</asp:ListItem>
+                              <asp:ListItem>26</asp:ListItem>
+                              <asp:ListItem>27</asp:ListItem>
+                              <asp:ListItem>28</asp:ListItem>
+                              <asp:ListItem>29</asp:ListItem>
+                              <asp:ListItem>30</asp:ListItem>
+                              <asp:ListItem>31</asp:ListItem>
+                          </asp:DropDownList>
+                          &nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList_FechaInicioMes_Reservar" runat="server">
+                              <asp:ListItem Value="- Mes -"></asp:ListItem>
+                              <asp:ListItem>Enero</asp:ListItem>
+                              <asp:ListItem>Febrero</asp:ListItem>
+                              <asp:ListItem>Marzo</asp:ListItem>
+                              <asp:ListItem>Abril</asp:ListItem>
+                              <asp:ListItem>Mayo</asp:ListItem>
+                              <asp:ListItem>Junio</asp:ListItem>
+                              <asp:ListItem>Julio</asp:ListItem>
+                              <asp:ListItem>Agosto</asp:ListItem>
+                              <asp:ListItem>Septiembre</asp:ListItem>
+                              <asp:ListItem>Octubre</asp:ListItem>
+                              <asp:ListItem>Noviembre</asp:ListItem>
+                              <asp:ListItem>Diciembre</asp:ListItem>
+                          </asp:DropDownList>
+                          &nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList_FechaInicioAho_Reservar" runat="server">
+                              <asp:ListItem>- Aho -</asp:ListItem>
+                              <asp:ListItem>2012</asp:ListItem>
+                              <asp:ListItem>2013</asp:ListItem>
+                              <asp:ListItem>2014</asp:ListItem>
+                              <asp:ListItem>2015</asp:ListItem>
+                              <asp:ListItem>2016</asp:ListItem>
+                              <asp:ListItem>2017</asp:ListItem>
+                              <asp:ListItem>2018</asp:ListItem>
+                              <asp:ListItem>2019</asp:ListItem>
+                              <asp:ListItem>2020</asp:ListItem>
+                              <asp:ListItem>2021</asp:ListItem>
+                          </asp:DropDownList>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
                           <br />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:Label ID="Label_FechaFin" runat="server" Text="Fecha Fin:"></asp:Label>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <br />
-                          <br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <asp:Label ID="Label_Localidad" runat="server" Text="Localidad:"></asp:Label>
-                          &nbsp;&nbsp;
-                          <asp:DropDownList ID="DropDownList_Localidad_Reservar" runat="server" 
-                              Width="200px" AutoPostBack="True">
-                              <asp:ListItem></asp:ListItem>
+                          &nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList_FechaFinDia_Reservar" runat="server">
+                              <asp:ListItem>- Dia -</asp:ListItem>
+                              <asp:ListItem>1</asp:ListItem>
+                              <asp:ListItem>2</asp:ListItem>
+                              <asp:ListItem>3</asp:ListItem>
+                              <asp:ListItem>4</asp:ListItem>
+                              <asp:ListItem>5</asp:ListItem>
+                              <asp:ListItem>6</asp:ListItem>
+                              <asp:ListItem>7</asp:ListItem>
+                              <asp:ListItem>8</asp:ListItem>
+                              <asp:ListItem>9</asp:ListItem>
+                              <asp:ListItem>10</asp:ListItem>
+                              <asp:ListItem>11</asp:ListItem>
+                              <asp:ListItem>12</asp:ListItem>
+                              <asp:ListItem>13</asp:ListItem>
+                              <asp:ListItem>14</asp:ListItem>
+                              <asp:ListItem>15</asp:ListItem>
+                              <asp:ListItem>16</asp:ListItem>
+                              <asp:ListItem>17</asp:ListItem>
+                              <asp:ListItem>18</asp:ListItem>
+                              <asp:ListItem>19</asp:ListItem>
+                              <asp:ListItem>20</asp:ListItem>
+                              <asp:ListItem>21</asp:ListItem>
+                              <asp:ListItem>22</asp:ListItem>
+                              <asp:ListItem>23</asp:ListItem>
+                              <asp:ListItem>24</asp:ListItem>
+                              <asp:ListItem>25</asp:ListItem>
+                              <asp:ListItem>26</asp:ListItem>
+                              <asp:ListItem>27</asp:ListItem>
+                              <asp:ListItem>28</asp:ListItem>
+                              <asp:ListItem>29</asp:ListItem>
+                              <asp:ListItem>30</asp:ListItem>
+                              <asp:ListItem>31</asp:ListItem>
                           </asp:DropDownList>
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList 
+                              ID="DropDownList_FechaFinMes_Reservar1" runat="server">
+                              <asp:ListItem Value="- Mes -"></asp:ListItem>
+                              <asp:ListItem>Enero</asp:ListItem>
+                              <asp:ListItem>Febrero</asp:ListItem>
+                              <asp:ListItem>Marzo</asp:ListItem>
+                              <asp:ListItem>Abril</asp:ListItem>
+                              <asp:ListItem>Mayo</asp:ListItem>
+                              <asp:ListItem>Junio</asp:ListItem>
+                              <asp:ListItem>Julio</asp:ListItem>
+                              <asp:ListItem>Agosto</asp:ListItem>
+                              <asp:ListItem>Septiembre</asp:ListItem>
+                              <asp:ListItem>Octubre</asp:ListItem>
+                              <asp:ListItem>Noviembre</asp:ListItem>
+                              <asp:ListItem>Diciembre</asp:ListItem>
+                          </asp:DropDownList>
+                          &nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList_FechaFinAho_Reservar" runat="server">
+                              <asp:ListItem>- Aho -</asp:ListItem>
+                              <asp:ListItem>2012</asp:ListItem>
+                              <asp:ListItem>2013</asp:ListItem>
+                              <asp:ListItem>2014</asp:ListItem>
+                              <asp:ListItem>2015</asp:ListItem>
+                              <asp:ListItem>2016</asp:ListItem>
+                              <asp:ListItem>2017</asp:ListItem>
+                              <asp:ListItem>2018</asp:ListItem>
+                              <asp:ListItem>2019</asp:ListItem>
+                              <asp:ListItem>2020</asp:ListItem>
+                              <asp:ListItem>2021</asp:ListItem>
+                          </asp:DropDownList>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                           <br />
                           <br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-                          <br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <asp:GridView ID="GridView_Reservar" runat="server" AutoGenerateColumns="False" 
-                              CellSpacing="1" HorizontalAlign="Center" 
-                              onrowcommand="GridView_Reservar_RowCommand" ShowFooter="True">
-                              <Columns>
-                                  <asp:TemplateField HeaderText="Titulo" SortExpression="Titulo">
-                                      <EditItemTemplate>
-                                          <asp:TextBox ID="TextBox1" runat="server" Text="Titulo"></asp:TextBox>
-                                      </EditItemTemplate>
-                                      <ItemTemplate>
-                                          <asp:Label ID="Label1" runat="server" Text="Titulo"></asp:Label>
-                                      </ItemTemplate>
-                                  </asp:TemplateField>
-                                  <asp:TemplateField HeaderText="Tipo" SortExpression="Tipo">
-                                      <EditItemTemplate>
-                                          <asp:TextBox ID="TextBox2" runat="server" Text="Tipo"></asp:TextBox>
-                                      </EditItemTemplate>
-                                      <ItemTemplate>
-                                          <asp:Label ID="Label2" runat="server" Text="Tipo"></asp:Label>
-                                      </ItemTemplate>
-                                  </asp:TemplateField>
-                                  <asp:TemplateField HeaderText="Localidad" SortExpression="Localidad">
-                                      <EditItemTemplate>
-                                          <asp:TextBox ID="TextBox3" runat="server" Text="Localidad"></asp:TextBox>
-                                      </EditItemTemplate>
-                                      <ItemTemplate>
-                                          <asp:Label ID="Label3" runat="server" Text="Localidad"></asp:Label>
-                                      </ItemTemplate>
-                                  </asp:TemplateField>
-                                  <asp:TemplateField HeaderText="Capacidad" SortExpression="Capacidad">
-                                      <EditItemTemplate>
-                                          <asp:TextBox ID="TextBox4" runat="server" Text="Capacidad"></asp:TextBox>
-                                      </EditItemTemplate>
-                                      <ItemTemplate>
-                                          <asp:Label ID="Label4" runat="server" Text="Capacidad"></asp:Label>
-                                      </ItemTemplate>
-                                  </asp:TemplateField>
-                                  <asp:TemplateField HeaderText="Precio" SortExpression="Precio">
-                                      <EditItemTemplate>
-                                          <asp:TextBox ID="TextBox5" runat="server" Text="Precio"></asp:TextBox>
-                                      </EditItemTemplate>
-                                      <ItemTemplate>
-                                          <asp:Label ID="Label5" runat="server" Text="Precio"></asp:Label>
-                                      </ItemTemplate>
-                                  </asp:TemplateField>
-                              </Columns>
-                          </asp:GridView>
-                          <br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                          <br />
-                          <br />
-                          <br />
-                          <br />
-                          <br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <asp:Button ID="Button_Ver_ListarPropiedad0" runat="server" 
+                          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <asp:Button ID="Button_CrearViaje_ListarPropiedad" runat="server" 
                               BackColor="#7AB428" ForeColor="White" Height="30px" 
-                              style="margin-left: 0px; margin-top: 2px" 
-                              Text="Mostrar Propiedades" Width="150px" 
-                              onclick="Button_Ver_ListarPropiedad0_Click" />
+                              onclick="Button_CrearViaje_ListarPropiedad_Click" 
+                              style="margin-left: 0px; margin-top: 2px" Text="Crear" 
+                              Width="150px" />
                           &nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:Button ID="Button_Reservar_ListarPropiedad" runat="server" 
                               BackColor="#7AB428" ForeColor="White" Height="30px" 
-                               style="margin-left: 0px; margin-top: 2px" 
-                              Text="Reservar" Width="150px" />
+                              style="margin-left: 0px; margin-top: 2px" Text="Crear y Reservar" 
+                              Width="150px" />
                           <br />
                           <br />
                           <br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           <asp:Button ID="Button_LogOut_ListarPropiedad0" runat="server" 
                               BackColor="#671160" ForeColor="White" Height="30px" 
                               onclick="Button_LogOut_Click" style="margin-left: 0px; margin-top: 2px" 
@@ -391,6 +454,8 @@
                           <br />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                       </asp:Panel>
+                 </asp:View>
+                 <asp:View ID="ViewPropiedades" runat="server">
                  </asp:View>
                  <asp:View ID="ViewSolicitarAnfitrion" runat="server">
                  </asp:View>

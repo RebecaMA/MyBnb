@@ -17,20 +17,20 @@ namespace MyBnb.GUI
             if (!IsPostBack) 
             {
                 MultiViewTabControl.ActiveViewIndex = 0;
-                DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
-                DropDownList_Tipo_ListarPropiedad.DataBind();
-                DropDownList_Hospedaje_ListarPropiedad0.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
-                DropDownList_Hospedaje_ListarPropiedad0.DataBind();
-                DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
-                DropDownList_Localidad_ListarPropiedad.DataBind();
-                DropDownList_HoraEntrada_ListarPropiedad.DataSource = new int[]{1,2,3,4,5,6,7,8,9,10,11,12};
-                DropDownList_HoraEntrada_ListarPropiedad.DataBind();
-                DropDownList_HoraSalida_ListarPropiedad0.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-                DropDownList_HoraSalida_ListarPropiedad0.DataBind();
+               // DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
+               // DropDownList_Tipo_ListarPropiedad.DataBind();
+               // DropDownList_Hospedaje_ListarPropiedad0.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
+               // DropDownList_Hospedaje_ListarPropiedad0.DataBind();
+               // DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
+               // DropDownList_Localidad_ListarPropiedad.DataBind();
+               // DropDownList_HoraEntrada_ListarPropiedad.DataSource = new int[]{1,2,3,4,5,6,7,8,9,10,11,12};
+               // DropDownList_HoraEntrada_ListarPropiedad.DataBind();
+               // DropDownList_HoraSalida_ListarPropiedad0.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+               // DropDownList_HoraSalida_ListarPropiedad0.DataBind();
 
                 // Reservar 
-                DropDownList_Localidad_Reservar.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
-                DropDownList_Localidad_Reservar.DataBind();
+                //DropDownList_Localidad_Reservar.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
+                //DropDownList_Localidad_Reservar.DataBind();
 
             }
         }
@@ -200,30 +200,30 @@ namespace MyBnb.GUI
             }
         }
 
-        protected void GridView_Reservar_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            if (e.CommandName.Equals("AddNew"))
-            {
-                TextBox txtNewName = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewName");
-                TextBox txtNewId = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewId");
+        //protected void GridView_Reservar_RowCommand(object sender, GridViewCommandEventArgs e)
+        //{
+        //    if (e.CommandName.Equals("AddNew"))
+        //    {
+        //        TextBox txtNewName = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewName");
+        //        TextBox txtNewId = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewId");
 
-                Persona p = new Persona();
-                p.Id = txtNewId.Text;
-                p.Nombre = txtNewName.Text;
+        //        Persona p = new Persona();
+        //        p.Id = txtNewId.Text;
+        //        p.Nombre = txtNewName.Text;
 
-                this.GuardarLista(p);
-                this.GridView_Reservar.DataSource = this.ObtenerLista();
-                this.GridView_Reservar.DataBind();
-            }
-        }
-
-        protected void Button_Ver_ListarPropiedad0_Click(object sender, EventArgs e)
-        {
-
-        }
+        //        this.GuardarLista(p);
+        //        this.GridView_Reservar.DataSource = this.ObtenerLista();
+        //        this.GridView_Reservar.DataBind();
+        //    }
+        //}
 
 
         #endregion
+
+        protected void Button_CrearViaje_ListarPropiedad_Click(object sender, EventArgs e)
+        {
+
+        }
 
        
        

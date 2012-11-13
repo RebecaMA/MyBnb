@@ -59,6 +59,7 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GUI\MyBnB_Propiedades.aspx" />
     <Content Include="GUI\MyBnB_Viajero.aspx" />
     <Content Include="GUI\MyBnB_Login.aspx" />
     <Content Include="GUI\MyBnB_Register.aspx" />
@@ -86,6 +87,13 @@
     <Compile Include="Controller\ControllerViaje.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MyBnB_Propiedades.aspx.cs">
+      <DependentUpon>MyBnB_Propiedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\MyBnB_Propiedades.aspx.designer.cs">
+      <DependentUpon>MyBnB_Propiedades.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\MyBnB_Viajero.aspx.cs">
       <DependentUpon>MyBnB_Viajero.aspx</DependentUpon>
