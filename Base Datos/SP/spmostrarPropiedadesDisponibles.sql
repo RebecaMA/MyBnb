@@ -20,7 +20,8 @@ AS BEGIN
 	horaSalida time(7),
 	precioPorNoche money,
 	precioVolumen money,
-	cantidadMinimanoches int
+	cantidadMinimanoches int,
+	ranking int
  );
  
 declare @titulo nvarchar(20);
@@ -33,16 +34,17 @@ declare @precioVolumen money;
 declare @cantidadMinimanoches int;
 declare @idPropiedad int;
 declare @fk_idLocalidad int = (select idLocalidad from Localidad where CodigoLocalidad = @pCodigoLocalidad);
+declare @ranking int;
 
 
 
 DECLARE cursorobtenerPropiedades CURSOR LOCAL FOR
-select 	idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches 
+select 	idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches, Ranking
 		from Propiedad where fk_idLocalidad = @fk_idLocalidad
 
 OPEN cursorobtenerPropiedades
 FETCH NEXT FROM cursorobtenerPropiedades
-INTO @idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches 
+INTO @idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches,@ranking
 
 WHILE @@fetch_status = 0
 BEGIN
@@ -56,11 +58,11 @@ BEGIN
 	
 
 FETCH NEXT FROM cursorobtenerPropiedades
-INTO @idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches 
+INTO @idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches,@ranking 
 END
 
-select idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches 
-from #PropiedadesTemporal
+select idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches, Ranking ranking
+from #PropiedadesTemporal ORDER BY ranking
 
 END
 
@@ -70,4 +72,4 @@ END
 select * from Localidad
 select * from propiedad
 select * from reservacion
-EXEC spmostrarPropiedadesDisponibles '2012/10/03','2012/10/05','SCLU'--verificar la de reservaciones bien, la logica no sirve siempre
+EXEC spmostrarPropiedadesDisponibles '2012/10/03','2012/10/05','SCLU'

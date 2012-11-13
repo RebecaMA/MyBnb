@@ -46,7 +46,7 @@ namespace MyBnb.Logica_Negocio
         public void modificarUsuario(String[] pdatos)
         {
 
-            for (int i = 2; i < 12; i++)
+            for (int i = 0; i < 12; i++)
             { 
                 if(pdatos[i].Equals(""))
                 {
