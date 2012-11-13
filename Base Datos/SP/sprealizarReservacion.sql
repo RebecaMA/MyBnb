@@ -1,16 +1,20 @@
 --opcionales telefono, fecha nacimiento, descripcion 
 
-CREATE PROCEDURE [dbo].[sprealizarReservacion]
+ALTER PROCEDURE [dbo].[sprealizarReservacion]
 	@pfechaEntrada date, 
 	@pfechaSalida date,
   	@pprecioTotal money,
   	@pcantidadnoches int,
-  	@plogin nvarchar(30),
-  	@pidPropiedad int
+  	@pidPropiedad int,
+  	@pidViaje nvarchar(30)
 AS BEGIN
-	insert into Reservacion(fechaEntrada,fechaSalida,precioTotal,cantidadNoches,fk_idUsuario,fk_idPropiedad)
-				values(@pfechaEntrada,@pfechaSalida,@pprecioTotal,@pcantidadnoches,
-				(select idUsuario from Usuario where login = @plogin),@pidPropiedad)
+	insert into Reservacion(fechaEntrada,fechaSalida,precioTotal,cantidadNoches,fk_idPropiedad)
+				values(@pfechaEntrada,@pfechaSalida,@pprecioTotal,@pcantidadnoches,@pidPropiedad)
+				
+	declare @idReservacion int = @@IDENTITY
+	
+	insert into ReservacionesXViaje (fk_idReservacion,fk_idViaje)
+				values(@pidViaje,@idReservacion)
 						
 				
 END

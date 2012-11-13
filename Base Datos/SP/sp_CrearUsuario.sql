@@ -16,7 +16,13 @@ CREATE PROCEDURE [dbo].[spcrearUsuario]
   	
 AS BEGIN
 declare @passwEncriptado varbinary(50) = HASHBYTES('MD5', @ppassword);
+
+declare @idUsuario int = (select idUsuario from Usuario where login = @plogin)
+declare @valor int = isnull(@idUsuario,-30)
 declare @pidPersona int;
+
+if(@valor = -30)
+begin
 	insert into Persona(nombre,apellido,fechaNacimiento,email,telefono,fk_idGenero,fk_idPais)
 		   values(@pnombre,@papellido,isnull(@pfechaNacimiento,null),@pemail,isnull(@ptelefono,null),
 				(select idGenero from Genero where genero = @pgenero),
@@ -28,8 +34,9 @@ declare @pidPersona int;
 				values (@plogin,@passwEncriptado, @pfechaInscripcion, isnull(@descripcion,null),
 						@pidPersona, (select idEstadoUsuario from EstadoUsuario where estadoUsuario = 'Activo'),
 						(select idTipoUsuario from TipoUsuario where tipoUsuario = @ptipousuario));
-						
-				
+select 'Usuario Creado'						
+END				
+else 'Login de usuario ya existe'
 END
 
  @pnombre nvarchar(20),
