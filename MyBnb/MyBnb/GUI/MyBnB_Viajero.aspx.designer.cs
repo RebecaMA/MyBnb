@@ -238,15 +238,6 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Button Button_Modificar_ModificarUsuario;
         
         /// <summary>
-        /// Button_LogOut_ModificarUsuario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_LogOut_ModificarUsuario;
-        
-        /// <summary>
         /// ViewListarPropiedad control.
         /// </summary>
         /// <remarks>
@@ -310,13 +301,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_Capacidad;
         
         /// <summary>
-        /// TextBox_Capacidad_ListarPropiedad0 control.
+        /// TextBox_Capacidad_ListarPropiedad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_Capacidad_ListarPropiedad0;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Capacidad_ListarPropiedad;
         
         /// <summary>
         /// Label_Descripcion2 control.
@@ -508,15 +499,6 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Button Button_ListarPropiedad_ListarPropiedad;
         
         /// <summary>
-        /// Button_LogOut_ListarPropiedad control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_LogOut_ListarPropiedad;
-        
-        /// <summary>
         /// ViewCrearViaje control.
         /// </summary>
         /// <remarks>
@@ -641,15 +623,6 @@ namespace MyBnb.GUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button_Reservar_ListarPropiedad;
-        
-        /// <summary>
-        /// Button_LogOut_ListarPropiedad0 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_LogOut_ListarPropiedad0;
         
         /// <summary>
         /// ViewPropiedades control.

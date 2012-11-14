@@ -14,20 +14,16 @@
     <div class="page">
         <div class="header" style="color: #000000; background-color: #CCCCCC">
             <div class="title" align="right" style="color: #000000">
-                <h1 align="right" style="color: #000000">
-                    MyBnB
+                <h1 align="left" style="color: #000000">
+                    <asp:Image ID="Image_LogoMyBnB" runat="server" ImageUrl="~/Images/MyBnB_pequeño.png" 
+                         style="margin-left: 5px; margin-top: 5px" />
+                    <asp:Label ID="Label_Usuario_Master" runat="server" Font-Size="Small" 
+                         style="margin-left: 530px; margin-top: 2px"
+                         Text="Usuario"></asp:Label>
+                    <asp:Button ID="Button_LogOut_Master" runat="server" BackColor="#671160" 
+                         ForeColor="White" Height="30px" 
+                         style="margin-left: 20px; margin-top: 2px" Text="Log Out" Width="90px" />
                 </h1>
-            </div>
-            <div class="loginDisplay">
-                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                    <AnonymousTemplate>
-                      
-                    </AnonymousTemplate>
-                    <LoggedInTemplate>
-                        Pantalla de bienvenida <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Cerrar sesión" LogoutPageUrl="~/"/> ]
-                    </LoggedInTemplate>
-                </asp:LoginView>
             </div>
             <div class="clear hideSkiplink">
             </div>

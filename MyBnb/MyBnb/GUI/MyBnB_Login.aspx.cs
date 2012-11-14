@@ -13,7 +13,7 @@ namespace MyBnb.GUI
         ControllerUsuario _controllerUsuario;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Button_Registrarse_Click(object sender, EventArgs e)

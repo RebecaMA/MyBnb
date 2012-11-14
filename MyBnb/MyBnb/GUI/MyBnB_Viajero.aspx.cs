@@ -98,18 +98,7 @@ namespace MyBnb.GUI
             datos[11] = "Inactivo";
 
             _controllerUsuario.modificarUsuario(datos);
-        }
-
-
-        /// <summary>
-        /// Se encarga de cerrar sesion del usuario.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void Button_LogOut_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("http://localhost:51088/GUI/MyBnB_Login.aspx"); 
-        }   
+        } 
 
         #endregion
       
@@ -122,7 +111,7 @@ namespace MyBnb.GUI
 
             String[] _datos = new String[12];
             _datos[0] = DropDownList_Tipo_ListarPropiedad.SelectedItem.ToString();
-            _datos[1] = TextBox_Capacidad_ListarPropiedad0.Text;
+            _datos[1] = TextBox_Capacidad_ListarPropiedad.Text;
             _datos[2] = TextBox_Titulo_ListarPropiedad.Text;
             _datos[3] = TextBox_Descripcion_ListarPropiedad.Text;
             _datos[4] = null;
