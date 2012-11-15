@@ -63,8 +63,11 @@
     <Content Include="GUI\MyBnB_Viajero.aspx" />
     <Content Include="GUI\MyBnB_Login.aspx" />
     <Content Include="GUI\MyBnB_Register.aspx" />
+    <Content Include="Images\casa.jpg" />
     <Content Include="Images\MyBnB.PNG" />
     <Content Include="Images\MyBnB_pequeño.png" />
+    <Content Include="Images\Next.png" />
+    <Content Include="Images\Preview.png" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />

@@ -6,9 +6,11 @@ body
     background: #b6b7bc;
     font-size: .80em;
     font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
-    margin: 0px;
+    margin: 0px 0px 0px 32px;
     padding: 0px;
     color: #696969;
+    width: 1035px;
+    height: 163px;
 }
 
 a:link, a:visited
@@ -88,9 +90,9 @@ first child of the left and right table columns */
 
 .page
 {
-    width: 960px;
+    width: 1001px;
     background-color: #fff;
-    margin: 20px auto 0px auto;
+    margin: 20px auto 0px 0px;
     border: 1px solid #496077;
 }
 
@@ -119,6 +121,8 @@ first child of the left and right table columns */
     padding: 0px 12px;
     margin: 12px 8px 8px 8px;
     min-height: 420px;
+    width: 965px;
+    height: 90px;
 }
 
 .leftCol
@@ -136,6 +140,7 @@ first child of the left and right table columns */
     margin: 0px auto;
     text-align: center;
     line-height: normal;
+    width: 944px;
 }
 
 
@@ -249,7 +254,7 @@ div.accountInfo
     display: block;
     float: left;
     text-align: left;
-    width: 954px;
+    width: 993px;
 }
 
 .loginDisplay

@@ -9,11 +9,14 @@
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
-    <form runat="server">
+<body alink="#003399">
+    <form runat="server" 
+    style="width: 1000px; height: 1000px; margin-left: 30px; margin-right: 0px;">
     <div class="page">
-        <div class="header" style="color: #000000; background-color: #CCCCCC">
-            <div class="title" align="right" style="color: #000000">
+        <div class="header" 
+            
+            style="border-width: thin; border-style: solid; margin: 0px; color: #000000; background-color: #CCCCCC; vertical-align: super; top: -23px; left: -1px; height: 55px; line-height: 0px;">
+            <div class="title" align="right" style="color: #000000; vertical-align: top;">
                 <h1 align="left" style="color: #000000">
                     <asp:Image ID="Image_LogoMyBnB" runat="server" ImageUrl="~/Images/MyBnB_pequeño.png" 
                          style="margin-left: 5px; margin-top: 5px" />
@@ -22,20 +25,13 @@
                          Text="Usuario"></asp:Label>
                     <asp:Button ID="Button_LogOut_Master" runat="server" BackColor="#5093CF" 
                          ForeColor="White" Height="30px" 
-                         style="margin-left: 20px; margin-top: 2px" Text="Log Out" Width="90px" />
+                         style="margin-left: 20px; margin-top: 0px" Text="Log Out" Width="90px" /> <br /> <br />
                 </h1>
-            </div>
-            <div class="clear hideSkiplink">
             </div>
         </div>
         <div class="main">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
         </div>
-        <div class="clear">
-        </div>
-    </div>
-    <div class="footer">
-        
     </div>
     </form>
 </body>
