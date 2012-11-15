@@ -17,16 +17,16 @@ namespace MyBnb.GUI
             if (!IsPostBack) 
             {
                 MultiViewTabControl.ActiveViewIndex = 0;
-               // DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
-               // DropDownList_Tipo_ListarPropiedad.DataBind();
-               // DropDownList_Hospedaje_ListarPropiedad0.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
-               // DropDownList_Hospedaje_ListarPropiedad0.DataBind();
-               // DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
-               // DropDownList_Localidad_ListarPropiedad.DataBind();
-               // DropDownList_HoraEntrada_ListarPropiedad.DataSource = new int[]{1,2,3,4,5,6,7,8,9,10,11,12};
-               // DropDownList_HoraEntrada_ListarPropiedad.DataBind();
-               // DropDownList_HoraSalida_ListarPropiedad0.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-               // DropDownList_HoraSalida_ListarPropiedad0.DataBind();
+                DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
+                DropDownList_Tipo_ListarPropiedad.DataBind();
+                DropDownList_TipoHospedaje_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
+                DropDownList_TipoHospedaje_ListarPropiedad.DataBind();
+                DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
+                DropDownList_Localidad_ListarPropiedad.DataBind();
+               DropDownList_HoraEntrada_ListarPropiedad.DataSource = new int[]{1,2,3,4,5,6,7,8,9,10,11,12};
+                DropDownList_HoraEntrada_ListarPropiedad.DataBind();
+                DropDownList_HoraSalida_ListarPropiedad.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+                DropDownList_HoraSalida_ListarPropiedad.DataBind();
 
                 // Reservar 
                 //DropDownList_Localidad_Reservar.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
@@ -141,6 +141,16 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void Button_CrearViaje_CrearViaje_Click(object sender, EventArgs e)
         {
+            ControllerViaje _viaje = new ControllerViaje();
+            ControllerUsuario _usuario = new ControllerUsuario();
+
+            String[] _datos = new String[5];
+            _datos[0] = "2012/11/05";
+            _datos[1] = "2012/12/05";
+            _datos[2] = TextBox_Titulo_CrearViaje.Text;
+            _datos[3] = "SCLU Chile Santiago Santiago";
+            _datos[4] = _usuario.getLogin();
+            _viaje.reservarViaje(_datos);
 
         }
 
@@ -151,7 +161,19 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void Button_CrearReservar_CrearViaje_Click(object sender, EventArgs e)
         {
+            ControllerViaje _viaje = new ControllerViaje();
+            ControllerUsuario _usuario = new ControllerUsuario();
+           
 
+            String[] _datos = new String[5];
+            _datos[0] = "2012/11/05";
+            _datos[1] = "2012/12/05";
+            _datos[2] = TextBox_Titulo_CrearViaje.Text;
+            _datos[3] = "SCLU Chile Santiago Santiago";
+            _datos[4] = _usuario.getLogin();
+            _viaje.setidViaje(_viaje.reservarViaje(_datos));
+            MultiViewTabControl.ActiveViewIndex = 3;
+           
         }
 
         //struct Persona
@@ -235,6 +257,19 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void Button_Filtrar_Propiedades_Click(object sender, EventArgs e)
         {
+            ControllerPropiedades _propiedades = new ControllerPropiedades();
+            String[] datos = new String[3];
+            //datos[0] = Fecha Entrada
+            //datos[1] = Fecha Salida
+            //datos[2] = Codigo
+            datos[0] = "2012/10/20";
+            datos[1] = "2012/11/01";
+            datos[2] = "SCLU Chile Santigo Santiago";
+            _propiedades.obtenerPropiedades("Propiedades Disponibles", datos);
+           // GridView_Propiedades.DataSource = _propiedades.obtenerPropiedades("Propiedades Disponibles", datos);
+           // GridView_Propiedades.DataBind();
+            
+            
 
         }
 
@@ -246,6 +281,18 @@ namespace MyBnb.GUI
         protected void Button_Ver_Propiedades_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        protected void Button_Reservar_Propiedades_Click(object sender, EventArgs e)
+        {
+            ControllerViaje _viaje = new ControllerViaje();
+            // Aqui tengo q poner el index del q eligio
+            String[] pdatos = new String[2];
+            // Ligar aqui las fechas de entrada y de salida
+            pdatos[0] = "2012/10/20";
+            pdatos[1] = "2012/11/01";
+            _viaje.realizarReservacion(0,pdatos);
         }
 
         #endregion
@@ -287,6 +334,8 @@ namespace MyBnb.GUI
         }
 
         #endregion
+
+     
 
     }
 }

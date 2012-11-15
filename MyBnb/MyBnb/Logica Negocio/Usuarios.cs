@@ -21,14 +21,29 @@ namespace MyBnb.Logica_Negocio
             ppersona.Apellido = pdatos[1];
             ppersona.FechaNacimiento = pdatos[2];
             ppersona.Email = pdatos[3];
-            ppersona.Telefono = pdatos[4];
+            if (pdatos[4].Equals(""))
+            {
+                ppersona.Telefono = null;
+            }
+            else
+            {
+                ppersona.Telefono = pdatos[4];
+            }
             ppersona.Genero = pdatos[5];
             ppersona.Pais = pdatos[6];
 
             pusuario.Login = pdatos[7];
             pusuario.Password = pdatos[8];
             pusuario.FechaInscripcion = pdatos[9];
-            pusuario.Descripcion = pdatos[10];
+            if (pdatos[10].Equals(""))
+            {
+                pusuario.Descripcion = null;
+            }
+            else
+            {
+                pusuario.Descripcion = pdatos[10];
+            } 
+            
             pusuario.TipoUsuario = pdatos[11];
 
             

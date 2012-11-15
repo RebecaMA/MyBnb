@@ -123,6 +123,7 @@
     <Compile Include="LibreriaClases\Persona.cs" />
     <Compile Include="LibreriaClases\Propiedad.cs" />
     <Compile Include="LibreriaClases\Usuario.cs" />
+    <Compile Include="LibreriaClases\Viaje.cs" />
     <Compile Include="Logica Negocio\Propiedades.cs" />
     <Compile Include="Logica Negocio\Usuarios.cs" />
     <Compile Include="Logica Negocio\Viaje.cs" />

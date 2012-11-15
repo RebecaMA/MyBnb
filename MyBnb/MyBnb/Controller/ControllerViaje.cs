@@ -9,12 +9,38 @@ namespace MyBnb.Controller
 {
     public class ControllerViaje
     {
-        Viaje _viaje = new Viaje();
+        Viajes _viaje = new Viajes();
+        static int _idViaje;
+
+     
         public ControllerViaje() { }
 
-        public void reservarViaje(String[] pdatos)
+        public int reservarViaje(String[] pdatos)
         {
-            _viaje.reservarViaje(pdatos);
+             
+           return _viaje.reservarViaje(pdatos);
+        }
+
+        public String realizarReservacion(int pindex, String[] pdatos)
+        {
+           ControllerPropiedades _propiedad = new ControllerPropiedades();
+           String[] datos = new String[4];
+           datos[0] = pdatos[0];
+           datos[1] = pdatos[1];
+           datos[2] = _propiedad.obtenerIdPropiedad(pindex).ToString();
+           datos[3] = getidViaje().ToString();
+
+           return _viaje.realizarReservacion(datos);
+        }
+
+        public void setidViaje(int pidViaje)
+        {
+            _idViaje = pidViaje;
+        }
+
+        public int getidViaje() 
+        {
+            return _idViaje;
         }
 
         

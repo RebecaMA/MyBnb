@@ -53,7 +53,17 @@
         <asp:Label ID="Label_VerificarContraseña" runat="server" Text="Verificar contraseña:"
                 style="margin-left: 10px; margin-top: 5px" />
         <asp:TextBox ID="TextBox_VerificarContraseña_Registrarse" runat="server" TextMode="Password" 
-                style="margin-left: 10px; margin-top: 5px" Width="200px"/>
+                style="margin-left: 10px; margin-top: 5px" Width="200px" 
+                />
+        <br />
+        <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp; Tipo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:DropDownList ID="DropDownTipoLogin" runat="server" AutoPostBack="True">
+                <asp:ListItem>Viajero</asp:ListItem>
+                <asp:ListItem>Administrador</asp:ListItem>
+            </asp:DropDownList>
+
         <br />
         <br />
         <asp:Button ID="Button_Registrarse" runat="server" BackColor="#7AB428" Text="Registrarse" 

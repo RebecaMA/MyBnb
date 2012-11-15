@@ -21,10 +21,11 @@ namespace MyBnb.GUI
             String login = TextBox_Usuario_Registrarse.Text;
             String contraseña = TextBox_Contraseña_Registrarse.Text;
             String verificar = TextBox_VerificarContraseña_Registrarse.Text;
+            String tipoUsuario = DropDownTipoLogin.SelectedItem.ToString();
 
             if (contraseña.Equals(verificar))
             {
-                _controllerUsuario = new ControllerUsuario(login, contraseña);
+                _controllerUsuario = new ControllerUsuario(login, contraseña,tipoUsuario);
                 Response.Redirect("http://localhost:51088/GUI/MyBnB_Register.aspx");
             }
             else //Label de error
@@ -48,5 +49,7 @@ namespace MyBnb.GUI
             }
 
         }
+
+    
     }
 }

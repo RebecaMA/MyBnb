@@ -6,14 +6,23 @@ using MyBnb.Acceso_Datos;
 
 namespace MyBnb.Logica_Negocio
 {
-    public class Viaje
+    public class Viajes
     {
 
         AccesoDatosViaje _accesoDatosViaje = new AccesoDatosViaje();
 
-        public void reservarViaje(String[] pdatos)
+        public int reservarViaje(String[] pdatos)
         {
-            _accesoDatosViaje.ReservarViaje(pdatos);
+            String[]_split = pdatos[3].Split(' ');
+            pdatos[3] =_split[0];
+            return _accesoDatosViaje.ReservarViaje(pdatos);
+        }
+
+        public String realizarReservacion(String[] pdatos)
+        {
+            
+
+            return "En proceso";
         }
     }
 }

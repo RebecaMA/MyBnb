@@ -28,9 +28,9 @@ namespace MyBnb.GUI
              _datos[6] = TextBox_Pais.Text;
              _datos[7] = _controllerUsuario.getLogin();
              _datos[8] = _controllerUsuario.getContraseña();
-             _datos[9] = DateTime.Today.Year + "/" + DateTime.Today.Month + "/"+ DateTime.Today.Day + " " +DateTime.Today.Hour + ":00:00";
+             _datos[9] = DateTime.Today.Year + "/"+ DateTime.Today.Day + "/" + DateTime.Today.Month+" " +DateTime.Today.Hour + ":00:00";
              _datos[10] = TextBox_Descripcion.Text;
-             _datos[11] = "Viajero";
+             _datos[11] = _controllerUsuario.getTipoUsuairo();
             
              _controllerUsuario.registrarUsuario(_datos);
              Response.Redirect("http://localhost:51088/GUI/MyBnB_Viajero.aspx"); 

@@ -14,23 +14,27 @@ namespace MyBnb.Logica_Negocio
         public Propiedades()
         {
             _accesoDatosPropiedad = new AccesoDatosPropiedad();
-            _listaPropiedades = new List<Propiedad>();
+           // _listaPropiedades = new List<Propiedad>();
 
         }
 
         public String[] obtenerPropiedades(String ptipoBusqueda, String[] pdatos)
         {
             String[] _informacionPropiedades = null;
-            
 
 
+            String[] _split = pdatos[2].Split(' ');
+            pdatos[2] = _split[0];
             _listaPropiedades = _accesoDatosPropiedad.obtenerPropiedades(ptipoBusqueda, pdatos);
-            _informacionPropiedades = new String[_listaPropiedades.Count];
+          //  _informacionPropiedades = new String[_listaPropiedades.Count];
+            _informacionPropiedades = new String[3];
 
 
             _listaPropiedades.ForEach(delegate(Propiedad ppropiedad)
             {
-                // pongo lo q hay q hacerle a cada propiedad
+                _informacionPropiedades[0] = ppropiedad.Titulo;
+                _informacionPropiedades[1] = ppropiedad.PrecioNoche.ToString();
+                _informacionPropiedades[2] = ppropiedad.TipoHospedaje;
             });
 
             return _informacionPropiedades;
@@ -42,6 +46,13 @@ namespace MyBnb.Logica_Negocio
             return _accesoDatosPropiedad.obtenerTipo(pTipo);
         }
 
+        public int obtenerId(int pindex) 
+        {
+            return _listaPropiedades.ElementAt(pindex).IdPropiedad;
+        }
+
+      
+
         public String listarPropiedad(String[] pdatos)
         {
             String _retorno = null;
@@ -49,19 +60,6 @@ namespace MyBnb.Logica_Negocio
             String[] _split;
             int _horaEntrada, _HoraSalida;
             String _tiempoEntrada, _tiempoSalida;
-
-            //_datos[0] = DropDownList_Tipo_ListarPropiedad.SelectedItem.ToString();
-            //_datos[1] = TextBox_Capacidad_ListarPropiedad0.Text;
-            //_datos[2] = TextBox_Titulo_ListarPropiedad.Text;
-            //_datos[3] = TextBox_Descripcion_ListarPropiedad.Text;
-            //_datos[4] = null;
-            //_datos[5] = DropDownList_HoraEntrada_ListarPropiedad.SelectedItem.ToString() + " " + DropDownList_TiempoEntrada_ListarPropiedad.SelectedItem.ToString();
-            //_datos[6] = DropDownList_HoraSalida_ListarPropiedad0.SelectedItem.ToString() + " " + DropDownList_TiempoSalida_ListarPropiedad3.SelectedItem.ToString();
-            //_datos[7] = DropDownList_Localidad_Reservar.SelectedItem.ToString();
-            //_datos[8] = DropDownList_Hospedaje_ListarPropiedad0.SelectedItem.ToString();
-            //_datos[9] = TextBox_PrecioNoche_ListarPropiedad.Text;
-            //_datos[10] = TextBox_PrecioVolumen.Text;
-            //_datos[11] = TextBox_CantidadNoches.Text;
 
             if (!float.TryParse(pdatos[1],out _numero))
             {
