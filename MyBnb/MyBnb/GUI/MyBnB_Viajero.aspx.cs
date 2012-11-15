@@ -48,35 +48,6 @@ namespace MyBnb.GUI
         #region Modificar Usuario
 
         /// <summary>
-        /// Se encarga de modificar el perfil del usuario.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void Button_Modificar_Click(object sender, EventArgs e)
-        {
-            //String[] _nombreparametros = new String[12] {"@pusuario","@plogin","@ppassword","@descripcion","@pnombre",
-            //                                            "@papellido","@pfechaNacimiento","@pemail","@ptelefono","@pgenero","@ppais","@pestadoUsuario" };
-
-            String[] datos = new String[12];
-            datos[0] = _controllerUsuario.getLogin();
-            datos[1] = TextBox_Login_ModificarUsuario.Text;
-            datos[2] = TextBox_Contrasena_ModificarUsuario.Text;
-            datos[3] = TextBox_Descripcion_ModificarUsuario.Text;
-            datos[4] = TextBox_Nombre_ModificarUsuario.Text;
-            datos[5] = TextBox_Apellidos_ModificarUsuario.Text;
-            datos[6] = "";
-            datos[7] = TextBox_Email_ModificarUsuario.Text;
-            datos[8] = TextBox_Telefono_ModificarUsuario.Text;
-            datos[9] = DropDownList_Sexo_ModificarUsuario.SelectedValue.ToString();
-            datos[10] = TextBox_Pais_ModificarUsuario.Text;
-            datos[11] = "";
-
-            _controllerUsuario.modificarUsuario(datos);
-
-        }
-
-
-        /// <summary>
         /// Se encarga de desacticar el perfil del usuario.
         /// </summary>
         /// <param name="sender"></param>
@@ -93,18 +64,51 @@ namespace MyBnb.GUI
             datos[6] = "";
             datos[7] = TextBox_Email_ModificarUsuario.Text;
             datos[8] = TextBox_Telefono_ModificarUsuario.Text;
-            datos[9] = DropDownList_Sexo_ModificarUsuario.SelectedValue.ToString();
+            datos[9] = DropDownList_Genero_ModificarUsuario.SelectedValue.ToString();
             datos[10] = TextBox_Pais_ModificarUsuario.Text;
             datos[11] = "Inactivo";
 
             _controllerUsuario.modificarUsuario(datos);
-        } 
+        }
+
+        /// <summary>
+        /// Se encarga de modificar el perfil del usuario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_Modificar_ModificarUsuario_Click(object sender, EventArgs e)
+        {
+            //String[] _nombreparametros = new String[12] {"@pusuario","@plogin","@ppassword","@descripcion","@pnombre",
+            //                                            "@papellido","@pfechaNacimiento","@pemail","@ptelefono","@pgenero","@ppais","@pestadoUsuario" };
+
+            String[] datos = new String[12];
+            datos[0] = _controllerUsuario.getLogin();
+            datos[1] = TextBox_Login_ModificarUsuario.Text;
+            datos[2] = TextBox_Contrasena_ModificarUsuario.Text;
+            datos[3] = TextBox_Descripcion_ModificarUsuario.Text;
+            datos[4] = TextBox_Nombre_ModificarUsuario.Text;
+            datos[5] = TextBox_Apellidos_ModificarUsuario.Text;
+            datos[6] = "";
+            datos[7] = TextBox_Email_ModificarUsuario.Text;
+            datos[8] = TextBox_Telefono_ModificarUsuario.Text;
+            datos[9] = DropDownList_Genero_ModificarUsuario.SelectedValue.ToString();
+            datos[10] = TextBox_Pais_ModificarUsuario.Text;
+            datos[11] = "";
+
+            _controllerUsuario.modificarUsuario(datos);
+
+        }
 
         #endregion
       
         #region Listar Propiedad
-
-        protected void Button_ListarPropiedad_ListarPropiedad_Click(object sender, EventArgs e)
+        
+        /// <summary>
+        /// Se encarga de realizar el registro de nuevas propiedades.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_Registrar_ListarPropiedad_Click(object sender, EventArgs e)
         {
             //{"@pTipoPropiedad","@pcantidadMaximaPersonas","@pTitulo","@pdescripcion","@pfoto","@phoraEntrada",
             //    "@pHoraSalida","@pCodigoLocalidad","@pTipoHospedaje","@pprecioPorNoche","@pprecioVolumen","@pcantidadMinimaNoches"};
@@ -116,78 +120,93 @@ namespace MyBnb.GUI
             _datos[3] = TextBox_Descripcion_ListarPropiedad.Text;
             _datos[4] = null;
             _datos[5] = DropDownList_HoraEntrada_ListarPropiedad.SelectedItem.ToString() + " " + DropDownList_TiempoEntrada_ListarPropiedad.SelectedItem.ToString();
-            _datos[6] = DropDownList_HoraSalida_ListarPropiedad0.SelectedItem.ToString() + " " + DropDownList_TiempoSalida_ListarPropiedad3.SelectedItem.ToString();
+            _datos[6] = DropDownList_HoraSalida_ListarPropiedad.SelectedItem.ToString() + " " + DropDownList_TiempoSalida_ListarPropiedad.SelectedItem.ToString();
             _datos[7] = DropDownList_Localidad_ListarPropiedad.SelectedItem.ToString();
-            _datos[8] = DropDownList_Hospedaje_ListarPropiedad0.SelectedItem.ToString();
+            _datos[8] = DropDownList_TipoHospedaje_ListarPropiedad.SelectedItem.ToString();
             _datos[9] = TextBox_PrecioNoche_ListarPropiedad.Text;
-            _datos[10] = TextBox_PrecioVolumen.Text;
-            _datos[11] = TextBox_CantidadNoches.Text;
+            _datos[10] = TextBox_PrecioVolumen_ListarPropiedad.Text;
+            _datos[11] = TextBox_CantidadVolumen_ListarPropiedad.Text;
 
-           TextBox_Titulo_ListarPropiedad.Text =  _controllerPropiedad.listarPropiedad(_datos);
-    
-            
-
-
-
+           TextBox_Titulo_ListarPropiedad.Text =  _controllerPropiedad.listarPropiedad(_datos);               
         }
 
         #endregion
 
-        #region Reservar Viaje
+        #region Crear Viaje
 
-        struct Persona
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_CrearViaje_CrearViaje_Click(object sender, EventArgs e)
         {
-            public string Id;
-            public string Nombre;
-        }
-
-        private List<Persona> ObtenerNuevaLista()
-        {
-            List<Persona> lista = new List<Persona>();
-
-            Persona p1 = new Persona();
-            p1.Id = "1";
-            p1.Nombre = "Luisa";
-
-            Persona p2 = new Persona();
-            p2.Id = "2";
-            p2.Nombre = "Karla";
-
-            lista.Add(p1);
-            lista.Add(p2);
-
-            return lista;
 
         }
 
-        private List<Persona> GuardarLista(Persona persona)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_CrearReservar_CrearViaje_Click(object sender, EventArgs e)
         {
-            if (Session["lista"] == null)
-            {
-                List<Persona> p = this.ObtenerNuevaLista();
-                p.Add(persona);
-                Session["lista"] = p;
-            }
-            else
-            {
-                List<Persona> p = (List<Persona>)Session["lista"];
-                p.Add(persona);
-                Session["lista"] = p;
-            }
-            return (List<Persona>)Session["lista"];
+
         }
 
-        private List<Persona> ObtenerLista()
-        {
-            if (Session["lista"] == null)
-            {
-                return this.ObtenerNuevaLista();
-            }
-            else
-            {
-                return (List<Persona>)Session["lista"];
-            }
-        }
+        //struct Persona
+        //{
+        //    public string Id;
+        //    public string Nombre;
+        //}
+
+        //private List<Persona> ObtenerNuevaLista()
+        //{
+        //    List<Persona> lista = new List<Persona>();
+
+        //    Persona p1 = new Persona();
+        //    p1.Id = "1";
+        //    p1.Nombre = "Luisa";
+
+        //    Persona p2 = new Persona();
+        //    p2.Id = "2";
+        //    p2.Nombre = "Karla";
+
+        //    lista.Add(p1);
+        //    lista.Add(p2);
+
+        //    return lista;
+
+        //}
+
+        //private List<Persona> GuardarLista(Persona persona)
+        //{
+        //    if (Session["lista"] == null)
+        //    {
+        //        List<Persona> p = this.ObtenerNuevaLista();
+        //        p.Add(persona);
+        //        Session["lista"] = p;
+        //    }
+        //    else
+        //    {
+        //        List<Persona> p = (List<Persona>)Session["lista"];
+        //        p.Add(persona);
+        //        Session["lista"] = p;
+        //    }
+        //    return (List<Persona>)Session["lista"];
+        //}
+
+        //private List<Persona> ObtenerLista()
+        //{
+        //    if (Session["lista"] == null)
+        //    {
+        //        return this.ObtenerNuevaLista();
+        //    }
+        //    else
+        //    {
+        //        return (List<Persona>)Session["lista"];
+        //    }
+        //}
 
         //protected void GridView_Reservar_RowCommand(object sender, GridViewCommandEventArgs e)
         //{
@@ -205,23 +224,69 @@ namespace MyBnb.GUI
         //        this.GridView_Reservar.DataBind();
         //    }
         //}
-
-
         #endregion
 
-        protected void Button_CrearViaje_ListarPropiedad_Click(object sender, EventArgs e)
+        #region Propiedades
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_Filtrar_Propiedades_Click(object sender, EventArgs e)
         {
 
         }
 
-       
-       
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_Ver_Propiedades_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
         #region Solicitar Anfitrion
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_Solicitar_SolicitarAnfitrion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_VerRespuestas_SolicitarAnfitrion_Click(object sender, EventArgs e)
+        {
+
+        }
 
         #endregion
 
         #region Administrar WishList
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button_Ver_AdministrarWishList_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
+
     }
 }

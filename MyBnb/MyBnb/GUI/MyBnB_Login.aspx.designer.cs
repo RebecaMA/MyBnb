@@ -31,13 +31,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_NombreUsuario;
         
         /// <summary>
-        /// TextBox_NombreUsuario control.
+        /// TextBox_Usuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_NombreUsuario;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Usuario;
         
         /// <summary>
         /// Label_Contraseña control.
@@ -112,13 +112,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_RegistrarNombreUsuario;
         
         /// <summary>
-        /// TextBox_RegistrarNombreUsuario control.
+        /// TextBox_Usuario_Registrarse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_RegistrarNombreUsuario;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Usuario_Registrarse;
         
         /// <summary>
         /// Label_RegistrarContraseña control.
@@ -130,13 +130,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_RegistrarContraseña;
         
         /// <summary>
-        /// TextBox_RegistrarContraseña control.
+        /// TextBox_Contraseña_Registrarse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_RegistrarContraseña;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Contraseña_Registrarse;
         
         /// <summary>
         /// Label_VerificarContraseña control.
@@ -148,13 +148,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_VerificarContraseña;
         
         /// <summary>
-        /// TextBox_verificarContraseña control.
+        /// TextBox_VerificarContraseña_Registrarse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_verificarContraseña;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_VerificarContraseña_Registrarse;
         
         /// <summary>
         /// Button_Registrarse control.

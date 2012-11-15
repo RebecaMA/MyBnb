@@ -193,13 +193,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_Sexo;
         
         /// <summary>
-        /// DropDownList_Sexo_ModificarUsuario control.
+        /// DropDownList_Genero_ModificarUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Sexo_ModificarUsuario;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Genero_ModificarUsuario;
         
         /// <summary>
         /// Label_Descripcion0 control.
@@ -337,13 +337,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_Fotografia_ListarPropiedad;
         
         /// <summary>
-        /// FileUpload1 control.
+        /// FileUpload_Fotografia_ListarPropiedad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload_Fotografia_ListarPropiedad;
         
         /// <summary>
         /// Label_HoraEntrada control.
@@ -382,31 +382,31 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_HoraSalida;
         
         /// <summary>
-        /// DropDownList_HoraSalida_ListarPropiedad0 control.
+        /// DropDownList_HoraSalida_ListarPropiedad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_HoraSalida_ListarPropiedad0;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_HoraSalida_ListarPropiedad;
         
         /// <summary>
-        /// DropDownList_TiempoSalida_ListarPropiedad3 control.
+        /// DropDownList_TiempoSalida_ListarPropiedad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_TiempoSalida_ListarPropiedad3;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_TiempoSalida_ListarPropiedad;
         
         /// <summary>
-        /// Label_Pais_ListarPropiedad control.
+        /// Label_Localidad_ListarPropiedad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_Pais_ListarPropiedad;
+        protected global::System.Web.UI.WebControls.Label Label_Localidad_ListarPropiedad;
         
         /// <summary>
         /// DropDownList_Localidad_ListarPropiedad control.
@@ -427,13 +427,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_TipoHospedaje_ListarPropiedad;
         
         /// <summary>
-        /// DropDownList_Hospedaje_ListarPropiedad0 control.
+        /// DropDownList_TipoHospedaje_ListarPropiedad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Hospedaje_ListarPropiedad0;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_TipoHospedaje_ListarPropiedad;
         
         /// <summary>
         /// Label_PrecioNoche control.
@@ -463,13 +463,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_PrecioVolumen_ListarPropiedad;
         
         /// <summary>
-        /// TextBox_PrecioVolumen control.
+        /// TextBox_PrecioVolumen_ListarPropiedad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_PrecioVolumen;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_PrecioVolumen_ListarPropiedad;
         
         /// <summary>
         /// Label_CantidadMinima control.
@@ -481,22 +481,22 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_CantidadMinima;
         
         /// <summary>
-        /// TextBox_CantidadNoches control.
+        /// TextBox_CantidadVolumen_ListarPropiedad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_CantidadNoches;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_CantidadVolumen_ListarPropiedad;
         
         /// <summary>
-        /// Button_ListarPropiedad_ListarPropiedad control.
+        /// Button_Registrar_ListarPropiedad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_ListarPropiedad_ListarPropiedad;
+        protected global::System.Web.UI.WebControls.Button Button_Registrar_ListarPropiedad;
         
         /// <summary>
         /// ViewCrearViaje control.
@@ -508,13 +508,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.View ViewCrearViaje;
         
         /// <summary>
-        /// Panel_ListarPropiedad0 control.
+        /// Panel_CrearViaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel_ListarPropiedad0;
+        protected global::System.Web.UI.WebControls.Panel Panel_CrearViaje;
         
         /// <summary>
         /// Label_Titulo0 control.
@@ -526,13 +526,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_Titulo0;
         
         /// <summary>
-        /// TextBox_Titulo_Reservar control.
+        /// TextBox_Titulo_CrearViaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox_Titulo_Reservar;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Titulo_CrearViaje;
         
         /// <summary>
         /// Label_FechaInicio_Reservar control.
@@ -544,33 +544,6 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_FechaInicio_Reservar;
         
         /// <summary>
-        /// DropDownList_FechaInicioDia_Reservar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_FechaInicioDia_Reservar;
-        
-        /// <summary>
-        /// DropDownList_FechaInicioMes_Reservar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_FechaInicioMes_Reservar;
-        
-        /// <summary>
-        /// DropDownList_FechaInicioAho_Reservar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_FechaInicioAho_Reservar;
-        
-        /// <summary>
         /// Label_FechaFin control.
         /// </summary>
         /// <remarks>
@@ -580,49 +553,22 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_FechaFin;
         
         /// <summary>
-        /// DropDownList_FechaFinDia_Reservar control.
+        /// Button_Crear_CrearViaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_FechaFinDia_Reservar;
+        protected global::System.Web.UI.WebControls.Button Button_Crear_CrearViaje;
         
         /// <summary>
-        /// DropDownList_FechaFinMes_Reservar1 control.
+        /// Button_CrearReservar_CrearViaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_FechaFinMes_Reservar1;
-        
-        /// <summary>
-        /// DropDownList_FechaFinAho_Reservar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_FechaFinAho_Reservar;
-        
-        /// <summary>
-        /// Button_CrearViaje_ListarPropiedad control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_CrearViaje_ListarPropiedad;
-        
-        /// <summary>
-        /// Button_Reservar_ListarPropiedad control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_Reservar_ListarPropiedad;
+        protected global::System.Web.UI.WebControls.Button Button_CrearReservar_CrearViaje;
         
         /// <summary>
         /// ViewPropiedades control.
@@ -634,6 +580,78 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.View ViewPropiedades;
         
         /// <summary>
+        /// Panel_Propiedades control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel_Propiedades;
+        
+        /// <summary>
+        /// Label_Localidad_Propiedades control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Localidad_Propiedades;
+        
+        /// <summary>
+        /// DropDownList_Localidad_Propiedades control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Localidad_Propiedades;
+        
+        /// <summary>
+        /// Label_FechaInicio_Propiedades control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_FechaInicio_Propiedades;
+        
+        /// <summary>
+        /// Label_FechaFin_Propiedades control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_FechaFin_Propiedades;
+        
+        /// <summary>
+        /// Button_Filtrar_Propiedades control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_Filtrar_Propiedades;
+        
+        /// <summary>
+        /// GridView_Propiedades control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_Propiedades;
+        
+        /// <summary>
+        /// Button_Ver_Propiedades control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_Ver_Propiedades;
+        
+        /// <summary>
         /// ViewSolicitarAnfitrion control.
         /// </summary>
         /// <remarks>
@@ -643,6 +661,69 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.View ViewSolicitarAnfitrion;
         
         /// <summary>
+        /// Panel_SolicitarAnfitrion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel_SolicitarAnfitrion;
+        
+        /// <summary>
+        /// Label_Localidad_SolicitarAnfitrion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Localidad_SolicitarAnfitrion;
+        
+        /// <summary>
+        /// DropDownList_Localidad_SolicitarAnfitrion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Localidad_SolicitarAnfitrion;
+        
+        /// <summary>
+        /// Label_FechaInicio_SolicitarAnfitrion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_FechaInicio_SolicitarAnfitrion;
+        
+        /// <summary>
+        /// Label_FechaFin_SolicitarAnfitrion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_FechaFin_SolicitarAnfitrion;
+        
+        /// <summary>
+        /// Button_Solicitar_SolicitarAnfitrion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_Solicitar_SolicitarAnfitrion;
+        
+        /// <summary>
+        /// Button_VerRespuestas_SolicitarAnfitrion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_VerRespuestas_SolicitarAnfitrion;
+        
+        /// <summary>
         /// ViewAdministrarWishlist control.
         /// </summary>
         /// <remarks>
@@ -650,5 +731,32 @@ namespace MyBnb.GUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.View ViewAdministrarWishlist;
+        
+        /// <summary>
+        /// Panel_AdministrarWishList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel_AdministrarWishList;
+        
+        /// <summary>
+        /// GridView_WishList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_WishList;
+        
+        /// <summary>
+        /// Button_Ver_AdministrarWishList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_Ver_AdministrarWishList;
     }
 }

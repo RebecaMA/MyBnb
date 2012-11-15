@@ -53,7 +53,7 @@
             <br />
             <br />
             <asp:Label ID="Label_FechaNacimiento" runat="server" Text="Fecha de Nacimiento:     "
-                style="margin-left: 5px; margin-top: 10px" />            
+                style="margin-left: 5px; margin-top: 10px" />&nbsp;&nbsp;   
             <script type="text/javascript"
             src="http://www.snaphost.com/jquery/Calendar.aspx"></script>
 
@@ -61,7 +61,7 @@
             <br />
             <asp:Label ID="Label_Sexo" runat="server" Text="Genero:"
                     style="margin-left: 5px; margin-top: 10px" />
-            <asp:DropDownList ID="DropDownList_Sexo" runat="server" Width="200px"
+            <asp:DropDownList ID="DropDownList_Genero" runat="server" Width="200px"
                            style="margin-left: 88px; margin-top: 10px">
                 <asp:ListItem></asp:ListItem>
                 <asp:ListItem>Femenino</asp:ListItem>
@@ -71,7 +71,7 @@
             <br />
             <asp:Label ID="Label_Descripcion" runat="server" Text="Descripcion:"
                     style="margin-left: 5px; margin-top: 10px" />
-            <asp:TextBox ID="TextBoxDescripcion" runat="server" Width="200px"
+            <asp:TextBox ID="TextBox_Descripcion" runat="server" Width="200px"
                       style="margin-left: 60px; margin-top: 10px" />
             
             <br />

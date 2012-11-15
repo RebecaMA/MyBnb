@@ -9,16 +9,16 @@
         <br />        
         <asp:Label ID="Label_NombreUsuario" runat="server" Text="Usuario:"
                 style="margin-left: 600px; margin-top: 15px" />
-        <asp:TextBox ID="TextBox_NombreUsuario" runat="server" Width="200px" Wrap="False" 
+        <asp:TextBox ID="TextBox_Usuario" runat="server" Width="200px" Wrap="False" 
                 style="margin-left: 5px; margin-top: 15px" />
         
-        <br /> 
+        <br /> <br />
         <asp:Label ID="Label_Contraseña" runat="server" Text="Contraseña:"
                 style="margin-left: 580px; margin-top: 15px" />
         <asp:TextBox ID="TextBox_Contraseña" runat="server" Width="200px" TextMode="Password"
             style="margin-left: 5px; margin-top: 2px" />
         
-        <br /> 
+        <br />
         <asp:Button ID="Button_Login" runat="server" BackColor="#7AB428" 
             BorderColor="#CCCCCC" Height="30px" Text="Login" 
             Width="85px" onclick="Button_Login_Click"
@@ -30,7 +30,7 @@
 
         <asp:Panel ID="Panel_CrearUsuario" runat="server" BorderStyle="Solid" 
             Height="273px" HorizontalAlign="Left" 
-            style="margin-left: 508px; margin-top: 47px">
+            style="margin-left: 508px; margin-top: 30px">
         <asp:Panel ID="Panel1" runat="server" BackColor="#CCCCCC" BorderColor="#EEEEEE" 
                 BorderStyle="Double" Height="25px" HorizontalAlign="Left">
                 <asp:Label ID="Label_Registrarse" runat="server" style="font-weight: 700" 
@@ -40,19 +40,19 @@
         <br />        
         <asp:Label ID="Label_RegistrarNombreUsuario" runat="server" Text="Nombre de Usuario:"
                 style="margin-left: 10px; margin-top: 5px" />
-        <asp:TextBox ID="TextBox_RegistrarNombreUsuario" runat="server" 
+        <asp:TextBox ID="TextBox_Usuario_Registrarse" runat="server" 
                 style="margin-left: 10px; margin-top: 5px" Width="200px"/>                
         <br />
         <br />            
         <asp:Label ID="Label_RegistrarContraseña" runat="server" Text="Contraseña:"
                 style="margin-left: 60px; margin-top: 5px" />
-        <asp:TextBox ID="TextBox_RegistrarContraseña" runat="server" TextMode="Password"
+        <asp:TextBox ID="TextBox_Contraseña_Registrarse" runat="server" TextMode="Password"
                 style="margin-left: 10px; margin-top: 5px" Width="200px"/>
         <br />
         <br />
         <asp:Label ID="Label_VerificarContraseña" runat="server" Text="Verificar contraseña:"
                 style="margin-left: 10px; margin-top: 5px" />
-        <asp:TextBox ID="TextBox_verificarContraseña" runat="server" TextMode="Password" 
+        <asp:TextBox ID="TextBox_VerificarContraseña_Registrarse" runat="server" TextMode="Password" 
                 style="margin-left: 10px; margin-top: 5px" Width="200px"/>
         <br />
         <br />

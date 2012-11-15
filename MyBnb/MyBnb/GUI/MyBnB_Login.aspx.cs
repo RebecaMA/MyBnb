@@ -18,9 +18,9 @@ namespace MyBnb.GUI
 
         protected void Button_Registrarse_Click(object sender, EventArgs e)
         {
-            String login = TextBox_RegistrarNombreUsuario.Text;
-            String contraseña = TextBox_RegistrarContraseña.Text;
-            String verificar = TextBox_verificarContraseña.Text;
+            String login = TextBox_Usuario_Registrarse.Text;
+            String contraseña = TextBox_Contraseña_Registrarse.Text;
+            String verificar = TextBox_VerificarContraseña_Registrarse.Text;
 
             if (contraseña.Equals(verificar))
             {
@@ -35,7 +35,7 @@ namespace MyBnb.GUI
 
         protected void Button_Login_Click(object sender, EventArgs e)
         {
-           String login = TextBox_NombreUsuario.Text;
+           String login = TextBox_Usuario.Text;
             String contraseña = TextBox_Contraseña.Text;
             String resultado;
             _controllerUsuario = new ControllerUsuario(login, contraseña);

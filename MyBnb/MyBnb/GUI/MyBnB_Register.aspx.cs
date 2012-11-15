@@ -24,12 +24,12 @@ namespace MyBnb.GUI
              _datos[2] = "2012/11/05";
              _datos[3] = TextBox_Email.Text;
              _datos[4] = TextBox_Telefono.Text;
-             _datos[5] = DropDownList_Sexo.SelectedValue;
+             _datos[5] = DropDownList_Genero.SelectedValue;
              _datos[6] = TextBox_Pais.Text;
              _datos[7] = _controllerUsuario.getLogin();
              _datos[8] = _controllerUsuario.getContraseña();
              _datos[9] = DateTime.Today.Year + "/" + DateTime.Today.Month + "/"+ DateTime.Today.Day + " " +DateTime.Today.Hour + ":00:00";
-             _datos[10] = TextBoxDescripcion.Text;
+             _datos[10] = TextBox_Descripcion.Text;
              _datos[11] = "Viajero";
             
              _controllerUsuario.registrarUsuario(_datos);

@@ -26,7 +26,7 @@
     </asp:Menu>
 </div>
 
-<div style="width: 918px; height: 600px; background-color: #C0C0FF;">
+<div style="width: 918px; height: 37px; background-color: #C0C0FF;">
             <asp:MultiView ID="MultiViewTabControl" runat="server">
                  <asp:View ID="ViewModificarUsuario" runat="server">
                       <asp:Panel ID="Panel_ModificarUsuario" runat="server" HorizontalAlign="Left" 
@@ -84,7 +84,7 @@
                               <br />                              
                               <asp:Label ID="Label_Sexo" runat="server" Text="Genero:"
                                   style="margin-left: 10px; margin-top: 10px;" />
-                              <asp:DropDownList ID="DropDownList_Sexo_ModificarUsuario" runat="server" 
+                              <asp:DropDownList ID="DropDownList_Genero_ModificarUsuario" runat="server" 
                                   style="margin-left: 86px; margin-top: 10px;" Width="200px">
                                   <asp:ListItem></asp:ListItem>
                                   <asp:ListItem>Femenino</asp:ListItem>
@@ -104,8 +104,8 @@
                                   style="margin-left: 145px; margin-top: 10px;" Text="Desactivar" Width="90px" />
                               
                               <asp:Button ID="Button_Modificar_ModificarUsuario" runat="server" 
-                                  BackColor="#7AB428" ForeColor="White" Height="30px" 
-                                  onclick="Button_Modificar_Click" 
+                                  BackColor="#671160" ForeColor="White" Height="30px" 
+                                  onclick="Button_Modificar_ModificarUsuario_Click" 
                                   style="margin-left: 15px; margin-top: 10px" 
                                   Text="Modificar" Width="90px" />
                               <br />
@@ -152,7 +152,7 @@
                           <br />
                           <asp:Label ID="Label_Fotografia_ListarPropiedad" runat="server" Text="Fotografia:"
                                   style="margin-left: 10px; margin-top: 10px;"/>
-                          <asp:FileUpload ID="FileUpload1" runat="server"
+                          <asp:FileUpload ID="FileUpload_Fotografia_ListarPropiedad" runat="server"
                                        style="margin-left: 70px; margin-top: 10px;"/>
                           
                           <br />                                                    
@@ -172,11 +172,13 @@
                           <br />
                           <asp:Label ID="Label_HoraSalida" runat="server" Text="Hora Salida:"
                                   style="margin-left: 10px; margin-top: 10px;"/>
-                          <asp:DropDownList ID="DropDownList_HoraSalida_ListarPropiedad0" runat="server" Width="75px" AutoPostBack="True"
+                          <asp:DropDownList ID="DropDownList_HoraSalida_ListarPropiedad" runat="server" 
+                              Width="75px" AutoPostBack="True"
                                     style="margin-left: 60px; margin-top: 10px;">
                               <asp:ListItem></asp:ListItem>
                           </asp:DropDownList>                          
-                          <asp:DropDownList ID="DropDownList_TiempoSalida_ListarPropiedad3" runat="server" Width="75px" AutoPostBack="True"
+                          <asp:DropDownList ID="DropDownList_TiempoSalida_ListarPropiedad" runat="server" 
+                              Width="75px" AutoPostBack="True"
                                     style="margin-left: 10px; margin-top: 10px;">
                               <asp:ListItem></asp:ListItem>
                               <asp:ListItem>AM</asp:ListItem>
@@ -184,7 +186,7 @@
                           </asp:DropDownList>
                           
                           <br />                          
-                          <asp:Label ID="Label_Pais_ListarPropiedad" runat="server" Text="Localidad:"
+                          <asp:Label ID="Label_Localidad_ListarPropiedad" runat="server" Text="Localidad:"
                                     style="margin-left: 10px; margin-top: 10px;"/>
                           <asp:DropDownList ID="DropDownList_Localidad_ListarPropiedad" runat="server" Width="200px" AutoPostBack="True"
                                     style="margin-left: 70px; margin-top: 10px;">
@@ -194,7 +196,8 @@
                           <br />
                           <asp:Label ID="Label_TipoHospedaje_ListarPropiedad" runat="server" Text="Tipo de Hospedaje:"
                                   style="margin-left: 10px; margin-top: 10px;"/>              
-                          <asp:DropDownList ID="DropDownList_Hospedaje_ListarPropiedad0" runat="server" Width="200px"
+                          <asp:DropDownList ID="DropDownList_TipoHospedaje_ListarPropiedad" 
+                              runat="server" Width="200px"
                                     style="margin-left: 15px; margin-top: 10px;">
                               <asp:ListItem></asp:ListItem>
                           </asp:DropDownList>
@@ -208,20 +211,21 @@
                           <br />                          
                           <asp:Label ID="Label_PrecioVolumen_ListarPropiedad" runat="server" Text="Precio por volumen:"
                                   style="margin-left: 10px; margin-top: 10px;"/>
-                          <asp:TextBox ID="TextBox_PrecioVolumen" runat="server" Width="100px"
+                          <asp:TextBox ID="TextBox_PrecioVolumen_ListarPropiedad" runat="server" Width="100px"
                                     style="margin-left: 10px; margin-top: 10px;"/>&nbsp;*
                           
                           <br />                          
                           <asp:Label ID="Label_CantidadMinima" runat="server" Text="Cantidad volumen:"
                                   style="margin-left: 10px; margin-top: 10px;"/>
-                          <asp:TextBox ID="TextBox_CantidadNoches" runat="server" Width="100px"
+                          <asp:TextBox ID="TextBox_CantidadVolumen_ListarPropiedad" runat="server" Width="100px"
                                     style="margin-left: 20px; margin-top: 10px;"/>
 
-                          <br />
-                          <asp:Button ID="Button_ListarPropiedad_ListarPropiedad" runat="server" 
+                          <br /> <br />
+                          <asp:Button ID="Button_Registrar_ListarPropiedad" runat="server" 
                               BackColor="#7AB428" ForeColor="White" Height="30px" 
-                              onclick="Button_ListarPropiedad_ListarPropiedad_Click" 
-                              style="margin-left: 140px; margin-top: 2px" Text="Registrar" Width="90px" />
+                              onclick="Button_Registrar_ListarPropiedad_Click" 
+                              style="margin-left: 140px; margin-top: 2px" Text="Registrar" 
+                              Width="90px" />
                           
                           <br /> <br /> <br /> * Precio en dolares estadounidenses.                          
                           <br /> <br /> **Dato opcional. 
@@ -229,182 +233,175 @@
                           
                       </asp:Panel>
                  </asp:View>
+
                 <asp:View ID="ViewCrearViaje" runat="server">
-                      <asp:Panel ID="Panel_ListarPropiedad0" runat="server" BackColor="White" 
-                          BorderStyle="Groove" HorizontalAlign="Left" ScrollBars="Vertical" 
+                      <asp:Panel ID="Panel_CrearViaje" runat="server" BackColor="White" 
+                          BorderStyle="Groove" HorizontalAlign="Left" 
                           style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
                           
-                          <asp:Label ID="Label_Titulo0" runat="server" Text="Titulo:"></asp:Label>
-                          
-                          <asp:TextBox ID="TextBox_Titulo_Reservar" runat="server" Width="200px"></asp:TextBox>
-                          
                           <br />
-                          <br />
-                          <asp:Label ID="Label_FechaInicio_Reservar" runat="server" 
-                              Text="Fecha Inicio:"></asp:Label>
-                          <asp:DropDownList ID="DropDownList_FechaInicioDia_Reservar" runat="server">
-                              <asp:ListItem>- Dia -</asp:ListItem>
-                              <asp:ListItem>1</asp:ListItem>
-                              <asp:ListItem>2</asp:ListItem>
-                              <asp:ListItem>3</asp:ListItem>
-                              <asp:ListItem>4</asp:ListItem>
-                              <asp:ListItem>5</asp:ListItem>
-                              <asp:ListItem>6</asp:ListItem>
-                              <asp:ListItem>7</asp:ListItem>
-                              <asp:ListItem>8</asp:ListItem>
-                              <asp:ListItem>9</asp:ListItem>
-                              <asp:ListItem>10</asp:ListItem>
-                              <asp:ListItem>11</asp:ListItem>
-                              <asp:ListItem>12</asp:ListItem>
-                              <asp:ListItem>13</asp:ListItem>
-                              <asp:ListItem>14</asp:ListItem>
-                              <asp:ListItem>15</asp:ListItem>
-                              <asp:ListItem>16</asp:ListItem>
-                              <asp:ListItem>17</asp:ListItem>
-                              <asp:ListItem>18</asp:ListItem>
-                              <asp:ListItem>19</asp:ListItem>
-                              <asp:ListItem>20</asp:ListItem>
-                              <asp:ListItem>21</asp:ListItem>
-                              <asp:ListItem>22</asp:ListItem>
-                              <asp:ListItem>23</asp:ListItem>
-                              <asp:ListItem>24</asp:ListItem>
-                              <asp:ListItem>25</asp:ListItem>
-                              <asp:ListItem>26</asp:ListItem>
-                              <asp:ListItem>27</asp:ListItem>
-                              <asp:ListItem>28</asp:ListItem>
-                              <asp:ListItem>29</asp:ListItem>
-                              <asp:ListItem>30</asp:ListItem>
-                              <asp:ListItem>31</asp:ListItem>
-                          </asp:DropDownList>
-                          <asp:DropDownList ID="DropDownList_FechaInicioMes_Reservar" runat="server">
-                              <asp:ListItem Value="- Mes -"></asp:ListItem>
-                              <asp:ListItem>Enero</asp:ListItem>
-                              <asp:ListItem>Febrero</asp:ListItem>
-                              <asp:ListItem>Marzo</asp:ListItem>
-                              <asp:ListItem>Abril</asp:ListItem>
-                              <asp:ListItem>Mayo</asp:ListItem>
-                              <asp:ListItem>Junio</asp:ListItem>
-                              <asp:ListItem>Julio</asp:ListItem>
-                              <asp:ListItem>Agosto</asp:ListItem>
-                              <asp:ListItem>Septiembre</asp:ListItem>
-                              <asp:ListItem>Octubre</asp:ListItem>
-                              <asp:ListItem>Noviembre</asp:ListItem>
-                              <asp:ListItem>Diciembre</asp:ListItem>
-                          </asp:DropDownList>
-                          <asp:DropDownList ID="DropDownList_FechaInicioAho_Reservar" runat="server">
-                              <asp:ListItem>- Aho -</asp:ListItem>
-                              <asp:ListItem>2012</asp:ListItem>
-                              <asp:ListItem>2013</asp:ListItem>
-                              <asp:ListItem>2014</asp:ListItem>
-                              <asp:ListItem>2015</asp:ListItem>
-                              <asp:ListItem>2016</asp:ListItem>
-                              <asp:ListItem>2017</asp:ListItem>
-                              <asp:ListItem>2018</asp:ListItem>
-                              <asp:ListItem>2019</asp:ListItem>
-                              <asp:ListItem>2020</asp:ListItem>
-                              <asp:ListItem>2021</asp:ListItem>
-                          </asp:DropDownList>
-                          
-                          <br />
-                          <br />
-                          
-                          <asp:Label ID="Label_FechaFin" runat="server" Text="Fecha Fin:"></asp:Label>
-                          <asp:DropDownList ID="DropDownList_FechaFinDia_Reservar" runat="server">
-                              <asp:ListItem>- Dia -</asp:ListItem>
-                              <asp:ListItem>1</asp:ListItem>
-                              <asp:ListItem>2</asp:ListItem>
-                              <asp:ListItem>3</asp:ListItem>
-                              <asp:ListItem>4</asp:ListItem>
-                              <asp:ListItem>5</asp:ListItem>
-                              <asp:ListItem>6</asp:ListItem>
-                              <asp:ListItem>7</asp:ListItem>
-                              <asp:ListItem>8</asp:ListItem>
-                              <asp:ListItem>9</asp:ListItem>
-                              <asp:ListItem>10</asp:ListItem>
-                              <asp:ListItem>11</asp:ListItem>
-                              <asp:ListItem>12</asp:ListItem>
-                              <asp:ListItem>13</asp:ListItem>
-                              <asp:ListItem>14</asp:ListItem>
-                              <asp:ListItem>15</asp:ListItem>
-                              <asp:ListItem>16</asp:ListItem>
-                              <asp:ListItem>17</asp:ListItem>
-                              <asp:ListItem>18</asp:ListItem>
-                              <asp:ListItem>19</asp:ListItem>
-                              <asp:ListItem>20</asp:ListItem>
-                              <asp:ListItem>21</asp:ListItem>
-                              <asp:ListItem>22</asp:ListItem>
-                              <asp:ListItem>23</asp:ListItem>
-                              <asp:ListItem>24</asp:ListItem>
-                              <asp:ListItem>25</asp:ListItem>
-                              <asp:ListItem>26</asp:ListItem>
-                              <asp:ListItem>27</asp:ListItem>
-                              <asp:ListItem>28</asp:ListItem>
-                              <asp:ListItem>29</asp:ListItem>
-                              <asp:ListItem>30</asp:ListItem>
-                              <asp:ListItem>31</asp:ListItem>
-                          </asp:DropDownList>
-                          <asp:DropDownList 
-                              ID="DropDownList_FechaFinMes_Reservar1" runat="server">
-                              <asp:ListItem Value="- Mes -"></asp:ListItem>
-                              <asp:ListItem>Enero</asp:ListItem>
-                              <asp:ListItem>Febrero</asp:ListItem>
-                              <asp:ListItem>Marzo</asp:ListItem>
-                              <asp:ListItem>Abril</asp:ListItem>
-                              <asp:ListItem>Mayo</asp:ListItem>
-                              <asp:ListItem>Junio</asp:ListItem>
-                              <asp:ListItem>Julio</asp:ListItem>
-                              <asp:ListItem>Agosto</asp:ListItem>
-                              <asp:ListItem>Septiembre</asp:ListItem>
-                              <asp:ListItem>Octubre</asp:ListItem>
-                              <asp:ListItem>Noviembre</asp:ListItem>
-                              <asp:ListItem>Diciembre</asp:ListItem>
-                          </asp:DropDownList>
-                          <asp:DropDownList ID="DropDownList_FechaFinAho_Reservar" runat="server">
-                              <asp:ListItem>- Aho -</asp:ListItem>
-                              <asp:ListItem>2012</asp:ListItem>
-                              <asp:ListItem>2013</asp:ListItem>
-                              <asp:ListItem>2014</asp:ListItem>
-                              <asp:ListItem>2015</asp:ListItem>
-                              <asp:ListItem>2016</asp:ListItem>
-                              <asp:ListItem>2017</asp:ListItem>
-                              <asp:ListItem>2018</asp:ListItem>
-                              <asp:ListItem>2019</asp:ListItem>
-                              <asp:ListItem>2020</asp:ListItem>
-                              <asp:ListItem>2021</asp:ListItem>
-                          </asp:DropDownList>
-                          
-                          <br />
-                          
-                          <br />
-                          <br />
-                          
-                          <asp:Button ID="Button_CrearViaje_ListarPropiedad" runat="server" 
+                          <asp:Label ID="Label_Titulo0" runat="server" Text="Titulo:"
+                                  style="margin-left: 10px; margin-top: 10px;"/>
+                          <asp:TextBox ID="TextBox_Titulo_CrearViaje" runat="server" Width="200px"
+                                    style="margin-left: 43px; margin-top: 10px;"/>
+                                                    
+                          <br /> <br />
+                          <asp:Label ID="Label_FechaInicio_Reservar" runat="server" Text="Fecha Inicio:"
+                                  style="margin-left: 10px; margin-top: 10px;"/>&nbsp;&nbsp;
+                          <script type="text/javascript"
+                          src="http://www.snaphost.com/jquery/Calendar.aspx"></script>
+                                                    
+                          <br /> <br />
+                          <asp:Label ID="Label_FechaFin" runat="server" Text="Fecha Fin:"
+                                  style="margin-left: 10px; margin-top: 10px;"/>
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <script type="text/javascript">
+                                  $(function () {
+                                      $("#Calendar_CrearViaje")
+                          .datepicker({ showOn: 'both', buttonImage: 'http://www.snaphost.com/jquery/calendar.gif',
+                              buttonImageOnly: true, changeMonth: true, showOtherMonths: true, selectOtherMonths: true
+                          });
+                          });</script>
+                          <input name="Calendar_CrearViaje" id="Calendar_CrearViaje" type="text" />                                                    
+
+                          <br /> <br />
+                          <asp:Button ID="Button_Crear_CrearViaje" runat="server" 
                               BackColor="#7AB428" ForeColor="White" Height="30px" 
-                              onclick="Button_CrearViaje_ListarPropiedad_Click" 
-                              style="margin-left: 0px; margin-top: 2px" Text="Crear" 
-                              Width="150px" />
+                              onclick="Button_CrearViaje_CrearViaje_Click" 
+                              Text="Crear" Width="150px"
+                              style="margin-left: 90px; margin-top: 10px;"/>
                           
-                          <asp:Button ID="Button_Reservar_ListarPropiedad" runat="server" 
-                              BackColor="#7AB428" ForeColor="White" Height="30px" 
-                              style="margin-left: 0px; margin-top: 2px" Text="Crear y Reservar" 
-                              Width="150px" />
-                          <br />
-                          <br />
-                          <br />
-                          
-                          <br />
-                          
-                          <br />
-                          <br />
-                          
+                          <asp:Button ID="Button_CrearReservar_CrearViaje" runat="server" 
+                              BackColor="#671160" ForeColor="White" Height="30px" 
+                              Text="Crear y Reservar" Width="150px"
+                              style="margin-left: 10px; margin-top: 10px;" 
+                              onclick="Button_CrearReservar_CrearViaje_Click"/>
+
+                          <br /> <br />
                       </asp:Panel>
                  </asp:View>
+
                  <asp:View ID="ViewPropiedades" runat="server">
+                     <asp:Panel ID="Panel_Propiedades" runat="server" BackColor="White" 
+                         BorderStyle="Groove" HorizontalAlign="Left" 
+                         style="margin-left: 0px; margin-top: 0px; margin-right: 0px;" 
+                         Height="423px">
+                         <br />
+                         <asp:Label ID="Label_Localidad_Propiedades" runat="server" 
+                             style="margin-left: 10px; margin-top: 10px;" Text="Localidad:" />
+                         <asp:DropDownList ID="DropDownList_Localidad_Propiedades" runat="server" 
+                             AutoPostBack="True" style="margin-left: 20px; margin-top: 10px;" Width="200px">
+                             <asp:ListItem></asp:ListItem>
+                         </asp:DropDownList>
+                         
+                         <br /> <br />
+                         <asp:Label ID="Label_FechaInicio_Propiedades" runat="server" 
+                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Inicio:" />&nbsp;&nbsp;
+                         <script src="http://www.snaphost.com/jquery/Calendar.aspx" 
+                             type="text/javascript">
+                         </script>
+                         
+                         <br /> <br />
+                         <asp:Label ID="Label_FechaFin_Propiedades" runat="server" 
+                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" />
+                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <script type="text/javascript">
+                             $(function () {
+                                 $("#Calendar_Propiedades")
+                         .datepicker({ showOn: 'both', buttonImage: 'http://www.snaphost.com/jquery/calendar.gif',
+                             buttonImageOnly: true, changeMonth: true, showOtherMonths: true, selectOtherMonths: true
+                         });
+                         });</script>
+                         <input name="Calendar_Propiedades" id="Calendar_Propiedades" type="text" />
+                         
+                         <br /> <br />
+                         <asp:Button ID="Button_Filtrar_Propiedades" runat="server" BackColor="#671160" 
+                             Text="Filtrar" Width="150px"
+                             ForeColor="White" Height="30px" onclick="Button_Filtrar_Propiedades_Click" 
+                             style="margin-left: 85px; margin-top: 10px;" />
+                         
+                         <br /> <br />
+                         <asp:GridView ID="GridView_Propiedades" runat="server"
+                                    style="margin-left: 30px; margin-right: 30px; margin-top: 10px;" 
+                             Width="858px"/>
+                         <br /> <br />
+                         <asp:Button ID="Button_Ver_Propiedades" runat="server" 
+                             BackColor="#7AB428" ForeColor="White" Height="30px" 
+                             onclick="Button_Ver_Propiedades_Click" 
+                             style="margin-left: 30px; margin-top: 10px;" Text="Ver" Width="150px" />
+                         
+                         <br />
+                     </asp:Panel>
                  </asp:View>
+
                  <asp:View ID="ViewSolicitarAnfitrion" runat="server">
+                     <asp:Panel ID="Panel_SolicitarAnfitrion" runat="server" BackColor="White" 
+                         BorderStyle="Groove" HorizontalAlign="Left" 
+                         style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
+                         <br />
+                         <asp:Label ID="Label_Localidad_SolicitarAnfitrion" runat="server" 
+                             style="margin-left: 10px; margin-top: 10px;" Text="Localidad:" />
+                         <asp:DropDownList ID="DropDownList_Localidad_SolicitarAnfitrion" runat="server" 
+                             AutoPostBack="True" style="margin-left: 20px; margin-top: 10px;" Width="200px">
+                             <asp:ListItem></asp:ListItem>
+                         </asp:DropDownList>
+                         <br />
+                         <br />
+                         <asp:Label ID="Label_FechaInicio_SolicitarAnfitrion" runat="server" 
+                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Inicio:" />
+                         &nbsp;&nbsp;
+                         <script src="http://www.snaphost.com/jquery/Calendar.aspx" 
+                             type="text/javascript">
+                         </script>
+                         
+                         <br /> <br />
+                         <asp:Label ID="Label_FechaFin_SolicitarAnfitrion" runat="server" 
+                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" />
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <script type="text/javascript">
+                             $(function () {
+                                 $("#Calendar_Anfitrion")
+                         .datepicker({ showOn: 'both', buttonImage: 'http://www.snaphost.com/jquery/calendar.gif',
+                             buttonImageOnly: true, changeMonth: true, showOtherMonths: true, selectOtherMonths: true
+                         });
+                         });</script>
+                         <input name="Calendar_Anfitrion" id="Calendar_Anfitrion" type="text" />
+                         
+                         <br /> <br />
+                         <asp:Button ID="Button_Solicitar_SolicitarAnfitrion" runat="server" 
+                             BackColor="#7AB428" ForeColor="White" Height="30px" 
+                             onclick="Button_Solicitar_SolicitarAnfitrion_Click" 
+                             style="margin-left: 80px; margin-top: 10px;" Text="Solicitar" 
+                             Width="150px" />
+                         
+                         <asp:Button ID="Button_VerRespuestas_SolicitarAnfitrion" runat="server" 
+                             BackColor="#671160" ForeColor="White" Height="30px" 
+                             style="margin-left: 10px; margin-top: 10px;" Text="Ver Respuestas" 
+                             Width="150px" onclick="Button_VerRespuestas_SolicitarAnfitrion_Click" />
+                         <br />
+                         <br />
+                     </asp:Panel>
                  </asp:View>
+
                  <asp:View ID="ViewAdministrarWishlist" runat="server">
+                     <asp:Panel ID="Panel_AdministrarWishList" runat="server" BackColor="White" 
+                         BorderStyle="Groove" Height="379px" HorizontalAlign="Left" 
+                         style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
+                         
+                         <br /> <br />
+                         <asp:GridView ID="GridView_WishList" runat="server" 
+                             style="margin-left: 30px; margin-right: 30px; margin-top: 10px;" 
+                             Width="858px" />
+                         
+                         <br /> <br />
+                         <asp:Button ID="Button_Ver_AdministrarWishList" runat="server" BackColor="#7AB428" 
+                             ForeColor="White" Height="30px" 
+                             onclick="Button_Ver_AdministrarWishList_Click" 
+                             style="margin-left: 30px; margin-top: 10px;" Text="Ver" Width="150px" />
+                         <br /> <br />
+                     </asp:Panel>
                  </asp:View>
+
             </asp:MultiView>
 </div>
 

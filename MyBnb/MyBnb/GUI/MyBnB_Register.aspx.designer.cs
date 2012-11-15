@@ -166,13 +166,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_Sexo;
         
         /// <summary>
-        /// DropDownList_Sexo control.
+        /// DropDownList_Genero control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Sexo;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Genero;
         
         /// <summary>
         /// Label_Descripcion control.
@@ -184,13 +184,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_Descripcion;
         
         /// <summary>
-        /// TextBoxDescripcion control.
+        /// TextBox_Descripcion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxDescripcion;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Descripcion;
         
         /// <summary>
         /// Button_Registrarse control.
