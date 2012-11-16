@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Login.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Login" %>
+﻿<%@ Page Title="MyBnB - Login" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Login.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -55,23 +55,13 @@
         <asp:TextBox ID="TextBox_VerificarContraseña_Registrarse" runat="server" TextMode="Password" 
                 style="margin-left: 10px; margin-top: 5px" Width="200px" 
                 />
-        <br />
-        <br />
-
-            &nbsp;&nbsp;&nbsp;&nbsp; Tipo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:DropDownList ID="DropDownTipoLogin" runat="server" AutoPostBack="True">
-                <asp:ListItem>Viajero</asp:ListItem>
-                <asp:ListItem>Administrador</asp:ListItem>
-            </asp:DropDownList>
-
-        <br />
+            <br />
         <br />
         <asp:Button ID="Button_Registrarse" runat="server" BackColor="#7AB428" Text="Registrarse" 
                 Height="30px" Width="90px" onclick="Button_Registrarse_Click" 
                 style="margin-left: 260px; margin-top: 5px" />
         <br />
         <br />
-        <asp:Label ID="LabelError" runat="server"></asp:Label>
         </asp:Panel>
     </asp:Panel>
 </asp:Content>

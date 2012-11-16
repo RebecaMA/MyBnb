@@ -150,10 +150,19 @@ namespace MyBnb.GUI
             _datos[0] = "2012/11/05";
             _datos[1] = "2012/12/05";
             _datos[2] = TextBox_Titulo_CrearViaje.Text;
-            _datos[3] = "SCLU Chile Santiago Santiago";
+            _datos[3] = "SCLU Chile Santiago Santiago";//esto no debe estar
             _datos[4] = _usuario.getLogin();
-            _viaje.reservarViaje(_datos);
-
+            
+            if (string.IsNullOrEmpty(TextBox_Titulo_CrearViaje.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, typeof(string), "Error", "alert(Debe darle un nombre a este viaje);", true);
+            }
+            else
+            {
+                string value = Request.Form["Calendar_CrearViaje"];
+                ScriptManager.RegisterStartupScript(this, typeof(string), "Error", "alert(" + value + ");", true);
+                _viaje.reservarViaje(_datos);
+            }            
         }
 
         /// <summary>
@@ -168,7 +177,7 @@ namespace MyBnb.GUI
            
 
             String[] _datos = new String[5];
-            _datos[0] = "2012/11/05";
+            _datos[0] = "2012/12/05";
             _datos[1] = "2012/12/05";
             _datos[2] = TextBox_Titulo_CrearViaje.Text;
             _datos[3] = "SCLU Chile Santiago Santiago";
@@ -309,8 +318,16 @@ namespace MyBnb.GUI
         protected void Button_Solicitar_SolicitarAnfitrion_Click(object sender, EventArgs e)
         {
             
-            int seleccionado = DropDownList_Viaje_SolicitarAnfitrion.SelectedIndex;
-            _controllerViaje.solicitarAnfitrion(seleccionado);
+            int viajeSeleccionado = DropDownList_Viaje_SolicitarAnfitrion.SelectedIndex;
+            int localidadSeleccionada = DropDownList_Localidad_SolicitarAnfitrion.SelectedIndex;
+            if (viajeSeleccionado == -1 || localidadSeleccionada == -1)
+            {
+                ScriptManager.RegisterStartupScript(this, typeof(string), "Error", "alert('Datos incompletos');", true);
+            }
+            else 
+            {
+                _controllerViaje.solicitarAnfitrion(viajeSeleccionado);
+            }            
         }
 
         /// <summary>

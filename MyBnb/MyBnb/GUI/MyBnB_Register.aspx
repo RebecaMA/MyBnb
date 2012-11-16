@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Register.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Register" %>
+﻿<%@ Page Title="MyBnB - Registrarse" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Register.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Register" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -58,7 +58,7 @@
             <asp:Label ID="Label_FechaNacimiento" runat="server" Text="Fecha de Nacimiento:     "
                 style="margin-left: 5px; margin-top: 10px" />&nbsp;&nbsp;   
             <script type="text/javascript"
-            src="http://www.snaphost.com/jquery/Calendar.aspx"></script>
+            src="http://www.snaphost.com/jquery/Calendar.aspx" id="Calendar_Register"></script>
             
             <br />
             <asp:Label ID="Label_Sexo" runat="server" Text="Genero:"

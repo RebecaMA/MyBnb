@@ -21,7 +21,7 @@ namespace MyBnb.GUI
             String login = TextBox_Usuario_Registrarse.Text;
             String contraseña = TextBox_Contraseña_Registrarse.Text;
             String verificar = TextBox_VerificarContraseña_Registrarse.Text;
-            String tipoUsuario = DropDownTipoLogin.SelectedItem.ToString();
+            String tipoUsuario = "Viajero";
 
             if (string.IsNullOrEmpty(TextBox_Usuario_Registrarse.Text) ||
                 string.IsNullOrEmpty(TextBox_Contraseña_Registrarse.Text) ||
