@@ -58,7 +58,8 @@ namespace MyBnb.Acceso_Datos
                 _retorno[2] = _objeto.ToString();
                 _retorno[3] = reader.GetString(3);
                 _retorno[4] = reader.GetString(4);
-                _retorno[5] = reader.GetString(5);
+                _objeto = reader.GetValue(6);
+                _retorno[5] = _objeto.ToString();
                 _objeto = reader.GetValue(6);
                 _retorno[6] = _objeto.ToString();
                 _retorno[7] = reader.GetString(7);

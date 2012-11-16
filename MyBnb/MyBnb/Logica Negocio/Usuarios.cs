@@ -9,8 +9,11 @@ namespace MyBnb.Logica_Negocio
 {
     public class Usuarios
     {
-        AccesoDatosUsuario _accesoDatos = new AccesoDatosUsuario();
-        public Usuarios() { }
+        AccesoDatosUsuario _accesoDatos;
+        public Usuarios() 
+        {
+            _accesoDatos = new AccesoDatosUsuario();
+        }
 
         public String registarUsuario(String[] pdatos)
         {

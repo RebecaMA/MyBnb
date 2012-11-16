@@ -8,18 +8,19 @@ namespace MyBnb.Controller
 {
     public class ControllerUsuario
     {
-        Usuarios _usuario = new Usuarios();
+        Usuarios _usuario;
         static String _login, _contraseña, _tipoUsuario;
 
     
            
         public ControllerUsuario() 
         {
-
+            _usuario = new Usuarios();
         }
 
         public ControllerUsuario(String plogin,String pcontraseña,String ptipoUsuairo) 
         {
+            _usuario = new Usuarios();
             _login = plogin;
             _contraseña = pcontraseña;
             _tipoUsuario = ptipoUsuairo;
@@ -27,6 +28,7 @@ namespace MyBnb.Controller
 
         public ControllerUsuario(String plogin, String pcontraseña)
         {
+            _usuario = new Usuarios();
             _login = plogin;
             _contraseña = pcontraseña;
         }

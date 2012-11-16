@@ -11,7 +11,7 @@ namespace MyBnb.GUI
     public partial class MyBnB_Viajero : System.Web.UI.Page
     {
         ControllerPropiedades _controllerPropiedad = new ControllerPropiedades();
-        ControllerUsuario _controllerUsuario = new ControllerUsuario();
+        ControllerViaje _controllerViaje = new ControllerViaje();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) 
@@ -27,7 +27,8 @@ namespace MyBnb.GUI
                 DropDownList_HoraEntrada_ListarPropiedad.DataBind();
                 DropDownList_HoraSalida_ListarPropiedad.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
                 DropDownList_HoraSalida_ListarPropiedad.DataBind();
-
+                DropDownList_Viaje_SolicitarAnfitrion.DataSource = _controllerViaje.obtenerViajesUsuario();
+                DropDownList_Viaje_SolicitarAnfitrion.DataBind();
                 // Reservar 
                 //DropDownList_Localidad_Reservar.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
                 //DropDownList_Localidad_Reservar.DataBind();
@@ -54,6 +55,7 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void Button_Desactivar_ModificarUsuario_Click(object sender, EventArgs e)
         {
+            ControllerUsuario _controllerUsuario = new ControllerUsuario();
             String[] datos = new String[12];
             datos[0] = _controllerUsuario.getLogin();
             datos[1] = TextBox_Login_ModificarUsuario.Text;
@@ -80,7 +82,7 @@ namespace MyBnb.GUI
         {
             //String[] _nombreparametros = new String[12] {"@pusuario","@plogin","@ppassword","@descripcion","@pnombre",
             //                                            "@papellido","@pfechaNacimiento","@pemail","@ptelefono","@pgenero","@ppais","@pestadoUsuario" };
-
+            ControllerUsuario _controllerUsuario = new ControllerUsuario();
             String[] datos = new String[12];
             datos[0] = _controllerUsuario.getLogin();
             datos[1] = TextBox_Login_ModificarUsuario.Text;
@@ -306,7 +308,9 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void Button_Solicitar_SolicitarAnfitrion_Click(object sender, EventArgs e)
         {
-
+            
+            int seleccionado = DropDownList_Viaje_SolicitarAnfitrion.SelectedIndex;
+            _controllerViaje.solicitarAnfitrion(seleccionado);
         }
 
         /// <summary>

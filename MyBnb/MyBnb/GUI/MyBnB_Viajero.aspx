@@ -344,7 +344,9 @@
                      <asp:Panel ID="Panel_SolicitarAnfitrion" runat="server" BackColor="White" 
                          BorderStyle="Groove" HorizontalAlign="Left" 
                          style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
-                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Viaje:<asp:DropDownList ID="DropDownList_Viaje_SolicitarAnfitrion" 
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <br />
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Viaje:<asp:DropDownList ID="DropDownList_Viaje_SolicitarAnfitrion" 
                              runat="server" AutoPostBack="True" style="margin-left: 20px; margin-top: 10px;" 
                              Width="200px">
                              <asp:ListItem></asp:ListItem>
