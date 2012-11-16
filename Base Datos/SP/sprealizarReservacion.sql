@@ -20,6 +20,10 @@ AS BEGIN
 	
 	set @precio = (select precioPorNoche from Propiedad where idPropiedad = @pidPropiedad);
 	set @precioTotal  = (@precio * @diasTotales);
+	declare @retorno int= (SELECT [MyBnB_BD].[dbo].[verificarReservacionesPrevias] (@pidPropiedad,@pfechaEntrada,@pfechaSalida)GO)
+	if @retorno = 0
+	begin
+	
 	insert into Reservacion(fechaEntrada,fechaSalida,precioTotal,cantidadNoches,fk_idPropiedad)values(@pfechaEntrada,@pfechaSalida,@precioTotal,@diasTotales,@pidPropiedad)
 				
 	set @idReservacion  =  @@IDENTITY
@@ -28,5 +32,7 @@ AS BEGIN
 				values(@idReservacion,@pidViaje)
 						
  select 'Reservacion Realizada'
+ end 
+ else select 'No se puede realizar reservación'
 END
 

@@ -22,7 +22,9 @@ AS BEGIN
 	precioVolumen money,
 	cantidadMinimanoches int,
 	ranking int,
-	Localidad nvarchar(100)
+	Localidad nvarchar(100),
+	TipoPropiedad nvarchar(30),
+	TipoHospedaje nvarchar(30)
  );
  
 declare @titulo nvarchar(20);
@@ -37,14 +39,18 @@ declare @idPropiedad int;
 declare @fk_idLocalidad int = (select idLocalidad from Localidad where CodigoLocalidad = @pCodigoLocalidad);
 declare @ranking int;
 declare @Localidad nvarchar(100) =  (select Pais + ' ' + Estado + ' ' + Ciudad  from Localidad where idLocalidad = @fk_idLocalidad )
+declare @TipoPropiedad nvarchar(30);
+declare @TipoHospedaje nvarchar(30);
 
 DECLARE cursorobtenerPropiedades CURSOR LOCAL FOR
-select 	idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches, Ranking
-		from Propiedad where fk_idLocalidad = @fk_idLocalidad and ranking >= 3
+select 	idPropiedad,titulo,cantidadMaximaPersonas,Propiedad.descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches, Ranking,CategoriaHospedaje.tipoPropiedad,TipoHospedaje
+		from Propiedad INNER JOIN CategoriaHospedaje on Propiedad.fk_idCategoriaHospedaje = idTipoPropiedad
+					INNER JOIN TipoHospedaje on Propiedad.fk_idTipoHospedaje = idTipoHospedaje
+					where fk_idLocalidad = @fk_idLocalidad and ranking >= 3
 
 OPEN cursorobtenerPropiedades
 FETCH NEXT FROM cursorobtenerPropiedades
-INTO @idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches,@ranking
+INTO @idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches,@ranking,@TipoPropiedad,@TipoHospedaje
 
 WHILE @@fetch_status = 0
 BEGIN
@@ -52,16 +58,16 @@ BEGIN
 	
 	if (@retorno = 0)
 	begin 
-		insert into #PropiedadesTemporal(idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches,ranking,Localidad)
-					values(@idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches,@ranking,@Localidad)
+		insert into #PropiedadesTemporal(idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches,ranking,Localidad,TipoPropiedad,TipoHospedaje)
+					values(@idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches,@ranking,@Localidad,@TipoPropiedad,@TipoHospedaje)
 	end
 	
 
 FETCH NEXT FROM cursorobtenerPropiedades
-INTO @idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches,@ranking 
+INTO @idPropiedad,@titulo,@cantidadMaximaPersonas, @descripcion, @horaEntrada,@horaSalida,@precioPorNoche,@precioVolumen,@cantidadMinimanoches,@ranking,@TipoPropiedad,@TipoHospedaje
 END
 
-select idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches, Ranking ranking,Localidad Localidad
+select idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches, Ranking ranking,Localidad Localidad,TipoPropiedad,TipoHospedaje
 from #PropiedadesTemporal ORDER BY ranking
 
 END

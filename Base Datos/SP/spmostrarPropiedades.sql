@@ -8,8 +8,10 @@ ALTER PROCEDURE [spmostrarPropiedades]
 	
 AS BEGIN
 
-select 	idPropiedad,titulo,cantidadMaximaPersonas, descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches, Ranking,Pais + ' ' + Estado + ' ' + Ciudad as  Localidad 
-		from Propiedad  INNER JOIN Localidad on Propiedad.fk_idLocalidad = idLocalidad where ranking >= 3 
+select 	idPropiedad,titulo,cantidadMaximaPersonas, Propiedad.descripcion, horaEntrada,horaSalida,precioPorNoche,precioVolumen,cantidadMinimanoches, Ranking,Pais + ' ' + Estado + ' ' + Ciudad as  Localidad, CategoriaHospedaje.tipoPropiedad,TipoHospedaje
+		from Propiedad   INNER JOIN CategoriaHospedaje on Propiedad.fk_idCategoriaHospedaje = idTipoPropiedad
+						INNER JOIN TipoHospedaje on Propiedad.fk_idTipoHospedaje = idTipoHospedaje
+						INNER JOIN Localidad on Propiedad.fk_idLocalidad = idLocalidad where ranking >= 3 
 		
 
 
