@@ -16,7 +16,7 @@ namespace MyBnb.Controller
             _propiedades = new Propiedades();
         }
 
-        public String[] obtenerPropiedades(String ptipoBusqueda, String[] pdatos)
+        public List<String[]> obtenerPropiedades(String ptipoBusqueda, String[] pdatos)
         {
             return _propiedades.obtenerPropiedades(ptipoBusqueda, pdatos);
         }
@@ -29,6 +29,11 @@ namespace MyBnb.Controller
         public String listarPropiedad(String[] pdatos)
         {
             return _propiedades.listarPropiedad(pdatos);            
+        }
+
+        public int obtenerIdPropiedad(int pindex)
+        {
+            return _propiedades.obtenerId(pindex);
         }
 
     }

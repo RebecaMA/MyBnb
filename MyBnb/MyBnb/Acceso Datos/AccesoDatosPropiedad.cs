@@ -28,6 +28,10 @@ namespace MyBnb.Acceso_Datos
                 _nombreparametros = new String[3] { "@pfechainicio", "@pfechafinal", "@pCodigoLocalidad" };
                 _reader = _accesoDatos.leer("spmostrarPropiedadesDisponibles", _nombreparametros, pdatos);
             }
+            else if (ptipoBusqueda.Equals("Mostrar Propiedades"))
+            {
+                _reader = _accesoDatos.leer("spmostrarPropiedades");
+            }
 
             while (_reader.Read())
             {
@@ -40,8 +44,16 @@ namespace MyBnb.Acceso_Datos
                 _propiedad.HoraEntrada = _objeto.ToString();
                 _objeto = _reader.GetValue(5);
                 _propiedad.HoraSalida = _objeto.ToString();
-                _propiedad.PrecioNoche = _reader.GetFloat(6);
-                _propiedad.CantidadMinimaNoches = _reader.GetInt32(7);
+                _objeto = _reader.GetValue(6);
+                _propiedad.PrecioNoche = float.Parse(_objeto.ToString());
+                _objeto = _reader.GetValue(7);
+                _propiedad.PrecioVolumen = float.Parse(_objeto.ToString());
+                _objeto = _reader.GetValue(8);
+                _propiedad.CantidadMinimaNoches = int.Parse(_objeto.ToString());
+                _objeto = _reader.GetValue(9);
+                _propiedad.Ranking= int.Parse(_objeto.ToString());
+                _objeto = _reader.GetValue(10);
+                _propiedad.Localidad = _objeto.ToString();
 
                 _listaPropiedades.Add(_propiedad);
             }

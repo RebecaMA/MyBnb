@@ -20,9 +20,8 @@ namespace MyBnb.Logica_Negocio
 
         public String realizarReservacion(String[] pdatos)
         {
-            
 
-            return "En proceso";
+            return _accesoDatosViaje.realizarReservacionPropiedad(pdatos);
         }
     }
 }

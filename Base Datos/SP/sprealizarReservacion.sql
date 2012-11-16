@@ -3,25 +3,30 @@
 ALTER PROCEDURE [dbo].[sprealizarReservacion]
 	@pfechaEntrada date, 
 	@pfechaSalida date,
-  	@pprecioTotal money,
-  	@pcantidadnoches int,
   	@pidPropiedad int,
-  	@pidViaje nvarchar(30)
+  	@pidViaje int
 AS BEGIN
-	insert into Reservacion(fechaEntrada,fechaSalida,precioTotal,cantidadNoches,fk_idPropiedad)
-				values(@pfechaEntrada,@pfechaSalida,@pprecioTotal,@pcantidadnoches,@pidPropiedad)
+	declare @diainicio int = (SELECT DATEPART(dy,@pfechaEntrada));
+	declare @diafinal int =  (SELECT DATEPART(dy,@pfechaSalida));	
+	declare @diasTotales int;
+	declare @precio money;
+	declare @precioTotal money;
+	declare @idReservacion int;
+	if Year(@pfechaEntrada) = Year(@pfechaSalida)
+	begin 
+		set @diasTotales= (@diafinal - @diainicio)
+	end
+	else set @diasTotales= ((@diafinal+365)- @diainicio)
+	
+	set @precio = (select precioPorNoche from Propiedad where idPropiedad = @pidPropiedad);
+	set @precioTotal  = (@precio * @diasTotales);
+	insert into Reservacion(fechaEntrada,fechaSalida,precioTotal,cantidadNoches,fk_idPropiedad)values(@pfechaEntrada,@pfechaSalida,@precioTotal,@diasTotales,@pidPropiedad)
 				
-	declare @idReservacion int = @@IDENTITY
+	set @idReservacion  =  @@IDENTITY
 	
 	insert into ReservacionesXViaje (fk_idReservacion,fk_idViaje)
-				values(@pidViaje,@idReservacion)
+				values(@idReservacion,@pidViaje)
 						
-				
+ select 'Reservacion Realizada'
 END
 
- --select * from Usuario
-
-exec sprealizarReservacion '2012/10/05','2012/10/30',30000,25,'daniel',2
-exec spmostrarPropiedadesDisponibles '2012/09/20','2012/11/15','SCLU'
-
-select * from localidad

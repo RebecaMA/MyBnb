@@ -18,23 +18,33 @@ namespace MyBnb.Logica_Negocio
 
         }
 
-        public String[] obtenerPropiedades(String ptipoBusqueda, String[] pdatos)
+        public List<String[]> obtenerPropiedades(String ptipoBusqueda, String[] pdatos)
         {
-            String[] _informacionPropiedades = null;
+            List<String[]> _informacionPropiedades = null;
 
 
             String[] _split = pdatos[2].Split(' ');
             pdatos[2] = _split[0];
             _listaPropiedades = _accesoDatosPropiedad.obtenerPropiedades(ptipoBusqueda, pdatos);
           //  _informacionPropiedades = new String[_listaPropiedades.Count];
-            _informacionPropiedades = new String[3];
+            _informacionPropiedades = new List<String[]>();
 
 
             _listaPropiedades.ForEach(delegate(Propiedad ppropiedad)
             {
-                _informacionPropiedades[0] = ppropiedad.Titulo;
-                _informacionPropiedades[1] = ppropiedad.PrecioNoche.ToString();
-                _informacionPropiedades[2] = ppropiedad.TipoHospedaje;
+                String[] _propiedad = new String[11];
+                _propiedad[0] = ppropiedad.Titulo;
+                _propiedad[1] = ppropiedad.Localidad;
+                _propiedad[2] = ppropiedad.Descripcion;
+                _propiedad[3] = ppropiedad.TipoPropiedad;
+                _propiedad[4] = ppropiedad.TipoHospedaje;
+                _propiedad[5] = ppropiedad.CantidadMaximaPersonas.ToString();
+				_propiedad[6] = ppropiedad.HoraEntrada;
+                _propiedad[7] = ppropiedad.HoraSalida;
+                _propiedad[8] = ppropiedad.PrecioNoche.ToString();
+                _propiedad[9] = ppropiedad.PrecioVolumen.ToString();
+                _propiedad[10] = ppropiedad.CantidadMinimaNoches.ToString();
+                _informacionPropiedades.Add(_propiedad);
             });
 
             return _informacionPropiedades;

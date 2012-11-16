@@ -330,6 +330,12 @@
                              onclick="Button_Ver_Propiedades_Click" 
                              style="margin-left: 30px; margin-top: 10px;" Text="Ver" Width="150px" />
                          
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <asp:Button ID="Button_Reservar_Propiedades" runat="server" BackColor="#7AB428" 
+                             ForeColor="White" Height="30px"  
+                             style="margin-left: 30px; margin-top: 10px;" Text="Reservar" Width="150px" 
+                             onclick="Button_Reservar_Propiedades_Click" />
+                         
                          <br />
                      </asp:Panel>
                  </asp:View>
@@ -338,34 +344,13 @@
                      <asp:Panel ID="Panel_SolicitarAnfitrion" runat="server" BackColor="White" 
                          BorderStyle="Groove" HorizontalAlign="Left" 
                          style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
-                         <br />
-                         <asp:Label ID="Label_Localidad_SolicitarAnfitrion" runat="server" 
-                             style="margin-left: 10px; margin-top: 10px;" Text="Localidad:" />
-                         <asp:DropDownList ID="DropDownList_Localidad_SolicitarAnfitrion" runat="server" 
-                             AutoPostBack="True" style="margin-left: 20px; margin-top: 10px;" Width="200px">
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Viaje:<asp:DropDownList ID="DropDownList_Viaje_SolicitarAnfitrion" 
+                             runat="server" AutoPostBack="True" style="margin-left: 20px; margin-top: 10px;" 
+                             Width="200px">
                              <asp:ListItem></asp:ListItem>
                          </asp:DropDownList>
                          <br />
                          <br />
-                         <asp:Label ID="Label_FechaInicio_SolicitarAnfitrion" runat="server" 
-                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Inicio:" />
-                         &nbsp;&nbsp;
-                         <script src="http://www.snaphost.com/jquery/Calendar.aspx" 
-                             type="text/javascript">
-                         </script>
-                         
-                         <br /> <br />
-                         <asp:Label ID="Label_FechaFin_SolicitarAnfitrion" runat="server" 
-                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" />
-                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                         <script type="text/javascript">
-                             $(function () {
-                                 $("#Calendar_Anfitrion")
-                         .datepicker({ showOn: 'both', buttonImage: 'http://www.snaphost.com/jquery/calendar.gif',
-                             buttonImageOnly: true, changeMonth: true, showOtherMonths: true, selectOtherMonths: true
-                         });
-                         });</script>
-                         <input name="Calendar_Anfitrion" id="Calendar_Anfitrion" type="text" />
                          
                          <br /> <br />
                          <asp:Button ID="Button_Solicitar_SolicitarAnfitrion" runat="server" 

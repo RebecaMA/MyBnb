@@ -1,0 +1,21 @@
+Cambios: 
+
+- crear viaje tiene q tener localidad para poder solicitar anfitrion sobre ese viaje?
+
+- como hago para agarrar las fechas de los viajes?
+
+- arreglar registrar usuario
+- localidad es ver localidad me parece q no es necesario xq ya tengo mi localidad en el viaje
+- no tengo ni idea de como cargar el gried view lo intente voy a seguir
+- reservar falta un boton q diga reservar x aquello q solo quiera ya reservar la cosa
+- los viajes solo se muestran si todavia no han pasado?
+ o tienejn un estado de activo o algo?
+
+
+
+Dudas:
+-titulo de todos(propiedades, viajes)son unicos o no?
+- Me parece q la pagina de usuario esta sobrecargada
+- q pasa si un viaje va a muchas localidades??? 
+- el precio total lo calcula uno? con la cantidad de noches q se va a hospedar?
+- que es el precio volumen?

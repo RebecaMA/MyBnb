@@ -19,6 +19,13 @@ namespace MyBnb.LibreriaClases
         private String tipoHospedaje;
         private String localidad;
         private float precioVolumen;
+        private int ranking;
+
+        public int Ranking
+        {
+            get { return ranking; }
+            set { ranking = value; }
+        }
 
         public float PrecioVolumen
         {
