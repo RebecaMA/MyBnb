@@ -2,17 +2,20 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    
     <asp:Panel ID="Panel_Login" runat="server" 
         HorizontalAlign="Right" BackColor="#EEEEEE" 
-        style="margin-left: 0px">
+        
+    style="margin-left: 0px; margin-bottom:0; margin-right:0; margin-right:0;" 
+    Height="558px" Width="960px">
         
         <br />        
         <asp:Image ID="Image_LogoMyBnB" runat="server"  ImageAlign="Left" 
-            Height="114px" Width="459px" ImageUrl="~/Images/MyBnB.PNG" 
-            style="margin-left: 25px; margin-top: 114px"/>
+            Height="101px" Width="403px" ImageUrl="~/Images/MyBnB.PNG" 
+            style="margin-left: 25px; margin-top: 144px"/>
 
         <asp:Panel ID="Panel_CrearUsuario" runat="server" BorderStyle="Solid" HorizontalAlign="Left" 
-            style="margin-left: 509px; margin-top: 0px; margin-right: 26px;">
+            style="margin-left: 509px; margin-top: 50px; margin-right: 40px;">
             
             <asp:Panel ID="Panel1" runat="server" BackColor="#CCCCCC" BorderColor="#EEEEEE" 
                 BorderStyle="Double" Height="25px" HorizontalAlign="Left">                  
@@ -56,7 +59,6 @@
                 style="margin-left: 5px; margin-top: 10px" />&nbsp;&nbsp;   
             <script type="text/javascript"
             src="http://www.snaphost.com/jquery/Calendar.aspx"></script>
-
             
             <br />
             <asp:Label ID="Label_Sexo" runat="server" Text="Genero:"

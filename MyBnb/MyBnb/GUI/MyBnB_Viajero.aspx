@@ -6,8 +6,9 @@
     <div>    
     <asp:Menu ID="MenuTabControl" runat="server" 
         OnMenuItemClick="MenuTabControl_MenuItemClick" Orientation="Horizontal"
-              style="left: 0; position: relative; top: 0" Height="0px" 
-        Width="900px" >
+              style="margin-left:20; margin-right: 20; margin-top: 20; margin-bottom: 20px
+              top: 0" Height="30px" Width="960px" BackColor="#588EBE" 
+            ForeColor="White" >
               <StaticMenuStyle HorizontalPadding="0px" VerticalPadding="0px" />
               <StaticSelectedStyle BorderColor="#C0C0FF" />
               <DynamicItemTemplate>
@@ -26,12 +27,13 @@
     </asp:Menu>
 </div>
 
-<div style="width: 918px; height: 37px; background-color: #C0C0FF;">
+<div style="width: 957px; height: 10px; background-color: #C0C0FF;">
             <asp:MultiView ID="MultiViewTabControl" runat="server">
                  <asp:View ID="ViewModificarUsuario" runat="server">
+
                       <asp:Panel ID="Panel_ModificarUsuario" runat="server" HorizontalAlign="Left" 
-                              style="margin-left: 0px; margin-top: 0px; margin-right: 0px;" 
-                              BackColor="White" BorderStyle="Groove" Height="449px">
+                              style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom:0px" 
+                              BackColor="#E4E4E4" BorderStyle="Groove" Height="590px">
                               
                               <br />
                               <asp:Label ID="Label_Login" runat="server" Text="Login:"
@@ -118,9 +120,10 @@
                  </asp:View>
 
                  <asp:View ID="ViewListarPropiedad" runat="server">
-                      <asp:Panel ID="Panel_ListarPropiedad" runat="server" BackColor="White" 
+                      <asp:Panel ID="Panel_ListarPropiedad" runat="server" BackColor="#E4E4E4" 
                                  BorderStyle="Groove" HorizontalAlign="Left" 
-                                 style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
+                                 style="margin-left: 0px; margin-top: 0px; margin-right: 0px;" 
+                                 Height="590px">
                               
                           <br />                                                         
                           <asp:Label ID="Label_Titulo" runat="server" Text="Titulo:"
@@ -235,9 +238,9 @@
                  </asp:View>
 
                 <asp:View ID="ViewCrearViaje" runat="server">
-                      <asp:Panel ID="Panel_CrearViaje" runat="server" BackColor="White" 
+                      <asp:Panel ID="Panel_CrearViaje" runat="server" BackColor="#E4E4E4" 
                           BorderStyle="Groove" HorizontalAlign="Left" 
-                          style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
+                          style="margin-left: 0px; margin-top: 0px; margin-right: 0px;" Height="590px">
                           
                           <br />
                           <asp:Label ID="Label_Titulo0" runat="server" Text="Titulo:"
@@ -255,6 +258,7 @@
                           <asp:Label ID="Label_FechaFin" runat="server" Text="Fecha Fin:"
                                   style="margin-left: 10px; margin-top: 10px;"/>
                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          
                           <script type="text/javascript">
                                   $(function () {
                                       $("#Calendar_CrearViaje")
@@ -282,10 +286,10 @@
                  </asp:View>
 
                  <asp:View ID="ViewPropiedades" runat="server">
-                     <asp:Panel ID="Panel_Propiedades" runat="server" BackColor="White" 
+                     <asp:Panel ID="Panel_Propiedades" runat="server" BackColor="#E4E4E4" 
                          BorderStyle="Groove" HorizontalAlign="Left" 
                          style="margin-left: 0px; margin-top: 0px; margin-right: 0px;" 
-                         Height="423px">
+                         Height="490px">
                          <br />
                          <asp:Label ID="Label_Localidad_Propiedades" runat="server" 
                              style="margin-left: 10px; margin-top: 10px;" Text="Localidad:" />
@@ -341,8 +345,8 @@
                  </asp:View>
 
                  <asp:View ID="ViewSolicitarAnfitrion" runat="server">
-                     <asp:Panel ID="Panel_SolicitarAnfitrion" runat="server" BackColor="White" 
-                         BorderStyle="Groove" HorizontalAlign="Left" 
+                     <asp:Panel ID="Panel_SolicitarAnfitrion" runat="server" BackColor="#E4E4E4" 
+                         BorderStyle="Groove" HorizontalAlign="Left" Height="590px"
                          style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                          <br />
@@ -371,8 +375,8 @@
                  </asp:View>
 
                  <asp:View ID="ViewAdministrarWishlist" runat="server">
-                     <asp:Panel ID="Panel_AdministrarWishList" runat="server" BackColor="White" 
-                         BorderStyle="Groove" Height="379px" HorizontalAlign="Left" 
+                     <asp:Panel ID="Panel_AdministrarWishList" runat="server" BackColor="#E4E4E4" 
+                         BorderStyle="Groove" Height="490px" HorizontalAlign="Left" 
                          style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
                          
                          <br /> <br />

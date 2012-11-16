@@ -17,18 +17,18 @@ namespace MyBnb.GUI
             if (!IsPostBack) 
             {
                 MultiViewTabControl.ActiveViewIndex = 0;
-                DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
-                DropDownList_Tipo_ListarPropiedad.DataBind();
-                DropDownList_TipoHospedaje_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
-                DropDownList_TipoHospedaje_ListarPropiedad.DataBind();
-                DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
-                DropDownList_Localidad_ListarPropiedad.DataBind();
-               DropDownList_HoraEntrada_ListarPropiedad.DataSource = new int[]{1,2,3,4,5,6,7,8,9,10,11,12};
-                DropDownList_HoraEntrada_ListarPropiedad.DataBind();
-                DropDownList_HoraSalida_ListarPropiedad.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-                DropDownList_HoraSalida_ListarPropiedad.DataBind();
-                DropDownList_Viaje_SolicitarAnfitrion.DataSource = _controllerViaje.obtenerViajesUsuario();
-                DropDownList_Viaje_SolicitarAnfitrion.DataBind();
+                //DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
+                //DropDownList_Tipo_ListarPropiedad.DataBind();
+                //DropDownList_TipoHospedaje_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
+                //DropDownList_TipoHospedaje_ListarPropiedad.DataBind();
+                //DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
+                //DropDownList_Localidad_ListarPropiedad.DataBind();
+                //DropDownList_HoraEntrada_ListarPropiedad.DataSource = new int[]{1,2,3,4,5,6,7,8,9,10,11,12};
+                //DropDownList_HoraEntrada_ListarPropiedad.DataBind();
+                //DropDownList_HoraSalida_ListarPropiedad.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+                //DropDownList_HoraSalida_ListarPropiedad.DataBind();
+                //DropDownList_Viaje_SolicitarAnfitrion.DataSource = _controllerViaje.obtenerViajesUsuario();
+                //DropDownList_Viaje_SolicitarAnfitrion.DataBind();
                 // Reservar 
                 //DropDownList_Localidad_Reservar.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
                 //DropDownList_Localidad_Reservar.DataBind();

@@ -10,7 +10,7 @@ body
     padding: 0px;
     color: #696969;
     width: 1035px;
-    height: 163px;
+    height: 1000px;
 }
 
 a:link, a:visited
@@ -121,8 +121,8 @@ first child of the left and right table columns */
     padding: 0px 12px;
     margin: 12px 8px 8px 8px;
     min-height: 420px;
-    width: 965px;
-    height: 90px;
+    width: 1000px;
+    height: 580px;
 }
 
 .leftCol

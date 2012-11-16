@@ -2,9 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Panel ID="Panel_Login" runat="server" Height="430px" 
-        HorizontalAlign="Left" Width="924px" BackColor="#EEEEEE" 
-        style="margin-left: 0px">
+    <asp:Panel ID="Panel_Login" runat="server" Height="554px" 
+        HorizontalAlign="Left" Width="960px" BackColor="#EEEEEE" 
+        style="margin-left: 0px; margin-top: 0px;">
         
         <br />        
         <asp:Label ID="Label_NombreUsuario" runat="server" Text="Usuario:"
@@ -30,7 +30,7 @@
 
         <asp:Panel ID="Panel_CrearUsuario" runat="server" BorderStyle="Solid" 
             Height="273px" HorizontalAlign="Left" 
-            style="margin-left: 508px; margin-top: 30px">
+            style="margin-left: 508px; margin-top: 30px; margin-right: 40px">
         <asp:Panel ID="Panel1" runat="server" BackColor="#CCCCCC" BorderColor="#EEEEEE" 
                 BorderStyle="Double" Height="25px" HorizontalAlign="Left">
                 <asp:Label ID="Label_Registrarse" runat="server" style="font-weight: 700" 

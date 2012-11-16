@@ -23,14 +23,23 @@ namespace MyBnb.GUI
             String verificar = TextBox_VerificarContraseña_Registrarse.Text;
             String tipoUsuario = DropDownTipoLogin.SelectedItem.ToString();
 
-            if (contraseña.Equals(verificar))
+            if (string.IsNullOrEmpty(TextBox_Usuario_Registrarse.Text) ||
+                string.IsNullOrEmpty(TextBox_Contraseña_Registrarse.Text) ||
+                string.IsNullOrEmpty(TextBox_VerificarContraseña_Registrarse.Text))
             {
-                _controllerUsuario = new ControllerUsuario(login, contraseña,tipoUsuario);
-                Response.Redirect("http://localhost:51088/GUI/MyBnB_Register.aspx");
+                ScriptManager.RegisterStartupScript(this, typeof(string), "Error", "alert('Datos incompletos');", true);
             }
-            else //Label de error
+            else
             {
-                LabelError.Text = "Contraseñas no coinciden";                
+                if (contraseña.Equals(verificar))
+                {
+                    _controllerUsuario = new ControllerUsuario(login, contraseña, tipoUsuario);
+                    Response.Redirect("http://localhost:51088/GUI/MyBnB_Register.aspx");
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, typeof(string), "Error", "alert('Las contraseñas no coinciden');", true);
+                }
             }
         }
 
@@ -42,12 +51,20 @@ namespace MyBnb.GUI
             _controllerUsuario = new ControllerUsuario(login, contraseña);
             
             resultado = _controllerUsuario.autentificarUsuario();
-            if (resultado.Equals("Viajero"))
-            {
-                _controllerUsuario.setLogin(login);
-                Response.Redirect("http://localhost:51088/GUI/MyBnB_Viajero.aspx"); 
-            }
 
+            if (string.IsNullOrEmpty(TextBox_Usuario.Text) ||
+                string.IsNullOrEmpty(TextBox_Contraseña.Text))
+            {
+                ScriptManager.RegisterStartupScript(this, typeof(string), "Error", "alert('Datos incompletos');", true);
+            }
+            else
+            {
+                if (resultado.Equals("Viajero"))
+                {
+                    _controllerUsuario.setLogin(login);
+                    Response.Redirect("http://localhost:51088/GUI/MyBnB_Viajero.aspx");
+                }
+            }
         }
 
     
