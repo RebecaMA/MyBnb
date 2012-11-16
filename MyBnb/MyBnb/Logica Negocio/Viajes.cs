@@ -12,15 +12,15 @@ namespace MyBnb.Logica_Negocio
         AccesoDatosViaje _accesoDatosViaje;
         static List<String[]> _viajesUsuario;
 
-        public Viajes() 
+        public Viajes()
         {
             _accesoDatosViaje = new AccesoDatosViaje();
         }
 
         public int reservarViaje(String[] pdatos)
         {
-            String[]_split = pdatos[3].Split(' ');
-            pdatos[3] =_split[0];
+            String[] _split = pdatos[3].Split(' ');
+            pdatos[3] = _split[0];
             return _accesoDatosViaje.ReservarViaje(pdatos);
         }
 
@@ -35,10 +35,10 @@ namespace MyBnb.Logica_Negocio
             _viajesUsuario = _accesoDatosViaje.obtenerViajesUsuario(plogin);
             List<String> titulos = new List<String>();
 
-             _viajesUsuario.ForEach(delegate(String[] viaje)
-             {
-                 titulos.Add(viaje[0]);
-             });
+            _viajesUsuario.ForEach(delegate(String[] viaje)
+            {
+                titulos.Add(viaje[0]);
+            });
 
             return titulos;
         }

@@ -11,24 +11,38 @@ namespace MyBnb.Logica_Negocio
     {
         AccesoDatosPropiedad _accesoDatosPropiedad;
         static List<Propiedad> _listaPropiedades;
+        static int index;
+
+
+        /// <summary>
+        /// Setea el index cada vez que se crea una propiedad nueva
+        /// </summary>
         public Propiedades()
         {
             _accesoDatosPropiedad = new AccesoDatosPropiedad();
-           // _listaPropiedades = new List<Propiedad>();
+            index = -1;
+        }
+        /// <summary>
+        /// No setea el index, se llama cuando se necesita usar los valores del index
+        /// </summary>
+        /// <param name="pindex"></param>
+        public Propiedades(Boolean pboolean)
+        {
 
         }
-
-        public List<String[]> obtenerPropiedades(String ptipoBusqueda, String[] pdatos)
+        /// <summary>
+        /// Obtiene la lista de propiedades dependiendo del parametro de busqueda enviado, coloca el valor de las propiedades en la lista de propiedades
+        /// </summary>
+        /// <param name="ptipoBusqueda"></param>
+        /// <param name="pdatos"></param>
+        /// <returns></returns>
+        public List<String[]> obtenerListaPropiedades(String ptipoBusqueda, String[] pdatos)
         {
             List<String[]> _informacionPropiedades = null;
-
-
             String[] _split = pdatos[2].Split(' ');
             pdatos[2] = _split[0];
             _listaPropiedades = _accesoDatosPropiedad.obtenerPropiedades(ptipoBusqueda, pdatos);
-          //  _informacionPropiedades = new String[_listaPropiedades.Count];
             _informacionPropiedades = new List<String[]>();
-
 
             _listaPropiedades.ForEach(delegate(Propiedad ppropiedad)
             {
@@ -39,7 +53,7 @@ namespace MyBnb.Logica_Negocio
                 _propiedad[3] = ppropiedad.TipoPropiedad;
                 _propiedad[4] = ppropiedad.TipoHospedaje;
                 _propiedad[5] = ppropiedad.CantidadMaximaPersonas.ToString();
-				_propiedad[6] = ppropiedad.HoraEntrada;
+                _propiedad[6] = ppropiedad.HoraEntrada;
                 _propiedad[7] = ppropiedad.HoraSalida;
                 _propiedad[8] = ppropiedad.PrecioNoche.ToString();
                 _propiedad[9] = ppropiedad.PrecioVolumen.ToString();
@@ -51,17 +65,90 @@ namespace MyBnb.Logica_Negocio
 
         }
 
+
+
+        /// <summary>
+        /// Obtiene el tipo de propiedad
+        /// </summary>
+        /// <param name="pTipo"></param>
+        /// <returns></returns>
         public List<String> obtenerTipo(String pTipo)
         {
             return _accesoDatosPropiedad.obtenerTipo(pTipo);
         }
 
-        public int obtenerId(int pindex) 
+        /// <summary>
+        /// Obtiene el id de la propiedad que se encuentre en la posicion del index
+        /// </summary>
+        /// <param name="pindex"></param>
+        /// <returns></returns>
+        public int obtenerId(int pindex)
         {
             return _listaPropiedades.ElementAt(pindex).IdPropiedad;
         }
+        /// <summary>
+        /// Obtiene los datos de la propiedad señalada en el index
+        /// </summary>
+        /// <returns></returns>
+        public String[] obtenerPropiedad()
+        {
+            String[] _datospropiedades = new String[11];
+            Propiedad _propiedad = _listaPropiedades.ElementAt(index);
+            _datospropiedades[0] = _propiedad.Titulo;
+            _datospropiedades[1] = _propiedad.Localidad;
+            _datospropiedades[2] = _propiedad.Descripcion;
+            _datospropiedades[3] = _propiedad.TipoPropiedad;
+            _datospropiedades[4] = _propiedad.TipoHospedaje;
+            _datospropiedades[5] = _propiedad.CantidadMaximaPersonas.ToString();
+            _datospropiedades[6] = _propiedad.HoraEntrada;
+            _datospropiedades[7] = _propiedad.HoraSalida;
+            _datospropiedades[8] = _propiedad.PrecioNoche.ToString();
+            _datospropiedades[9] = _propiedad.PrecioVolumen.ToString();
+            _datospropiedades[10] = _propiedad.CantidadMinimaNoches.ToString();
+            return _datospropiedades;
+        }
+        /// <summary>
+        /// Obtiene los datos de la propiedad dependiendo de su estado es la siguiente o la anterior al index
+        /// </summary>
+        /// <param name="pestado"></param>
+        /// <returns></returns>
+        public String[] obtenerPropiedad(String pestado)
+        {
+            String[] _datospropiedades;
+            Propiedad _propiedad;
+            if (pestado.Equals("sig"))
+            {
+                index += 1;
+                if (index >= _listaPropiedades.Count)
+                {
+                    index = 0;
+                }
+            }
+            else if (pestado.Equals("ant"))
+            {
+                index -= 1;
+                if (index < 0)
+                {
+                    index = _listaPropiedades.Count - 1;
+                }
+            }
+            _propiedad = _listaPropiedades.ElementAt(index);
+            _datospropiedades = new String[11];
+            _datospropiedades[0] = _propiedad.Titulo;
+            _datospropiedades[1] = _propiedad.Localidad;
+            _datospropiedades[2] = _propiedad.Descripcion;
+            _datospropiedades[3] = _propiedad.TipoPropiedad;
+            _datospropiedades[4] = _propiedad.TipoHospedaje;
+            _datospropiedades[5] = _propiedad.CantidadMaximaPersonas.ToString();
+            _datospropiedades[6] = _propiedad.HoraEntrada;
+            _datospropiedades[7] = _propiedad.HoraSalida;
+            _datospropiedades[8] = _propiedad.PrecioNoche.ToString();
+            _datospropiedades[9] = _propiedad.PrecioVolumen.ToString();
+            _datospropiedades[10] = _propiedad.CantidadMinimaNoches.ToString();
+            return _datospropiedades;
+        }
 
-      
+
 
         public String listarPropiedad(String[] pdatos)
         {
@@ -71,11 +158,11 @@ namespace MyBnb.Logica_Negocio
             int _horaEntrada, _HoraSalida;
             String _tiempoEntrada, _tiempoSalida;
 
-            if (!float.TryParse(pdatos[1],out _numero))
+            if (!float.TryParse(pdatos[1], out _numero))
             {
                 _retorno = "Capacidad debe ser número";
             }
-            else if ((!float.TryParse(pdatos[9], out _numero)) ||(!float.TryParse(pdatos[10], out _numero)))
+            else if ((!float.TryParse(pdatos[9], out _numero)) || (!float.TryParse(pdatos[10], out _numero)))
             {
                 _retorno = "Precio debe de ser un número";
             }
@@ -86,7 +173,7 @@ namespace MyBnb.Logica_Negocio
             else
             {
                 _split = pdatos[5].Split(' ');
-                _horaEntrada =  Int32.Parse(_split[0]);
+                _horaEntrada = Int32.Parse(_split[0]);
                 _tiempoEntrada = _split[1];
                 _split = pdatos[6].Split(' ');
                 _HoraSalida = Int32.Parse(_split[0]);
@@ -96,7 +183,7 @@ namespace MyBnb.Logica_Negocio
                 {
                     pdatos[5] = (_horaEntrada + 12) + ":00";
                 }
-                else { pdatos[5] = _horaEntrada+ ":00"; }
+                else { pdatos[5] = _horaEntrada + ":00"; }
                 if (_tiempoSalida.Equals("PM"))
                 {
                     pdatos[6] = (_HoraSalida + 12) + ":00";
@@ -111,9 +198,23 @@ namespace MyBnb.Logica_Negocio
             }
 
             return _retorno;
-            
+
         }
 
+        public List<Propiedad> getListaPropiedades()
+        {
+            return _listaPropiedades;
+        }
+
+        public void setIndex(int pindex)
+        {
+            index = pindex;
+        }
+
+        public int getIndex()
+        {
+            return index;
+        }
 
 
     }

@@ -17,15 +17,15 @@ namespace MyBnb.Acceso_Datos
             IDataReader reader = _accesoDatos.leer("spregistrarViaje", _nombreparametros, pdatos);
             if (reader.Read())
             {
-                obj =  reader.GetValue(0);
+                obj = reader.GetValue(0);
             }
 
 
-                return Int32.Parse(obj.ToString());
+            return Int32.Parse(obj.ToString());
 
         }
 
-        public String realizarReservacionPropiedad( String[] pdatos)
+        public String realizarReservacionPropiedad(String[] pdatos)
         {
 
             String[] _nombreparametros = new String[4] { "@pfechaEntrada", "@pfechaSalida", "@pidPropiedad", "@pidViaje", };
@@ -40,9 +40,9 @@ namespace MyBnb.Acceso_Datos
         }
 
         public List<String[]> obtenerViajesUsuario(String plogin)
-        { 
+        {
             List<String[]> _listaviajesusuario = new List<String[]>();
-            String[] _nombreParametros = new String[1]{"@plogin"};
+            String[] _nombreParametros = new String[1] { "@plogin" };
             String[] _retorno;
             Object _objeto;
 
@@ -70,11 +70,11 @@ namespace MyBnb.Acceso_Datos
                 _retorno[12] = reader.GetString(12);
                 _listaviajesusuario.Add(_retorno);
 
-            
+
             }
 
             return _listaviajesusuario;
-        
+
         }
 
     }

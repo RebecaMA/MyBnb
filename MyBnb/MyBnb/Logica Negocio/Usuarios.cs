@@ -10,14 +10,14 @@ namespace MyBnb.Logica_Negocio
     public class Usuarios
     {
         AccesoDatosUsuario _accesoDatos;
-        public Usuarios() 
+        public Usuarios()
         {
             _accesoDatos = new AccesoDatosUsuario();
         }
 
         public String registarUsuario(String[] pdatos)
         {
-            
+
             Usuario pusuario = new Usuario();
             Persona ppersona = new Persona();
             ppersona.Nombre = pdatos[0];
@@ -45,11 +45,11 @@ namespace MyBnb.Logica_Negocio
             else
             {
                 pusuario.Descripcion = pdatos[10];
-            } 
-            
+            }
+
             pusuario.TipoUsuario = pdatos[11];
 
-            
+
 
             return _accesoDatos.registrarUsuario(pusuario, ppersona);
 
@@ -65,10 +65,10 @@ namespace MyBnb.Logica_Negocio
         {
 
             for (int i = 0; i < 12; i++)
-            { 
-                if(pdatos[i].Equals(""))
+            {
+                if (pdatos[i].Equals(""))
                 {
-                    pdatos[i] = null;   
+                    pdatos[i] = null;
                 }
             }
 

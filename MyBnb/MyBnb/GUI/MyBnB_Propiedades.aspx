@@ -1,4 +1,4 @@
-﻿<%@ Page Title="MyBnB - Propiedades" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Propiedades.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Propiedades" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Propiedades.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Propiedades" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -17,34 +17,44 @@
                 ImageUrl="~/Images/casa.jpg" />            
         </asp:Panel>
         
-        <asp:ImageButton ID="ImageButton3" runat="server" Height="20px" 
+        <asp:ImageButton ID="ImageButtonAnterior" runat="server" Height="20px" 
             ImageUrl="~/Images/Preview.png" Width="30px" 
-            style="margin-left: 0px; margin-top: 10px;"/>
+            style="margin-left: 0px; margin-top: 10px;" 
+            onclick="ImageButtonAnterior_Click"/>
         
-        <asp:ImageButton ID="ImageButton4" runat="server" Height="20px" 
-            ImageUrl="~/Images/Next.png" Width="30px"
-            style="margin-left: 30px; margin-top: 10px;"/>
+        <asp:ImageButton ID="ImageButtonSiguiente" runat="server" Height="20px" 
+            ImageUrl="~/LibreriaClases/Images/Next.png" Width="30px"
+            style="margin-left: 30px; margin-top: 10px;" 
+            onclick="ImageButtonSiguiente_Click"/>
         
         <br /> <br />
-        <asp:Button ID="Button_LogOut_Master" runat="server" 
+        <asp:Button ID="Button_Comentar_Propiedades" runat="server" 
             BackColor="#671160" ForeColor="White" Height="30px"             
-            style="margin-left: 0px; margin-top: 10px;" Text="Comentar" Width="90px" />
+            style="margin-left: 0px; margin-top: 10px;" Text="Comentar" Width="90px" 
+            onclick="Button_Comentar_Propiedades_Click" />
 
-        <asp:Button ID="Button_Desactivar_ModificarUsuario" runat="server" 
+        <asp:Button ID="Button_Recomendar_Propiedades" runat="server" 
             BackColor="#7AB428" ForeColor="White" Height="30px"             
-            style="margin-left: 10px; margin-top: 10px;" Text="Recomendar" Width="90px" />
+            style="margin-left: 10px; margin-top: 10px;" Text="Recomendar" 
+            Width="90px" />
 
         <br />
-        <asp:Button ID="Button_LogOut_Master0" runat="server" 
+        <asp:Button ID="Button_Reservar_Propiedades" runat="server" 
             BackColor="#7AB428" ForeColor="White" Height="30px"             
-            style="margin-left: 0px; margin-top: 10px;" Text="Reservar" Width="90px" />
+            style="margin-left: 0px; margin-top: 10px;" Text="Reservar" Width="90px" onclick="Button_Reservar_Propiedades_Click" 
+           />
 
-        <asp:Button ID="Button_Desactivar_ModificarUsuario1" runat="server" 
+        <asp:Button ID="Button_Wishlist_Propiedades" runat="server" 
             BackColor="#671160" ForeColor="White" Height="30px"             
             style="margin-left: 10px; margin-top: 10px" Text="WishList" 
             Width="90px" />
         
         <br />
+        
+        <asp:Button ID="Button_Regresar_Propiedades" runat="server" 
+            BackColor="#671160" ForeColor="White" Height="30px" 
+            
+            style="margin-left: 10px; margin-top: 10px" Text="Regresar" Width="90px" />
         
         </td>    
     <td class="rightColumn" align="center"> 
@@ -57,19 +67,21 @@
         <asp:Label ID="Label_Titulo" runat="server" Font-Bold="True" 
             style="margin-left: 10px; margin-top: 30px;" Text="Titulo:" />
         &nbsp;
-        <asp:Label ID="Label1" runat="server" 
+        <asp:Label ID="Label_PTitulo" runat="server" 
+            
             Text="Esto lo dejo como Label o pongo unTextBox? - Esto lo dejo como Label o pongo unTextBox?"></asp:Label>
         <br />
         <br />
         <asp:Label ID="Label_Localidad" runat="server" Font-Bold="True" 
             style="margin-left: 10px; margin-top: 30px;" Text="Localidad:" />
-        <asp:Label ID="Label7" runat="server" 
+        <asp:Label ID="Label_PLocalidad" runat="server" 
+            
             Text="Esto lo dejo como Label o pongo unTextBox? - Esto lo dejo como Label o pongo unTextBox?"></asp:Label>
         <br />
         <br />
         <asp:Label ID="Label_Descripcion" runat="server" Font-Bold="True" 
             style="margin-left: 10px; margin-top: 30px;" Text="Descripcion:" />
-        <asp:Label ID="Label4" runat="server" 
+        <asp:Label ID="Label_PDescripcion" runat="server" 
             Text="Esto lo dejo como Label o pongo unTextBox? "></asp:Label>
         <br />
 
@@ -78,7 +90,8 @@
                 style="margin-left: 10px; margin-top: 30px;" Font-Bold="True"/>
 
         &nbsp;
-        <asp:Label ID="Label2" runat="server" 
+        <asp:Label ID="Label_PTipo" runat="server" 
+            
             Text="Esto lo dejo como Label o pongo unTextBox? - Esto lo dejo como Label o pongo unTextBox?"></asp:Label>
         &nbsp; &nbsp;
         <br />
@@ -87,52 +100,47 @@
                 style="margin-left: 10px; margin-top: 30px;" Font-Bold="True"/>
 
         &nbsp;
-        <asp:Label ID="Label8" runat="server" 
+        <asp:Label ID="Label_PHospedaje" runat="server" 
+            
             Text="Esto lo dejo como Label o pongo unTextBox? - Esto lo dejo como Label o pongo unTextBox?"></asp:Label>
         <br />
         <br />
         <br />
-        &nbsp;<asp:Label ID="Label14" runat="server" Font-Bold="True" Text="Ocupacion"></asp:Label>
-        <hr />
-        <asp:Label ID="Label_Capacidad" runat="server" Font-Bold="True" 
-            style="margin-left: 10px; margin-top: 30px;" Text="Capacidad:" />
-&nbsp;
-        <asp:Label ID="Label3" runat="server" 
+        &nbsp;<hr />&nbsp;<asp:Label ID="Label_Capacidad" runat="server" 
+            Font-Bold="True" style="margin-left: 10px; margin-top: 30px;" 
+            Text="Capacidad:" />
+        &nbsp;&nbsp;<asp:Label ID="Label_PCapacidad" runat="server" 
             Text="Esto lo dejo como Label o pongo unTextBox? - Esto lo dejo como Label o pongo unTextBox?"></asp:Label>
         <br />
         <br />
         <asp:Label ID="Label_HoraEntrada" runat="server" Font-Bold="True" 
-            style="margin-left: 10px; margin-top: 30px;" Text="Entrada:" />
-        <asp:Label ID="Label5" runat="server" 
+            style="margin-left: 10px; margin-top: 30px;" Text="Hora Entrada:" />
+        <asp:Label ID="Label_PHoraE" runat="server" 
             Text="Esto lo dejo como Label o pongo unTextBox? - Esto lo dejo como Label o pongo unTextBox?"></asp:Label>
         <br />
         <br />
         <asp:Label ID="Label_HoraSalida" runat="server" Font-Bold="True" 
-            style="margin-left: 10px; margin-top: 30px;" Text="Salida:" />
-        <asp:Label ID="Label6" runat="server" 
+            style="margin-left: 10px; margin-top: 30px;" Text="Hora Salida:" />
+        <asp:Label ID="Label_PHoraSalida" runat="server" 
             Text="Esto lo dejo como Label o pongo unTextBox? - Esto lo dejo como Label o pongo unTextBox?"></asp:Label>
         <br />
         <br />
         <br />
-&nbsp;<asp:Label ID="Label13" runat="server" Font-Bold="True" Text="Precio"></asp:Label>
-        <hr />
-        <asp:Label ID="Label_PrecioNoche" runat="server" Font-Bold="True" 
-            style="margin-left: 10px; margin-top: 30px;" Text="Noche:" />
-        &nbsp;&nbsp;<asp:Label ID="Label9" runat="server" 
+&nbsp;<hr />&nbsp;<asp:Label ID="Label_PrecioNoche" runat="server" Font-Bold="True" 
+            style="margin-left: 10px; margin-top: 30px;" Text="Precio Noche:" />
+        &nbsp;&nbsp;<asp:Label ID="Label_PPrecioNoche" runat="server" 
             Text="Esto lo dejo como Label o pongo unTextBox? - Esto lo dejo como Label o pongo unTextBox?"></asp:Label>
         <br />
         <br />
         <asp:Label ID="Label_PrecioVolumen" runat="server" Font-Bold="True" 
             style="margin-left: 10px; margin-top: 30px;" Text="Precio Volumen:" />
-        &nbsp;
-        <asp:Label ID="Label10" runat="server" 
+        &nbsp;&nbsp;<asp:Label ID="Label_PPrecioVolumen" runat="server" 
             Text="Esto lo dejo como Label o pongo unTextBox? "></asp:Label>
         <br />
         <br />
-        <asp:Label ID="Label_CantidadVolumen" runat="server" Font-Bold="True" 
-            style="margin-left: 10px; margin-top: 30px;" Text="Cantidad Volumen:" />
-        &nbsp;
-        <asp:Label ID="Label11" runat="server" 
+        <asp:Label ID="Label_NochesMinima" runat="server" Font-Bold="True" 
+            style="margin-left: 10px; margin-top: 30px;" Text="Noches Minimas: " />
+&nbsp;&nbsp;<asp:Label ID="Label_PNochesMinima" runat="server" 
             Text="Esto lo dejo como Label o pongo unTextBox? "></asp:Label>
         <br />
 

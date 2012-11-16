@@ -12,29 +12,30 @@ namespace MyBnb.Controller
         Viajes _viaje;
         static int _idViaje;
 
-     
-        public ControllerViaje() 
+
+        public ControllerViaje()
         {
             _viaje = new Viajes();
         }
 
         public int reservarViaje(String[] pdatos)
         {
-             
-           return _viaje.reservarViaje(pdatos);
+
+            return _viaje.reservarViaje(pdatos);
         }
 
         public String realizarReservacion(int pindex, String[] pdatos)
         {
-           ControllerPropiedades _propiedad = new ControllerPropiedades();
-           String[] datos = new String[4];
-           datos[0] = pdatos[0];
-           datos[1] = pdatos[1];
-           datos[2] = _propiedad.obtenerIdPropiedad(pindex).ToString();
-           datos[3] = getidViaje().ToString();
+            ControllerPropiedades _propiedad = new ControllerPropiedades();
+            String[] datos = new String[4];
+            datos[0] = pdatos[0];
+            datos[1] = pdatos[1];
+            datos[2] = _propiedad.obtenerIdPropiedad(pindex).ToString();
+            datos[3] = getidViaje().ToString();
 
-           return _viaje.realizarReservacion(datos);
+            return _viaje.realizarReservacion(datos);
         }
+
 
         public List<String> obtenerViajesUsuario()
         {
@@ -42,7 +43,7 @@ namespace MyBnb.Controller
             return _viaje.obtenerViajesUsuario(_usuario.getLogin());
         }
 
-        public String[] solicitarAnfitrion(int pindex) 
+        public String[] solicitarAnfitrion(int pindex)
         {
             return _viaje.obtenerViajeSeleccionado(pindex);
         }
@@ -52,11 +53,11 @@ namespace MyBnb.Controller
             _idViaje = pidViaje;
         }
 
-        public int getidViaje() 
+        public int getidViaje()
         {
             return _idViaje;
         }
 
-        
+
     }
 }

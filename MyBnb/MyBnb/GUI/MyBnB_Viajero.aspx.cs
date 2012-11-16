@@ -12,23 +12,32 @@ namespace MyBnb.GUI
     {
         ControllerPropiedades _controllerPropiedad = new ControllerPropiedades();
         ControllerViaje _controllerViaje = new ControllerViaje();
+        private int idPropiedad;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["Indice"] != null)
+            {
+                idPropiedad = int.Parse(Request.QueryString["idPropiedad"]);
+                MultiViewTabControl.ActiveViewIndex = int.Parse(Request.QueryString["Indice"]);
+
+            }
+
             if (!IsPostBack) 
             {
                 MultiViewTabControl.ActiveViewIndex = 0;
-                //DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
-                //DropDownList_Tipo_ListarPropiedad.DataBind();
-                //DropDownList_TipoHospedaje_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
-                //DropDownList_TipoHospedaje_ListarPropiedad.DataBind();
-                //DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
-                //DropDownList_Localidad_ListarPropiedad.DataBind();
-                //DropDownList_HoraEntrada_ListarPropiedad.DataSource = new int[]{1,2,3,4,5,6,7,8,9,10,11,12};
-                //DropDownList_HoraEntrada_ListarPropiedad.DataBind();
-                //DropDownList_HoraSalida_ListarPropiedad.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-                //DropDownList_HoraSalida_ListarPropiedad.DataBind();
-                //DropDownList_Viaje_SolicitarAnfitrion.DataSource = _controllerViaje.obtenerViajesUsuario();
-                //DropDownList_Viaje_SolicitarAnfitrion.DataBind();
+                DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
+                DropDownList_Tipo_ListarPropiedad.DataBind();
+                DropDownList_TipoHospedaje_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
+                DropDownList_TipoHospedaje_ListarPropiedad.DataBind();
+                DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
+                DropDownList_Localidad_ListarPropiedad.DataBind();
+                DropDownList_HoraEntrada_ListarPropiedad.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+                DropDownList_HoraEntrada_ListarPropiedad.DataBind();
+                DropDownList_HoraSalida_ListarPropiedad.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+                DropDownList_HoraSalida_ListarPropiedad.DataBind();
+                DropDownList_Viaje_SolicitarAnfitrion.DataSource = _controllerViaje.obtenerViajesUsuario();
+                DropDownList_Viaje_SolicitarAnfitrion.DataBind();
+                idPropiedad = -1;
                 // Reservar 
                 //DropDownList_Localidad_Reservar.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
                 //DropDownList_Localidad_Reservar.DataBind();
@@ -187,76 +196,7 @@ namespace MyBnb.GUI
            
         }
 
-        //struct Persona
-        //{
-        //    public string Id;
-        //    public string Nombre;
-        //}
 
-        //private List<Persona> ObtenerNuevaLista()
-        //{
-        //    List<Persona> lista = new List<Persona>();
-
-        //    Persona p1 = new Persona();
-        //    p1.Id = "1";
-        //    p1.Nombre = "Luisa";
-
-        //    Persona p2 = new Persona();
-        //    p2.Id = "2";
-        //    p2.Nombre = "Karla";
-
-        //    lista.Add(p1);
-        //    lista.Add(p2);
-
-        //    return lista;
-
-        //}
-
-        //private List<Persona> GuardarLista(Persona persona)
-        //{
-        //    if (Session["lista"] == null)
-        //    {
-        //        List<Persona> p = this.ObtenerNuevaLista();
-        //        p.Add(persona);
-        //        Session["lista"] = p;
-        //    }
-        //    else
-        //    {
-        //        List<Persona> p = (List<Persona>)Session["lista"];
-        //        p.Add(persona);
-        //        Session["lista"] = p;
-        //    }
-        //    return (List<Persona>)Session["lista"];
-        //}
-
-        //private List<Persona> ObtenerLista()
-        //{
-        //    if (Session["lista"] == null)
-        //    {
-        //        return this.ObtenerNuevaLista();
-        //    }
-        //    else
-        //    {
-        //        return (List<Persona>)Session["lista"];
-        //    }
-        //}
-
-        //protected void GridView_Reservar_RowCommand(object sender, GridViewCommandEventArgs e)
-        //{
-        //    if (e.CommandName.Equals("AddNew"))
-        //    {
-        //        TextBox txtNewName = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewName");
-        //        TextBox txtNewId = (TextBox)GridView_Reservar.FooterRow.FindControl("txtNewId");
-
-        //        Persona p = new Persona();
-        //        p.Id = txtNewId.Text;
-        //        p.Nombre = txtNewName.Text;
-
-        //        this.GuardarLista(p);
-        //        this.GridView_Reservar.DataSource = this.ObtenerLista();
-        //        this.GridView_Reservar.DataBind();
-        //    }
-        //}
         #endregion
 
         #region Propiedades
@@ -277,8 +217,8 @@ namespace MyBnb.GUI
             datos[1] = "2012/11/01";
             datos[2] = "SCLU Chile Santigo Santiago";
             _propiedades.obtenerPropiedades("Propiedades Disponibles", datos);
-           // GridView_Propiedades.DataSource = _propiedades.obtenerPropiedades("Propiedades Disponibles", datos);
-           // GridView_Propiedades.DataBind();
+            GridView_Propiedades.DataSource = _propiedades.getlistaPropiedades();
+            GridView_Propiedades.DataBind();
             
             
 
@@ -291,7 +231,8 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void Button_Ver_Propiedades_Click(object sender, EventArgs e)
         {
-
+            _controllerPropiedad.setIndex(GridView_Propiedades.SelectedIndex);
+            Response.Redirect("~/GUI/MyBnB_Propiedades.aspx");
         }
 
 
@@ -300,10 +241,19 @@ namespace MyBnb.GUI
             ControllerViaje _viaje = new ControllerViaje();
             // Aqui tengo q poner el index del q eligio
             String[] pdatos = new String[2];
+            int index;
             // Ligar aqui las fechas de entrada y de salida
             pdatos[0] = "2012/10/20";
             pdatos[1] = "2012/11/01";
-            _viaje.realizarReservacion(0,pdatos);
+            if (idPropiedad < 0)
+            {
+                index = GridView_Propiedades.SelectedIndex;
+            }
+            else
+            {
+                index = idPropiedad;
+            }
+            _viaje.realizarReservacion(index, pdatos);
         }
 
         #endregion
@@ -355,6 +305,21 @@ namespace MyBnb.GUI
         }
 
         #endregion
+
+        protected void Button_Filtrar_Propiedades_Click1(object sender, EventArgs e)
+        {
+            ControllerPropiedades _propiedades = new ControllerPropiedades();
+            String[] datos = new String[3];
+            //datos[0] = Fecha Entrada
+            //datos[1] = Fecha Salida
+            //datos[2] = Codigo
+            datos[0] = "2012/10/20";
+            datos[1] = "2012/11/01";
+            datos[2] = "SCLU Chile Santigo Santiago";
+            _propiedades.obtenerPropiedades("Propiedades Disponibles", datos);
+            GridView_Propiedades.DataSource = _propiedades.getlistaPropiedades();
+            GridView_Propiedades.DataBind();
+        }
 
      
 

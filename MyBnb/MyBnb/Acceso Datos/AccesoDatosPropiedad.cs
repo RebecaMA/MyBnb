@@ -51,9 +51,12 @@ namespace MyBnb.Acceso_Datos
                 _objeto = _reader.GetValue(8);
                 _propiedad.CantidadMinimaNoches = int.Parse(_objeto.ToString());
                 _objeto = _reader.GetValue(9);
-                _propiedad.Ranking= int.Parse(_objeto.ToString());
+                _propiedad.Ranking = int.Parse(_objeto.ToString());
                 _objeto = _reader.GetValue(10);
                 _propiedad.Localidad = _objeto.ToString();
+                _propiedad.TipoPropiedad = _reader.GetString(11);
+                _propiedad.TipoHospedaje = _reader.GetString(12);
+
 
                 _listaPropiedades.Add(_propiedad);
             }
@@ -95,7 +98,7 @@ namespace MyBnb.Acceso_Datos
                 "@pHoraSalida","@pCodigoLocalidad","@pTipoHospedaje","@pprecioPorNoche","@pprecioVolumen","@pcantidadMinimaNoches"};
             IDataReader _reader = null;
 
-            _reader = _accesoDatos.leer("spListarPropiedad", _nombreparametros,pdatos);
+            _reader = _accesoDatos.leer("spListarPropiedad", _nombreparametros, pdatos);
 
             if (_reader.Read())
             {

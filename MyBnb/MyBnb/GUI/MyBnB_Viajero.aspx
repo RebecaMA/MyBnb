@@ -325,13 +325,31 @@
                          <br /> <br />
                          <asp:Button ID="Button_Filtrar_Propiedades" runat="server" BackColor="#671160" 
                              Text="Filtrar" Width="150px"
-                             ForeColor="White" Height="30px" onclick="Button_Filtrar_Propiedades_Click" 
-                             style="margin-left: 85px; margin-top: 10px;" />
+                             ForeColor="White" Height="30px" 
+                             style="margin-left: 85px; margin-top: 10px;" 
+                             onclick="Button_Filtrar_Propiedades_Click1" />
                          
                          <br /> <br />
                          <asp:GridView ID="GridView_Propiedades" runat="server"
                                     style="margin-left: 30px; margin-right: 30px; margin-top: 10px;" 
-                             Width="858px"/>
+                             Width="858px" AutoGenerateColumns="False" ShowFooter="True" 
+                             AutoGenerateSelectButton="True" 
+                             >
+                             <Columns>
+                                 <asp:BoundField DataField="titulo" HeaderText="Titulo" 
+                                     SortExpression="titulo" />
+                                 <asp:BoundField DataField="cantidadMaximaPersonas" 
+                                     HeaderText="Personas Maximas" SortExpression="cantidadMaximaPersonas" />
+                                 <asp:BoundField DataField="precioNoche" HeaderText="Precio por Noche" 
+                                     SortExpression="precioNoche" />
+                                 <asp:BoundField DataField="ranking" HeaderText="Ranking" 
+                                     SortExpression="ranking" />
+                                 <asp:BoundField DataField="descripcion" HeaderText="Descripcion" 
+                                     SortExpression="descripcion" />
+                                 <asp:BoundField DataField="cantidadMinimaNoches" 
+                                     HeaderText="Noches Minimas:" SortExpression="cantidadMinimaNoches" />
+                             </Columns>
+                         </asp:GridView>
                          <br /> <br />
                          <asp:Button ID="Button_Ver_Propiedades" runat="server" 
                              BackColor="#7AB428" ForeColor="White" Height="30px" 

@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GUI\MyBnB_Propiedades.aspx" />
+    <Content Include="GUI\MyBnB_RealizarComentario.aspx" />
     <Content Include="GUI\MyBnB_Viajero.aspx" />
     <Content Include="GUI\MyBnB_Login.aspx" />
     <Content Include="GUI\MyBnB_Register.aspx" />
@@ -83,9 +84,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acceso Datos\AccesoDatos.cs" />
+    <Compile Include="Acceso Datos\AccesoDatosComentario.cs" />
     <Compile Include="Acceso Datos\AccesoDatosPropiedad.cs" />
     <Compile Include="Acceso Datos\AccesoDatosUsuario.cs" />
     <Compile Include="Acceso Datos\AccesoDatosViaje.cs" />
+    <Compile Include="Controller\ControllerComentario.cs" />
     <Compile Include="Controller\ControllerPropiedades.cs" />
     <Compile Include="Controller\ControllerUsuario.cs" />
     <Compile Include="Controller\ControllerViaje.cs" />
@@ -98,6 +101,13 @@
     </Compile>
     <Compile Include="GUI\MyBnB_Propiedades.aspx.designer.cs">
       <DependentUpon>MyBnB_Propiedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MyBnB_RealizarComentario.aspx.cs">
+      <DependentUpon>MyBnB_RealizarComentario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\MyBnB_RealizarComentario.aspx.designer.cs">
+      <DependentUpon>MyBnB_RealizarComentario.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\MyBnB_Viajero.aspx.cs">
       <DependentUpon>MyBnB_Viajero.aspx</DependentUpon>
@@ -120,10 +130,12 @@
     <Compile Include="GUI\MyBnB_Register.aspx.designer.cs">
       <DependentUpon>MyBnB_Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LibreriaClases\Comentario.cs" />
     <Compile Include="LibreriaClases\Persona.cs" />
     <Compile Include="LibreriaClases\Propiedad.cs" />
     <Compile Include="LibreriaClases\Usuario.cs" />
     <Compile Include="LibreriaClases\Viaje.cs" />
+    <Compile Include="Logica Negocio\Comentarios.cs" />
     <Compile Include="Logica Negocio\Propiedades.cs" />
     <Compile Include="Logica Negocio\Usuarios.cs" />
     <Compile Include="Logica Negocio\Viajes.cs" />

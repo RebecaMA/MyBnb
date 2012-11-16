@@ -11,14 +11,14 @@ namespace MyBnb.Controller
         Usuarios _usuario;
         static String _login, _contraseña, _tipoUsuario;
 
-    
-           
-        public ControllerUsuario() 
+
+
+        public ControllerUsuario()
         {
             _usuario = new Usuarios();
         }
 
-        public ControllerUsuario(String plogin,String pcontraseña,String ptipoUsuairo) 
+        public ControllerUsuario(String plogin, String pcontraseña, String ptipoUsuairo)
         {
             _usuario = new Usuarios();
             _login = plogin;
@@ -35,7 +35,7 @@ namespace MyBnb.Controller
 
 
 
-        public String registrarUsuario(String[] pdatos) 
+        public String registrarUsuario(String[] pdatos)
         {
             return _usuario.registarUsuario(pdatos);
         }
@@ -45,7 +45,7 @@ namespace MyBnb.Controller
             return _usuario.autentificarUsuario(_login, _contraseña);
         }
 
-        public void modificarUsuario(String[] pdatos) 
+        public void modificarUsuario(String[] pdatos)
         {
             _usuario.modificarUsuario(pdatos);
         }
