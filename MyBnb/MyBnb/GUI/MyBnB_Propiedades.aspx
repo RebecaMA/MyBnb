@@ -23,7 +23,7 @@
             onclick="ImageButtonAnterior_Click"/>
         
         <asp:ImageButton ID="ImageButtonSiguiente" runat="server" Height="20px" 
-            ImageUrl="~/LibreriaClases/Images/Next.png" Width="30px"
+            ImageUrl="~/Images/Next.png" Width="30px"
             style="margin-left: 30px; margin-top: 10px;" 
             onclick="ImageButtonSiguiente_Click"/>
         
@@ -141,13 +141,23 @@
         <asp:Label ID="Label_NochesMinima" runat="server" Font-Bold="True" 
             style="margin-left: 10px; margin-top: 30px;" Text="Noches Minimas: " />
 &nbsp;&nbsp;<asp:Label ID="Label_PNochesMinima" runat="server" 
-            Text="Esto lo dejo como Label o pongo unTextBox? "></asp:Label>
-        <br />
-
-        <br />                    
+            Text="Esto lo dejo como Label o pongo unTextBox? "></asp:Label>                  
         </asp:Panel>       
 
         </td>
+    </tr>
+    <tr>
+    <asp:GridView ID="GridViewComentarios" runat="server" AutoGenerateColumns="False">
+        <Columns>
+            <asp:BoundField DataField="login" HeaderText="Usuario" SortExpression="login" />
+            <asp:BoundField DataField="descripcionComentario" HeaderText="Comentario" 
+                SortExpression="descripcionComentario" />
+            <asp:BoundField DataField="ranking" HeaderText="Calificación" 
+                SortExpression="ranking" />
+            <asp:BoundField DataField="fechaComentario" HeaderText="Fecha " 
+                SortExpression="fechaComentario" />
+        </Columns>
+        </asp:GridView>
     </tr>
     </table>
     </asp:Panel>

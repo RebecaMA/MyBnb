@@ -92,6 +92,9 @@ first child of the left and right table columns */
 {
     width: 1001px;
     background-color: #fff;
+    background-repeat: repeat-y !important; 
+    height: 900px !important;
+    
     margin: 20px auto 0px 0px;
     border: 1px solid #496077;
 }

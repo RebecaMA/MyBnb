@@ -20,6 +20,7 @@ namespace MyBnb.GUI
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
             llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad());
+            llenarComentarios();
 
         }
 
@@ -27,12 +28,14 @@ namespace MyBnb.GUI
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
             llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad("sig"));
+            llenarComentarios();
         }
 
         protected void ImageButtonAnterior_Click(object sender, ImageClickEventArgs e)
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
             llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad("ant"));
+            llenarComentarios();
         }
 
 
@@ -52,6 +55,13 @@ namespace MyBnb.GUI
             Label_PNochesMinima.Text = pdatos[10];
         }
 
+        public void llenarComentarios()
+        {
+            ControllerComentario _controllerComentario = new ControllerComentario();
+            GridViewComentarios.DataSource = _controllerComentario.obtenerComentariosPropiedad();
+            GridViewComentarios.DataBind();
+
+        }
         protected void Button_Reservar_Propiedades_Click(object sender, EventArgs e)
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
@@ -63,7 +73,11 @@ namespace MyBnb.GUI
 
         protected void Button_Comentar_Propiedades_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/GUI/MyBnB_RealizarComentario.aspx");
+            ControllerComentario _controllerComentario = new ControllerComentario();
+            if (_controllerComentario.verificarReservacion())
+                Response.Redirect("~/GUI/MyBnB_RealizarComentario.aspx");
+            else // MostrarError
+            { }
         }
 
 

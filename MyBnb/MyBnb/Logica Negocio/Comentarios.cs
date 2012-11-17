@@ -26,8 +26,21 @@ namespace MyBnb.Logica_Negocio
             _comentario.Ranking = int.Parse(pcomentario[3]);
             _comentario.FechaComentario = pcomentario[4];
             return _accesoDatosComentario.realizarComentario(_comentario);
+        }
 
+        public List<Comentario> obtenerComentariosPropiedad(String pidPropiedad)
+        {
+            _accesoDatosComentario = new AccesoDatosComentario();
+            return _accesoDatosComentario.obtenerComentariosPropiedad(pidPropiedad);
+        }
 
+        public Boolean verificarComentario(int pidPropiedad, String plogin)
+        {
+            String fecha = DateTime.Today.Year +  "/" + DateTime.Today.Month+ "/" + DateTime.Today.Day;
+
+            if (_accesoDatosComentario.verificarReservacion(pidPropiedad, plogin,fecha).Equals("Aprobado"))
+                return true;
+            else return false;
         }
     }
 }

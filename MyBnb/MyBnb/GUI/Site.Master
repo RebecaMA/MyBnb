@@ -11,8 +11,8 @@
 </head>
 <body alink="#003399">
     <form runat="server" 
-    style="width: 1000px; height: 1000px; margin-left: 30px; margin-right: 0px;">
-    <div class="page">
+    style="margin-left: 30px; margin-right: 0px;">
+    <div class="page" style="height: 900px !important;">
         <div class="header" 
             
             style="border-width: thin; border-style: solid; margin: 0px; color: #000000; background-color: #CCCCCC; vertical-align: super; top: -23px; left: -1px; height: 55px; line-height: 0px;">

@@ -7,13 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace MyBnb.GUI
-{
-
-
-    public partial class MyBnB_Propiedades
-    {
-
+namespace MyBnb.GUI {
+    
+    
+    public partial class MyBnB_Propiedades {
+        
         /// <summary>
         /// Control Panel_Propiedades.
         /// </summary>
@@ -22,7 +20,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel_Propiedades;
-
+        
         /// <summary>
         /// Control Panel_Imagen.
         /// </summary>
@@ -31,7 +29,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel_Imagen;
-
+        
         /// <summary>
         /// Control Image_Propiedad.
         /// </summary>
@@ -40,7 +38,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image_Propiedad;
-
+        
         /// <summary>
         /// Control ImageButtonAnterior.
         /// </summary>
@@ -49,7 +47,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ImageButtonAnterior;
-
+        
         /// <summary>
         /// Control ImageButtonSiguiente.
         /// </summary>
@@ -58,7 +56,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ImageButtonSiguiente;
-
+        
         /// <summary>
         /// Control Button_Comentar_Propiedades.
         /// </summary>
@@ -67,7 +65,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button_Comentar_Propiedades;
-
+        
         /// <summary>
         /// Control Button_Recomendar_Propiedades.
         /// </summary>
@@ -76,7 +74,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button_Recomendar_Propiedades;
-
+        
         /// <summary>
         /// Control Button_Reservar_Propiedades.
         /// </summary>
@@ -85,7 +83,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button_Reservar_Propiedades;
-
+        
         /// <summary>
         /// Control Button_Wishlist_Propiedades.
         /// </summary>
@@ -94,7 +92,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button_Wishlist_Propiedades;
-
+        
         /// <summary>
         /// Control Button_Regresar_Propiedades.
         /// </summary>
@@ -103,7 +101,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button_Regresar_Propiedades;
-
+        
         /// <summary>
         /// Control Panel_Descripcion.
         /// </summary>
@@ -112,7 +110,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel_Descripcion;
-
+        
         /// <summary>
         /// Control Label12.
         /// </summary>
@@ -121,7 +119,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label12;
-
+        
         /// <summary>
         /// Control Label_Titulo.
         /// </summary>
@@ -130,7 +128,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_Titulo;
-
+        
         /// <summary>
         /// Control Label_PTitulo.
         /// </summary>
@@ -139,7 +137,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PTitulo;
-
+        
         /// <summary>
         /// Control Label_Localidad.
         /// </summary>
@@ -148,7 +146,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_Localidad;
-
+        
         /// <summary>
         /// Control Label_PLocalidad.
         /// </summary>
@@ -157,7 +155,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PLocalidad;
-
+        
         /// <summary>
         /// Control Label_Descripcion.
         /// </summary>
@@ -166,7 +164,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_Descripcion;
-
+        
         /// <summary>
         /// Control Label_PDescripcion.
         /// </summary>
@@ -175,7 +173,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PDescripcion;
-
+        
         /// <summary>
         /// Control Label_Tipo.
         /// </summary>
@@ -184,7 +182,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_Tipo;
-
+        
         /// <summary>
         /// Control Label_PTipo.
         /// </summary>
@@ -193,7 +191,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PTipo;
-
+        
         /// <summary>
         /// Control Label_Hospedaje.
         /// </summary>
@@ -202,7 +200,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_Hospedaje;
-
+        
         /// <summary>
         /// Control Label_PHospedaje.
         /// </summary>
@@ -211,7 +209,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PHospedaje;
-
+        
         /// <summary>
         /// Control Label_Capacidad.
         /// </summary>
@@ -220,7 +218,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_Capacidad;
-
+        
         /// <summary>
         /// Control Label_PCapacidad.
         /// </summary>
@@ -229,7 +227,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PCapacidad;
-
+        
         /// <summary>
         /// Control Label_HoraEntrada.
         /// </summary>
@@ -238,7 +236,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_HoraEntrada;
-
+        
         /// <summary>
         /// Control Label_PHoraE.
         /// </summary>
@@ -247,7 +245,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PHoraE;
-
+        
         /// <summary>
         /// Control Label_HoraSalida.
         /// </summary>
@@ -256,7 +254,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_HoraSalida;
-
+        
         /// <summary>
         /// Control Label_PHoraSalida.
         /// </summary>
@@ -265,7 +263,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PHoraSalida;
-
+        
         /// <summary>
         /// Control Label_PrecioNoche.
         /// </summary>
@@ -274,7 +272,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PrecioNoche;
-
+        
         /// <summary>
         /// Control Label_PPrecioNoche.
         /// </summary>
@@ -283,7 +281,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PPrecioNoche;
-
+        
         /// <summary>
         /// Control Label_PrecioVolumen.
         /// </summary>
@@ -292,7 +290,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PrecioVolumen;
-
+        
         /// <summary>
         /// Control Label_PPrecioVolumen.
         /// </summary>
@@ -301,7 +299,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PPrecioVolumen;
-
+        
         /// <summary>
         /// Control Label_NochesMinima.
         /// </summary>
@@ -310,7 +308,7 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_NochesMinima;
-
+        
         /// <summary>
         /// Control Label_PNochesMinima.
         /// </summary>
@@ -319,5 +317,14 @@ namespace MyBnb.GUI
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_PNochesMinima;
+        
+        /// <summary>
+        /// Control GridViewComentarios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewComentarios;
     }
 }

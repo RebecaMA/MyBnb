@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using MyBnb.Logica_Negocio;
+using MyBnb.LibreriaClases;
 
 namespace MyBnb.Controller
 {
@@ -32,6 +33,27 @@ namespace MyBnb.Controller
             String fecha = DateTime.Today.Year + "/" + DateTime.Today.Month + "/" + DateTime.Today.Day;
             _datos = new String[5] { pcomentario, _controllerUsuario.getLogin(), idPropiedad.ToString(), pindiceRanking.ToString(), fecha };
             return _comentarios.realizarComentario(_datos);
+        }
+        /// <summary>
+        /// Retorna los comentarios de la propiedad, el Id de la propiedad es pasado por parametros. 
+        /// </summary>
+        /// <param name="pidPropiedad"></param>
+        /// <returns></returns>
+        public List<Comentario> obtenerComentariosPropiedad()
+        {
+            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
+            int index = _controllerPropiedades.getIndex();
+            int idPropiedad = _controllerPropiedades.obtenerIdPropiedad(index);
+            return _comentarios.obtenerComentariosPropiedad(idPropiedad.ToString());
+        }
+
+        public Boolean verificarReservacion()
+        {
+            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
+            ControllerUsuario _controllerUsuario = new ControllerUsuario();
+             int index = _controllerPropiedades.getIndex();
+            int idPropiedad = _controllerPropiedades.obtenerIdPropiedad(index);
+            return _comentarios.verificarComentario(idPropiedad, _controllerUsuario.getLogin());
         }
     }
 }
