@@ -77,3 +77,7 @@ C:\Users\ogsancho\Documents\GitHub\MyBnBTestFixture\MyBnb\MyBnb\MyBnb\bin\Micros
 C:\Users\ogsancho\Documents\GitHub\MyBnBTestFixture\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.ServiceLocation.pdb
 C:\Users\ogsancho\Documents\GitHub\MyBnBTestFixture\MyBnb\MyBnb\MyBnb\bin\Microsoft.Practices.Unity.Interception.pdb
 C:\Users\ogsancho\Documents\GitHub\MyBnBTestFixture\MyBnb\MyBnb\MyBnb\obj\Debug\MyBnb.pdb
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Twitterizer2.dll
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Twitterizer2.xml
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Newtonsoft.Json.dll
+C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Newtonsoft.Json.xml

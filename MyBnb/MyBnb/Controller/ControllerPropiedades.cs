@@ -35,7 +35,8 @@ namespace MyBnb.Controller
 
         public String listarPropiedad(String[] pdatos)
         {
-            return _propiedades.listarPropiedad(pdatos);
+            ControllerUsuario _controllerUsuario = new ControllerUsuario();
+            return _propiedades.listarPropiedad(pdatos,_controllerUsuario.getLogin());
         }
 
         public int obtenerIdPropiedad(int pindex)

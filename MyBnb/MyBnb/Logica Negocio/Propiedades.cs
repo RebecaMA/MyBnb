@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using MyBnb.Acceso_Datos;
 using MyBnb.LibreriaClases;
+using MyBnb.Controller;
 
 namespace MyBnb.Logica_Negocio
 {
@@ -150,14 +151,17 @@ namespace MyBnb.Logica_Negocio
 
 
 
-        public String listarPropiedad(String[] pdatos)
+        public String listarPropiedad(String[] pdatos,String plogin)
         {
-            String _retorno = null;
-            float _numero;
-            String[] _split;
-            int _horaEntrada, _HoraSalida;
+            ControllerTwitter _twitter;
+            String _retorno,_publicacion,localidad;
             String _tiempoEntrada, _tiempoSalida;
+            String[] _split;
+            float _numero;            
+            int _horaEntrada, _HoraSalida;
 
+
+            _twitter = new ControllerTwitter();
             if (!float.TryParse(pdatos[1], out _numero))
             {
                 _retorno = "Capacidad debe ser número";
@@ -193,8 +197,14 @@ namespace MyBnb.Logica_Negocio
                 _split = pdatos[7].Split(' ');
 
                 pdatos[7] = _split[0];
+                localidad = _split[1] + " " + _split[2];
 
                 _retorno = _accesoDatosPropiedad.listarPropiedad(pdatos);
+                if (_retorno.Equals("Ingresada"))
+                {
+                   _publicacion = "Nueva Propiedad: Titulo: " + pdatos[2] + " Localidad: " + localidad + " Usuario: " + plogin;
+                    _retorno = _twitter.realizarPublicacion(_publicacion);
+                }
             }
 
             return _retorno;
