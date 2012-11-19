@@ -35,6 +35,12 @@ p
     line-height: 1.6em;
 }
 
+.title
+{
+    font-family: @Dotum;
+    font-size:xx-large;
+    color: #7AB428;    
+}
 
 /* HEADINGS   
 ----------------------------------------------------------*/

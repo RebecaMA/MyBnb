@@ -9,3 +9,7 @@ insert into Genero (genero) values ('Femenino');
 insert into Genero (genero) values ('Masculino');
 
 insert into Pais (pais) values ('Costa Rica')
+
+insert into EstadoRecomendacion (estadoRecomendacion) values ('Aceptada')
+insert into EstadoRecomendacion (estadoRecomendacion) values ('Rechazada')
+insert into EstadoRecomendacion (estadoRecomendacion) values ('Espera')

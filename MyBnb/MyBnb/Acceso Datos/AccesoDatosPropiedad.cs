@@ -15,7 +15,13 @@ namespace MyBnb.Acceso_Datos
             _accesoDatos = new AccesoDatos();
         }
 
-
+        /// <summary>
+        /// Obtiene la lista de propiedades dependiendo del tipo de busqueda que se necesite
+        /// El tipo de busqueda es dado en el parametro ptipoBusqueda, llama al sp correspondiente
+        /// </summary>
+        /// <param name="ptipoBusqueda"></param>
+        /// <param name="pdatos"></param>
+        /// <returns></returns>
         public List<Propiedad> obtenerPropiedades(String ptipoBusqueda, String[] pdatos)
         {
             List<Propiedad> _listaPropiedades = new List<Propiedad>();
@@ -64,7 +70,12 @@ namespace MyBnb.Acceso_Datos
 
             return _listaPropiedades;
         }
-
+        /// <summary>
+        /// Devuelve los tipos de propiedades o categorias de hospedaje listadas en la base de datos, llamando
+        /// al spobtenerTipo
+        /// </summary>
+        /// <param name="ptipo"></param>
+        /// <returns></returns>
         public List<String> obtenerTipo(String ptipo)
         {
             List<String> _resultados = new List<String>();
@@ -90,6 +101,11 @@ namespace MyBnb.Acceso_Datos
             return _resultados;
         }
 
+        /// <summary>
+        /// Ingresa la propiedad a la base de datos
+        /// </summary>
+        /// <param name="pdatos"></param>
+        /// <returns></returns>
         public String listarPropiedad(String[] pdatos)
         {
 

@@ -36,7 +36,7 @@
         <asp:Button ID="Button_Recomendar_Propiedades" runat="server" 
             BackColor="#7AB428" ForeColor="White" Height="30px"             
             style="margin-left: 10px; margin-top: 10px;" Text="Recomendar" 
-            Width="90px" />
+            Width="90px" onclick="Button_Recomendar_Propiedades_Click" />
 
         <br />
         <asp:Button ID="Button_Reservar_Propiedades" runat="server" 

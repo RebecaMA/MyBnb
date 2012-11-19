@@ -12,6 +12,13 @@ namespace MyBnb.Acceso_Datos
         AccesoDatos _accesoDatos = new AccesoDatos();
         public AccesoDatosUsuario() { }
 
+        /// <summary>
+        /// Registra un usuario nuevo a la base de datos, como parametros los datos de usuario y persona
+        /// Llama al spRegistarUsuario
+        /// </summary>
+        /// <param name="pusuario"></param>
+        /// <param name="ppersona"></param>
+        /// <returns></returns>
         public String registrarUsuario(Usuario pusuario, Persona ppersona)
         {
             String _retorno = null;
@@ -28,6 +35,13 @@ namespace MyBnb.Acceso_Datos
             return _retorno;
         }
 
+        /// <summary>
+       /// Identifica si el usuario con los datos de login y contraseña se encuentran en la base
+       /// Devuelve un string con el tipo de usuario o error.
+        /// </summary>
+        /// <param name="plogin"></param>
+        /// <param name="pcontrasseña"></param>
+        /// <returns></returns>
         public String auntentificarUsuario(String plogin, String pcontrasseña)
         {
             String[] _nombreparametros = new String[2] { "@pusuario", "@ppassw" };
@@ -47,6 +61,23 @@ namespace MyBnb.Acceso_Datos
                                                         "@papellido","@pfechaNacimiento","@pemail","@ptelefono","@pgenero","@ppais","@pestadoUsuario" };
 
             _accesoDatos.escribirDB("spmodificarUsuario", _nombreparametros, pdatos);
+        }
+
+        /// <summary>
+        /// Retorna una lista de login de los usuarios viajeros menos el usuario con el login especificado, 
+        /// llama al spseleccionarUsuarios
+        /// </summary>
+        /// <param name="plogin"></param>
+        /// <returns></returns>
+        public List<String> seleccionarUsuarios(String plogin)
+        {
+            IDataReader _reader = _accesoDatos.leer("spseleccionarUsuarios", new String[] { "@pLogin" }, plogin);
+            List<String> _listaLogin = new List<String>();
+            while (_reader.Read())
+            {
+                _listaLogin.Add(_reader.GetString(0));
+            }
+            return _listaLogin;
         }
     }
 }

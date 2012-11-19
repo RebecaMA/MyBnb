@@ -49,6 +49,17 @@ namespace MyBnb.Controller
         {
             _usuario.modificarUsuario(pdatos);
         }
+
+        /// <summary>
+        /// Devuelve la lista de login de los usuarios menos del usuario loggeado
+        /// </summary>
+        /// <returns></returns>
+        public List<String> seleccionarUsuario()
+        {
+            return _usuario.seleccionarUsuario(_login);
+        }
+
+        #region
         public String getLogin()
         {
             return _login;
@@ -73,6 +84,9 @@ namespace MyBnb.Controller
         {
             return _tipoUsuario;
         }
+
+        #endregion
+       
 
     }
 }

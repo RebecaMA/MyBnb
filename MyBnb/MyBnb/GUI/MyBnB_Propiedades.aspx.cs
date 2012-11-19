@@ -80,6 +80,11 @@ namespace MyBnb.GUI
             { }
         }
 
+        protected void Button_Recomendar_Propiedades_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/GUI/MyBnB_Recomendar.aspx");
+        }
+
 
 
     }

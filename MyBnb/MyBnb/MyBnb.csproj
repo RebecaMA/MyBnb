@@ -68,6 +68,7 @@
     <Content Include="GettingStarted.txt" />
     <Content Include="GUI\MyBnB_Propiedades.aspx" />
     <Content Include="GUI\MyBnB_RealizarComentario.aspx" />
+    <Content Include="GUI\MyBnB_Recomendar.aspx" />
     <Content Include="GUI\MyBnB_Viajero.aspx" />
     <Content Include="GUI\MyBnB_Login.aspx" />
     <Content Include="GUI\MyBnB_Register.aspx" />
@@ -116,6 +117,13 @@
     </Compile>
     <Compile Include="GUI\MyBnB_RealizarComentario.aspx.designer.cs">
       <DependentUpon>MyBnB_RealizarComentario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MyBnB_Recomendar.aspx.cs">
+      <DependentUpon>MyBnB_Recomendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\MyBnB_Recomendar.aspx.designer.cs">
+      <DependentUpon>MyBnB_Recomendar.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\MyBnB_Viajero.aspx.cs">
       <DependentUpon>MyBnB_Viajero.aspx</DependentUpon>

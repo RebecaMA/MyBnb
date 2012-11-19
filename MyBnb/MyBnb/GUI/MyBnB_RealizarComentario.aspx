@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Label ID="LabelComentar" runat="server" Font-Bold="True" 
     
-        Font-Size="XX-Large" Text="Comentar" ForeColor="#7AB428"></asp:Label>
+        Font-Size="XX-Large" Text="Comentar" ForeColor="#7AB428" CssClass="title"></asp:Label>
  
   
    

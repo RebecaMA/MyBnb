@@ -16,6 +16,11 @@ namespace MyBnb.Acceso_Datos
             _accesoDatos = new AccesoDatos();
         }
 
+        /// <summary>
+        /// Ingresa el objeto comentario, llama al sprealizarComentario y le ingresa como parametros los contenidos en Comentario
+        /// </summary>
+        /// <param name="pcomentario"></param>
+        /// <returns></returns>
         public String realizarComentario(Comentario pcomentario)
         {
             String[] _nombreParametos = new String[5] { "@pComentario", "@pLogin", "pidPropiedad", "@pRanking", "@pFecha" };
@@ -31,6 +36,12 @@ namespace MyBnb.Acceso_Datos
             return _retorno;
         }
 
+        /// <summary>
+        /// Obtiene los comentarios de la propiedad que le corresponde el Id. LLama al spobtenerComentariosPropiedad con parametro
+        /// el idPropiedad y devuelve una lista de comentarios
+        /// </summary>
+        /// <param name="pidPropiedad"></param>
+        /// <returns></returns>
         public List<Comentario> obtenerComentariosPropiedad(String pidPropiedad)
         {
             List<Comentario> _listaComentarios = new List<Comentario>();
@@ -52,6 +63,15 @@ namespace MyBnb.Acceso_Datos
             return _listaComentarios;
         }
 
+        /// <summary>
+        /// Verifica que el usuario listado en login pueda hacer comentarios sobre la propiedad a la que le corresponde el id
+        /// Devuelve un string de 'Aprobado' o 'No aprobado'. 
+        /// Llama al spverificarReservacion con los parametos del idPropiedad y el login del usuario
+         /// </summary>
+        /// <param name="pidPropiedad"></param>
+        /// <param name="plogin"></param>
+        /// <param name="pfecha"></param>
+        /// <returns></returns>
         public String verificarReservacion(int pidPropiedad, String plogin,String pfecha)
         {
             String[] _nombreparametros = new String[3] { "@pidPropiedad", "@pLogin","@pfecha" };

@@ -74,5 +74,14 @@ namespace MyBnb.Logica_Negocio
 
             _accesoDatos.modificarUsuario(pdatos);
         }
+        /// <summary>
+        /// Devuelve una lista de los usuarios viajeros del sistema menos el usuario señalado en login
+        /// </summary>
+        /// <param name="plogin"></param>
+        /// <returns></returns>
+        public List<String> seleccionarUsuario(String plogin)
+        {
+            return _accesoDatos.seleccionarUsuarios(plogin);
+        }
     }
 }

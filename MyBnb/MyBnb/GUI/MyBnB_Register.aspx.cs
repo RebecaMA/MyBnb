@@ -21,7 +21,7 @@ namespace MyBnb.GUI
              String[] _datos = new String[12];
              _datos[0] = TextBox_Nombre.Text;
              _datos[1] = TextBox_Apellido.Text;
-             _datos[2] = 
+             _datos[2] = null;
              _datos[3] = TextBox_Email.Text;
              _datos[4] = TextBox_Telefono.Text;
              _datos[5] = DropDownList_Genero.SelectedValue;
