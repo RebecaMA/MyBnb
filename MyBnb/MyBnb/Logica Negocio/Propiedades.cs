@@ -211,6 +211,21 @@ namespace MyBnb.Logica_Negocio
 
         }
 
+        /// <summary>
+        /// Lista la recomendacion, llamando a Acceso Datos Propiedad, como parametros le ingresa los 
+        /// Login del usuario que recomienda y el que recibe la recomendacion
+        /// </summary>
+        /// <param name="pLoginRecomienda"></param>
+        /// <param name="pLoginRecomendado"></param>
+        /// <returns></returns>
+        public String realizarRecomendacion(String pLoginRecomienda,String pLoginRecomendado)
+        {
+            int idPropiedad = obtenerId(getIndex());
+            _accesoDatosPropiedad = new AccesoDatosPropiedad();
+            String[] _datos = new String[3] {idPropiedad.ToString(),pLoginRecomienda,pLoginRecomendado };
+            return _accesoDatosPropiedad.realizarRecomendacion(_datos);
+        }
+
         public List<Propiedad> getListaPropiedades()
         {
             return _listaPropiedades;

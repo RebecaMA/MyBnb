@@ -12,14 +12,26 @@ namespace MyBnb.GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            llenarUsuarios();
+            if (!this.IsPostBack)
+            {
+                llenarUsuarios();
+            }
+            
         }
 
         public void llenarUsuarios()
         { 
             ControllerUsuario _controllerUsuario = new ControllerUsuario();
-            CheckBoxListUsuarios.DataSource = _controllerUsuario.seleccionarUsuario();
-            CheckBoxListUsuarios.DataBind();
+            RadioButtonUsuarios.DataSource = _controllerUsuario.seleccionarUsuario();
+            RadioButtonUsuarios.DataBind();
+        }
+
+        protected void Button_Recomendar_Click(object sender, EventArgs e)
+        {
+            ControllerPropiedades _controllerPropiedad = new ControllerPropiedades(true);
+            String ploginRecomendado = RadioButtonUsuarios.SelectedValue;
+            _controllerPropiedad.realizarRecomendacion(ploginRecomendado);
+
         }
     }
 }

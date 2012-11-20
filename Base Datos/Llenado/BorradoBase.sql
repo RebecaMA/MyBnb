@@ -29,3 +29,5 @@ DELETE FROM dbo.CategoriaHospedaje
 DBCC CHECKIDENT ('dbo.CategoriaHospedaje',RESEED,0)
 DELETE FROM dbo.TipoHospedaje
 DBCC  CHECKIDENT ('dbo.TipoHospedaje',RESEED,0)
+DELETE FROM dbo.Prioridad
+DBCC  CHECKIDENT ('dbo.Prioridad',RESEED,0)
