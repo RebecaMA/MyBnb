@@ -97,9 +97,9 @@ namespace MyBnb.GUI
             _controllerWishlist.ingresarWishlist(prioridad);
         }
 
-        protected void Button_Recomendar_TodosComentarios_Click(object sender, EventArgs e)
+        protected void Button_Comentar_TodosComentarios_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/GUI/MyBnB_RealizarComentario.aspx");
+            Response.Redirect("~/GUI/MyBnB_MuestraComentarios.aspx");
         }
 
 

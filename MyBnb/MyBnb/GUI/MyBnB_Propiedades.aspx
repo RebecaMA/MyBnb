@@ -121,7 +121,7 @@
         <table style="width: 960px; height: 317px;">
             <tr>
                 <td align="left" class="style1">
-                    <asp:Panel ID="Panel4" runat="server" Width="315px" Height="148px" 
+                    <asp:Panel ID="Panel4" runat="server" Width="315px" Height="128px" 
                         BorderStyle="Groove">
                         <br />
                         <asp:Label ID="Label_Prioridad" runat="server" 
@@ -136,12 +136,27 @@
                             ForeColor="White" Height="30px" onclick="Button_Wishlist_Propiedades_Click" 
                             style="margin-left: 200px; margin-top: 10px" Text="WishList" Width="90px" />                        
                     </asp:Panel>
-                    <asp:Panel ID="Panel5" runat="server" Height="144px" Width="315px" 
+                    <asp:Panel ID="Panel5" runat="server" Height="164px" Width="315px" 
                         BorderStyle="Groove">
+                        <asp:Label ID="Label14" runat="server" Font-Bold="True" Text="Usuario:"></asp:Label>
+                        &nbsp;
+                        <asp:TextBox ID="TextBox1" runat="server" Width="200px" style="margin-top:10px"></asp:TextBox>
+                        <br />
+                        <asp:Button ID="Button_Filtrar_PropiedadesAdministrador" runat="server" 
+                            BackColor="#671160" ForeColor="White" Height="30px" 
+                            onclick="Button_Comentar_Propiedades_Click" 
+                            style="margin-left: 60px; margin-top: 10px;" Text="Comentar" 
+                            Width="90px" />
+                        <br />
+                        <asp:DropDownList ID="DropDownList_Prioridad_UsuarioRecomendar" runat="server" 
+                            AutoPostBack="True" Height="16px" style="margin-left: 60px; margin-top: 10px;" 
+                            Width="209px">
+                        </asp:DropDownList>
+                        <br />
                         <asp:Button ID="Button_Recomendar_Propiedades" runat="server" 
                             BackColor="#7AB428" ForeColor="White" Height="30px" 
                             onclick="Button_Recomendar_Propiedades_Click" 
-                            style="margin-left: 200px; margin-top: 10px;" Text="Recomendar" Width="90px" />
+                            style="margin-left: 60px; margin-top: 10px;" Text="Recomendar" Width="90px" />
                         </asp:Panel>
                 </td>
                 <td align="left" class="rightColumn">
@@ -153,7 +168,7 @@
                         &nbsp;<asp:Label ID="Label13" runat="server" Font-Bold="True" 
                             style="margin-top: 3px" Text="Comentario:"></asp:Label>
                         &nbsp;&nbsp;
-                        <asp:TextBox ID="TextBoxComentario" runat="server" Height="80px" 
+                        <asp:TextBox ID="TextBoxComentario" runat="server" Height="100px" 
                             style="margin-top:6px" TextMode="MultiLine" Width="520px"></asp:TextBox>
                         <br />
                         
@@ -171,9 +186,9 @@
                             Text="Donde 5 es el mejor y 1 el peor"></asp:Label>
                         <br />
                         <br />
-                        <asp:Button ID="Button_Recomendar_TodosComentarios" runat="server" 
+                        <asp:Button ID="Button_Comentar_TodosComentarios" runat="server" 
                             BackColor="#7AB428" ForeColor="White" Height="30px" 
-                            onclick="Button_Recomendar_TodosComentarios_Click" 
+                            onclick="Button_Comentar_TodosComentarios_Click" 
                             style="margin-left: 90px; margin-top: 10px;" Text="Ver" Width="90px" />
                         <asp:Button ID="Button_Comentar_Propiedades" runat="server" BackColor="#671160" 
                             ForeColor="White" Height="30px" onclick="Button_Comentar_Propiedades_Click" 

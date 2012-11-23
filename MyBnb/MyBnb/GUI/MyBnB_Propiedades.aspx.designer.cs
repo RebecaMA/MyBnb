@@ -337,6 +337,42 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Panel Panel5;
         
         /// <summary>
+        /// Label14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label14;
+        
+        /// <summary>
+        /// TextBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        
+        /// <summary>
+        /// Button_Filtrar_PropiedadesAdministrador control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_Filtrar_PropiedadesAdministrador;
+        
+        /// <summary>
+        /// DropDownList_Prioridad_UsuarioRecomendar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Prioridad_UsuarioRecomendar;
+        
+        /// <summary>
         /// Button_Recomendar_Propiedades control.
         /// </summary>
         /// <remarks>
@@ -391,13 +427,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_Comentar;
         
         /// <summary>
-        /// Button_Recomendar_TodosComentarios control.
+        /// Button_Comentar_TodosComentarios control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_Recomendar_TodosComentarios;
+        protected global::System.Web.UI.WebControls.Button Button_Comentar_TodosComentarios;
         
         /// <summary>
         /// Button_Comentar_Propiedades control.
