@@ -18,10 +18,6 @@ namespace MyBnb.Controller
             _propiedades = new Propiedades();
         }
 
-        public ControllerPropiedades(Boolean pboolean)
-        {
-            _propiedades = new Propiedades(pboolean);
-        }
 
         public List<String[]> obtenerPropiedades(String ptipoBusqueda, String[] pdatos)
         {
@@ -54,17 +50,6 @@ namespace MyBnb.Controller
             return _propiedades.obtenerPropiedad(pestado);
         }
 
-        /// <summary>
-        /// LLama a propiedaddes realizar recomendacion. Le ingresa el login del usuario al que se le va a recomendar la propiedad
-        /// Le pasa como parametros este login del usuario actual. 
-        /// </summary>
-        /// <param name="pLoginRecomendado"></param>
-        /// <returns></returns>
-        public String realizarRecomendacion(String pLoginRecomendado)
-        {
-            ControllerUsuario _controllerUsuario = new ControllerUsuario();
-            return _propiedades.realizarRecomendacion(_controllerUsuario.getLogin(), pLoginRecomendado);
-        }
 
 
         public void setIndex(int index)

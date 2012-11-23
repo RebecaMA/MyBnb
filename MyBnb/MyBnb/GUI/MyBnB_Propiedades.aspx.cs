@@ -14,11 +14,18 @@ namespace MyBnb.GUI
         protected void Page_Load(object sender, EventArgs e)
         {
             colocarPropiedad();
+            if (Request.QueryString["Tipo"] != null)
+            {
+                if (Request.QueryString["Tipo"].Equals("Wishlist"))
+                {
+                    Button_Wishlist_Propiedades.Visible = false;
+                }
+            }
         }
 
         public void colocarPropiedad()
         {
-            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
+            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad());
             llenarComentarios();
 
@@ -26,14 +33,14 @@ namespace MyBnb.GUI
 
         protected void ImageButtonSiguiente_Click(object sender, ImageClickEventArgs e)
         {
-            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
+            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad("sig"));
             llenarComentarios();
         }
 
         protected void ImageButtonAnterior_Click(object sender, ImageClickEventArgs e)
         {
-            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
+            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad("ant"));
             llenarComentarios();
         }
@@ -64,10 +71,10 @@ namespace MyBnb.GUI
         }
         protected void Button_Reservar_Propiedades_Click(object sender, EventArgs e)
         {
-            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
+            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             int index = _controllerPropiedades.getIndex();
             //Response.Redirect("http://localhost:51088/GUI/MyBnB_Viajero.aspx?Indice = 3 & idPropiedad ="+index+");
-            Response.Redirect("~/GUI/MyBnB_Viajero.aspx?Indice=3&idPropiedad=" + index);
+            Response.Redirect("~/GUI/MyBnB_Viajero.aspx?Indice=3");
             //  Response.Redirect("~/GUI/MyBnB_Viajero.aspx"); 
         }
 
@@ -83,6 +90,11 @@ namespace MyBnb.GUI
         protected void Button_Recomendar_Propiedades_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/GUI/MyBnB_Recomendar.aspx");
+        }
+
+        protected void Button_Wishlist_Propiedades_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/GUI/MyBnB_AgregarWishlist.aspx");
         }
 
 

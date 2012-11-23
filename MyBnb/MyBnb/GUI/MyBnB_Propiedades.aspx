@@ -47,14 +47,9 @@
         <asp:Button ID="Button_Wishlist_Propiedades" runat="server" 
             BackColor="#671160" ForeColor="White" Height="30px"             
             style="margin-left: 10px; margin-top: 10px" Text="WishList" 
-            Width="90px" />
+            Width="90px" onclick="Button_Wishlist_Propiedades_Click" />
         
         <br />
-        
-        <asp:Button ID="Button_Regresar_Propiedades" runat="server" 
-            BackColor="#671160" ForeColor="White" Height="30px" 
-            
-            style="margin-left: 10px; margin-top: 10px" Text="Regresar" Width="90px" />
         
         </td>    
     <td class="rightColumn" align="center"> 

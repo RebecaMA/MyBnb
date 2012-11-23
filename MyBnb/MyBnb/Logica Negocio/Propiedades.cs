@@ -21,16 +21,8 @@ namespace MyBnb.Logica_Negocio
         public Propiedades()
         {
             _accesoDatosPropiedad = new AccesoDatosPropiedad();
-            index = -1;
         }
-        /// <summary>
-        /// No setea el index, se llama cuando se necesita usar los valores del index
-        /// </summary>
-        /// <param name="pindex"></param>
-        public Propiedades(Boolean pboolean)
-        {
 
-        }
         /// <summary>
         /// Obtiene la lista de propiedades dependiendo del parametro de busqueda enviado, coloca el valor de las propiedades en la lista de propiedades
         /// </summary>
@@ -40,8 +32,12 @@ namespace MyBnb.Logica_Negocio
         public List<String[]> obtenerListaPropiedades(String ptipoBusqueda, String[] pdatos)
         {
             List<String[]> _informacionPropiedades = null;
-            String[] _split = pdatos[2].Split(' ');
-            pdatos[2] = _split[0];
+            if (ptipoBusqueda.Equals("Propiedades Disponibles"))
+            { 
+                String[] _split = pdatos[2].Split(' ');
+                pdatos[2] = _split[0];               
+            }
+
             _listaPropiedades = _accesoDatosPropiedad.obtenerPropiedades(ptipoBusqueda, pdatos);
             _informacionPropiedades = new List<String[]>();
 
@@ -211,21 +207,6 @@ namespace MyBnb.Logica_Negocio
 
         }
 
-        /// <summary>
-        /// Lista la recomendacion, llamando a Acceso Datos Propiedad, como parametros le ingresa los 
-        /// Login del usuario que recomienda y el que recibe la recomendacion
-        /// </summary>
-        /// <param name="pLoginRecomienda"></param>
-        /// <param name="pLoginRecomendado"></param>
-        /// <returns></returns>
-        public String realizarRecomendacion(String pLoginRecomienda,String pLoginRecomendado)
-        {
-            int idPropiedad = obtenerId(getIndex());
-            _accesoDatosPropiedad = new AccesoDatosPropiedad();
-            String[] _datos = new String[3] {idPropiedad.ToString(),pLoginRecomienda,pLoginRecomendado };
-            return _accesoDatosPropiedad.realizarRecomendacion(_datos);
-        }
-
         public List<Propiedad> getListaPropiedades()
         {
             return _listaPropiedades;
@@ -238,7 +219,14 @@ namespace MyBnb.Logica_Negocio
 
         public int getIndex()
         {
-            return index;
+            if (_listaPropiedades == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return index;
+            }
         }
 
 

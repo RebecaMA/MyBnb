@@ -37,8 +37,11 @@ namespace MyBnb.Acceso_Datos
             else if (ptipoBusqueda.Equals("Mostrar Propiedades"))
             {
                 _reader = _accesoDatos.leer("spmostrarPropiedades");
-            }
-
+            }else if(ptipoBusqueda.Equals("Mostrar Propiedades Wishlist"))
+            {
+                _reader = _accesoDatos.leer("spmostrarPropiedadesWishlist",new String[]{"@pLogin"},pdatos[0]);
+            }          
+            
             while (_reader.Read())
             {
                 _propiedad = new Propiedad();
@@ -123,24 +126,6 @@ namespace MyBnb.Acceso_Datos
             return _retorno;
         }
 
-        /// <summary>
-        /// Enlista la recomendacion creada por el usuario que recomienda, la recomendacion ingresa como estado de en Espera
-        /// </summary>
-        /// <param name="pdatos"></param>
-        /// <returns></returns>
-        public String realizarRecomendacion(String[] pdatos)
-        { 
-            String[] _nombreParametros = new String[3] { "@pidPropiedad", "@pLoginRecomienda", "pLoginRecomendado" };
-            IDataReader _reader = _accesoDatos.leer("sprealizarRecomendacion", _nombreParametros, pdatos);
-            if (_reader.Read())
-            {
-                return _reader.GetString(0);
-            }
-            else 
-            {
-                return "Error en la recomendación";
-            }
-            
-        }
+  
     }
 }

@@ -625,6 +625,24 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_FechaFin_Propiedades;
         
         /// <summary>
+        /// Control Label_Viaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Viaje;
+        
+        /// <summary>
+        /// Control DropDownList_Viaje_Propiedades.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Viaje_Propiedades;
+        
+        /// <summary>
         /// Control Button_Filtrar_Propiedades.
         /// </summary>
         /// <remarks>
@@ -767,5 +785,23 @@ namespace MyBnb.GUI {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button_Ver_AdministrarWishList;
+        
+        /// <summary>
+        /// Control Button_AceptarWishlist.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_AceptarWishlist;
+        
+        /// <summary>
+        /// Control Button_RechazarWishist.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_RechazarWishist;
     }
 }

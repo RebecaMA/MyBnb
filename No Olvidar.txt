@@ -1,0 +1,1 @@
+Comentar verifica antes que pueda, wishlist verifica antes que no este ya en esta propiedad, 

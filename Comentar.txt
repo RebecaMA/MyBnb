@@ -1,5 +1,0 @@
-Comentar: un usuario puede comentar una ubicación en donde se ha hospedado. Para esto solo debe ingresar a la propiedad y seleccionar la opción de
-comentar. El usuario puede ingresar una descripción de su experiencia y un rating.
-Todos los comentarios son públicos a los demás usuarios y son desplegados en el perfil de la propiedad, ordenados de manera cronológica. 
-La nota brindada formará parte de la nota promedio de
-todos los usuarios a la propiedad

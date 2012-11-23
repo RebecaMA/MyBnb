@@ -26,7 +26,7 @@ namespace MyBnb.Controller
         public String realizarComentario(int pindiceRanking, String pcomentario)
         {
             String[] _datos;
-            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
+            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             ControllerUsuario _controllerUsuario = new ControllerUsuario();
             int indexPropiedad = _controllerPropiedades.getIndex();
             int idPropiedad = _controllerPropiedades.obtenerIdPropiedad(indexPropiedad);
@@ -41,7 +41,7 @@ namespace MyBnb.Controller
         /// <returns></returns>
         public List<Comentario> obtenerComentariosPropiedad()
         {
-            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
+            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             int index = _controllerPropiedades.getIndex();
             int idPropiedad = _controllerPropiedades.obtenerIdPropiedad(index);
             return _comentarios.obtenerComentariosPropiedad(idPropiedad.ToString());
@@ -49,7 +49,7 @@ namespace MyBnb.Controller
 
         public Boolean verificarReservacion()
         {
-            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades(true);
+            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             ControllerUsuario _controllerUsuario = new ControllerUsuario();
              int index = _controllerPropiedades.getIndex();
             int idPropiedad = _controllerPropiedades.obtenerIdPropiedad(index);

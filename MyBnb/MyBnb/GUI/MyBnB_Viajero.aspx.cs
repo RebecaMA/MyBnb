@@ -4,45 +4,79 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 using MyBnb.Controller;
 
 namespace MyBnb.GUI
 {
     public partial class MyBnB_Viajero : System.Web.UI.Page
     {
-        ControllerPropiedades _controllerPropiedad = new ControllerPropiedades();
+
         ControllerViaje _controllerViaje = new ControllerViaje();
-        private int idPropiedad;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["Indice"] != null)
             {
-                idPropiedad = int.Parse(Request.QueryString["idPropiedad"]);
                 MultiViewTabControl.ActiveViewIndex = int.Parse(Request.QueryString["Indice"]);
+                if (int.Parse(Request.QueryString["Indice"]) == 4)
+                {
+                    //
+                }
 
             }
-
             if (!IsPostBack) 
-            {
-                MultiViewTabControl.ActiveViewIndex = 0;
-                DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
-                DropDownList_Tipo_ListarPropiedad.DataBind();
-                DropDownList_TipoHospedaje_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
-                DropDownList_TipoHospedaje_ListarPropiedad.DataBind();
-                DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
-                DropDownList_Localidad_ListarPropiedad.DataBind();
-                DropDownList_HoraEntrada_ListarPropiedad.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-                DropDownList_HoraEntrada_ListarPropiedad.DataBind();
-                DropDownList_HoraSalida_ListarPropiedad.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-                DropDownList_HoraSalida_ListarPropiedad.DataBind();
-                DropDownList_Viaje_SolicitarAnfitrion.DataSource = _controllerViaje.obtenerViajesUsuario();
-                DropDownList_Viaje_SolicitarAnfitrion.DataBind();
-                idPropiedad = -1;
-                // Reservar 
-                //DropDownList_Localidad_Reservar.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
-                //DropDownList_Localidad_Reservar.DataBind();
-
+            {       
+ 
+          
             }
+        }
+        /// <summary>
+        /// Completa la informacion para listar propiedad
+        /// Dropdown de tipo propiedad, tipo de hospedaje, localidad, hora entrada, hora salidad
+        /// </summary>
+        public void llenarListarPropiedad()
+        {
+            ControllerPropiedades _controllerPropiedad = new ControllerPropiedades();
+            DropDownList_Tipo_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoPropiedad");
+            DropDownList_Tipo_ListarPropiedad.DataBind();
+            DropDownList_TipoHospedaje_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerTipoHospedaje");
+            DropDownList_TipoHospedaje_ListarPropiedad.DataBind();
+            DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
+            DropDownList_Localidad_ListarPropiedad.DataBind();
+            DropDownList_HoraEntrada_ListarPropiedad.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+            DropDownList_HoraEntrada_ListarPropiedad.DataBind();
+            DropDownList_HoraSalida_ListarPropiedad.DataSource = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+            DropDownList_HoraSalida_ListarPropiedad.DataBind();      
+        }
+        /// <summary>
+        /// Llena la informacion necesaria para reservar viaje
+        /// Obtiene los viajes de usuario
+        /// </summary>
+        public void llenarSolicitarAnfitrion()
+        {
+            DropDownList_Viaje_SolicitarAnfitrion.DataSource = _controllerViaje.obtenerViajesUsuario();
+            DropDownList_Viaje_SolicitarAnfitrion.DataBind();
+        }
+
+        public void llenarWishlist()
+        {
+            ControllerWishList _controllerWishList = new ControllerWishList();
+            GridView_WishList.DataSource = _controllerWishList.mostrarWishlist();
+            GridView_WishList.DataBind();
+            Button_AceptarWishlist.Visible = false;
+            Button_RechazarWishist.Visible = false;
+            _controllerWishList.obtenerPropiedadesWishList();         
+
+        }
+
+        public void llenarReservarViaje()
+        {
+            ControllerViaje _controllerViaje = new ControllerViaje();
+            DropDownList_Viaje_Propiedades.DataSource = _controllerViaje.obtenerViajesUsuario();
+            DropDownList_Viaje_Propiedades.DataBind();
+            DropDownList_Viaje_Propiedades.Visible = true;
+            Label_Viaje.Visible = true;
         }
 
         /// <summary>
@@ -52,7 +86,24 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void MenuTabControl_MenuItemClick(object sender, MenuEventArgs e)
         {
-            MultiViewTabControl.ActiveViewIndex = Int32.Parse(MenuTabControl.SelectedValue);
+            int index = Int32.Parse(MenuTabControl.SelectedValue); 
+            if(index == 1)
+            {
+                llenarListarPropiedad();
+            }
+            else if (index == 3)
+            {
+                llenarReservarViaje();
+            }
+            else if (index == 4)
+            {
+                llenarSolicitarAnfitrion();
+            }
+            else if (index == 5)
+            {
+                llenarWishlist();
+            }
+            MultiViewTabControl.ActiveViewIndex = index;
         }
 
         #region Modificar Usuario
@@ -121,9 +172,7 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void Button_Registrar_ListarPropiedad_Click(object sender, EventArgs e)
         {
-            //{"@pTipoPropiedad","@pcantidadMaximaPersonas","@pTitulo","@pdescripcion","@pfoto","@phoraEntrada",
-            //    "@pHoraSalida","@pCodigoLocalidad","@pTipoHospedaje","@pprecioPorNoche","@pprecioVolumen","@pcantidadMinimaNoches"};
-
+            ControllerPropiedades _controllerPropiedad = new ControllerPropiedades();
             String[] _datos = new String[12];
             _datos[0] = DropDownList_Tipo_ListarPropiedad.SelectedItem.ToString();
             _datos[1] = TextBox_Capacidad_ListarPropiedad.Text;
@@ -139,6 +188,21 @@ namespace MyBnb.GUI
             _datos[11] = TextBox_CantidadVolumen_ListarPropiedad.Text;
 
            TextBox_Titulo_ListarPropiedad.Text =  _controllerPropiedad.listarPropiedad(_datos);               
+        }
+
+        protected void Button_Filtrar_Propiedades_Click1(object sender, EventArgs e)
+        {
+            ControllerPropiedades _propiedades = new ControllerPropiedades();
+            String[] datos = new String[3];
+            //datos[0] = Fecha Entrada
+            //datos[1] = Fecha Salida
+            //datos[2] = Codigo
+            datos[0] = "2012/10/20";
+            datos[1] = "2012/11/01";
+            datos[2] = "SCLU Chile Santigo Santiago";
+            _propiedades.obtenerPropiedades("Propiedades Disponibles", datos);
+            GridView_Propiedades.DataSource = _propiedades.getlistaPropiedades();
+            GridView_Propiedades.DataBind();
         }
 
         #endregion
@@ -192,10 +256,22 @@ namespace MyBnb.GUI
             _datos[3] = "SCLU Chile Santiago Santiago";
             _datos[4] = _usuario.getLogin();
             _viaje.setidViaje(_viaje.reservarViaje(_datos));
+           // llenarReservarViaje();
+            DropDownList_Viaje_Propiedades.Visible = false;
+            Label_Viaje.Visible = false;
             MultiViewTabControl.ActiveViewIndex = 3;
            
         }
-
+        /// <summary>
+        /// Dispara este método cuando se hace un index de cambio de viaje
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void CambioViaje(object sender, EventArgs e)
+        {
+            ControllerViaje _controllerViaje = new ControllerViaje();
+            _controllerViaje.setidViajeIndex(DropDownList_Viaje_Propiedades.SelectedIndex);
+        }
 
         #endregion
 
@@ -219,8 +295,7 @@ namespace MyBnb.GUI
             _propiedades.obtenerPropiedades("Propiedades Disponibles", datos);
             GridView_Propiedades.DataSource = _propiedades.getlistaPropiedades();
             GridView_Propiedades.DataBind();
-            
-            
+          
 
         }
 
@@ -231,7 +306,6 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void Button_Ver_Propiedades_Click(object sender, EventArgs e)
         {
-            _controllerPropiedad.setIndex(GridView_Propiedades.SelectedIndex);
             Response.Redirect("~/GUI/MyBnB_Propiedades.aspx");
         }
 
@@ -245,15 +319,10 @@ namespace MyBnb.GUI
             // Ligar aqui las fechas de entrada y de salida
             pdatos[0] = "2012/10/20";
             pdatos[1] = "2012/11/01";
-            if (idPropiedad < 0)
-            {
-                index = GridView_Propiedades.SelectedIndex;
-            }
-            else
-            {
-                index = idPropiedad;
-            }
-            _viaje.realizarReservacion(index, pdatos);
+            
+            index = GridView_Propiedades.SelectedIndex;
+            _viaje.realizarReservacion(pdatos);
+
         }
 
         #endregion
@@ -304,22 +373,63 @@ namespace MyBnb.GUI
 
         }
 
+        protected void Button_AceptarWishlist_Click(object sender, EventArgs e)
+        {
+            ControllerWishList _wishlist = new ControllerWishList();
+            int index = GridView_WishList.SelectedIndex;
+            _wishlist.cambiarEstadoRecomendacion(index, "Aceptada");
+            llenarWishlist();
+        }
+
+        protected void Button_RechazarWishist_Click(object sender, EventArgs e)
+        {
+            ControllerWishList _wishlist = new ControllerWishList();
+            int index = GridView_WishList.SelectedIndex;
+            _wishlist.cambiarEstadoRecomendacion(index, "Rechazada");
+            llenarWishlist();
+        }
+
+        protected void GriedViewSelectionChange(object sender, EventArgs e)
+        {
+            GridViewRow row = GridView_WishList.SelectedRow;
+
+            if (row.Cells[5].Text.Equals("Espera"))
+            {
+                Button_AceptarWishlist.Visible = true;
+                Button_RechazarWishist.Visible = true;
+            }
+            else 
+            {
+                Button_AceptarWishlist.Visible = false;
+                Button_RechazarWishist.Visible = false;
+            
+            }
+        }
+
         #endregion
 
-        protected void Button_Filtrar_Propiedades_Click1(object sender, EventArgs e)
+        protected void Button_Ver_AdministrarWishList_Click1(object sender, EventArgs e)
         {
-            ControllerPropiedades _propiedades = new ControllerPropiedades();
-            String[] datos = new String[3];
-            //datos[0] = Fecha Entrada
-            //datos[1] = Fecha Salida
-            //datos[2] = Codigo
-            datos[0] = "2012/10/20";
-            datos[1] = "2012/11/01";
-            datos[2] = "SCLU Chile Santigo Santiago";
-            _propiedades.obtenerPropiedades("Propiedades Disponibles", datos);
-            GridView_Propiedades.DataSource = _propiedades.getlistaPropiedades();
-            GridView_Propiedades.DataBind();
+            ControllerPropiedades _controllerPropiedad = new ControllerPropiedades();
+            _controllerPropiedad.setIndex(GridView_WishList.SelectedIndex);
+            Response.Redirect("~/GUI/MyBnB_Propiedades.aspx?Tipo=Wishlist");
+
         }
+
+        protected void GriedViewPropiedades(object sender, EventArgs e)
+        {
+            ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
+            _controllerPropiedades.setIndex(GridView_Propiedades.SelectedIndex);
+        }
+
+      
+
+  
+      
+
+        
+
+       
 
      
 

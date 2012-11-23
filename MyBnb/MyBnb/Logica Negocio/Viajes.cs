@@ -26,8 +26,7 @@ namespace MyBnb.Logica_Negocio
 
         public String realizarReservacion(String[] pdatos)
         {
-
-            return _accesoDatosViaje.realizarReservacionPropiedad(pdatos);
+             return _accesoDatosViaje.realizarReservacionPropiedad(pdatos);
         }
 
         public List<String> obtenerViajesUsuario(String plogin)
@@ -37,7 +36,7 @@ namespace MyBnb.Logica_Negocio
 
             _viajesUsuario.ForEach(delegate(String[] viaje)
             {
-                titulos.Add(viaje[0]);
+                titulos.Add(viaje[1]);
             });
 
             return titulos;
@@ -47,5 +46,11 @@ namespace MyBnb.Logica_Negocio
         {
             return _viajesUsuario.ElementAt(pindex);
         }
+
+        public int getidViaje(int pindex)
+        {
+            return int.Parse(_viajesUsuario[pindex][0]);
+        }
+
     }
 }

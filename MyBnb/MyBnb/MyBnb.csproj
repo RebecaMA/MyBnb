@@ -65,7 +65,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GettingStarted.txt" />
+    <Content Include="LibreriaClases\GettingStarted.txt" />
+    <Content Include="GUI\MyBnB_AgregarWishlist.aspx" />
     <Content Include="GUI\MyBnB_Propiedades.aspx" />
     <Content Include="GUI\MyBnB_RealizarComentario.aspx" />
     <Content Include="GUI\MyBnB_Recomendar.aspx" />
@@ -96,13 +97,22 @@
     <Compile Include="Acceso Datos\AccesoDatosPropiedad.cs" />
     <Compile Include="Acceso Datos\AccesoDatosUsuario.cs" />
     <Compile Include="Acceso Datos\AccesoDatosViaje.cs" />
+    <Compile Include="Acceso Datos\AccesoDatosWishlist.cs" />
     <Compile Include="Controller\ControllerComentario.cs" />
     <Compile Include="Controller\ControllerPropiedades.cs" />
     <Compile Include="Controller\ControllerTwitter.cs" />
     <Compile Include="Controller\ControllerUsuario.cs" />
     <Compile Include="Controller\ControllerViaje.cs" />
+    <Compile Include="Controller\ControllerWishList.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MyBnB_AgregarWishlist.aspx.cs">
+      <DependentUpon>MyBnB_AgregarWishlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\MyBnB_AgregarWishlist.aspx.designer.cs">
+      <DependentUpon>MyBnB_AgregarWishlist.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\MyBnB_Propiedades.aspx.cs">
       <DependentUpon>MyBnB_Propiedades.aspx</DependentUpon>
@@ -151,11 +161,13 @@
     <Compile Include="LibreriaClases\Propiedad.cs" />
     <Compile Include="LibreriaClases\Usuario.cs" />
     <Compile Include="LibreriaClases\Viaje.cs" />
+    <Compile Include="LibreriaClases\Wishlist.cs" />
     <Compile Include="Logica Negocio\Comentarios.cs" />
     <Compile Include="Logica Negocio\Propiedades.cs" />
     <Compile Include="Logica Negocio\Twitter.cs" />
     <Compile Include="Logica Negocio\Usuarios.cs" />
     <Compile Include="Logica Negocio\Viajes.cs" />
+    <Compile Include="Logica Negocio\WishList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

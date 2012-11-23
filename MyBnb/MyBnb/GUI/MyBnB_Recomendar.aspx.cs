@@ -28,9 +28,9 @@ namespace MyBnb.GUI
 
         protected void Button_Recomendar_Click(object sender, EventArgs e)
         {
-            ControllerPropiedades _controllerPropiedad = new ControllerPropiedades(true);
+            ControllerWishList _controllerWishlist = new ControllerWishList();
             String ploginRecomendado = RadioButtonUsuarios.SelectedValue;
-            _controllerPropiedad.realizarRecomendacion(ploginRecomendado);
+            _controllerWishlist.realizarRecomendacion(ploginRecomendado);
 
         }
     }

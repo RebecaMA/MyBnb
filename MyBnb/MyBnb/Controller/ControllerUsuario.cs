@@ -45,6 +45,10 @@ namespace MyBnb.Controller
             return _usuario.autentificarUsuario(_login, _contraseña);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pdatos"></param>
         public void modificarUsuario(String[] pdatos)
         {
             _usuario.modificarUsuario(pdatos);

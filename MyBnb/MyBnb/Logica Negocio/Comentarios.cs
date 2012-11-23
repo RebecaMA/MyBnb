@@ -37,7 +37,7 @@ namespace MyBnb.Logica_Negocio
         public Boolean verificarComentario(int pidPropiedad, String plogin)
         {
             String fecha = DateTime.Today.Year +  "/" + DateTime.Today.Month+ "/" + DateTime.Today.Day;
-
+            AccesoDatosComentario _accesoDatosComentario = new AccesoDatosComentario();
             if (_accesoDatosComentario.verificarReservacion(pidPropiedad, plogin,fecha).Equals("Aprobado"))
                 return true;
             else return false;
