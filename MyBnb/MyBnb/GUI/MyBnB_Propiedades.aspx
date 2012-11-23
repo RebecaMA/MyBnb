@@ -142,6 +142,7 @@
                         &nbsp;
                         <asp:TextBox ID="TextBox1" runat="server" Width="200px" style="margin-top:10px"></asp:TextBox>
                         <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="Button_Filtrar_PropiedadesAdministrador" runat="server" 
                             BackColor="#671160" ForeColor="White" Height="30px" 
                             onclick="Button_Comentar_Propiedades_Click" 
@@ -149,10 +150,11 @@
                             Width="90px" />
                         <br />
                         <asp:DropDownList ID="DropDownList_Prioridad_UsuarioRecomendar" runat="server" 
-                            AutoPostBack="True" Height="16px" style="margin-left: 60px; margin-top: 10px;" 
+                            AutoPostBack="True" Height="16px" style="margin-left: 50px; margin-top: 10px;" 
                             Width="209px">
                         </asp:DropDownList>
                         <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="Button_Recomendar_Propiedades" runat="server" 
                             BackColor="#7AB428" ForeColor="White" Height="30px" 
                             onclick="Button_Recomendar_Propiedades_Click" 

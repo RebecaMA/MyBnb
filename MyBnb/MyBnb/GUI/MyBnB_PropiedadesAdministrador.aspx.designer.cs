@@ -67,6 +67,15 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Button Button_Agregar_PropiedadesAdministrador;
         
         /// <summary>
+        /// Button_Cerrar_PropiedadesAdministrador control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_Cerrar_PropiedadesAdministrador;
+        
+        /// <summary>
         /// Panel_DescripcionAdministrador control.
         /// </summary>
         /// <remarks>

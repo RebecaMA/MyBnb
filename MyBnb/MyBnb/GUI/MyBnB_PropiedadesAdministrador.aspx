@@ -30,6 +30,10 @@
             BackColor="#7AB428" ForeColor="White" Height="30px"             
             style="margin-left: 0px; margin-top: 10px;" Text="Agregar" Width="90px" 
             onclick="Button_Agregar_PropiedadesAdministrador_Click" />
+        <asp:Button ID="Button_Cerrar_PropiedadesAdministrador" runat="server" 
+            BackColor="#671160" ForeColor="White" Height="30px" 
+            onclick="Button_Cerrar_PropiedadesAdministrador_Click" 
+            style="margin-left: 10px; margin-top: 10px;" Text="Salir" Width="90px" />
         <br /> 
         </td>    
     

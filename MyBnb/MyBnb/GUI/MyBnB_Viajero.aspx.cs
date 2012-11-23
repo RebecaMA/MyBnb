@@ -55,15 +55,15 @@ namespace MyBnb.GUI
         /// </summary>
         public void llenarSolicitarAnfitrion()
         {
-            DropDownList_Viaje_SolicitarAnfitrion.DataSource = _controllerViaje.obtenerViajesUsuario();
-            DropDownList_Viaje_SolicitarAnfitrion.DataBind();
+            //DropDownList_Viaje_SolicitarAnfitrion.DataSource = _controllerViaje.obtenerViajesUsuario();
+            //DropDownList_Viaje_SolicitarAnfitrion.DataBind();
         }
 
         public void llenarWishlist()
         {
             ControllerWishList _controllerWishList = new ControllerWishList();
-            GridView_WishList.DataSource = _controllerWishList.mostrarWishlist();
-            GridView_WishList.DataBind();
+            //GridView_WishList.DataSource = _controllerWishList.mostrarWishlist();
+            //GridView_WishList.DataBind();
             Button_AceptarWishlist.Visible = false;
             Button_RechazarWishist.Visible = false;
             _controllerWishList.obtenerPropiedadesWishList();         
@@ -337,7 +337,7 @@ namespace MyBnb.GUI
         protected void Button_Solicitar_SolicitarAnfitrion_Click(object sender, EventArgs e)
         {
             
-            int viajeSeleccionado = DropDownList_Viaje_SolicitarAnfitrion.SelectedIndex;
+            int viajeSeleccionado = DropDownList_Localidad_SolicitarAnfitrion.SelectedIndex;
             int localidadSeleccionada = DropDownList_Localidad_SolicitarAnfitrion.SelectedIndex;
             if (viajeSeleccionado == -1 || localidadSeleccionada == -1)
             {
@@ -420,6 +420,11 @@ namespace MyBnb.GUI
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             _controllerPropiedades.setIndex(GridView_Propiedades.SelectedIndex);
+        }
+
+        protected void Button_VerRespuestas_SolicitarAnfitrion_Click1(object sender, EventArgs e)
+        {
+
         }
 
       

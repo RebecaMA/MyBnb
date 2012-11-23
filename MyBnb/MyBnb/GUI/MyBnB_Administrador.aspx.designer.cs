@@ -130,15 +130,6 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.TextBox TextBox_NombreCategoria0;
         
         /// <summary>
-        /// Button_CrearListaRecomendacion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_CrearListaRecomendacion;
-        
-        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -191,5 +182,14 @@ namespace MyBnb.GUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button_Ver_Propiedades0;
+        
+        /// <summary>
+        /// Button_CrearListaRecomendacion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_CrearListaRecomendacion;
     }
 }

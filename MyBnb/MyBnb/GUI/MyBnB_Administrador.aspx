@@ -72,14 +72,7 @@
                              style="margin-left: 23px; margin-top: 10px;" Width="200px" />
                          
                          <br />
-                         <asp:Button ID="Button_CrearListaRecomendacion" runat="server" 
-                             BackColor="#7AB428" ForeColor="White" Height="30px" 
-                             style="margin-left: 120px; margin-top: 10px;" Text="Crear" Width="150px" 
-                             onclick="Button_CrearListaRecomendacion_Click" />
-                         
-                         <br /> 
-                         <br />
-                         <br />
+                         &nbsp;
                          <asp:Label ID="Label2" runat="server" Text="Localidad:"
                                  style="margin-left: 30px; margin-top: 10px;" />
                          <asp:DropDownList ID="DropDownList_Localidad_Propiedades0" runat="server" 
@@ -87,7 +80,7 @@
                              <asp:ListItem></asp:ListItem>
                          </asp:DropDownList>
                          <br />
-                         <asp:Button ID="Button_Filtrar_Propiedades" runat="server" BackColor="#671160" 
+                         &nbsp;<asp:Button ID="Button_Filtrar_Propiedades" runat="server" BackColor="#671160" 
                              ForeColor="White" Height="30px" onclick="Button_Filtrar_Propiedades_Click1" 
                              style="margin-left: 110px; margin-top: 10px;" Text="Filtrar" 
                              Width="150px" />
@@ -96,22 +89,37 @@
                          
                          <asp:Panel ID="Panel1" runat="server" Height="426px" style="margin-bottom: 0px">
                              <asp:GridView ID="GridView_Propiedades0" runat="server" 
-                                 AutoGenerateColumns="False" AutoGenerateSelectButton="True" 
+                                 AutoGenerateColumns="False" 
                                  onselectedindexchanged="GriedViewPropiedades" ShowFooter="True" 
-                                 style="margin-left: 30px; margin-right: 30px; margin-top: 10px;" Width="880px">
+                                 style="margin-left: 30px; margin-right: 30px; margin-top: 10px;" 
+                                 Width="880px">
                                  <Columns>
                                      <asp:BoundField DataField="titulo" HeaderText="Titulo" 
-                                         SortExpression="titulo" />
+                                         SortExpression="titulo" ReadOnly="True" />
                                      <asp:BoundField DataField="cantidadMaximaPersonas" 
-                                         HeaderText="Personas Maximas" SortExpression="cantidadMaximaPersonas" />
+                                         HeaderText="Personas Maximas" SortExpression="cantidadMaximaPersonas" 
+                                         ReadOnly="True" >
+                                     <FooterStyle Height="100px" />
+                                     </asp:BoundField>
                                      <asp:BoundField DataField="precioNoche" HeaderText="Precio por Noche" 
-                                         SortExpression="precioNoche" />
+                                         SortExpression="precioNoche" ReadOnly="True" />
                                      <asp:BoundField DataField="ranking" HeaderText="Ranking" 
-                                         SortExpression="ranking" />
+                                         SortExpression="ranking" ReadOnly="True" />
                                      <asp:BoundField DataField="descripcion" HeaderText="Descripcion" 
-                                         SortExpression="descripcion" />
+                                         SortExpression="descripcion" ReadOnly="True" />
                                      <asp:BoundField DataField="cantidadMinimaNoches" HeaderText="Noches Minimas:" 
-                                         SortExpression="cantidadMinimaNoches" />
+                                         SortExpression="cantidadMinimaNoches" ReadOnly="True" >
+                                     <FooterStyle Height="100px" />
+                                     </asp:BoundField>
+                                     <asp:TemplateField HeaderText="Seleccionar">
+                                         <EditItemTemplate>
+                                             <asp:CheckBox ID="CheckBox1" runat="server" />
+                                         </EditItemTemplate>
+                                         <ItemTemplate>
+                                             <asp:CheckBox ID="CheckBox1" runat="server" />
+                                         </ItemTemplate>
+                                         <FooterStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="100px" />
+                                     </asp:TemplateField>
                                  </Columns>
                              </asp:GridView>
                          </asp:Panel>
@@ -122,6 +130,10 @@
                              BackColor="#7AB428" ForeColor="White" Height="30px" 
                              style="margin-left: 30px; margin-top: 10px;" Text="Ver" 
                              Width="150px" onclick="Button_Ver_Propiedades_Click" />
+                         <asp:Button ID="Button_CrearListaRecomendacion" runat="server" 
+                             BackColor="#671160" ForeColor="White" Height="30px" 
+                             onclick="Button_CrearListaRecomendacion_Click" 
+                             style="margin-left: 20px; margin-top: 10px;" Text="Crear" Width="150px" />
                          <br />
                          <br />
                      </asp:Panel>

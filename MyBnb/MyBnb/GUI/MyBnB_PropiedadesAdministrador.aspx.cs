@@ -54,5 +54,10 @@ namespace MyBnb.GUI
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             LlenarDatosPropiedadAdministrador(_controllerPropiedades.obtenerPropiedad("ant"));
         }
+
+        protected void Button_Cerrar_PropiedadesAdministrador_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

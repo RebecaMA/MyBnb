@@ -77,43 +77,41 @@
                               <asp:TextBox ID="TextBox_Telefono_ModificarUsuario" runat="server" Width="200px"
                                         style="margin-left: 80px; margin-top: 10px;"/>
                           
-                              <br /><br />
-                              <asp:Label ID="Label_FechaNacimiento" runat="server" Text="Fecha de Nacimiento:"
-                                      style="margin-left: 10px; margin-top: 10px;"/>&nbsp;&nbsp;                                 
+                              &nbsp; *<br /><br />
+                              <asp:Label ID="Label_FechaNacimiento" runat="server" 
+                                  style="margin-left: 10px; margin-top: 10px;" Text="Fecha de Nacimiento:" />
+                              &nbsp;&nbsp;                                 
                               
                               <script type="text/javascript"
                               src="http://www.snaphost.com/jquery/Calendar.aspx" id="Calendar_ModificarUsuario"></script>
                                                                                                                         
-                              <br />                              
-                              <asp:Label ID="Label_Sexo" runat="server" Text="Genero:"
-                                  style="margin-left: 10px; margin-top: 10px;" />
+                              *<br />                              
+                              <asp:Label ID="Label_Sexo" runat="server" 
+                                  style="margin-left: 10px; margin-top: 10px;" Text="Genero:" />
                               <asp:DropDownList ID="DropDownList_Genero_ModificarUsuario" runat="server" 
                                   style="margin-left: 86px; margin-top: 10px;" Width="200px">
                                   <asp:ListItem></asp:ListItem>
                                   <asp:ListItem>Femenino</asp:ListItem>
                                   <asp:ListItem>Masculino</asp:ListItem>
                               </asp:DropDownList>
-                              
                               <br />
                               <asp:Label ID="Label_Descripcion0" runat="server" 
                                   style="margin-left: 10px; margin-top: 10px;" Text="Descripcion:" />
                               <asp:TextBox ID="TextBox_Descripcion_ModificarUsuario" runat="server" 
-                                  style="margin-left: 61px; margin-top: 10px;" Width="200px" />
-                              
-                              <br />
+                                  Height="80px" style="margin-left: 61px; margin-top: 10px;" TextMode="MultiLine" 
+                                  Width="200px" />
+                              &nbsp; *<br />
                               <asp:Button ID="Button_Desactivar_ModificarUsuario" runat="server" 
                                   BackColor="#7AB428" ForeColor="White" Height="30px" 
                                   onclick="Button_Desactivar_ModificarUsuario_Click" 
                                   style="margin-left: 145px; margin-top: 10px;" Text="Desactivar" Width="90px" />
-                              
                               <asp:Button ID="Button_Modificar_ModificarUsuario" runat="server" 
                                   BackColor="#671160" ForeColor="White" Height="30px" 
                                   onclick="Button_Modificar_ModificarUsuario_Click" 
-                                  style="margin-left: 15px; margin-top: 10px" 
-                                  Text="Modificar" Width="90px" />
+                                  style="margin-left: 15px; margin-top: 10px" Text="Modificar" Width="90px" />
                               <br />
                               <br />
-                              * Campos opcionales.
+                              &nbsp; * Campos opcionales.
                               <br />
                               <br />                          
                       </asp:Panel>
@@ -153,66 +151,60 @@
                           <asp:TextBox ID="TextBox_Descripcion_ListarPropiedad" runat="server" Width="200px"
                                     style="margin-left: 60px; margin-top: 10px;"/>
                           
-                          <br />
-                          <asp:Label ID="Label_Fotografia_ListarPropiedad" runat="server" Text="Fotografia:"
-                                  style="margin-left: 10px; margin-top: 10px;"/>
-                          <asp:FileUpload ID="FileUpload_Fotografia_ListarPropiedad" runat="server"
-                                       style="margin-left: 70px; margin-top: 10px;"/>
-                          
-                          <br />                                                    
-                          <asp:Label ID="Label_HoraEntrada" runat="server" Text="Hora Entrada:"
-                                  style="margin-left: 10px; margin-top: 10px;"/>
-                          <asp:DropDownList ID="DropDownList_HoraEntrada_ListarPropiedad" runat="server" Width="75px"
-                                         style="margin-left: 50px; margin-top: 10px;">
+                          &nbsp;**<br />
+                          <asp:Label ID="Label_Fotografia_ListarPropiedad" runat="server" 
+                              style="margin-left: 10px; margin-top: 10px;" Text="Fotografia:" />
+                          <asp:FileUpload ID="FileUpload_Fotografia_ListarPropiedad" runat="server" 
+                              style="margin-left: 70px; margin-top: 10px;" />
+                          &nbsp;**<br />
+                          <asp:Label ID="Label_HoraEntrada" runat="server" 
+                              style="margin-left: 10px; margin-top: 10px;" Text="Hora Entrada:" />
+                          <asp:DropDownList ID="DropDownList_HoraEntrada_ListarPropiedad" runat="server" 
+                              style="margin-left: 50px; margin-top: 10px;" Width="75px">
                               <asp:ListItem></asp:ListItem>
-                          </asp:DropDownList>                          
-                          <asp:DropDownList ID="DropDownList_TiempoEntrada_ListarPropiedad" runat="server" Width="75px" AutoPostBack="True"
-                                         style="margin-left: 10px; margin-top: 10px;">
+                          </asp:DropDownList>
+                          <asp:DropDownList ID="DropDownList_TiempoEntrada_ListarPropiedad" 
+                              runat="server" AutoPostBack="True" style="margin-left: 10px; margin-top: 10px;" 
+                              Width="75px">
                               <asp:ListItem></asp:ListItem>
                               <asp:ListItem>AM</asp:ListItem>
                               <asp:ListItem>PM</asp:ListItem>
                           </asp:DropDownList>
-                                                                              
-                          <br />
-                          <asp:Label ID="Label_HoraSalida" runat="server" Text="Hora Salida:"
-                                  style="margin-left: 10px; margin-top: 10px;"/>
-                          <asp:DropDownList ID="DropDownList_HoraSalida_ListarPropiedad" runat="server" 
-                              Width="75px" AutoPostBack="True"
-                                    style="margin-left: 60px; margin-top: 10px;">
-                              <asp:ListItem></asp:ListItem>
-                          </asp:DropDownList>                          
-                          <asp:DropDownList ID="DropDownList_TiempoSalida_ListarPropiedad" runat="server" 
-                              Width="75px" AutoPostBack="True"
-                                    style="margin-left: 10px; margin-top: 10px;">
-                              <asp:ListItem></asp:ListItem>
-                              <asp:ListItem>AM</asp:ListItem>
-                              <asp:ListItem>PM</asp:ListItem>
-                          </asp:DropDownList>
-                          
-                          <br />                          
-                          <asp:Label ID="Label_Localidad_ListarPropiedad" runat="server" Text="Localidad:"
-                                    style="margin-left: 10px; margin-top: 10px;"/>
-                          <asp:DropDownList ID="DropDownList_Localidad_ListarPropiedad" runat="server" Width="200px" AutoPostBack="True"
-                                    style="margin-left: 70px; margin-top: 10px;">
-                              <asp:ListItem></asp:ListItem>
-                          </asp:DropDownList>
-                                                    
-                          <br />
-                          <asp:Label ID="Label_TipoHospedaje_ListarPropiedad" runat="server" Text="Tipo de Hospedaje:"
-                                  style="margin-left: 10px; margin-top: 10px;"/>              
-                          <asp:DropDownList ID="DropDownList_TipoHospedaje_ListarPropiedad" 
-                              runat="server" Width="200px"
-                                    style="margin-left: 15px; margin-top: 10px;">
-                              <asp:ListItem></asp:ListItem>
-                          </asp:DropDownList>
-                          
-                          <br />                                                    
-                          <asp:Label ID="Label_PrecioNoche" runat="server" Text="Precio por noche:"
-                                    style="margin-left: 10px; margin-top: 10px;"/>
-                          <asp:TextBox ID="TextBox_PrecioNoche_ListarPropiedad" runat="server" Width="100px"
-                                    style="margin-left: 25px; margin-top: 10px;"/>&nbsp;*
 
                           <br />                          
+                          <asp:Label ID="Label_HoraSalida" runat="server" 
+                              style="margin-left: 10px; margin-top: 10px;" Text="Hora Salida:" />
+                          <asp:DropDownList ID="DropDownList_HoraSalida_ListarPropiedad" runat="server" 
+                              AutoPostBack="True" style="margin-left: 60px; margin-top: 10px;" Width="75px">
+                              <asp:ListItem></asp:ListItem>
+                          </asp:DropDownList>
+                          <asp:DropDownList ID="DropDownList_TiempoSalida_ListarPropiedad" runat="server" 
+                              AutoPostBack="True" style="margin-left: 10px; margin-top: 10px;" Width="75px">
+                              <asp:ListItem></asp:ListItem>
+                              <asp:ListItem>AM</asp:ListItem>
+                              <asp:ListItem>PM</asp:ListItem>
+                          </asp:DropDownList>
+                          <br />
+                          <asp:Label ID="Label_Localidad_ListarPropiedad" runat="server" 
+                              style="margin-left: 10px; margin-top: 10px;" Text="Localidad:" />
+                          <asp:DropDownList ID="DropDownList_Localidad_ListarPropiedad" runat="server" 
+                              AutoPostBack="True" style="margin-left: 70px; margin-top: 10px;" Width="200px">
+                              <asp:ListItem></asp:ListItem>
+                          </asp:DropDownList>
+                          <br />
+                          <asp:Label ID="Label_TipoHospedaje_ListarPropiedad" runat="server" 
+                              style="margin-left: 10px; margin-top: 10px;" Text="Tipo de Hospedaje:" />
+                          <asp:DropDownList ID="DropDownList_TipoHospedaje_ListarPropiedad" 
+                              runat="server" style="margin-left: 15px; margin-top: 10px;" Width="200px">
+                              <asp:ListItem></asp:ListItem>
+                          </asp:DropDownList>
+                          <br />
+                          <asp:Label ID="Label_PrecioNoche" runat="server" 
+                              style="margin-left: 10px; margin-top: 10px;" Text="Precio por noche:" />
+                          <asp:TextBox ID="TextBox_PrecioNoche_ListarPropiedad" runat="server" 
+                              style="margin-left: 25px; margin-top: 10px;" Width="100px" />
+                          &nbsp;*
+                          <br />
                           <asp:Label ID="Label_PrecioVolumen_ListarPropiedad" runat="server" Text="Precio por volumen:"
                                   style="margin-left: 10px; margin-top: 10px;"/>
                           <asp:TextBox ID="TextBox_PrecioVolumen_ListarPropiedad" runat="server" Width="100px"
@@ -231,8 +223,8 @@
                               style="margin-left: 140px; margin-top: 2px" Text="Registrar" 
                               Width="90px" />
                           
-                          <br /> <br /> <br /> * Precio en dolares estadounidenses.                          
-                          <br /> <br /> **Dato opcional. 
+                          <br /> <br /> <br /> &nbsp;* Precio en dolares estadounidenses.                          
+                          <br /> <br /> &nbsp;**Dato opcional. 
                           <br /> <br />
                           
                       </asp:Panel>
@@ -328,49 +320,57 @@
                          <br />
                              <asp:Label ID="Label_Viaje" runat="server" 
                              style="margin-left: 10px; margin-top: 10px;" Text="Viaje:" />
-                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                          <asp:DropDownList ID="DropDownList_Viaje_Propiedades" runat="server" onselectedindexchanged="CambioViaje" 
                              style="margin-left: 20px; margin-top: 10px;" Width="200px">
                              <asp:ListItem></asp:ListItem>
                          </asp:DropDownList>
                          <br />
+                         &nbsp;
                          <asp:Button ID="Button_Filtrar_Propiedades" runat="server" BackColor="#671160" 
-                             ForeColor="White" Height="30px"  
-                             style="margin-left: 85px; margin-top: 10px;" Text="Filtrar" Width="150px" 
-                             onclick="Button_Filtrar_Propiedades_Click1" />
-                         
+                             ForeColor="White" Height="30px" onclick="Button_Filtrar_Propiedades_Click1" 
+                             style="margin-left: 85px; margin-top: 10px;" Text="Filtrar" Width="150px" />
                          <br />
                          <br />
-                         
-                         <br />
-                         <asp:GridView ID="GridView_Propiedades" runat="server" 
-                             AutoGenerateColumns="False" AutoGenerateSelectButton="True" 
-                             onselectedindexchanged="GriedViewPropiedades" ShowFooter="True" 
-                             style="margin-left: 30px; margin-right: 30px; margin-top: 10px;" Width="858px">
-                             <Columns>
-                                 <asp:BoundField DataField="titulo" HeaderText="Titulo" 
-                                     SortExpression="titulo" />
-                                 <asp:BoundField DataField="cantidadMaximaPersonas" 
-                                     HeaderText="Personas Maximas" SortExpression="cantidadMaximaPersonas" />
-                                 <asp:BoundField DataField="precioNoche" HeaderText="Precio por Noche" 
-                                     SortExpression="precioNoche" />
-                                 <asp:BoundField DataField="ranking" HeaderText="Ranking" 
-                                     SortExpression="ranking" />
-                                 <asp:BoundField DataField="descripcion" HeaderText="Descripcion" 
-                                     SortExpression="descripcion" />
-                                 <asp:BoundField DataField="cantidadMinimaNoches" HeaderText="Noches Minimas:" 
-                                     SortExpression="cantidadMinimaNoches" />
-                             </Columns>
-                         </asp:GridView>
-                         <br />
+                         <asp:Panel ID="Panel1" runat="server">
+                             <asp:GridView ID="GridView_Propiedades" runat="server" 
+                                 AutoGenerateColumns="False" onselectedindexchanged="GriedViewPropiedades" 
+                                 ShowFooter="True" 
+                                 style="margin-left: 30px; margin-right: 30px; margin-top: 10px;" Width="858px">
+                                 <Columns>
+                                     <asp:BoundField DataField="titulo" HeaderText="Titulo" 
+                                         SortExpression="titulo" />
+                                     <asp:BoundField DataField="cantidadMaximaPersonas" 
+                                         HeaderText="Personas Maximas" SortExpression="cantidadMaximaPersonas" />
+                                     <asp:BoundField DataField="precioNoche" HeaderText="Precio por Noche" 
+                                         SortExpression="precioNoche" />
+                                     <asp:BoundField DataField="ranking" HeaderText="Ranking" 
+                                         SortExpression="ranking" />
+                                     <asp:BoundField DataField="descripcion" HeaderText="Descripcion" 
+                                         SortExpression="descripcion" />
+                                     <asp:BoundField DataField="cantidadMinimaNoches" HeaderText="Noches Minimas:" 
+                                         SortExpression="cantidadMinimaNoches" />
+                                     <asp:TemplateField HeaderText="Seleccionar">
+                                         <EditItemTemplate>
+                                             <asp:CheckBox ID="CheckBox1" runat="server" />
+                                         </EditItemTemplate>
+                                         <ItemTemplate>
+                                             <asp:CheckBox ID="CheckBox2" runat="server" />
+                                         </ItemTemplate>
+                                         <FooterStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                     </asp:TemplateField>
+                                 </Columns>
+                             </asp:GridView>
+                         </asp:Panel>
                          <br />
                          <asp:Button ID="Button_Ver_Propiedades" runat="server" BackColor="#7AB428" 
                              ForeColor="White" Height="30px" onclick="Button_Ver_Propiedades_Click" 
                              style="margin-left: 30px; margin-top: 10px;" Text="Ver" Width="150px" />
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                         <asp:Button ID="Button_Reservar_Propiedades" runat="server" BackColor="#7AB428" 
+                         <asp:Button ID="Button_Reservar_Propiedades" runat="server" BackColor="#671160" 
                              ForeColor="White" Height="30px" onclick="Button_Reservar_Propiedades_Click" 
-                             style="margin-left: 30px; margin-top: 10px;" Text="Reservar" Width="150px" />
+                             style="margin-left: 30px; margin-top: 10px;" Text="Reservar" 
+                             Width="150px" />
                          
                          <br />
                      </asp:Panel>
@@ -381,25 +381,26 @@
                          BorderStyle="Groove" HorizontalAlign="Left" Height="590px"
                          style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
                          
-                         <br /> <br />                         
-                         <asp:Label ID="Label1" runat="server" Text="Viaje:"
-                                 style="margin-left: 60px; margin-top: 10px;" />
-                         <asp:DropDownList ID="DropDownList_Viaje_SolicitarAnfitrion" 
-                             runat="server" AutoPostBack="True" style="margin-left: 10px; margin-top: 10px;" 
-                             Width="200px">
-                             <asp:ListItem></asp:ListItem>
-                         </asp:DropDownList>
-                         
                          <br /> <br />
                          <asp:Label ID="Label2" runat="server" Text="Localidad:"
-                                 style="margin-left: 30px; margin-top: 10px;" />
+                                 style="margin-left: 20px; margin-top: 10px;" />
+                         
+                         &nbsp;
                          <asp:DropDownList ID="DropDownList_Localidad_SolicitarAnfitrion" runat="server" 
                              AutoPostBack="True" style="margin-left: 10px; margin-top: 10px;" Width="200px">
                              <asp:ListItem></asp:ListItem>
                          </asp:DropDownList>
                          <br />
-                         
-                         <br /> <br />
+                         <br />
+&nbsp;
+                         <asp:Label ID="Label_FechaInicio_Propiedades0" runat="server" 
+                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Inicio:" />
+                         <br />
+                         <br />
+                         &nbsp;&nbsp;<asp:Label ID="Label_FechaFin_Propiedades0" runat="server" 
+                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" />
+                         <br />
+                         <br />
                          <asp:Button ID="Button_Solicitar_SolicitarAnfitrion" runat="server" 
                              BackColor="#7AB428" ForeColor="White" Height="30px" 
                              onclick="Button_Solicitar_SolicitarAnfitrion_Click" 
@@ -409,9 +410,37 @@
                          <asp:Button ID="Button_VerRespuestas_SolicitarAnfitrion" runat="server" 
                              BackColor="#671160" ForeColor="White" Height="30px" 
                              style="margin-left: 10px; margin-top: 10px;" Text="Ver Respuestas" 
-                             Width="150px" onclick="Button_VerRespuestas_SolicitarAnfitrion_Click" />
+                             Width="150px" onclick="Button_VerRespuestas_SolicitarAnfitrion_Click1" />
                          <br />
                          <br />
+                         <asp:Panel ID="Panel2" runat="server" Height="280px">
+                             <asp:GridView ID="GridView_RespuestasAnfitriones" runat="server" 
+                                 AutoGenerateColumns="False" onselectedindexchanged="GriedViewPropiedades" 
+                                 ShowFooter="True" 
+                                 style="margin-left: 30px; margin-right: 30px; margin-top: 10px;" Width="858px">
+                                 <Columns>
+                                     <asp:BoundField HeaderText="Localidad" ReadOnly="True" />
+                                     <asp:BoundField HeaderText="Fecha Inicio" />
+                                     <asp:BoundField HeaderText="Fecha Fin" />
+                                     <asp:BoundField HeaderText="Anfitrion" />
+                                     <asp:BoundField HeaderText="Descripcion" />
+                                     <asp:TemplateField HeaderText="Seleccionar">
+                                         <EditItemTemplate>
+                                             <asp:CheckBox ID="CheckBox5" runat="server" />
+                                         </EditItemTemplate>
+                                         <ItemTemplate>
+                                             <asp:CheckBox ID="CheckBox6" runat="server" />
+                                         </ItemTemplate>
+                                         <FooterStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                                     </asp:TemplateField>
+                                 </Columns>
+                             </asp:GridView>                             
+                         </asp:Panel>
+                         <asp:Button ID="Button_Solicitud_AceptarAnfitrion" runat="server" 
+                                 BackColor="#7AB428" ForeColor="White" Height="30px" 
+                                 onclick="Button_Solicitar_SolicitarAnfitrion_Click" 
+                                 style="margin-left: 30px; margin-top: 10px;" Text="Aceptar" 
+                             Width="150px" />
                      </asp:Panel>
                  </asp:View>
 
@@ -421,55 +450,65 @@
                          style="margin-left: 0px; margin-top: 0px; margin-right: 0px;">
                          
                          <br /> <br />
-                         <asp:GridView ID="GridView_WishList" runat="server" 
-                             style="margin-left: 30px; margin-right: 30px; margin-top: 10px;" 
-                             Width="858px" AutoGenerateColumns="False" AutoGenerateSelectButton="True" 
-                             onselectedindexchanged="GriedViewSelectionChange" >
+                         <asp:Panel ID="Panel3" runat="server" Height="364px">
+                             <asp:GridView ID="GridView_WishList" runat="server" 
+                                 AutoGenerateColumns="False" 
+                                 onselectedindexchanged="GriedViewSelectionChange" 
+                                 style="margin-left: 30px; margin-right: 30px; margin-top: 10px;" 
+                                 Width="885px">
+                                 <Columns>
+                                     <asp:TemplateField HeaderText="Titulo Propiedad" SortExpression="titulo">
+                                         <EditItemTemplate>
+                                             <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("titulo") %>'></asp:TextBox>
+                                         </EditItemTemplate>
+                                         <ItemTemplate>
+                                             <asp:Label ID="Label5" runat="server" Text='<%# Bind("titulo") %>'></asp:Label>
+                                         </ItemTemplate>
+                                     </asp:TemplateField>
+                                     <asp:TemplateField HeaderText="Prioridad" SortExpression="prioridad">
+                                         <EditItemTemplate>
+                                             <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("prioridad") %>'></asp:TextBox>
+                                         </EditItemTemplate>
+                                         <ItemTemplate>
+                                             <asp:Label ID="Label6" runat="server" Text='<%# Bind("prioridad") %>'></asp:Label>
+                                         </ItemTemplate>
+                                     </asp:TemplateField>
+                                     <asp:TemplateField HeaderText="Usuario que recomendo" 
+                                         SortExpression="usuarioRecomendo">
+                                         <EditItemTemplate>
+                                             <asp:TextBox ID="TextBox7" runat="server" 
+                                                 Text='<%# Bind("usuarioRecomendo") %>'></asp:TextBox>
+                                         </EditItemTemplate>
+                                         <ItemTemplate>
+                                             <asp:Label ID="Label7" runat="server" Text='<%# Bind("usuarioRecomendo") %>'></asp:Label>
+                                         </ItemTemplate>
+                                     </asp:TemplateField>
+                                     <asp:TemplateField HeaderText="Tipo" SortExpression="tipo">
+                                         <EditItemTemplate>
+                                             <asp:TextBox ID="TextBox8" runat="server" Text='<%# Bind("tipo") %>'></asp:TextBox>
+                                         </EditItemTemplate>
+                                         <ItemTemplate>
+                                             <asp:Label ID="Label8" runat="server" Text='<%# Bind("tipo") %>'></asp:Label>
+                                         </ItemTemplate>
+                                     </asp:TemplateField>
+                                     <asp:BoundField DataField="estadoRecomendacion" 
+                                         HeaderText="Estado Recomendacion" SortExpression="estadoRecomendacion" />
+                                     <asp:TemplateField HeaderText="Seleccionar">
+                                         <EditItemTemplate>
+                                             <asp:CheckBox ID="CheckBox1" runat="server" />
+                                         </EditItemTemplate>
+                                         <ItemTemplate>
+                                             <asp:CheckBox ID="CheckBox1" runat="server" />
+                                         </ItemTemplate>
+                                     </asp:TemplateField>
+                                 </Columns>
+                             </asp:GridView>
+                         </asp:Panel>
                          
-                             <Columns>
-                                 <asp:TemplateField HeaderText="Titulo Propiedad" SortExpression="titulo">
-                                     <EditItemTemplate>
-                                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("titulo") %>'></asp:TextBox>
-                                     </EditItemTemplate>
-                                     <ItemTemplate>
-                                         <asp:Label ID="Label1" runat="server" Text='<%# Bind("titulo") %>'></asp:Label>
-                                     </ItemTemplate>
-                                 </asp:TemplateField>
-                                 <asp:TemplateField HeaderText="Prioridad" SortExpression="prioridad">
-                                     <EditItemTemplate>
-                                         <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("prioridad") %>'></asp:TextBox>
-                                     </EditItemTemplate>
-                                     <ItemTemplate>
-                                         <asp:Label ID="Label2" runat="server" Text='<%# Bind("prioridad") %>'></asp:Label>
-                                     </ItemTemplate>
-                                 </asp:TemplateField>
-                                 <asp:TemplateField HeaderText="Usuario que recomendo" 
-                                     SortExpression="usuarioRecomendo">
-                                     <EditItemTemplate>
-                                         <asp:TextBox ID="TextBox3" runat="server" 
-                                             Text='<%# Bind("usuarioRecomendo") %>'></asp:TextBox>
-                                     </EditItemTemplate>
-                                     <ItemTemplate>
-                                         <asp:Label ID="Label3" runat="server" Text='<%# Bind("usuarioRecomendo") %>'></asp:Label>
-                                     </ItemTemplate>
-                                 </asp:TemplateField>
-                                 <asp:TemplateField HeaderText="Tipo" SortExpression="tipo">
-                                     <EditItemTemplate>
-                                         <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("tipo") %>'></asp:TextBox>
-                                     </EditItemTemplate>
-                                     <ItemTemplate>
-                                         <asp:Label ID="Label4" runat="server" Text='<%# Bind("tipo") %>'></asp:Label>
-                                     </ItemTemplate>
-                                 </asp:TemplateField>
-                                 <asp:BoundField DataField="estadoRecomendacion" 
-                                     HeaderText="Estado Recomendacion" SortExpression="estadoRecomendacion" />
-                             </Columns>
-                         </asp:GridView>
-                         
-                         <br /> <br />
+                         <br />
                          <asp:Button ID="Button_Ver_AdministrarWishList" runat="server" BackColor="#7AB428" 
                              ForeColor="White" Height="30px"  
-                             style="margin-left: 30px; margin-top: 10px;" Text="Ver" Width="160px" 
+                             style="margin-left: 30px; margin-top: 0px;" Text="Ver" Width="160px" 
                              onclick="Button_Ver_AdministrarWishList_Click1" />
                          <asp:Button ID="Button_AceptarWishlist" runat="server" 
                              BackColor="#671160" ForeColor="White" Height="30px" 
