@@ -58,15 +58,6 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.ImageButton ImageButtonSiguiente;
         
         /// <summary>
-        /// Button_Recomendar_Propiedades control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_Recomendar_Propiedades;
-        
-        /// <summary>
         /// Button_Reservar_Propiedades control.
         /// </summary>
         /// <remarks>
@@ -346,22 +337,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Panel Panel5;
         
         /// <summary>
-        /// Panel2 control.
+        /// Button_Recomendar_Propiedades control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel2;
-        
-        /// <summary>
-        /// GridViewComentarios control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewComentarios;
+        protected global::System.Web.UI.WebControls.Button Button_Recomendar_Propiedades;
         
         /// <summary>
         /// Panel3 control.

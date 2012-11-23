@@ -18,15 +18,18 @@
             
             style="border-width: thin; border-style: solid; margin: 0px; color: #000000; background-color: #CCCCCC; vertical-align: super; top: 0px; left: 0px; height: 55px; line-height: 0px;">
             <div class="title" align="right" 
-                style="color: #000000; vertical-align: top; height: 57px;">
+                style="color: #000000; vertical-align: top; height: 57px; width: 1002px;">
                 
-                    <asp:Image ID="Image_LogoMyBnB" runat="server" ImageUrl="~/Images/MyBnB_pequeño.png" 
-                         style="margin-left: 5px; margin-top: 5px" />
+                    <br />
+                    <br />
+                
+                    <asp:Image ID="Image1" runat="server" style="margin-top:5px; margin-left:10px" ImageUrl="~/Images/MyBnB_logo.png" />
+                
                     <asp:Label ID="Label_Usuario_Master" runat="server" Font-Size="Small" 
-                         style="margin-left: 550px; margin-top: 2px"></asp:Label>
+                         style="margin-left: 500px; margin-bottom: 10px"></asp:Label>
                     <asp:Button ID="Button_LogOut_Master" runat="server" BackColor="#5093CF" 
                          ForeColor="White" Height="30px" 
-                         style="margin-left: 20px; margin-top: 0px; margin-bottom: 2px" Text="Log Out" Width="90px" /> <br />
+                         style="margin-left: 20px; margin-top: 15px; margin-bottom: 2px" Text="Log Out" Width="90px" /> <br />
                 
             </div>
         </div>

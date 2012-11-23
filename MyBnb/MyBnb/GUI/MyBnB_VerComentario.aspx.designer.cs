@@ -22,6 +22,24 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label LabelComentar;
         
         /// <summary>
+        /// Panel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel1;
+        
+        /// <summary>
+        /// Panel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel2;
+        
+        /// <summary>
         /// GridViewComentarios control.
         /// </summary>
         /// <remarks>
@@ -31,12 +49,12 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.GridView GridViewComentarios;
         
         /// <summary>
-        /// Button_Salir control.
+        /// Button_Volver control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_Salir;
+        protected global::System.Web.UI.WebControls.Button Button_Volver;
     }
 }

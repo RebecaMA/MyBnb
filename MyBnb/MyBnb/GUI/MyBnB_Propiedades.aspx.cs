@@ -26,23 +26,20 @@ namespace MyBnb.GUI
         public void colocarPropiedad()
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
-            llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad());
-            llenarComentarios();
+            llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad());            
 
         }
 
         protected void ImageButtonSiguiente_Click(object sender, ImageClickEventArgs e)
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
-            llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad("sig"));
-            llenarComentarios();
+            llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad("sig"));            
         }
 
         protected void ImageButtonAnterior_Click(object sender, ImageClickEventArgs e)
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
-            llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad("ant"));
-            llenarComentarios();
+            llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad("ant"));            
         }
 
 
@@ -62,13 +59,7 @@ namespace MyBnb.GUI
             Label_PNochesMinima.Text = pdatos[10];
         }
 
-        public void llenarComentarios()
-        {
-            ControllerComentario _controllerComentario = new ControllerComentario();
-            GridViewComentarios.DataSource = _controllerComentario.obtenerComentariosPropiedad();
-            GridViewComentarios.DataBind();
 
-        }
         protected void Button_Reservar_Propiedades_Click(object sender, EventArgs e)
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
@@ -88,7 +79,9 @@ namespace MyBnb.GUI
                 _controllerComentario.realizarComentario(indexRanking, TextBoxComentario.Text);                
             }
             else // MostrarError
-            { }
+            {
+                ScriptManager.RegisterStartupScript(this, typeof(string), "Error", "alert('Unicamente puede comentar las propiedades que ya visito.');", true);
+            }
             
         }
 
@@ -99,7 +92,9 @@ namespace MyBnb.GUI
 
         protected void Button_Wishlist_Propiedades_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/GUI/MyBnB_AgregarWishlist.aspx");
+            ControllerWishList _controllerWishlist = new ControllerWishList();
+            String prioridad = DropDownList_Prioridad_AgregarWishlist.SelectedValue;
+            _controllerWishlist.ingresarWishlist(prioridad);
         }
 
         protected void Button_Recomendar_TodosComentarios_Click(object sender, EventArgs e)

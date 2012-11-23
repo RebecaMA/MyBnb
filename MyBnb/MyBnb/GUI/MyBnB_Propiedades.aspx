@@ -33,12 +33,7 @@
             style="margin-left: 30px; margin-top: 10px;" 
             onclick="ImageButtonSiguiente_Click"/>
         
-        <br /> <br />
-
-        <asp:Button ID="Button_Recomendar_Propiedades" runat="server" 
-            BackColor="#7AB428" ForeColor="White" Height="30px"             
-            style="margin-left: 10px; margin-top: 10px;" Text="Recomendar" 
-            Width="90px" onclick="Button_Recomendar_Propiedades_Click" />
+        <br /> 
 
         <br />
         <asp:Button ID="Button_Reservar_Propiedades" runat="server" 
@@ -126,12 +121,13 @@
         <table style="width: 960px; height: 317px;">
             <tr>
                 <td align="left" class="style1">
-                    <br />
-                    <asp:Panel ID="Panel4" runat="server" Width="317px" Height="150px">
+                    <asp:Panel ID="Panel4" runat="server" Width="315px" Height="148px" 
+                        BorderStyle="Groove">
+                        <br />
                         <asp:Label ID="Label_Prioridad" runat="server" 
                             style="margin-left: 10px; margin-top: 10px;" Text="Priodidad:" 
                             Font-Bold="True" />
-                        <asp:DropDownList ID="DropDownList_Prioridad_AgregarWishlist" runat="server" 
+                        &nbsp;<asp:DropDownList ID="DropDownList_Prioridad_AgregarWishlist" runat="server" 
                             AutoPostBack="True" style="margin-left: 5px; margin-top: 10px;" 
                             Width="209px" Height="16px">
                         </asp:DropDownList>
@@ -140,38 +136,22 @@
                             ForeColor="White" Height="30px" onclick="Button_Wishlist_Propiedades_Click" 
                             style="margin-left: 200px; margin-top: 10px" Text="WishList" Width="90px" />                        
                     </asp:Panel>
-                    <asp:Panel ID="Panel5" runat="server" Height="150px">
+                    <asp:Panel ID="Panel5" runat="server" Height="144px" Width="315px" 
+                        BorderStyle="Groove">
+                        <asp:Button ID="Button_Recomendar_Propiedades" runat="server" 
+                            BackColor="#7AB428" ForeColor="White" Height="30px" 
+                            onclick="Button_Recomendar_Propiedades_Click" 
+                            style="margin-left: 200px; margin-top: 10px;" Text="Recomendar" Width="90px" />
                         </asp:Panel>
                 </td>
-                <td align="center" class="rightColumn">
-                    <asp:Panel ID="Panel2" runat="server">
-                        <asp:GridView ID="GridViewComentarios" runat="server" style="margin-left: 5px; margin-right: 5px; margin-top: 2px;"
-                            AutoGenerateColumns="False" Width="623px">
-                            <Columns>
-                                <asp:BoundField DataField="login" HeaderText="Usuario" SortExpression="login" >
-                                <FooterStyle Width="80px" />
-                                </asp:BoundField>
-                                <asp:BoundField DataField="descripcionComentario" HeaderText="Comentario" 
-                                    SortExpression="descripcionComentario" >
-                                <FooterStyle Width="500px" />
-                                </asp:BoundField>
-                                <asp:BoundField DataField="ranking" HeaderText="Calificación" 
-                                    SortExpression="ranking" >
-                                <FooterStyle Width="50px" />
-                                </asp:BoundField>
-                                <asp:BoundField DataField="fechaComentario" HeaderText="Fecha " 
-                                    SortExpression="fechaComentario" >
-                                <FooterStyle Width="50px" />
-                                </asp:BoundField>
-                            </Columns>
-                        </asp:GridView>                        
-                    </asp:Panel>
-                    <asp:Panel ID="Panel3" runat="server" Height="189px" HorizontalAlign="Left">
+                <td align="left" class="rightColumn">
+                    <asp:Panel ID="Panel3" runat="server" Height="300px" HorizontalAlign="Left" 
+                        BorderStyle="Groove">
                         
                         <br />
                         
-                        <asp:Label ID="Label13" runat="server" Font-Bold="True" 
-                            Text="Comentario:" style="margin-top:3px"></asp:Label>
+                        &nbsp;<asp:Label ID="Label13" runat="server" Font-Bold="True" 
+                            style="margin-top: 3px" Text="Comentario:"></asp:Label>
                         &nbsp;&nbsp;
                         <asp:TextBox ID="TextBoxComentario" runat="server" Height="80px" 
                             style="margin-top:6px" TextMode="MultiLine" Width="520px"></asp:TextBox>
@@ -179,24 +159,25 @@
                         
                     <asp:RadioButtonList ID="RadioButtonListRanking" runat="server" 
                                BorderStyle="Dotted" BorderWidth="0px" Font-Bold="True" Font-Italic="False" 
-                               Font-Size="Small" RepeatDirection="Horizontal" Width="250px">
+                               Font-Size="Small" RepeatDirection="Horizontal" Width="250px" style="margin-left:90px; margin-top:10px">
                     <asp:ListItem>5</asp:ListItem>
                     <asp:ListItem>4</asp:ListItem>
                     <asp:ListItem>3</asp:ListItem>
                     <asp:ListItem>2</asp:ListItem>
                     <asp:ListItem>1</asp:ListItem>
                     </asp:RadioButtonList>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="Label_Comentar" runat="server" Text="5 es el mayor, 1 es el menor"></asp:Label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label_Comentar" runat="server" 
+                            Text="Donde 5 es el mejor y 1 el peor"></asp:Label>
                         <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <br />
                         <asp:Button ID="Button_Recomendar_TodosComentarios" runat="server" 
                             BackColor="#7AB428" ForeColor="White" Height="30px" 
                             onclick="Button_Recomendar_TodosComentarios_Click" 
-                            style="margin-left: 10px; margin-top: 10px;" Text="Comentarios" Width="90px" />
-&nbsp;
+                            style="margin-left: 90px; margin-top: 10px;" Text="Ver" Width="90px" />
                         <asp:Button ID="Button_Comentar_Propiedades" runat="server" BackColor="#671160" 
                             ForeColor="White" Height="30px" onclick="Button_Comentar_Propiedades_Click" 
-                            style="margin-left: 0px; margin-top: 10px;" Text="Comentar" Width="90px" />
+                            style="margin-left: 10px; margin-top: 10px;" Text="Comentar" Width="90px" />
                     </asp:Panel>
                 </td>
             </tr>
