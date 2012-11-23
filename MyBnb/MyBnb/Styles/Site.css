@@ -9,7 +9,7 @@ body
     margin: 0px 0px 0px 32px;
     padding: 0px;
     color: #696969;
-    width: 1035px;
+    width: 1032px;
     height: 1000px;
 }
 
@@ -130,8 +130,8 @@ first child of the left and right table columns */
     padding: 0px 12px;
     margin: 12px 8px 8px 8px;
     min-height: 420px;
-    width: 1000px;
-    height: 580px;
+    width: 967px;
+    height: 879px;
 }
 
 .leftCol
@@ -263,8 +263,7 @@ div.accountInfo
     display: block;
     float: left;
     text-align: left;
-    width: 993px;
-}
+    }
 
 .loginDisplay
 {

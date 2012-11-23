@@ -81,3 +81,7 @@ C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Twitterizer2.dll
 C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Twitterizer2.xml
 C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Newtonsoft.Json.dll
 C:\Users\Rebeca\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Newtonsoft.Json.xml
+C:\Users\ogsancho\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Newtonsoft.Json.dll
+C:\Users\ogsancho\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Twitterizer2.dll
+C:\Users\ogsancho\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Newtonsoft.Json.xml
+C:\Users\ogsancho\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Twitterizer2.xml

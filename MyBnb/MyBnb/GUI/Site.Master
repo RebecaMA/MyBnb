@@ -11,22 +11,23 @@
 </head>
 <body alink="#003399">
     <form runat="server" 
-    style="margin-left: 30px; margin-right: 0px;">
+    style="margin-left: 30px; margin-right: 0px; height: 915px; width: 1006px;">
     <div class="page" style="height: 900px !important;">
         <div class="header" 
             
-            style="border-width: thin; border-style: solid; margin: 0px; color: #000000; background-color: #CCCCCC; vertical-align: super; top: -23px; left: -1px; height: 55px; line-height: 0px;">
-            <div class="title" align="right" style="color: #000000; vertical-align: top;">
-                <h1 align="left" style="color: #000000">
+            
+            style="border-width: thin; border-style: solid; margin: 0px; color: #000000; background-color: #CCCCCC; vertical-align: super; top: 0px; left: 0px; height: 55px; line-height: 0px;">
+            <div class="title" align="right" 
+                style="color: #000000; vertical-align: top; height: 57px;">
+                
                     <asp:Image ID="Image_LogoMyBnB" runat="server" ImageUrl="~/Images/MyBnB_pequeño.png" 
                          style="margin-left: 5px; margin-top: 5px" />
                     <asp:Label ID="Label_Usuario_Master" runat="server" Font-Size="Small" 
-                         style="margin-left: 530px; margin-top: 2px"
-                         Text="Usuario"></asp:Label>
+                         style="margin-left: 550px; margin-top: 2px"></asp:Label>
                     <asp:Button ID="Button_LogOut_Master" runat="server" BackColor="#5093CF" 
                          ForeColor="White" Height="30px" 
-                         style="margin-left: 20px; margin-top: 0px" Text="Log Out" Width="90px" /> <br /> <br />
-                </h1>
+                         style="margin-left: 20px; margin-top: 0px; margin-bottom: 2px" Text="Log Out" Width="90px" /> <br />
+                
             </div>
         </div>
         <div class="main">

@@ -18,10 +18,7 @@ namespace MyBnb.GUI
 
         protected void Button_Comentar_Click(object sender, EventArgs e)
         {
-            ControllerComentario _controllerComentario = new ControllerComentario();
-            int indexRanking = int.Parse(RadioButtonListRanking.SelectedValue.ToString());
 
-            _controllerComentario.realizarComentario(indexRanking, TextBoxComentario.Text);
 
 
 

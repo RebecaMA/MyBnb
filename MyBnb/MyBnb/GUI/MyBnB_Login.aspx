@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Panel ID="Panel_Login" runat="server" Height="554px" 
+    <asp:Panel ID="Panel_Login" runat="server" Height="811px" 
         HorizontalAlign="Left" Width="960px" BackColor="#EEEEEE" 
         style="margin-left: 0px; margin-top: 0px;">
         

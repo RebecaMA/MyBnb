@@ -82,9 +82,14 @@ namespace MyBnb.GUI
         {
             ControllerComentario _controllerComentario = new ControllerComentario();
             if (_controllerComentario.verificarReservacion())
-                Response.Redirect("~/GUI/MyBnB_RealizarComentario.aspx");
+            {                
+                int indexRanking = int.Parse(RadioButtonListRanking.SelectedValue.ToString());
+
+                _controllerComentario.realizarComentario(indexRanking, TextBoxComentario.Text);                
+            }
             else // MostrarError
             { }
+            
         }
 
         protected void Button_Recomendar_Propiedades_Click(object sender, EventArgs e)
@@ -95,6 +100,11 @@ namespace MyBnb.GUI
         protected void Button_Wishlist_Propiedades_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/GUI/MyBnB_AgregarWishlist.aspx");
+        }
+
+        protected void Button_Recomendar_TodosComentarios_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/GUI/MyBnB_RealizarComentario.aspx");
         }
 
 
