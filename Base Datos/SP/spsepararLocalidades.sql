@@ -1,17 +1,17 @@
 
 ALTER PROCEDURE spsepararLocalidades
-	@Localidades varchar(1000)
+	@Localidades nvarchar(1000)
 
 AS
 
 CREATE TABLE #localidades 
 (
-	parametro varchar(10)
+	localidad nvarchar(10)
 )
 	SET NOCOUNT ON
 
 	DECLARE @Posicion int
-	DECLARE @localidad varchar(10)
+	DECLARE @localidad nvarchar(10)
 
 	SET @Localidades = @Localidades + ','
 
@@ -27,3 +27,6 @@ SELECT * FROM #localidades
 drop table #localidades
 SET NOCOUNT OFF
 GO
+
+--exec spsepararLocalidades 'viaje1,viaje2'
+	

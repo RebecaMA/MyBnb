@@ -41,7 +41,7 @@ AS BEGIN
 	update dbo.Persona set email = isnull(@pemail, email) where idPersona = @idPersona;
 	update dbo.Persona set telefono = isnull(@ptelefono,telefono) where idPersona = @idPersona;
 	update dbo.Persona set fk_idGenero = isnull(@idGenero,fk_idGenero) where idPersona = @idPersona;
-	update dbo.Persona set fk_idPais = isnull(@idPais,fk_idPais) where idPersona = @idPersona;				
+update dbo.Persona set fk_idPais = isnull(@idPais,fk_idPais) where idPersona = @idPersona;				
 
 
 END

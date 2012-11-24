@@ -27,9 +27,11 @@ ALTER PROCEDURE sprealizarComentario
 	
 AS
 BEGIN
-	declare @Ranking int = @pRanking;
+	declare @Ranking int = (select Ranking from Propiedad where idPropiedad = @pidPropiedad)
 	insert into Comentario(descripcion,rating,fk_idUsuario,fk_idPropiedad,FechaComentario)
 				values(@pComentario,@pRanking,(select idUsuario from usuario where Login = @pLogin),@pidPropiedad,@pFecha)
+				
+	update dbo.Propiedad set Ranking = ((@Ranking + @pRanking)/2) where idPropiedad = @pidPropiedad
 				
 	select 'Comentario Realizado'
 	
