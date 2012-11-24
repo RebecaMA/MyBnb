@@ -59,6 +59,11 @@ namespace MyBnb.GUI
 
         protected void Button_CrearCategoria_Click(object sender, EventArgs e)
         {
+            ControllerAdministrador _controllerAdministrador = new ControllerAdministrador();
+            String categoria = TextBox_NombreCategoria.Text;
+            String descripcion = TextBox_DescripcionCategoria.Text;
+            _controllerAdministrador.crearCategoria(categoria,descripcion);
+
 
         }
 

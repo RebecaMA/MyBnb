@@ -146,7 +146,12 @@ namespace MyBnb.Logica_Negocio
         }
 
 
-
+        /// <summary>
+        /// Se encarga de listar una propiedad
+        /// </summary>
+        /// <param name="pdatos"></param>
+        /// <param name="plogin"></param>
+        /// <returns></returns>
         public String listarPropiedad(String[] pdatos,String plogin)
         {
             ControllerTwitter _twitter;
@@ -206,17 +211,27 @@ namespace MyBnb.Logica_Negocio
             return _retorno;
 
         }
-
+        /// <summary>
+        /// Obtiene la lista de propiedades
+        /// </summary>
+        /// <returns></returns>
         public List<Propiedad> getListaPropiedades()
         {
             return _listaPropiedades;
         }
-
+        /// <summary>
+        /// Setea el index de la lista de propiedades
+        /// </summary>
+        /// <param name="pindex"></param>
         public void setIndex(int pindex)
         {
             index = pindex;
         }
 
+        /// <summary>
+        /// Obtiene el index actual de la lista de propiedades
+        /// </summary>
+        /// <returns></returns>
         public int getIndex()
         {
             if (_listaPropiedades == null)

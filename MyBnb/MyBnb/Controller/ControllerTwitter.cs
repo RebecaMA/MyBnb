@@ -14,6 +14,11 @@ namespace MyBnb.Controller
             _twitter = new Twitter();
         }
 
+        /// <summary>
+        /// Manda a llamar una publicacion en twitter
+        /// </summary>
+        /// <param name="ppublicacion"></param>
+        /// <returns></returns>
         public String realizarPublicacion(String ppublicacion)
         {            
            return _twitter.realizarPublicacion(ppublicacion);

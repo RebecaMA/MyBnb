@@ -21,7 +21,7 @@ namespace MyBnb.GUI
             String login = TextBox_Usuario_Registrarse.Text;
             String contraseña = TextBox_Contraseña_Registrarse.Text;
             String verificar = TextBox_VerificarContraseña_Registrarse.Text;
-            String tipoUsuario = "Viajero";
+            String tipoUsuario = DropDownUsuario.SelectedValue;
 
             if (string.IsNullOrEmpty(TextBox_Usuario_Registrarse.Text) ||
                 string.IsNullOrEmpty(TextBox_Contraseña_Registrarse.Text) ||
@@ -63,6 +63,11 @@ namespace MyBnb.GUI
                 {
                     _controllerUsuario.setLogin(login);
                     Response.Redirect("http://localhost:51088/GUI/MyBnB_Viajero.aspx");
+                }
+                else if (resultado.Equals("Administrador"))
+                {
+                    _controllerUsuario.setLogin(login);
+                    Response.Redirect("http://localhost:51088/GUI/MyBnB_Administrador.aspx");
                 }
             }
         }

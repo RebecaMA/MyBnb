@@ -116,7 +116,6 @@
                 <asp:ListItem>31</asp:ListItem>
             </asp:DropDownList>
             <asp:DropDownList ID="DropDownListMes_R" runat="server" AutoPostBack="True" 
-                onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
                 style="margin-top: 20">
                 <asp:ListItem>- Mes - </asp:ListItem>
                 <asp:ListItem>Enero</asp:ListItem>

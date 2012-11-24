@@ -364,13 +364,13 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Button Button_Filtrar_PropiedadesAdministrador;
         
         /// <summary>
-        /// Control DropDownList_Prioridad_UsuarioRecomendar.
+        /// Control DropDownList_Usuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Prioridad_UsuarioRecomendar;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Usuario;
         
         /// <summary>
         /// Control Button_Recomendar_Propiedades.

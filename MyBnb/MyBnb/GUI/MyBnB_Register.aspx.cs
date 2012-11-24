@@ -18,10 +18,11 @@ namespace MyBnb.GUI
         
         protected void Button_Registrarse_Click(object sender, EventArgs e)
         {
+            
              String[] _datos = new String[12];
              _datos[0] = TextBox_Nombre.Text;
              _datos[1] = TextBox_Apellido.Text;
-             _datos[2] = DropDownListA_R.SelectedValue + DropDownListMes_R + DropDownListDia_R;
+             _datos[2] = DropDownListA_R.SelectedValue+ "/"+ DropDownListMes_R.SelectedIndex+"/" + DropDownListDia_R.SelectedValue;
              _datos[3] = TextBox_Email.Text;
              _datos[4] = TextBox_Telefono.Text;
              _datos[5] = DropDownList_Genero.SelectedValue;

@@ -17,18 +17,32 @@ namespace MyBnb.Logica_Negocio
             _accesoDatosViaje = new AccesoDatosViaje();
         }
 
+        /// <summary>
+        /// Reserva un viaje, esto es crear un nuevo viaje para poder realizar reservaciones
+        /// </summary>
+        /// <param name="pdatos"></param>
+        /// <returns></returns>
         public int reservarViaje(String[] pdatos)
         {
-            String[] _split = pdatos[3].Split(' ');
             pdatos[3] = "CRC";
             return _accesoDatosViaje.ReservarViaje(pdatos);
         }
 
+        /// <summary>
+        /// Realiza las reservaciones sobre un viaje
+        /// </summary>
+        /// <param name="pdatos"></param>
+        /// <returns></returns>
         public String realizarReservacion(String[] pdatos)
         {
              return _accesoDatosViaje.realizarReservacionPropiedad(pdatos);
         }
 
+        /// <summary>
+        /// Obtiene todos los titulos de viaje del usuario
+        /// </summary>
+        /// <param name="plogin"></param>
+        /// <returns></returns>
         public List<String> obtenerViajesUsuario(String plogin)
         {
             _viajesUsuario = _accesoDatosViaje.obtenerViajesUsuario(plogin);
@@ -42,11 +56,21 @@ namespace MyBnb.Logica_Negocio
             return titulos;
         }
 
+        /// <summary>
+        /// Obtiene la informacion del viaje seleccionado con el index
+        /// </summary>
+        /// <param name="pindex"></param>
+        /// <returns></returns>
         public String[] obtenerViajeSeleccionado(int pindex)
         {
             return _viajesUsuario.ElementAt(pindex);
         }
 
+        /// <summary>
+        /// Obtiene el id del viaje seleccionado
+        /// </summary>
+        /// <param name="pindex"></param>
+        /// <returns></returns>
         public int getidViaje(int pindex)
         {
             return int.Parse(_viajesUsuario[pindex][0]);

@@ -60,7 +60,8 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label1" runat="server" Text="Tipo Usuario:"></asp:Label>
             &nbsp;&nbsp;
-            <asp:DropDownList ID="DropDownList1" runat="server" Height="25px" Width="200px">
+            <asp:DropDownList ID="DropDownUsuario" runat="server" Height="25px" 
+                Width="200px" AutoPostBack="True">
                 <asp:ListItem>Viajero</asp:ListItem>
                 <asp:ListItem>Administrador</asp:ListItem>
             </asp:DropDownList>

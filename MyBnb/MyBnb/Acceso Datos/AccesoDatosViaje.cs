@@ -10,6 +10,11 @@ namespace MyBnb.Acceso_Datos
     {
         AccesoDatos _accesoDatos = new AccesoDatos();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pdatos"></param>
+        /// <returns></returns>
         public int ReservarViaje(String[] pdatos)
         {
             Object obj = "-1";
@@ -25,6 +30,11 @@ namespace MyBnb.Acceso_Datos
 
         }
 
+        /// <summary>
+        /// Se encarga de realizar la reservacion propiedad
+        /// </summary>
+        /// <param name="pdatos"></param>
+        /// <returns></returns>
         public String realizarReservacionPropiedad(String[] pdatos)
         {
 
@@ -39,6 +49,11 @@ namespace MyBnb.Acceso_Datos
             return objeto.ToString();
         }
 
+        /// <summary>
+        /// Obtiene los viajes del usuario
+        /// </summary>
+        /// <param name="plogin"></param>
+        /// <returns></returns>
         public List<String[]> obtenerViajesUsuario(String plogin)
         {
             List<String[]> _listaviajesusuario = new List<String[]>();
@@ -66,10 +81,6 @@ namespace MyBnb.Acceso_Datos
                 _retorno[7] = _objeto.ToString();
                 _retorno[8] = reader.GetString(8);
                 _retorno[9] = reader.GetString(9);
-                _retorno[10] = reader.GetString(10);
-                _retorno[11] = reader.GetString(11);
-                _retorno[12] = reader.GetString(12);
-                _retorno[13] = reader.GetString(13);
                 _listaviajesusuario.Add(_retorno);
 
 

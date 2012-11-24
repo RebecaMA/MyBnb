@@ -26,9 +26,12 @@ namespace MyBnb.GUI
 
             }
             if (!IsPostBack) 
-            {       
- 
-          
+            {
+
+                llenarListarPropiedad();
+                llenarReservarViaje();
+                llenarSolicitarAnfitrion();
+                llenarWishlist();
             }
         }
         /// <summary>
@@ -73,9 +76,12 @@ namespace MyBnb.GUI
         public void llenarReservarViaje()
         {
             ControllerViaje _controllerViaje = new ControllerViaje();
+            ControllerPropiedades _controllerPropiedad = new ControllerPropiedades();
             DropDownList_Viaje_Propiedades.DataSource = _controllerViaje.obtenerViajesUsuario();
             DropDownList_Viaje_Propiedades.DataBind();
             DropDownList_Viaje_Propiedades.Visible = true;
+            DropDownList_Localidad_ListarPropiedad.DataSource = _controllerPropiedad.obtenerTipo("ObtenerLocalidad");
+            DropDownList_Localidad_ListarPropiedad.DataBind();
             Label_Viaje.Visible = true;
             
         }
@@ -124,7 +130,7 @@ namespace MyBnb.GUI
             datos[3] = TextBox_Descripcion_ModificarUsuario.Text;
             datos[4] = TextBox_Nombre_ModificarUsuario.Text;
             datos[5] = TextBox_Apellidos_ModificarUsuario.Text;
-            datos[6] = DropDownListAno_modificar.SelectedValue + DropDownListMes_Modificar.SelectedValue + DropDownListDia_Modificar;
+            datos[6] = DropDownListAno_modificar.SelectedValue + DropDownListMes_Modificar.SelectedIndex + DropDownListDia_Modificar;
             datos[7] = TextBox_Email_ModificarUsuario.Text;
             datos[8] = TextBox_Telefono_ModificarUsuario.Text;
             datos[9] = DropDownList_Genero_ModificarUsuario.SelectedValue.ToString();
@@ -149,7 +155,10 @@ namespace MyBnb.GUI
             datos[3] = TextBox_Descripcion_ModificarUsuario.Text;
             datos[4] = TextBox_Nombre_ModificarUsuario.Text;
             datos[5] = TextBox_Apellidos_ModificarUsuario.Text;
-            datos[6] = DropDownListAno_modificar.SelectedValue + DropDownListMes_Modificar.SelectedValue + DropDownListDia_Modificar;
+            if (DropDownListMes_Modificar.SelectedIndex == 0)
+            { datos[6] = ""; }
+            else
+            { datos[6] = DropDownListAno_modificar.SelectedValue + "/" + DropDownListMes_Modificar.SelectedIndex + "/" + DropDownListDia_Modificar.SelectedValue; }
             datos[7] = TextBox_Email_ModificarUsuario.Text;
             datos[8] = TextBox_Telefono_ModificarUsuario.Text;
             datos[9] = DropDownList_Genero_ModificarUsuario.SelectedValue.ToString();
@@ -186,9 +195,8 @@ namespace MyBnb.GUI
             _datos[10] = TextBox_PrecioVolumen_ListarPropiedad.Text;
             _datos[11] = TextBox_CantidadVolumen_ListarPropiedad.Text;
             String retorno = _controllerPropiedad.listarPropiedad(_datos);
-            ScriptManager.RegisterStartupScript(this, typeof(string), 
-                "Error", "alert("+retorno+");", true); 
-            ;               
+            ScriptManager.RegisterStartupScript(this, typeof(string),"Error", "alert("+retorno+");", true); 
+                           
         }
 
         protected void Button_Filtrar_Propiedades_Click1(object sender, EventArgs e)
@@ -214,8 +222,8 @@ namespace MyBnb.GUI
             ControllerUsuario _usuario = new ControllerUsuario();
 
             String[] _datos = new String[5];
-            _datos[0] = DropDownListFEAno_CV.SelectedValue + "/" + DropDownListDEMes_CV.SelectedValue + "/" + DropDownListFEDia_CrearViaje.SelectedValue;
-            _datos[1] = DropDownListFSAno_CV.SelectedValue + "/" + DropDownListFSMes_CV.SelectedValue + "/" + DropDownListFSDia_CV.SelectedValue;
+            _datos[0] = DropDownListFEAno_CV.SelectedValue + "/" + DropDownListDEMes_CV.SelectedIndex + "/" + DropDownListFEDia_CrearViaje.SelectedValue;
+            _datos[1] = DropDownListFSAno_CV.SelectedValue + "/" + DropDownListFSMes_CV.SelectedIndex + "/" + DropDownListFSDia_CV.SelectedValue;
             _datos[2] = TextBox_Titulo_CrearViaje.Text;
             _datos[3] = null;
             _datos[4] = _usuario.getLogin();
@@ -244,8 +252,8 @@ namespace MyBnb.GUI
            
 
             String[] _datos = new String[5];
-            _datos[0] = DropDownListFEAno_CV.SelectedValue + "/" + DropDownListDEMes_CV.SelectedValue + "/" + DropDownListFEDia_CrearViaje.SelectedValue;
-            _datos[1] = DropDownListFSAno_CV.SelectedValue + "/" + DropDownListFSMes_CV.SelectedValue + "/" + DropDownListFSDia_CV.SelectedValue;
+            _datos[0] = DropDownListFEAno_CV.SelectedValue + "/" + DropDownListDEMes_CV.SelectedIndex + "/" + DropDownListFEDia_CrearViaje.SelectedValue;
+            _datos[1] = DropDownListFSAno_CV.SelectedValue + "/" + DropDownListFSMes_CV.SelectedIndex + "/" + DropDownListFSDia_CV.SelectedValue;
             _datos[2] = TextBox_Titulo_CrearViaje.Text;
             _datos[3] = null;
             _datos[4] = _usuario.getLogin();
@@ -302,8 +310,8 @@ namespace MyBnb.GUI
             ControllerViaje _viaje = new ControllerViaje();
             String[] pdatos = new String[2];
             int index;
-            pdatos[0] = DropDownListFIAno_P.SelectedValue+"/"+DropDownListFIMes_P+"/"+ DropDownListFIDia_Propiedades;
-            pdatos[1] = DropDownListFFAno_P+"/"+DropDownListFFMes_P+"/"+DropDownListFFDia_P;
+            pdatos[0] = DropDownListFIAno_P.SelectedValue + "/" + DropDownListFIMes_P.SelectedIndex + "/" + DropDownListFIDia_Propiedades.SelectedValue;
+            pdatos[1] = DropDownListFFAno_P.SelectedValue + "/" + DropDownListFFMes_P.SelectedIndex + "/" + DropDownListFFDia_P.SelectedValue;
             
             index = GridView_Propiedades.SelectedIndex;
 

@@ -15,6 +15,11 @@ namespace MyBnb.Logica_Negocio
             _accesoDatos = new AccesoDatosUsuario();
         }
 
+        /// <summary>
+        /// Se encarga de realizar el registro de un usuario
+        /// </summary>
+        /// <param name="pdatos"></param>
+        /// <returns></returns>
         public String registarUsuario(String[] pdatos)
         {
 
@@ -55,12 +60,22 @@ namespace MyBnb.Logica_Negocio
 
         }
 
+        /// <summary>
+        /// Se encarga de autentificar usuario
+        /// Regresa el tipo de usuario o error de login
+        /// </summary>
+        /// <param name="plogin"></param>
+        /// <param name="pcontraseña"></param>
+        /// <returns></returns>
         public String autentificarUsuario(String plogin, String pcontraseña)
         {
             return _accesoDatos.auntentificarUsuario(plogin, pcontraseña);
         }
 
-
+        /// <summary>
+        /// Modifica los datos del usuario, si los datos del String[] son vacios se setean como nulos
+        /// </summary>
+        /// <param name="pdatos"></param>
         public void modificarUsuario(String[] pdatos)
         {
 

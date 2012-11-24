@@ -129,7 +129,7 @@
                             Font-Bold="True" />
                         &nbsp;<asp:DropDownList ID="DropDownList_Prioridad_AgregarWishlist" runat="server" 
                             AutoPostBack="True" style="margin-left: 5px; margin-top: 10px;" 
-                            Width="209px" Height="16px">
+                            Width="209px" Height="25px">
                         </asp:DropDownList>
                         
                         <asp:Button ID="Button_Wishlist_Propiedades" runat="server" BackColor="#671160" 
@@ -149,8 +149,8 @@
                             style="margin-left: 60px; margin-top: 10px;" Text="Filtrar" 
                             Width="90px" />
                         <br />
-                        <asp:DropDownList ID="DropDownList_Prioridad_UsuarioRecomendar" runat="server" 
-                            AutoPostBack="True" Height="16px" style="margin-left: 50px; margin-top: 10px;" 
+                        <asp:DropDownList ID="DropDownList_Usuario" runat="server" 
+                            AutoPostBack="True" Height="25px" style="margin-left: 50px; margin-top: 10px;" 
                             Width="209px">
                         </asp:DropDownList>
                         <br />

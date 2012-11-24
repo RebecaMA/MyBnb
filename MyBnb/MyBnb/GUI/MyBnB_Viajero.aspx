@@ -640,9 +640,11 @@
 
                          <asp:Label ID="Label_Viaje" runat="server" 
                              style="margin-left: 10px; margin-top: 10px;" Text="Viaje:" />
-                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList_Viaje_Propiedades" runat="server" 
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList 
+                             ID="DropDownList_Viaje_Propiedades" runat="server" 
                              onselectedindexchanged="CambioViaje" 
-                             style="margin-left: 20px; margin-top: 10px;" Width="200px">
+                             style="margin-left: 20px; margin-top: 10px;" Width="200px" 
+                             AutoPostBack="True">
                              <asp:ListItem></asp:ListItem>
                          </asp:DropDownList>
                          <br />

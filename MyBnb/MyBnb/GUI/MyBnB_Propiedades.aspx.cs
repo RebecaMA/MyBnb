@@ -17,6 +17,9 @@ namespace MyBnb.GUI
             llenarDatosGenerales();
         }
 
+        /// <summary>
+        /// Se encarga de colocar propiedades en pantalla
+        /// </summary>
         public void colocarPropiedad()
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
@@ -24,27 +27,45 @@ namespace MyBnb.GUI
 
         }
 
+        /// <summary>
+        /// Se encarga de llenar datos del usuario y el wishlist
+        /// </summary>
         public void llenarDatosGenerales() 
         {
             ControllerWishList _controllerWishlist = new ControllerWishList();
+            ControllerUsuario _controllerUsuario = new ControllerUsuario();
             DropDownList_Prioridad_AgregarWishlist.DataSource = _controllerWishlist.obtenerPrioridad();
             DropDownList_Prioridad_AgregarWishlist.DataBind();
+            DropDownList_Usuario.DataSource = _controllerUsuario.seleccionarUsuario();
+            DropDownList_Usuario.DataBind();
         }
 
+        /// <summary>
+        /// Boton siquiente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void ImageButtonSiguiente_Click(object sender, ImageClickEventArgs e)
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad("sig"));            
         }
 
+        /// <summary>
+        /// Boton anterior
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void ImageButtonAnterior_Click(object sender, ImageClickEventArgs e)
         {
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad("ant"));            
         }
 
-
-
+        /// <summary>
+        /// Se encarga de llenar los datos de las propiedades
+        /// </summary>
+        /// <param name="pdatos"></param>
         public void llenarDatosPropiedad(String[] pdatos)
         {
             Label_PTitulo.Text = pdatos[0];
@@ -59,7 +80,6 @@ namespace MyBnb.GUI
             Label_PPrecioVolumen.Text = pdatos[9];
             Label_PNochesMinima.Text = pdatos[10];
         }
-
 
         protected void Button_Reservar_Propiedades_Click(object sender, EventArgs e)
         {
@@ -88,7 +108,9 @@ namespace MyBnb.GUI
 
         protected void Button_Recomendar_Propiedades_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/GUI/MyBnB_Recomendar.aspx");
+            ControllerWishList _controllerWishlist = new ControllerWishList();
+            String ploginRecomendado = DropDownList_Usuario.SelectedValue;
+            _controllerWishlist.realizarRecomendacion(ploginRecomendado);
         }
 
         protected void Button_Wishlist_Propiedades_Click(object sender, EventArgs e)

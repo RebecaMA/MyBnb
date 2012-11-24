@@ -93,11 +93,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acceso Datos\AccesoDatos.cs" />
+    <Compile Include="Acceso Datos\AccesoDatosAdministrador.cs" />
     <Compile Include="Acceso Datos\AccesoDatosComentario.cs" />
     <Compile Include="Acceso Datos\AccesoDatosPropiedad.cs" />
     <Compile Include="Acceso Datos\AccesoDatosUsuario.cs" />
     <Compile Include="Acceso Datos\AccesoDatosViaje.cs" />
     <Compile Include="Acceso Datos\AccesoDatosWishlist.cs" />
+    <Compile Include="Controller\ControllerAdministrador.cs" />
     <Compile Include="Controller\ControllerComentario.cs" />
     <Compile Include="Controller\ControllerPropiedades.cs" />
     <Compile Include="Controller\ControllerTwitter.cs" />
@@ -162,6 +164,7 @@
     <Compile Include="LibreriaClases\Usuario.cs" />
     <Compile Include="LibreriaClases\Viaje.cs" />
     <Compile Include="LibreriaClases\Wishlist.cs" />
+    <Compile Include="Logica Negocio\Administrador.cs" />
     <Compile Include="Logica Negocio\Comentarios.cs" />
     <Compile Include="Logica Negocio\Propiedades.cs" />
     <Compile Include="Logica Negocio\Twitter.cs" />

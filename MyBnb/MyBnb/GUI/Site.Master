@@ -29,7 +29,8 @@
                          style="margin-left: 500px; margin-bottom: 10px"></asp:Label>
                     <asp:Button ID="Button_LogOut_Master" runat="server" BackColor="#5093CF" 
                          ForeColor="White" Height="30px" 
-                         style="margin-left: 20px; margin-top: 15px; margin-bottom: 2px" Text="Log Out" Width="90px" /> <br />
+                         style="margin-left: 20px; margin-top: 15px; margin-bottom: 2px" 
+                        Text="Log Out" Width="90px" onclick="Button_LogOut_Master_Click" /> <br />
                 
             </div>
         </div>

@@ -24,15 +24,10 @@ namespace MyBnb.Acceso_Datos
         public String realizarRecomendacion(String[] pdatos)
         {
             String[] _nombreParametros = new String[3] { "@pidPropiedad", "@pLoginRecomienda", "pLoginRecomendado" };
-            IDataReader _reader = _accesoDatos.leer("sprealizarRecomendacion", _nombreParametros, pdatos);
-            if (_reader.Read())
-            {
-                return _reader.GetString(0);
-            }
-            else
-            {
+             _accesoDatos.escribirDB("sprealizarRecomendacion", _nombreParametros, pdatos);
+            
                 return "Error en la recomendación";
-            }
+            
 
         }
 

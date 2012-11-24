@@ -18,12 +18,22 @@ namespace MyBnb.Controller
             _viaje = new Viajes();
         }
 
+        /// <summary>
+        /// Llama a reservar viaje
+        /// </summary>
+        /// <param name="pdatos"></param>
+        /// <returns></returns>
         public int reservarViaje(String[] pdatos)
         {
 
             return _viaje.reservarViaje(pdatos);
         }
 
+        /// <summary>
+        /// Realiza reservacion
+        /// </summary>
+        /// <param name="pdatos"></param>
+        /// <returns></returns>
         public String realizarReservacion(String[] pdatos)
         {
             ControllerPropiedades _propiedad = new ControllerPropiedades();
@@ -46,18 +56,30 @@ namespace MyBnb.Controller
 
         }
 
-
+        /// <summary>
+        /// Obtiene los viajes del usuario
+        /// </summary>
+        /// <returns></returns>
         public List<String> obtenerViajesUsuario()
         {
             ControllerUsuario _usuario = new ControllerUsuario();
             return _viaje.obtenerViajesUsuario(_usuario.getLogin());
         }
 
+        /// <summary>
+        /// Solicita anfitrion
+        /// </summary>
+        /// <param name="pindex"></param>
+        /// <returns></returns>
         public String[] solicitarAnfitrion(int pindex)
         {
             return _viaje.obtenerViajeSeleccionado(pindex);
         }
 
+        /// <summary>
+        /// Setea el id del viaje
+        /// </summary>
+        /// <param name="pindex"></param>
         public void setidViajeIndex(int pindex)
         {
             _idViaje = _viaje.getidViaje(pindex);
