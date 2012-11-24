@@ -62,8 +62,8 @@ namespace MyBnb.GUI
         public void llenarWishlist()
         {
             ControllerWishList _controllerWishList = new ControllerWishList();
-            //GridView_WishList.DataSource = _controllerWishList.mostrarWishlist();
-            //GridView_WishList.DataBind();
+            GridView_WishList.DataSource = _controllerWishList.mostrarWishlist();
+            GridView_WishList.DataBind();
             Button_AceptarWishlist.Visible = false;
             Button_RechazarWishist.Visible = false;
             _controllerWishList.obtenerPropiedadesWishList();         

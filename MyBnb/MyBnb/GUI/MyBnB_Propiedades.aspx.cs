@@ -14,13 +14,7 @@ namespace MyBnb.GUI
         protected void Page_Load(object sender, EventArgs e)
         {
             colocarPropiedad();
-            if (Request.QueryString["Tipo"] != null)
-            {
-                if (Request.QueryString["Tipo"].Equals("Wishlist"))
-                {
-                    Button_Wishlist_Propiedades.Visible = false;
-                }
-            }
+            llenarDatosGenerales();
         }
 
         public void colocarPropiedad()
@@ -28,6 +22,13 @@ namespace MyBnb.GUI
             ControllerPropiedades _controllerPropiedades = new ControllerPropiedades();
             llenarDatosPropiedad(_controllerPropiedades.obtenerPropiedad());            
 
+        }
+
+        public void llenarDatosGenerales() 
+        {
+            ControllerWishList _controllerWishlist = new ControllerWishList();
+            DropDownList_Prioridad_AgregarWishlist.DataSource = _controllerWishlist.obtenerPrioridad();
+            DropDownList_Prioridad_AgregarWishlist.DataBind();
         }
 
         protected void ImageButtonSiguiente_Click(object sender, ImageClickEventArgs e)

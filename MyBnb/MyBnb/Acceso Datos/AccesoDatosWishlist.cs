@@ -66,8 +66,8 @@ namespace MyBnb.Acceso_Datos
         public String ingresaraWishlist(String pidPropiedad, String pLogin,String pPrioridad)
         {
 
-            String[] _nombreParametros = new String[3] { "@pidPropiedad", "@pLogin","@pPrioridad" };
-            IDataReader _reader = _accesoDatos.leer("spagregarWishList", _nombreParametros, pidPropiedad, pLogin,pPrioridad);
+            String[] _nombreParametros = new String[3] { "@pLoginUsuario","@pidpropiedad","@pPrioridad" };
+            IDataReader _reader = _accesoDatos.leer("spagregarWishListUsuario", _nombreParametros,pLogin,pidPropiedad, pPrioridad);
 
             if (_reader.Read())
             {

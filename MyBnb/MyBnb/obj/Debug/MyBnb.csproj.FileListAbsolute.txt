@@ -85,3 +85,27 @@ C:\Users\ogsancho\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Newtonsoft.Json.dll
 C:\Users\ogsancho\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Twitterizer2.dll
 C:\Users\ogsancho\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Newtonsoft.Json.xml
 C:\Users\ogsancho\Documents\GitHub\MyBnb\MyBnb\MyBnb\bin\Twitterizer2.xml
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\MyBnb.dll
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\MyBnb.pdb
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.dll
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Newtonsoft.Json.dll
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Twitterizer2.dll
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.Unity.dll
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.ServiceLocation.dll
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.Unity.Interception.dll
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.pdb
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.EnterpriseLibrary.Data.SqlCe.xml
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Newtonsoft.Json.xml
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Twitterizer2.xml
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.Unity.pdb
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\bin\Microsoft.Practices.Unity.Interception.pdb
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\obj\Debug\ResolveAssemblyReference.cache
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\obj\Debug\MyBnb.dll
+D:\6. II Sem 2012\Diseño\Proyecto\Progra\MyBnb 24.11\MyBnb\MyBnb\obj\Debug\MyBnb.pdb
