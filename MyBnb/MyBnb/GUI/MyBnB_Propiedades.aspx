@@ -146,7 +146,7 @@
                         <asp:Button ID="Button_Filtrar_PropiedadesAdministrador" runat="server" 
                             BackColor="#671160" ForeColor="White" Height="30px" 
                             onclick="Button_Comentar_Propiedades_Click" 
-                            style="margin-left: 60px; margin-top: 10px;" Text="Comentar" 
+                            style="margin-left: 60px; margin-top: 10px;" Text="Filtrar" 
                             Width="90px" />
                         <br />
                         <asp:DropDownList ID="DropDownList_Prioridad_UsuarioRecomendar" runat="server" 
