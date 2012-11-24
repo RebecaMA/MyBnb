@@ -123,7 +123,7 @@ namespace MyBnb.GUI
             datos[3] = TextBox_Descripcion_ModificarUsuario.Text;
             datos[4] = TextBox_Nombre_ModificarUsuario.Text;
             datos[5] = TextBox_Apellidos_ModificarUsuario.Text;
-            datos[6] = "";
+            datos[6] = DropDownListAno_modificar.SelectedValue + DropDownListMes_Modificar.SelectedValue + DropDownListDia_Modificar;
             datos[7] = TextBox_Email_ModificarUsuario.Text;
             datos[8] = TextBox_Telefono_ModificarUsuario.Text;
             datos[9] = DropDownList_Genero_ModificarUsuario.SelectedValue.ToString();
@@ -140,8 +140,6 @@ namespace MyBnb.GUI
         /// <param name="e"></param>
         protected void Button_Modificar_ModificarUsuario_Click(object sender, EventArgs e)
         {
-            //String[] _nombreparametros = new String[12] {"@pusuario","@plogin","@ppassword","@descripcion","@pnombre",
-            //                                            "@papellido","@pfechaNacimiento","@pemail","@ptelefono","@pgenero","@ppais","@pestadoUsuario" };
             ControllerUsuario _controllerUsuario = new ControllerUsuario();
             String[] datos = new String[12];
             datos[0] = _controllerUsuario.getLogin();
@@ -150,7 +148,7 @@ namespace MyBnb.GUI
             datos[3] = TextBox_Descripcion_ModificarUsuario.Text;
             datos[4] = TextBox_Nombre_ModificarUsuario.Text;
             datos[5] = TextBox_Apellidos_ModificarUsuario.Text;
-            datos[6] = "";
+            datos[6] = DropDownListAno_modificar.SelectedValue + DropDownListMes_Modificar.SelectedValue + DropDownListDia_Modificar;
             datos[7] = TextBox_Email_ModificarUsuario.Text;
             datos[8] = TextBox_Telefono_ModificarUsuario.Text;
             datos[9] = DropDownList_Genero_ModificarUsuario.SelectedValue.ToString();
@@ -193,14 +191,7 @@ namespace MyBnb.GUI
         protected void Button_Filtrar_Propiedades_Click1(object sender, EventArgs e)
         {
             ControllerPropiedades _propiedades = new ControllerPropiedades();
-            String[] datos = new String[3];
-            //datos[0] = Fecha Entrada
-            //datos[1] = Fecha Salida
-            //datos[2] = Codigo
-            datos[0] = "2012/10/20";
-            datos[1] = "2012/11/01";
-            datos[2] = "SCLU Chile Santigo Santiago";
-            _propiedades.obtenerPropiedades("Propiedades Disponibles", datos);
+            _propiedades.obtenerPropiedades("Mostrar Propiedades", null);
             GridView_Propiedades.DataSource = _propiedades.getlistaPropiedades();
             GridView_Propiedades.DataBind();
         }
@@ -428,6 +419,11 @@ namespace MyBnb.GUI
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void DropDownListAno_modificar_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

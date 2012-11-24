@@ -81,7 +81,7 @@
                     onselectionchanged="Calendar1_SelectionChanged" Width="200px">
                 </asp:Calendar>
             </div>
-            <asp:DropDownList ID="DropDownList4" runat="server" style="margin-top: 20">
+            <asp:DropDownList ID="DropDownListDia_R" runat="server" style="margin-top: 20">
                 <asp:ListItem>- Dia -</asp:ListItem>
                 <asp:ListItem>1</asp:ListItem>
                 <asp:ListItem>2</asp:ListItem>
@@ -115,7 +115,7 @@
                 <asp:ListItem>30</asp:ListItem>
                 <asp:ListItem>31</asp:ListItem>
             </asp:DropDownList>
-            <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" 
+            <asp:DropDownList ID="DropDownListMes_R" runat="server" AutoPostBack="True" 
                 onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
                 style="margin-top: 20">
                 <asp:ListItem>- Mes - </asp:ListItem>
@@ -132,8 +132,29 @@
                 <asp:ListItem>Noviembre</asp:ListItem>
                 <asp:ListItem>Diciembre</asp:ListItem>
             </asp:DropDownList>
-            <asp:DropDownList ID="DropDownList3" runat="server" style="margin-top: 20">
+            <asp:DropDownList ID="DropDownListA_R" runat="server" style="margin-top: 20">
                 <asp:ListItem>- Aho -</asp:ListItem>
+                <asp:ListItem>1990</asp:ListItem>
+                <asp:ListItem>1991</asp:ListItem>
+                <asp:ListItem>1992</asp:ListItem>
+                <asp:ListItem>1993</asp:ListItem>
+                <asp:ListItem>1994</asp:ListItem>
+                <asp:ListItem>1995</asp:ListItem>
+                <asp:ListItem>1996</asp:ListItem>
+                <asp:ListItem>1997</asp:ListItem>
+                <asp:ListItem>1998</asp:ListItem>
+                <asp:ListItem>1999</asp:ListItem>
+                <asp:ListItem>2000</asp:ListItem>
+                <asp:ListItem>2001</asp:ListItem>
+                <asp:ListItem>2002</asp:ListItem>
+                <asp:ListItem>2003</asp:ListItem>
+                <asp:ListItem>2005</asp:ListItem>
+                <asp:ListItem>2006</asp:ListItem>
+                <asp:ListItem>2007</asp:ListItem>
+                <asp:ListItem>2008</asp:ListItem>
+                <asp:ListItem>2009</asp:ListItem>
+                <asp:ListItem>2010</asp:ListItem>
+                <asp:ListItem>2011</asp:ListItem>
                 <asp:ListItem>2012</asp:ListItem>
                 <asp:ListItem>2013</asp:ListItem>
                 <asp:ListItem>2014</asp:ListItem>

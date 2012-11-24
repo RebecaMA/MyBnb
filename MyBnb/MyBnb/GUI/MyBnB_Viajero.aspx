@@ -90,7 +90,8 @@
                               &nbsp; *<br /> <br />
                               <asp:Label ID="Label_FechaNacimiento" runat="server" 
                                   style="margin-left: 10px; margin-top: 30px;" Text="Fecha de Nacimiento:" />
-                              &nbsp;&nbsp;<asp:DropDownList ID="DropDownList4" runat="server" style="margin-top:20">
+                              &nbsp;&nbsp;<asp:DropDownList ID="DropDownListDia_Modificar" runat="server" 
+                                  style="margin-top:20">
                                   <asp:ListItem>- Dia -</asp:ListItem>
                                   <asp:ListItem>1</asp:ListItem>
                                   <asp:ListItem>2</asp:ListItem>
@@ -124,8 +125,8 @@
                                   <asp:ListItem>30</asp:ListItem>
                                   <asp:ListItem>31</asp:ListItem>
                               </asp:DropDownList>
-                              &nbsp;&nbsp;<asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" 
-                                  onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                              &nbsp;&nbsp;<asp:DropDownList ID="DropDownListMes_Modificar" runat="server" AutoPostBack="True" 
+                                  
                                   style="margin-top:20">
                                   <asp:ListItem>- Mes - </asp:ListItem>
                                   <asp:ListItem>Enero</asp:ListItem>
@@ -141,12 +142,35 @@
                                   <asp:ListItem>Noviembre</asp:ListItem>
                                   <asp:ListItem>Diciembre</asp:ListItem>
                               </asp:DropDownList>
-                              &nbsp;&nbsp;<asp:DropDownList ID="DropDownList3" runat="server" style="margin-top:20">
+                              &nbsp;&nbsp;<asp:DropDownList ID="DropDownListAno_modificar" runat="server" 
+                                  style="margin-top:20" 
+                                  onselectedindexchanged="DropDownListAno_modificar_SelectedIndexChanged">
                                   <asp:ListItem>- Aho -</asp:ListItem>
-                                  <asp:ListItem>2012</asp:ListItem>
-                                  <asp:ListItem>2013</asp:ListItem>
-                                  <asp:ListItem>2014</asp:ListItem>
-                                  <asp:ListItem>2015</asp:ListItem>
+                                    <asp:ListItem>1990</asp:ListItem>
+                                    <asp:ListItem>1991</asp:ListItem>
+                                    <asp:ListItem>1992</asp:ListItem>
+                                    <asp:ListItem>1993</asp:ListItem>
+                                    <asp:ListItem>1994</asp:ListItem>
+                                    <asp:ListItem>1995</asp:ListItem>
+                                    <asp:ListItem>1996</asp:ListItem>
+                                    <asp:ListItem>1997</asp:ListItem>
+                                    <asp:ListItem>1998</asp:ListItem>
+                                    <asp:ListItem>1999</asp:ListItem>
+                                    <asp:ListItem>2000</asp:ListItem>
+                                    <asp:ListItem>2001</asp:ListItem>
+                                    <asp:ListItem>2002</asp:ListItem>
+                                    <asp:ListItem>2003</asp:ListItem>
+                                    <asp:ListItem>2005</asp:ListItem>
+                                    <asp:ListItem>2006</asp:ListItem>
+                                    <asp:ListItem>2007</asp:ListItem>
+                                    <asp:ListItem>2008</asp:ListItem>
+                                    <asp:ListItem>2009</asp:ListItem>
+                                    <asp:ListItem>2010</asp:ListItem>
+                                    <asp:ListItem>2011</asp:ListItem>
+                                    <asp:ListItem>2012</asp:ListItem>
+                                    <asp:ListItem>2013</asp:ListItem>
+                                    <asp:ListItem>2014</asp:ListItem>
+                                    <asp:ListItem>2015</asp:ListItem>
                               </asp:DropDownList>
                               &nbsp;&nbsp;*<br />
                               <asp:Label ID="Label_Sexo" runat="server" 
@@ -317,7 +341,8 @@
                           <asp:Label ID="Label_FechaInicio_Reservar" runat="server" Text="Fecha Inicio:"
                                   style="margin-left: 10px; margin-top: 10px;"/>&nbsp;&nbsp;
 
-                          <asp:DropDownList ID="DropDownList5" runat="server" style="margin-top:20">
+                          <asp:DropDownList ID="DropDownListFEDia_CrearViaje" runat="server" 
+                              style="margin-top:20">
                               <asp:ListItem>- Dia -</asp:ListItem>
                               <asp:ListItem>1</asp:ListItem>
                               <asp:ListItem>2</asp:ListItem>
@@ -351,8 +376,7 @@
                               <asp:ListItem>30</asp:ListItem>
                               <asp:ListItem>31</asp:ListItem>
                           </asp:DropDownList>
-                          <asp:DropDownList ID="DropDownList6" runat="server" AutoPostBack="True" 
-                              onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                          <asp:DropDownList ID="DropDownListDEMes_CV" runat="server" AutoPostBack="True" 
                               style="margin-top:20">
                               <asp:ListItem>- Mes - </asp:ListItem>
                               <asp:ListItem>Enero</asp:ListItem>
@@ -368,7 +392,8 @@
                               <asp:ListItem>Noviembre</asp:ListItem>
                               <asp:ListItem>Diciembre</asp:ListItem>
                           </asp:DropDownList>
-                          <asp:DropDownList ID="DropDownList7" runat="server" style="margin-top:20">
+                          <asp:DropDownList ID="DropDownListFEAno_CV" runat="server" 
+                              style="margin-top:20">
                               <asp:ListItem>- Aho -</asp:ListItem>
                               <asp:ListItem>2012</asp:ListItem>
                               <asp:ListItem>2013</asp:ListItem>
@@ -388,7 +413,8 @@
                           <asp:Label ID="Label_FechaInicio_Reservar0" runat="server" 
                               style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" />
                           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <asp:DropDownList ID="DropDownList8" runat="server" style="margin-top:20">
+                          <asp:DropDownList ID="DropDownListFSDia_CV" runat="server" 
+                              style="margin-top:20">
                               <asp:ListItem>- Dia -</asp:ListItem>
                               <asp:ListItem>1</asp:ListItem>
                               <asp:ListItem>2</asp:ListItem>
@@ -422,8 +448,7 @@
                               <asp:ListItem>30</asp:ListItem>
                               <asp:ListItem>31</asp:ListItem>
                           </asp:DropDownList>
-                          <asp:DropDownList ID="DropDownList9" runat="server" AutoPostBack="True" 
-                              onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                          <asp:DropDownList ID="DropDownListFSMes_CV" runat="server" AutoPostBack="True" 
                               style="margin-top:20">
                               <asp:ListItem>- Mes - </asp:ListItem>
                               <asp:ListItem>Enero</asp:ListItem>
@@ -439,7 +464,8 @@
                               <asp:ListItem>Noviembre</asp:ListItem>
                               <asp:ListItem>Diciembre</asp:ListItem>
                           </asp:DropDownList>
-                          <asp:DropDownList ID="DropDownList10" runat="server" style="margin-top:20">
+                          <asp:DropDownList ID="DropDownListFSAno_CV" runat="server" 
+                              style="margin-top:20">
                               <asp:ListItem>- Aho -</asp:ListItem>
                               <asp:ListItem>2012</asp:ListItem>
                               <asp:ListItem>2013</asp:ListItem>
@@ -485,7 +511,8 @@
 
                          <form action="MyBnB_Viajero.aspx.cs" method="post">
                          </form>
-                         <asp:DropDownList ID="DropDownList11" runat="server" style="margin-top:20">
+                         <asp:DropDownList ID="DropDownListFIDia_Propiedades" runat="server" 
+                             style="margin-top:20">
                              <asp:ListItem>- Dia -</asp:ListItem>
                              <asp:ListItem>1</asp:ListItem>
                              <asp:ListItem>2</asp:ListItem>
@@ -519,8 +546,7 @@
                              <asp:ListItem>30</asp:ListItem>
                              <asp:ListItem>31</asp:ListItem>
                          </asp:DropDownList>
-                         <asp:DropDownList ID="DropDownList12" runat="server" AutoPostBack="True" 
-                             onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                         <asp:DropDownList ID="DropDownListFIMes_CV" runat="server" AutoPostBack="True" 
                              style="margin-top:20">
                              <asp:ListItem>- Mes - </asp:ListItem>
                              <asp:ListItem>Enero</asp:ListItem>
@@ -536,7 +562,8 @@
                              <asp:ListItem>Noviembre</asp:ListItem>
                              <asp:ListItem>Diciembre</asp:ListItem>
                          </asp:DropDownList>
-                         <asp:DropDownList ID="DropDownList13" runat="server" style="margin-top:20">
+                         <asp:DropDownList ID="DropDownListFIAno_CV" runat="server" 
+                             style="margin-top:20">
                              <asp:ListItem>- Aho -</asp:ListItem>
                              <asp:ListItem>2012</asp:ListItem>
                              <asp:ListItem>2013</asp:ListItem>
@@ -550,7 +577,8 @@
                           
                           <form action="MyBnB_Viajero.aspx.cs" method="post">
                           </form>
-                         <asp:DropDownList ID="DropDownList14" runat="server" style="margin-top:20">
+                         <asp:DropDownList ID="DropDownListFFDia_CV" runat="server" 
+                             style="margin-top:20">
                              <asp:ListItem>- Dia -</asp:ListItem>
                              <asp:ListItem>1</asp:ListItem>
                              <asp:ListItem>2</asp:ListItem>
@@ -584,8 +612,7 @@
                              <asp:ListItem>30</asp:ListItem>
                              <asp:ListItem>31</asp:ListItem>
                          </asp:DropDownList>
-                         <asp:DropDownList ID="DropDownList15" runat="server" AutoPostBack="True" 
-                             onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                         <asp:DropDownList ID="DropDownListFFMes_CV" runat="server" AutoPostBack="True" 
                              style="margin-top:20">
                              <asp:ListItem>- Mes - </asp:ListItem>
                              <asp:ListItem>Enero</asp:ListItem>
@@ -601,7 +628,8 @@
                              <asp:ListItem>Noviembre</asp:ListItem>
                              <asp:ListItem>Diciembre</asp:ListItem>
                          </asp:DropDownList>
-                         <asp:DropDownList ID="DropDownList16" runat="server" style="margin-top:20">
+                         <asp:DropDownList ID="DropDownListFFAno_CV" runat="server" 
+                             style="margin-top:20">
                              <asp:ListItem>- Aho -</asp:ListItem>
                              <asp:ListItem>2012</asp:ListItem>
                              <asp:ListItem>2013</asp:ListItem>
@@ -730,7 +758,6 @@
                              <asp:ListItem>31</asp:ListItem>
                          </asp:DropDownList>
                          <asp:DropDownList ID="DropDownList18" runat="server" AutoPostBack="True" 
-                             onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
                              style="margin-top:20">
                              <asp:ListItem>- Mes - </asp:ListItem>
                              <asp:ListItem>Enero</asp:ListItem>
@@ -800,8 +827,7 @@
                              <asp:ListItem>30</asp:ListItem>
                              <asp:ListItem>31</asp:ListItem>
                          </asp:DropDownList>
-                         <asp:DropDownList ID="DropDownList21" runat="server" AutoPostBack="True" 
-                             onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                         <asp:DropDownList ID="DropDownList21" runat="server" AutoPostBack="True"  
                              style="margin-top:20">
                              <asp:ListItem>- Mes - </asp:ListItem>
                              <asp:ListItem>Enero</asp:ListItem>
