@@ -47,68 +47,112 @@
                               <br />
                               <asp:Label ID="Label_Login" runat="server" Text="Login:"
                                       style="margin-left: 10px; margin-top: 10px;"/>
-                              <asp:TextBox ID="TextBox_Login_ModificarUsuario" runat="server" Width="200px"
+                              <asp:TextBox ID="TextBox_Login_ModificarUsuario" runat="server" Width="227px"
                                         style="margin-left: 100px; margin-top: 10px;"/>
                               
                               <br />
                               <asp:Label ID="Label_Contrasena" runat="server" Text="Password:"
                                       style="margin-left: 10px; margin-top: 10px;"/>
-                              <asp:TextBox ID="TextBox_Contrasena_ModificarUsuario" runat="server" Width="200px" TextMode="Password"
+                              <asp:TextBox ID="TextBox_Contrasena_ModificarUsuario" runat="server" 
+                                  Width="227px" TextMode="Password"
                                         style="margin-left: 75px; margin-top: 10px;"/>
                               
                               <br />
                               <asp:Label ID="Label_Nombre" runat="server" Text="Nombre:"
                                   style="margin-left: 10px; margin-top: 10px;"/>                          
-                              <asp:TextBox ID="TextBox_Nombre_ModificarUsuario" runat="server" Width="200px"
+                              <asp:TextBox ID="TextBox_Nombre_ModificarUsuario" runat="server" Width="227px"
                                         style="margin-left: 83px; margin-top: 10px;"/>
                               
                               <br />
                               <asp:Label ID="Label_Apellidos" runat="server" Text="Apellidos:"
                                       style="margin-left: 10px; margin-top: 10px;"/>
-                              <asp:TextBox ID="TextBox_Apellidos_ModificarUsuario" runat="server" Width="200px"
+                              <asp:TextBox ID="TextBox_Apellidos_ModificarUsuario" runat="server" Width="228px"
                                         style="margin-left: 80px; margin-top: 10px;"/>
                           
                               <br />
                               <asp:Label ID="Label_Pais" runat="server" Text="Pais:"
                                       style="margin-left: 10px; margin-top: 10px;"/>                          
-                              <asp:TextBox ID="TextBox_Pais_ModificarUsuario" runat="server" Width="200px"
+                              <asp:TextBox ID="TextBox_Pais_ModificarUsuario" runat="server" Width="227px"
                                         style="margin-left: 110px; margin-top: 10px;"/>
                           
                               <br />
                               <asp:Label ID="Label_Email" runat="server" Text="Email:"
                                       style="margin-left: 10px; margin-top: 10px;"/>                          
-                              <asp:TextBox ID="TextBox_Email_ModificarUsuario" runat="server" Width="200px"
+                              <asp:TextBox ID="TextBox_Email_ModificarUsuario" runat="server" Width="227px"
                                         style="margin-left: 100px; margin-top: 10px;"/>
                               
                               <br />                       
                               <asp:Label ID="Label_Telefono" runat="server" Text="Telefono:"
                                       style="margin-left: 10px; margin-top: 10px;"/>
-                              <asp:TextBox ID="TextBox_Telefono_ModificarUsuario" runat="server" Width="200px"
+                              <asp:TextBox ID="TextBox_Telefono_ModificarUsuario" runat="server" Width="227px"
                                         style="margin-left: 80px; margin-top: 10px;"/>
                           
-                              &nbsp; *<br />
+                              &nbsp; *<br /> <br />
                               <asp:Label ID="Label_FechaNacimiento" runat="server" 
-                                  style="margin-left: 10px; margin-top: 10px;" Text="Fecha de Nacimiento:" />
-                              &nbsp;
-                          
-                          <div id="divCalendar" style="display: none; position: absolute">
-                         <asp:Calendar ID="CalendarModificarUsuario" runat="server" BackColor="White" 
-                         BorderColor="#999999" BorderStyle="Outset" BorderWidth="2px" CellPadding="4" 
-                         DayNameFormat="FirstLetter" Font-Names="Verdana" Font-Size="8pt" 
-                         ForeColor="Black" Height="180px"
-                         onselectionchanged="Calendar1_SelectionChanged" Width="200px">
-                         </asp:Calendar>
-                         </div>
-                            
-                              <input name="CalendarModificarUsuario" id="CalendarModificarUsuarioInput" type="text" />
-                              <asp:Button ID="ButtonCalendar0" runat="server" 
-                                  OnClientClick="return openCalendar()" Text="..." />
-
-                              &nbsp;*<br />                              
+                                  style="margin-left: 10px; margin-top: 30px;" Text="Fecha de Nacimiento:" />
+                              &nbsp;&nbsp;<asp:DropDownList ID="DropDownList4" runat="server" style="margin-top:20">
+                                  <asp:ListItem>- Dia -</asp:ListItem>
+                                  <asp:ListItem>1</asp:ListItem>
+                                  <asp:ListItem>2</asp:ListItem>
+                                  <asp:ListItem>3</asp:ListItem>
+                                  <asp:ListItem>4</asp:ListItem>
+                                  <asp:ListItem>5</asp:ListItem>
+                                  <asp:ListItem>6</asp:ListItem>
+                                  <asp:ListItem>7</asp:ListItem>
+                                  <asp:ListItem>8</asp:ListItem>
+                                  <asp:ListItem>9</asp:ListItem>
+                                  <asp:ListItem>10</asp:ListItem>
+                                  <asp:ListItem>11</asp:ListItem>
+                                  <asp:ListItem>12</asp:ListItem>
+                                  <asp:ListItem>13</asp:ListItem>
+                                  <asp:ListItem>14</asp:ListItem>
+                                  <asp:ListItem>15</asp:ListItem>
+                                  <asp:ListItem>16</asp:ListItem>
+                                  <asp:ListItem>17</asp:ListItem>
+                                  <asp:ListItem>18</asp:ListItem>
+                                  <asp:ListItem>19</asp:ListItem>
+                                  <asp:ListItem>20</asp:ListItem>
+                                  <asp:ListItem>21</asp:ListItem>
+                                  <asp:ListItem>22</asp:ListItem>
+                                  <asp:ListItem>23</asp:ListItem>
+                                  <asp:ListItem>24</asp:ListItem>
+                                  <asp:ListItem>25</asp:ListItem>
+                                  <asp:ListItem>26</asp:ListItem>
+                                  <asp:ListItem>27</asp:ListItem>
+                                  <asp:ListItem>28</asp:ListItem>
+                                  <asp:ListItem>29</asp:ListItem>
+                                  <asp:ListItem>30</asp:ListItem>
+                                  <asp:ListItem>31</asp:ListItem>
+                              </asp:DropDownList>
+                              &nbsp;&nbsp;<asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" 
+                                  onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                                  style="margin-top:20">
+                                  <asp:ListItem>- Mes - </asp:ListItem>
+                                  <asp:ListItem>Enero</asp:ListItem>
+                                  <asp:ListItem>Febrero</asp:ListItem>
+                                  <asp:ListItem>Marzo</asp:ListItem>
+                                  <asp:ListItem>Abril</asp:ListItem>
+                                  <asp:ListItem>Mayo</asp:ListItem>
+                                  <asp:ListItem>Junio</asp:ListItem>
+                                  <asp:ListItem>Julio</asp:ListItem>
+                                  <asp:ListItem>Agosto</asp:ListItem>
+                                  <asp:ListItem>Setiembre</asp:ListItem>
+                                  <asp:ListItem>Octubre</asp:ListItem>
+                                  <asp:ListItem>Noviembre</asp:ListItem>
+                                  <asp:ListItem>Diciembre</asp:ListItem>
+                              </asp:DropDownList>
+                              &nbsp;&nbsp;<asp:DropDownList ID="DropDownList3" runat="server" style="margin-top:20">
+                                  <asp:ListItem>- Aho -</asp:ListItem>
+                                  <asp:ListItem>2012</asp:ListItem>
+                                  <asp:ListItem>2013</asp:ListItem>
+                                  <asp:ListItem>2014</asp:ListItem>
+                                  <asp:ListItem>2015</asp:ListItem>
+                              </asp:DropDownList>
+                              &nbsp;&nbsp;*<br />
                               <asp:Label ID="Label_Sexo" runat="server" 
                                   style="margin-left: 10px; margin-top: 10px;" Text="Genero:" />
                               <asp:DropDownList ID="DropDownList_Genero_ModificarUsuario" runat="server" 
-                                  style="margin-left: 86px; margin-top: 10px;" Width="200px">
+                                  style="margin-left: 86px; margin-top: 10px;" Width="227px">
                                   <asp:ListItem></asp:ListItem>
                                   <asp:ListItem>Femenino</asp:ListItem>
                                   <asp:ListItem>Masculino</asp:ListItem>
@@ -118,7 +162,7 @@
                                   style="margin-left: 10px; margin-top: 10px;" Text="Descripcion:" />
                               <asp:TextBox ID="TextBox_Descripcion_ModificarUsuario" runat="server" 
                                   Height="80px" style="margin-left: 61px; margin-top: 10px;" TextMode="MultiLine" 
-                                  Width="200px" />
+                                  Width="227px" />
                               &nbsp; *<br />
                               <asp:Button ID="Button_Desactivar_ModificarUsuario" runat="server" 
                                   BackColor="#7AB428" ForeColor="White" Height="30px" 
@@ -273,24 +317,135 @@
                           <asp:Label ID="Label_FechaInicio_Reservar" runat="server" Text="Fecha Inicio:"
                                   style="margin-left: 10px; margin-top: 10px;"/>&nbsp;&nbsp;
 
-                          <input name="CalendarCrearViaje" id="CalendarCrearViajeInput" type="text" /> 
-                          <asp:Button ID="ButtonCalendarCrearViaje" runat="server" OnClientClick="return openCalendar()" Text="..." />
-
-                         <div id="div4" style="display: none; position: absolute">
-                         <asp:Calendar ID="CalendarCrearViajeFin" runat="server" BackColor="White" 
-                         BorderColor="#999999" BorderStyle="Outset" BorderWidth="2px" CellPadding="4" 
-                         DayNameFormat="FirstLetter" Font-Names="Verdana" Font-Size="8pt" 
-                         ForeColor="Black" Height="180px"
-                         onselectionchanged="Calendar1_SelectionChanged" Width="200px">
-                         </asp:Calendar>
-                         </div>
-
-                          <br /> <br />
+                          <asp:DropDownList ID="DropDownList5" runat="server" style="margin-top:20">
+                              <asp:ListItem>- Dia -</asp:ListItem>
+                              <asp:ListItem>1</asp:ListItem>
+                              <asp:ListItem>2</asp:ListItem>
+                              <asp:ListItem>3</asp:ListItem>
+                              <asp:ListItem>4</asp:ListItem>
+                              <asp:ListItem>5</asp:ListItem>
+                              <asp:ListItem>6</asp:ListItem>
+                              <asp:ListItem>7</asp:ListItem>
+                              <asp:ListItem>8</asp:ListItem>
+                              <asp:ListItem>9</asp:ListItem>
+                              <asp:ListItem>10</asp:ListItem>
+                              <asp:ListItem>11</asp:ListItem>
+                              <asp:ListItem>12</asp:ListItem>
+                              <asp:ListItem>13</asp:ListItem>
+                              <asp:ListItem>14</asp:ListItem>
+                              <asp:ListItem>15</asp:ListItem>
+                              <asp:ListItem>16</asp:ListItem>
+                              <asp:ListItem>17</asp:ListItem>
+                              <asp:ListItem>18</asp:ListItem>
+                              <asp:ListItem>19</asp:ListItem>
+                              <asp:ListItem>20</asp:ListItem>
+                              <asp:ListItem>21</asp:ListItem>
+                              <asp:ListItem>22</asp:ListItem>
+                              <asp:ListItem>23</asp:ListItem>
+                              <asp:ListItem>24</asp:ListItem>
+                              <asp:ListItem>25</asp:ListItem>
+                              <asp:ListItem>26</asp:ListItem>
+                              <asp:ListItem>27</asp:ListItem>
+                              <asp:ListItem>28</asp:ListItem>
+                              <asp:ListItem>29</asp:ListItem>
+                              <asp:ListItem>30</asp:ListItem>
+                              <asp:ListItem>31</asp:ListItem>
+                          </asp:DropDownList>
+                          <asp:DropDownList ID="DropDownList6" runat="server" AutoPostBack="True" 
+                              onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                              style="margin-top:20">
+                              <asp:ListItem>- Mes - </asp:ListItem>
+                              <asp:ListItem>Enero</asp:ListItem>
+                              <asp:ListItem>Febrero</asp:ListItem>
+                              <asp:ListItem>Marzo</asp:ListItem>
+                              <asp:ListItem>Abril</asp:ListItem>
+                              <asp:ListItem>Mayo</asp:ListItem>
+                              <asp:ListItem>Junio</asp:ListItem>
+                              <asp:ListItem>Julio</asp:ListItem>
+                              <asp:ListItem>Agosto</asp:ListItem>
+                              <asp:ListItem>Setiembre</asp:ListItem>
+                              <asp:ListItem>Octubre</asp:ListItem>
+                              <asp:ListItem>Noviembre</asp:ListItem>
+                              <asp:ListItem>Diciembre</asp:ListItem>
+                          </asp:DropDownList>
+                          <asp:DropDownList ID="DropDownList7" runat="server" style="margin-top:20">
+                              <asp:ListItem>- Aho -</asp:ListItem>
+                              <asp:ListItem>2012</asp:ListItem>
+                              <asp:ListItem>2013</asp:ListItem>
+                              <asp:ListItem>2014</asp:ListItem>
+                              <asp:ListItem>2015</asp:ListItem>
+                          </asp:DropDownList>
+                          &nbsp;<div ID="div4" style="display: none; position: absolute">
+                              <asp:Calendar ID="CalendarCrearViajeFin" runat="server" BackColor="White" 
+                                  BorderColor="#999999" BorderStyle="Outset" BorderWidth="2px" CellPadding="4" 
+                                  DayNameFormat="FirstLetter" Font-Names="Verdana" Font-Size="8pt" 
+                                  ForeColor="Black" Height="180px" 
+                                  onselectionchanged="Calendar1_SelectionChanged" Width="200px">
+                              </asp:Calendar>
+                          </div>
+                          <br />
+                          <br />
                           <asp:Label ID="Label_FechaInicio_Reservar0" runat="server" 
-                              style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <input name="CalendarCrearViajeFin" id="CalendarCrearViajeFinInput" type="text" />
-                          <asp:Button ID="ButtonCalendarCrearViajeFin" runat="server" 
-                              OnClientClick="return openCalendar()" Text="..." />
+                              style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <asp:DropDownList ID="DropDownList8" runat="server" style="margin-top:20">
+                              <asp:ListItem>- Dia -</asp:ListItem>
+                              <asp:ListItem>1</asp:ListItem>
+                              <asp:ListItem>2</asp:ListItem>
+                              <asp:ListItem>3</asp:ListItem>
+                              <asp:ListItem>4</asp:ListItem>
+                              <asp:ListItem>5</asp:ListItem>
+                              <asp:ListItem>6</asp:ListItem>
+                              <asp:ListItem>7</asp:ListItem>
+                              <asp:ListItem>8</asp:ListItem>
+                              <asp:ListItem>9</asp:ListItem>
+                              <asp:ListItem>10</asp:ListItem>
+                              <asp:ListItem>11</asp:ListItem>
+                              <asp:ListItem>12</asp:ListItem>
+                              <asp:ListItem>13</asp:ListItem>
+                              <asp:ListItem>14</asp:ListItem>
+                              <asp:ListItem>15</asp:ListItem>
+                              <asp:ListItem>16</asp:ListItem>
+                              <asp:ListItem>17</asp:ListItem>
+                              <asp:ListItem>18</asp:ListItem>
+                              <asp:ListItem>19</asp:ListItem>
+                              <asp:ListItem>20</asp:ListItem>
+                              <asp:ListItem>21</asp:ListItem>
+                              <asp:ListItem>22</asp:ListItem>
+                              <asp:ListItem>23</asp:ListItem>
+                              <asp:ListItem>24</asp:ListItem>
+                              <asp:ListItem>25</asp:ListItem>
+                              <asp:ListItem>26</asp:ListItem>
+                              <asp:ListItem>27</asp:ListItem>
+                              <asp:ListItem>28</asp:ListItem>
+                              <asp:ListItem>29</asp:ListItem>
+                              <asp:ListItem>30</asp:ListItem>
+                              <asp:ListItem>31</asp:ListItem>
+                          </asp:DropDownList>
+                          <asp:DropDownList ID="DropDownList9" runat="server" AutoPostBack="True" 
+                              onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                              style="margin-top:20">
+                              <asp:ListItem>- Mes - </asp:ListItem>
+                              <asp:ListItem>Enero</asp:ListItem>
+                              <asp:ListItem>Febrero</asp:ListItem>
+                              <asp:ListItem>Marzo</asp:ListItem>
+                              <asp:ListItem>Abril</asp:ListItem>
+                              <asp:ListItem>Mayo</asp:ListItem>
+                              <asp:ListItem>Junio</asp:ListItem>
+                              <asp:ListItem>Julio</asp:ListItem>
+                              <asp:ListItem>Agosto</asp:ListItem>
+                              <asp:ListItem>Setiembre</asp:ListItem>
+                              <asp:ListItem>Octubre</asp:ListItem>
+                              <asp:ListItem>Noviembre</asp:ListItem>
+                              <asp:ListItem>Diciembre</asp:ListItem>
+                          </asp:DropDownList>
+                          <asp:DropDownList ID="DropDownList10" runat="server" style="margin-top:20">
+                              <asp:ListItem>- Aho -</asp:ListItem>
+                              <asp:ListItem>2012</asp:ListItem>
+                              <asp:ListItem>2013</asp:ListItem>
+                              <asp:ListItem>2014</asp:ListItem>
+                              <asp:ListItem>2015</asp:ListItem>
+                          </asp:DropDownList>
 
                           <br /> <br />
                           <asp:Button ID="Button_Crear_CrearViaje" runat="server" 
@@ -329,17 +484,130 @@
 
 
                          <form action="MyBnB_Viajero.aspx.cs" method="post">
-                         <input name="CalendarPropiedadesInicio" id="CalendarPropiedadesInicioInput" type="text" />
                          </form>
-                         <asp:Button ID="ButtonCalendarPropiedadesInicio" runat="server" OnClientClick="return openCalendar()" Text="..." /> &nbsp;<br /> <br />
+                         <asp:DropDownList ID="DropDownList11" runat="server" style="margin-top:20">
+                             <asp:ListItem>- Dia -</asp:ListItem>
+                             <asp:ListItem>1</asp:ListItem>
+                             <asp:ListItem>2</asp:ListItem>
+                             <asp:ListItem>3</asp:ListItem>
+                             <asp:ListItem>4</asp:ListItem>
+                             <asp:ListItem>5</asp:ListItem>
+                             <asp:ListItem>6</asp:ListItem>
+                             <asp:ListItem>7</asp:ListItem>
+                             <asp:ListItem>8</asp:ListItem>
+                             <asp:ListItem>9</asp:ListItem>
+                             <asp:ListItem>10</asp:ListItem>
+                             <asp:ListItem>11</asp:ListItem>
+                             <asp:ListItem>12</asp:ListItem>
+                             <asp:ListItem>13</asp:ListItem>
+                             <asp:ListItem>14</asp:ListItem>
+                             <asp:ListItem>15</asp:ListItem>
+                             <asp:ListItem>16</asp:ListItem>
+                             <asp:ListItem>17</asp:ListItem>
+                             <asp:ListItem>18</asp:ListItem>
+                             <asp:ListItem>19</asp:ListItem>
+                             <asp:ListItem>20</asp:ListItem>
+                             <asp:ListItem>21</asp:ListItem>
+                             <asp:ListItem>22</asp:ListItem>
+                             <asp:ListItem>23</asp:ListItem>
+                             <asp:ListItem>24</asp:ListItem>
+                             <asp:ListItem>25</asp:ListItem>
+                             <asp:ListItem>26</asp:ListItem>
+                             <asp:ListItem>27</asp:ListItem>
+                             <asp:ListItem>28</asp:ListItem>
+                             <asp:ListItem>29</asp:ListItem>
+                             <asp:ListItem>30</asp:ListItem>
+                             <asp:ListItem>31</asp:ListItem>
+                         </asp:DropDownList>
+                         <asp:DropDownList ID="DropDownList12" runat="server" AutoPostBack="True" 
+                             onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                             style="margin-top:20">
+                             <asp:ListItem>- Mes - </asp:ListItem>
+                             <asp:ListItem>Enero</asp:ListItem>
+                             <asp:ListItem>Febrero</asp:ListItem>
+                             <asp:ListItem>Marzo</asp:ListItem>
+                             <asp:ListItem>Abril</asp:ListItem>
+                             <asp:ListItem>Mayo</asp:ListItem>
+                             <asp:ListItem>Junio</asp:ListItem>
+                             <asp:ListItem>Julio</asp:ListItem>
+                             <asp:ListItem>Agosto</asp:ListItem>
+                             <asp:ListItem>Setiembre</asp:ListItem>
+                             <asp:ListItem>Octubre</asp:ListItem>
+                             <asp:ListItem>Noviembre</asp:ListItem>
+                             <asp:ListItem>Diciembre</asp:ListItem>
+                         </asp:DropDownList>
+                         <asp:DropDownList ID="DropDownList13" runat="server" style="margin-top:20">
+                             <asp:ListItem>- Aho -</asp:ListItem>
+                             <asp:ListItem>2012</asp:ListItem>
+                             <asp:ListItem>2013</asp:ListItem>
+                             <asp:ListItem>2014</asp:ListItem>
+                             <asp:ListItem>2015</asp:ListItem>
+                         </asp:DropDownList>
+                         <br /> <br />
 
                          <asp:Label ID="Label_FechaFin_Propiedades" runat="server" 
                              style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                           
                           <form action="MyBnB_Viajero.aspx.cs" method="post">
-                               <input name="CalendarPropiedadesFin" id="CalendarInput2" type="text" />
                           </form>
-                         <asp:Button ID="ButtonCalendarPropiedadesFin" runat="server" OnClientClick="return openCalendar()" Text="..." />
+                         <asp:DropDownList ID="DropDownList14" runat="server" style="margin-top:20">
+                             <asp:ListItem>- Dia -</asp:ListItem>
+                             <asp:ListItem>1</asp:ListItem>
+                             <asp:ListItem>2</asp:ListItem>
+                             <asp:ListItem>3</asp:ListItem>
+                             <asp:ListItem>4</asp:ListItem>
+                             <asp:ListItem>5</asp:ListItem>
+                             <asp:ListItem>6</asp:ListItem>
+                             <asp:ListItem>7</asp:ListItem>
+                             <asp:ListItem>8</asp:ListItem>
+                             <asp:ListItem>9</asp:ListItem>
+                             <asp:ListItem>10</asp:ListItem>
+                             <asp:ListItem>11</asp:ListItem>
+                             <asp:ListItem>12</asp:ListItem>
+                             <asp:ListItem>13</asp:ListItem>
+                             <asp:ListItem>14</asp:ListItem>
+                             <asp:ListItem>15</asp:ListItem>
+                             <asp:ListItem>16</asp:ListItem>
+                             <asp:ListItem>17</asp:ListItem>
+                             <asp:ListItem>18</asp:ListItem>
+                             <asp:ListItem>19</asp:ListItem>
+                             <asp:ListItem>20</asp:ListItem>
+                             <asp:ListItem>21</asp:ListItem>
+                             <asp:ListItem>22</asp:ListItem>
+                             <asp:ListItem>23</asp:ListItem>
+                             <asp:ListItem>24</asp:ListItem>
+                             <asp:ListItem>25</asp:ListItem>
+                             <asp:ListItem>26</asp:ListItem>
+                             <asp:ListItem>27</asp:ListItem>
+                             <asp:ListItem>28</asp:ListItem>
+                             <asp:ListItem>29</asp:ListItem>
+                             <asp:ListItem>30</asp:ListItem>
+                             <asp:ListItem>31</asp:ListItem>
+                         </asp:DropDownList>
+                         <asp:DropDownList ID="DropDownList15" runat="server" AutoPostBack="True" 
+                             onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                             style="margin-top:20">
+                             <asp:ListItem>- Mes - </asp:ListItem>
+                             <asp:ListItem>Enero</asp:ListItem>
+                             <asp:ListItem>Febrero</asp:ListItem>
+                             <asp:ListItem>Marzo</asp:ListItem>
+                             <asp:ListItem>Abril</asp:ListItem>
+                             <asp:ListItem>Mayo</asp:ListItem>
+                             <asp:ListItem>Junio</asp:ListItem>
+                             <asp:ListItem>Julio</asp:ListItem>
+                             <asp:ListItem>Agosto</asp:ListItem>
+                             <asp:ListItem>Setiembre</asp:ListItem>
+                             <asp:ListItem>Octubre</asp:ListItem>
+                             <asp:ListItem>Noviembre</asp:ListItem>
+                             <asp:ListItem>Diciembre</asp:ListItem>
+                         </asp:DropDownList>
+                         <asp:DropDownList ID="DropDownList16" runat="server" style="margin-top:20">
+                             <asp:ListItem>- Aho -</asp:ListItem>
+                             <asp:ListItem>2012</asp:ListItem>
+                             <asp:ListItem>2013</asp:ListItem>
+                             <asp:ListItem>2014</asp:ListItem>
+                             <asp:ListItem>2015</asp:ListItem>
+                         </asp:DropDownList>
                          <br /> <br />
 
                          <asp:Label ID="Label_Viaje" runat="server" 
@@ -427,26 +695,135 @@
 
                          <asp:Label ID="Label_FechaInicio_Propiedades0" runat="server" 
                              style="margin-left: 10px; margin-top: 10px;" Text="Fecha Inicio:" /> &nbsp;
-                         
-                         <input name="CalendarSolicitarAnfitrionInicio" id="CalendarSolicitarAnfitrionInicioInput" type="text" />                         
-                         <asp:Button ID="ButtonCalendarSolicitarAnfitrionInicio" runat="server" 
-                             OnClientClick="return openCalendar()" Text="..." />
-                         <br /> <br />
-
-                         <div id="div2" style="display: none; position: absolute">
-                         <asp:Calendar ID="CalendarSolicitarAnfitrionFin" runat="server" BackColor="White" 
-                         BorderColor="#999999" BorderStyle="Outset" BorderWidth="2px" CellPadding="4" 
-                         DayNameFormat="FirstLetter" Font-Names="Verdana" Font-Size="8pt" 
-                         ForeColor="Black" Height="180px"
-                         onselectionchanged="Calendar1_SelectionChanged" Width="200px">
-                         </asp:Calendar>
+                         <asp:DropDownList ID="DropDownList17" runat="server" style="margin-top:20">
+                             <asp:ListItem>- Dia -</asp:ListItem>
+                             <asp:ListItem>1</asp:ListItem>
+                             <asp:ListItem>2</asp:ListItem>
+                             <asp:ListItem>3</asp:ListItem>
+                             <asp:ListItem>4</asp:ListItem>
+                             <asp:ListItem>5</asp:ListItem>
+                             <asp:ListItem>6</asp:ListItem>
+                             <asp:ListItem>7</asp:ListItem>
+                             <asp:ListItem>8</asp:ListItem>
+                             <asp:ListItem>9</asp:ListItem>
+                             <asp:ListItem>10</asp:ListItem>
+                             <asp:ListItem>11</asp:ListItem>
+                             <asp:ListItem>12</asp:ListItem>
+                             <asp:ListItem>13</asp:ListItem>
+                             <asp:ListItem>14</asp:ListItem>
+                             <asp:ListItem>15</asp:ListItem>
+                             <asp:ListItem>16</asp:ListItem>
+                             <asp:ListItem>17</asp:ListItem>
+                             <asp:ListItem>18</asp:ListItem>
+                             <asp:ListItem>19</asp:ListItem>
+                             <asp:ListItem>20</asp:ListItem>
+                             <asp:ListItem>21</asp:ListItem>
+                             <asp:ListItem>22</asp:ListItem>
+                             <asp:ListItem>23</asp:ListItem>
+                             <asp:ListItem>24</asp:ListItem>
+                             <asp:ListItem>25</asp:ListItem>
+                             <asp:ListItem>26</asp:ListItem>
+                             <asp:ListItem>27</asp:ListItem>
+                             <asp:ListItem>28</asp:ListItem>
+                             <asp:ListItem>29</asp:ListItem>
+                             <asp:ListItem>30</asp:ListItem>
+                             <asp:ListItem>31</asp:ListItem>
+                         </asp:DropDownList>
+                         <asp:DropDownList ID="DropDownList18" runat="server" AutoPostBack="True" 
+                             onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                             style="margin-top:20">
+                             <asp:ListItem>- Mes - </asp:ListItem>
+                             <asp:ListItem>Enero</asp:ListItem>
+                             <asp:ListItem>Febrero</asp:ListItem>
+                             <asp:ListItem>Marzo</asp:ListItem>
+                             <asp:ListItem>Abril</asp:ListItem>
+                             <asp:ListItem>Mayo</asp:ListItem>
+                             <asp:ListItem>Junio</asp:ListItem>
+                             <asp:ListItem>Julio</asp:ListItem>
+                             <asp:ListItem>Agosto</asp:ListItem>
+                             <asp:ListItem>Setiembre</asp:ListItem>
+                             <asp:ListItem>Octubre</asp:ListItem>
+                             <asp:ListItem>Noviembre</asp:ListItem>
+                             <asp:ListItem>Diciembre</asp:ListItem>
+                         </asp:DropDownList>
+                         <asp:DropDownList ID="DropDownList19" runat="server" style="margin-top:20">
+                             <asp:ListItem>- Aho -</asp:ListItem>
+                             <asp:ListItem>2012</asp:ListItem>
+                             <asp:ListItem>2013</asp:ListItem>
+                             <asp:ListItem>2014</asp:ListItem>
+                             <asp:ListItem>2015</asp:ListItem>
+                         </asp:DropDownList>
+                         &nbsp;<br /> 
+                         <br />
+                         <div ID="div2" style="display: none; position: absolute">
+                             <asp:Calendar ID="CalendarSolicitarAnfitrionFin" runat="server" 
+                                 BackColor="White" BorderColor="#999999" BorderStyle="Outset" BorderWidth="2px" 
+                                 CellPadding="4" DayNameFormat="FirstLetter" Font-Names="Verdana" 
+                                 Font-Size="8pt" ForeColor="Black" Height="180px" 
+                                 onselectionchanged="Calendar1_SelectionChanged" Width="200px">
+                             </asp:Calendar>
                          </div>
-
                          &nbsp;&nbsp;<asp:Label ID="Label_FechaFin_Propiedades0" runat="server" 
                              style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" />
                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                         <input name="CalendarSolocitarAnfitrionFin" id="CalendarSolocitarAnfitrionFinInput" type="text" />
-                         <asp:Button ID="ButtonCalendarSolocitarAnfitrionFin" runat="server" OnClientClick="return openCalendar()" Text="..." />
+                         <asp:DropDownList ID="DropDownList20" runat="server" style="margin-top:20">
+                             <asp:ListItem>- Dia -</asp:ListItem>
+                             <asp:ListItem>1</asp:ListItem>
+                             <asp:ListItem>2</asp:ListItem>
+                             <asp:ListItem>3</asp:ListItem>
+                             <asp:ListItem>4</asp:ListItem>
+                             <asp:ListItem>5</asp:ListItem>
+                             <asp:ListItem>6</asp:ListItem>
+                             <asp:ListItem>7</asp:ListItem>
+                             <asp:ListItem>8</asp:ListItem>
+                             <asp:ListItem>9</asp:ListItem>
+                             <asp:ListItem>10</asp:ListItem>
+                             <asp:ListItem>11</asp:ListItem>
+                             <asp:ListItem>12</asp:ListItem>
+                             <asp:ListItem>13</asp:ListItem>
+                             <asp:ListItem>14</asp:ListItem>
+                             <asp:ListItem>15</asp:ListItem>
+                             <asp:ListItem>16</asp:ListItem>
+                             <asp:ListItem>17</asp:ListItem>
+                             <asp:ListItem>18</asp:ListItem>
+                             <asp:ListItem>19</asp:ListItem>
+                             <asp:ListItem>20</asp:ListItem>
+                             <asp:ListItem>21</asp:ListItem>
+                             <asp:ListItem>22</asp:ListItem>
+                             <asp:ListItem>23</asp:ListItem>
+                             <asp:ListItem>24</asp:ListItem>
+                             <asp:ListItem>25</asp:ListItem>
+                             <asp:ListItem>26</asp:ListItem>
+                             <asp:ListItem>27</asp:ListItem>
+                             <asp:ListItem>28</asp:ListItem>
+                             <asp:ListItem>29</asp:ListItem>
+                             <asp:ListItem>30</asp:ListItem>
+                             <asp:ListItem>31</asp:ListItem>
+                         </asp:DropDownList>
+                         <asp:DropDownList ID="DropDownList21" runat="server" AutoPostBack="True" 
+                             onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                             style="margin-top:20">
+                             <asp:ListItem>- Mes - </asp:ListItem>
+                             <asp:ListItem>Enero</asp:ListItem>
+                             <asp:ListItem>Febrero</asp:ListItem>
+                             <asp:ListItem>Marzo</asp:ListItem>
+                             <asp:ListItem>Abril</asp:ListItem>
+                             <asp:ListItem>Mayo</asp:ListItem>
+                             <asp:ListItem>Junio</asp:ListItem>
+                             <asp:ListItem>Julio</asp:ListItem>
+                             <asp:ListItem>Agosto</asp:ListItem>
+                             <asp:ListItem>Setiembre</asp:ListItem>
+                             <asp:ListItem>Octubre</asp:ListItem>
+                             <asp:ListItem>Noviembre</asp:ListItem>
+                             <asp:ListItem>Diciembre</asp:ListItem>
+                         </asp:DropDownList>
+                         <asp:DropDownList ID="DropDownList22" runat="server" style="margin-top:20">
+                             <asp:ListItem>- Aho -</asp:ListItem>
+                             <asp:ListItem>2012</asp:ListItem>
+                             <asp:ListItem>2013</asp:ListItem>
+                             <asp:ListItem>2014</asp:ListItem>
+                             <asp:ListItem>2015</asp:ListItem>
+                         </asp:DropDownList>
 
                          <br /> <br /> <br />
                          <asp:Button ID="Button_Solicitar_SolicitarAnfitrion" runat="server" 

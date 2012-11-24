@@ -81,11 +81,65 @@
                     onselectionchanged="Calendar1_SelectionChanged" Width="200px">
                 </asp:Calendar>
             </div>
-            <input name="CalendarModificarUsuario" id="Text1" type="text" />
-            <asp:Button ID="Button1" runat="server" OnClientClick="return openCalendar()" 
-                Text="..." />
-            <br />
-
+            <asp:DropDownList ID="DropDownList4" runat="server" style="margin-top: 20">
+                <asp:ListItem>- Dia -</asp:ListItem>
+                <asp:ListItem>1</asp:ListItem>
+                <asp:ListItem>2</asp:ListItem>
+                <asp:ListItem>3</asp:ListItem>
+                <asp:ListItem>4</asp:ListItem>
+                <asp:ListItem>5</asp:ListItem>
+                <asp:ListItem>6</asp:ListItem>
+                <asp:ListItem>7</asp:ListItem>
+                <asp:ListItem>8</asp:ListItem>
+                <asp:ListItem>9</asp:ListItem>
+                <asp:ListItem>10</asp:ListItem>
+                <asp:ListItem>11</asp:ListItem>
+                <asp:ListItem>12</asp:ListItem>
+                <asp:ListItem>13</asp:ListItem>
+                <asp:ListItem>14</asp:ListItem>
+                <asp:ListItem>15</asp:ListItem>
+                <asp:ListItem>16</asp:ListItem>
+                <asp:ListItem>17</asp:ListItem>
+                <asp:ListItem>18</asp:ListItem>
+                <asp:ListItem>19</asp:ListItem>
+                <asp:ListItem>20</asp:ListItem>
+                <asp:ListItem>21</asp:ListItem>
+                <asp:ListItem>22</asp:ListItem>
+                <asp:ListItem>23</asp:ListItem>
+                <asp:ListItem>24</asp:ListItem>
+                <asp:ListItem>25</asp:ListItem>
+                <asp:ListItem>26</asp:ListItem>
+                <asp:ListItem>27</asp:ListItem>
+                <asp:ListItem>28</asp:ListItem>
+                <asp:ListItem>29</asp:ListItem>
+                <asp:ListItem>30</asp:ListItem>
+                <asp:ListItem>31</asp:ListItem>
+            </asp:DropDownList>
+            <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" 
+                onselectedindexchanged="DropDownList2_SelectedIndexChanged" 
+                style="margin-top: 20">
+                <asp:ListItem>- Mes - </asp:ListItem>
+                <asp:ListItem>Enero</asp:ListItem>
+                <asp:ListItem>Febrero</asp:ListItem>
+                <asp:ListItem>Marzo</asp:ListItem>
+                <asp:ListItem>Abril</asp:ListItem>
+                <asp:ListItem>Mayo</asp:ListItem>
+                <asp:ListItem>Junio</asp:ListItem>
+                <asp:ListItem>Julio</asp:ListItem>
+                <asp:ListItem>Agosto</asp:ListItem>
+                <asp:ListItem>Setiembre</asp:ListItem>
+                <asp:ListItem>Octubre</asp:ListItem>
+                <asp:ListItem>Noviembre</asp:ListItem>
+                <asp:ListItem>Diciembre</asp:ListItem>
+            </asp:DropDownList>
+            <asp:DropDownList ID="DropDownList3" runat="server" style="margin-top: 20">
+                <asp:ListItem>- Aho -</asp:ListItem>
+                <asp:ListItem>2012</asp:ListItem>
+                <asp:ListItem>2013</asp:ListItem>
+                <asp:ListItem>2014</asp:ListItem>
+                <asp:ListItem>2015</asp:ListItem>
+            </asp:DropDownList>
+            &nbsp;<br />
             <asp:Label ID="Label_Sexo" runat="server" 
                 style="margin-left: 5px; margin-top: 10px" Text="Genero:" />
             <asp:DropDownList ID="DropDownList_Genero" runat="server" 
@@ -94,12 +148,9 @@
                 <asp:ListItem>Femenino</asp:ListItem>
                 <asp:ListItem>Masculino</asp:ListItem>
             </asp:DropDownList>
-&nbsp;<br />
-
-            <br />
-            <asp:Label ID="Label_Descripcion" runat="server" Text="Descripcion:"
-                    style="margin-left: 5px; margin-top: 10px" />
-            &nbsp;<asp:TextBox ID="TextBox_Descripcion" runat="server" Width="200px"
+            &nbsp;<br />&nbsp;<asp:Label ID="Label_Descripcion" runat="server" 
+                style="margin-left: 5px; margin-top: 10px" Text="Descripcion:" />
+            <asp:TextBox ID="TextBox_Descripcion" runat="server" Width="200px"
                       style="margin-left: 60px; margin-top: 10px" />
             
             <br />
