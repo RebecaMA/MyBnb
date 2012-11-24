@@ -546,7 +546,7 @@
                              <asp:ListItem>30</asp:ListItem>
                              <asp:ListItem>31</asp:ListItem>
                          </asp:DropDownList>
-                         <asp:DropDownList ID="DropDownListFIMes_CV" runat="server" AutoPostBack="True" 
+                         <asp:DropDownList ID="DropDownListFIMes_P" runat="server" AutoPostBack="True" 
                              style="margin-top:20">
                              <asp:ListItem>- Mes - </asp:ListItem>
                              <asp:ListItem>Enero</asp:ListItem>
@@ -562,7 +562,7 @@
                              <asp:ListItem>Noviembre</asp:ListItem>
                              <asp:ListItem>Diciembre</asp:ListItem>
                          </asp:DropDownList>
-                         <asp:DropDownList ID="DropDownListFIAno_CV" runat="server" 
+                         <asp:DropDownList ID="DropDownListFIAno_P" runat="server" 
                              style="margin-top:20">
                              <asp:ListItem>- Aho -</asp:ListItem>
                              <asp:ListItem>2012</asp:ListItem>
@@ -577,7 +577,7 @@
                           
                           <form action="MyBnB_Viajero.aspx.cs" method="post">
                           </form>
-                         <asp:DropDownList ID="DropDownListFFDia_CV" runat="server" 
+                         <asp:DropDownList ID="DropDownListFFDia_P" runat="server" 
                              style="margin-top:20">
                              <asp:ListItem>- Dia -</asp:ListItem>
                              <asp:ListItem>1</asp:ListItem>
@@ -612,7 +612,7 @@
                              <asp:ListItem>30</asp:ListItem>
                              <asp:ListItem>31</asp:ListItem>
                          </asp:DropDownList>
-                         <asp:DropDownList ID="DropDownListFFMes_CV" runat="server" AutoPostBack="True" 
+                         <asp:DropDownList ID="DropDownListFFMes_P" runat="server" AutoPostBack="True" 
                              style="margin-top:20">
                              <asp:ListItem>- Mes - </asp:ListItem>
                              <asp:ListItem>Enero</asp:ListItem>
@@ -628,7 +628,7 @@
                              <asp:ListItem>Noviembre</asp:ListItem>
                              <asp:ListItem>Diciembre</asp:ListItem>
                          </asp:DropDownList>
-                         <asp:DropDownList ID="DropDownListFFAno_CV" runat="server" 
+                         <asp:DropDownList ID="DropDownListFFAno_P" runat="server" 
                              style="margin-top:20">
                              <asp:ListItem>- Aho -</asp:ListItem>
                              <asp:ListItem>2012</asp:ListItem>

@@ -20,7 +20,7 @@ namespace MyBnb.Logica_Negocio
         public int reservarViaje(String[] pdatos)
         {
             String[] _split = pdatos[3].Split(' ');
-            pdatos[3] = _split[0];
+            pdatos[3] = "CRC";
             return _accesoDatosViaje.ReservarViaje(pdatos);
         }
 

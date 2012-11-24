@@ -55,8 +55,8 @@ namespace MyBnb.GUI
         /// </summary>
         public void llenarSolicitarAnfitrion()
         {
-            //DropDownList_Viaje_SolicitarAnfitrion.DataSource = _controllerViaje.obtenerViajesUsuario();
-            //DropDownList_Viaje_SolicitarAnfitrion.DataBind();
+           // DropDownList_Viaje_SolicitarAnfitrion.DataSource = _controllerViaje.obtenerViajesUsuario();
+           // DropDownList_Viaje_SolicitarAnfitrion.DataBind();
         }
 
         public void llenarWishlist()
@@ -77,6 +77,7 @@ namespace MyBnb.GUI
             DropDownList_Viaje_Propiedades.DataBind();
             DropDownList_Viaje_Propiedades.Visible = true;
             Label_Viaje.Visible = true;
+            
         }
 
         /// <summary>
@@ -184,8 +185,10 @@ namespace MyBnb.GUI
             _datos[9] = TextBox_PrecioNoche_ListarPropiedad.Text;
             _datos[10] = TextBox_PrecioVolumen_ListarPropiedad.Text;
             _datos[11] = TextBox_CantidadVolumen_ListarPropiedad.Text;
-
-           TextBox_Titulo_ListarPropiedad.Text =  _controllerPropiedad.listarPropiedad(_datos);               
+            String retorno = _controllerPropiedad.listarPropiedad(_datos);
+            ScriptManager.RegisterStartupScript(this, typeof(string), 
+                "Error", "alert("+retorno+");", true); 
+            ;               
         }
 
         protected void Button_Filtrar_Propiedades_Click1(object sender, EventArgs e)
@@ -211,10 +214,10 @@ namespace MyBnb.GUI
             ControllerUsuario _usuario = new ControllerUsuario();
 
             String[] _datos = new String[5];
-            _datos[0] = "2012/11/05";
-            _datos[1] = "2012/12/05";
+            _datos[0] = DropDownListFEAno_CV.SelectedValue + "/" + DropDownListDEMes_CV.SelectedValue + "/" + DropDownListFEDia_CrearViaje.SelectedValue;
+            _datos[1] = DropDownListFSAno_CV.SelectedValue + "/" + DropDownListFSMes_CV.SelectedValue + "/" + DropDownListFSDia_CV.SelectedValue;
             _datos[2] = TextBox_Titulo_CrearViaje.Text;
-            _datos[3] = "SCLU Chile Santiago Santiago";//esto no debe estar
+            _datos[3] = null;
             _datos[4] = _usuario.getLogin();
             
             if (string.IsNullOrEmpty(TextBox_Titulo_CrearViaje.Text))
@@ -223,9 +226,9 @@ namespace MyBnb.GUI
             }
             else
             {
-                string value = Request.Form["Calendar_CrearViaje"];
+                string value = "Numero de viaje "+ _viaje.reservarViaje(_datos);
                 ScriptManager.RegisterStartupScript(this, typeof(string), "Error", "alert(" + value + ");", true);
-                _viaje.reservarViaje(_datos);
+               
             }            
         }
 
@@ -241,10 +244,10 @@ namespace MyBnb.GUI
            
 
             String[] _datos = new String[5];
-            _datos[0] = "2012/12/05";
-            _datos[1] = "2012/12/05";
+            _datos[0] = DropDownListFEAno_CV.SelectedValue + "/" + DropDownListDEMes_CV.SelectedValue + "/" + DropDownListFEDia_CrearViaje.SelectedValue;
+            _datos[1] = DropDownListFSAno_CV.SelectedValue + "/" + DropDownListFSMes_CV.SelectedValue + "/" + DropDownListFSDia_CV.SelectedValue;
             _datos[2] = TextBox_Titulo_CrearViaje.Text;
-            _datos[3] = "SCLU Chile Santiago Santiago";
+            _datos[3] = null;
             _datos[4] = _usuario.getLogin();
             _viaje.setidViaje(_viaje.reservarViaje(_datos));
            // llenarReservarViaje();
@@ -276,14 +279,7 @@ namespace MyBnb.GUI
         protected void Button_Filtrar_Propiedades_Click(object sender, EventArgs e)
         {
             ControllerPropiedades _propiedades = new ControllerPropiedades();
-            String[] datos = new String[3];
-            //datos[0] = Fecha Entrada
-            //datos[1] = Fecha Salida
-            //datos[2] = Codigo
-            datos[0] = "2012/10/20";
-            datos[1] = "2012/11/01";
-            datos[2] = "SCLU Chile Santigo Santiago";
-            _propiedades.obtenerPropiedades("Propiedades Disponibles", datos);
+            _propiedades.obtenerPropiedades("Mostrar Propiedades", null);
             GridView_Propiedades.DataSource = _propiedades.getlistaPropiedades();
             GridView_Propiedades.DataBind();
           
@@ -304,15 +300,16 @@ namespace MyBnb.GUI
         protected void Button_Reservar_Propiedades_Click(object sender, EventArgs e)
         {
             ControllerViaje _viaje = new ControllerViaje();
-            // Aqui tengo q poner el index del q eligio
             String[] pdatos = new String[2];
             int index;
-            // Ligar aqui las fechas de entrada y de salida
-            pdatos[0] = "2012/10/20";
-            pdatos[1] = "2012/11/01";
+            pdatos[0] = DropDownListFIAno_P.SelectedValue+"/"+DropDownListFIMes_P+"/"+ DropDownListFIDia_Propiedades;
+            pdatos[1] = DropDownListFFAno_P+"/"+DropDownListFFMes_P+"/"+DropDownListFFDia_P;
             
             index = GridView_Propiedades.SelectedIndex;
-            _viaje.realizarReservacion(pdatos);
+
+            String retorno =_viaje.realizarReservacion(pdatos);
+
+            ScriptManager.RegisterStartupScript(this, typeof(string), "Error", "alert("+retorno+"');", true);
 
         }
 
