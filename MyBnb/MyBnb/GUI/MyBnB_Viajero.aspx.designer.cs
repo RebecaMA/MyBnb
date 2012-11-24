@@ -184,6 +184,24 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_FechaNacimiento;
         
         /// <summary>
+        /// CalendarModificarUsuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar CalendarModificarUsuario;
+        
+        /// <summary>
+        /// ButtonCalendar0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCalendar0;
+        
+        /// <summary>
         /// Label_Sexo control.
         /// </summary>
         /// <remarks>
@@ -535,6 +553,15 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.TextBox TextBox_Titulo_CrearViaje;
         
         /// <summary>
+        /// CalendarCrearViaje control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar CalendarCrearViaje;
+        
+        /// <summary>
         /// Label_FechaInicio_Reservar control.
         /// </summary>
         /// <remarks>
@@ -544,13 +571,40 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_FechaInicio_Reservar;
         
         /// <summary>
-        /// Label_FechaFin control.
+        /// ButtonCalendarCrearViaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_FechaFin;
+        protected global::System.Web.UI.WebControls.Button ButtonCalendarCrearViaje;
+        
+        /// <summary>
+        /// CalendarCrearViajeFin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar CalendarCrearViajeFin;
+        
+        /// <summary>
+        /// Label_FechaInicio_Reservar0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_FechaInicio_Reservar0;
+        
+        /// <summary>
+        /// ButtonCalendarCrearViajeFin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCalendarCrearViajeFin;
         
         /// <summary>
         /// Button_Crear_CrearViaje control.
@@ -616,6 +670,15 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_FechaInicio_Propiedades;
         
         /// <summary>
+        /// ButtonCalendarPropiedadesInicio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCalendarPropiedadesInicio;
+        
+        /// <summary>
         /// Label_FechaFin_Propiedades control.
         /// </summary>
         /// <remarks>
@@ -623,6 +686,15 @@ namespace MyBnb.GUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_FechaFin_Propiedades;
+        
+        /// <summary>
+        /// ButtonCalendarPropiedadesFin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCalendarPropiedadesFin;
         
         /// <summary>
         /// Label_Viaje control.
@@ -724,6 +796,15 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.DropDownList DropDownList_Localidad_SolicitarAnfitrion;
         
         /// <summary>
+        /// CalendarSolicitarAnfitrionInicio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar CalendarSolicitarAnfitrionInicio;
+        
+        /// <summary>
         /// Label_FechaInicio_Propiedades0 control.
         /// </summary>
         /// <remarks>
@@ -733,6 +814,24 @@ namespace MyBnb.GUI {
         protected global::System.Web.UI.WebControls.Label Label_FechaInicio_Propiedades0;
         
         /// <summary>
+        /// ButtonCalendarSolicitarAnfitrionInicio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCalendarSolicitarAnfitrionInicio;
+        
+        /// <summary>
+        /// CalendarSolicitarAnfitrionFin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar CalendarSolicitarAnfitrionFin;
+        
+        /// <summary>
         /// Label_FechaFin_Propiedades0 control.
         /// </summary>
         /// <remarks>
@@ -740,6 +839,15 @@ namespace MyBnb.GUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_FechaFin_Propiedades0;
+        
+        /// <summary>
+        /// ButtonCalendarSolocitarAnfitrionFin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCalendarSolocitarAnfitrionFin;
         
         /// <summary>
         /// Button_Solicitar_SolicitarAnfitrion control.

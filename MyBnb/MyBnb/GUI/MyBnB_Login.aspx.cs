@@ -67,6 +67,10 @@ namespace MyBnb.GUI
             }
         }
 
+        public void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            
+        }
     
     }
 }

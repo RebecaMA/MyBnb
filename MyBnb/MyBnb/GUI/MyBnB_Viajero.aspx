@@ -1,7 +1,16 @@
 <%@ Page Title="MyBnB - Viajero" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Viajero.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Viajero"%>
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server"> 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+<script type="text/javascript">
+    function openCalendar() {
+        if (divCalendar.style.display == "none")
+            divCalendar.style.display = "inline";
+        else
+            divCalendar.style.display = "none";
+    }
+</script>                                                  
     
     <div>    
     <asp:Menu ID="MenuTabControl" runat="server" 
@@ -77,15 +86,25 @@
                               <asp:TextBox ID="TextBox_Telefono_ModificarUsuario" runat="server" Width="200px"
                                         style="margin-left: 80px; margin-top: 10px;"/>
                           
-                              &nbsp; *<br /><br />
+                              &nbsp; *<br />
                               <asp:Label ID="Label_FechaNacimiento" runat="server" 
                                   style="margin-left: 10px; margin-top: 10px;" Text="Fecha de Nacimiento:" />
-                              &nbsp;&nbsp;                                 
-                              
-                              <script type="text/javascript"
-                              src="http://www.snaphost.com/jquery/Calendar.aspx" id="Calendar_ModificarUsuario"></script>
-                                                                                                                        
-                              *<br />                              
+                              &nbsp;
+                          
+                          <div id="divCalendar" style="display: none; position: absolute">
+                         <asp:Calendar ID="CalendarModificarUsuario" runat="server" BackColor="White" 
+                         BorderColor="#999999" BorderStyle="Outset" BorderWidth="2px" CellPadding="4" 
+                         DayNameFormat="FirstLetter" Font-Names="Verdana" Font-Size="8pt" 
+                         ForeColor="Black" Height="180px"
+                         onselectionchanged="Calendar1_SelectionChanged" Width="200px">
+                         </asp:Calendar>
+                         </div>
+                            
+                              <input name="CalendarModificarUsuario" id="CalendarModificarUsuarioInput" type="text" />
+                              <asp:Button ID="ButtonCalendar0" runat="server" 
+                                  OnClientClick="return openCalendar()" Text="..." />
+
+                              &nbsp;*<br />                              
                               <asp:Label ID="Label_Sexo" runat="server" 
                                   style="margin-left: 10px; margin-top: 10px;" Text="Genero:" />
                               <asp:DropDownList ID="DropDownList_Genero_ModificarUsuario" runat="server" 
@@ -241,28 +260,37 @@
                           <asp:TextBox ID="TextBox_Titulo_CrearViaje" runat="server" Width="200px"
                                     style="margin-left: 43px; margin-top: 10px;"/>
                                                     
+                         <div id="div3" style="display: none; position: absolute">
+                         <asp:Calendar ID="CalendarCrearViaje" runat="server" BackColor="White" 
+                         BorderColor="#999999" BorderStyle="Outset" BorderWidth="2px" CellPadding="4" 
+                         DayNameFormat="FirstLetter" Font-Names="Verdana" Font-Size="8pt" 
+                         ForeColor="Black" Height="180px"
+                         onselectionchanged="Calendar1_SelectionChanged" Width="200px">
+                         </asp:Calendar>
+                         </div>
+
                           <br /> <br />
                           <asp:Label ID="Label_FechaInicio_Reservar" runat="server" Text="Fecha Inicio:"
                                   style="margin-left: 10px; margin-top: 10px;"/>&nbsp;&nbsp;
-                          <script type="text/javascript"
-                          src="http://www.snaphost.com/jquery/Calendar.aspx" id="Calendar_FechaInicio_Reservar"></script>
-                                                    
+
+                          <input name="CalendarCrearViaje" id="CalendarCrearViajeInput" type="text" /> 
+                          <asp:Button ID="ButtonCalendarCrearViaje" runat="server" OnClientClick="return openCalendar()" Text="..." />
+
+                         <div id="div4" style="display: none; position: absolute">
+                         <asp:Calendar ID="CalendarCrearViajeFin" runat="server" BackColor="White" 
+                         BorderColor="#999999" BorderStyle="Outset" BorderWidth="2px" CellPadding="4" 
+                         DayNameFormat="FirstLetter" Font-Names="Verdana" Font-Size="8pt" 
+                         ForeColor="Black" Height="180px"
+                         onselectionchanged="Calendar1_SelectionChanged" Width="200px">
+                         </asp:Calendar>
+                         </div>
+
                           <br /> <br />
-                          <asp:Label ID="Label_FechaFin" runat="server" Text="Fecha Fin:"
-                                  style="margin-left: 10px; margin-top: 10px;"/>
-                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                         
-
-                          <script type="text/javascript">
-                                  $(function () {
-                                      $("#Calendar_CrearViaje")
-                          .datepicker({ showOn: 'both', buttonImage: 'http://www.snaphost.com/jquery/calendar.gif',
-                              buttonImageOnly: true, changeMonth: true, showOtherMonths: true, selectOtherMonths: true
-                          });
-                          });</script>                          
-
-                          <form action="MyBnB_Viajero.aspx.cs" method="post">
-                               <input name="Calendar_CrearViaje" id="Calendar_CrearViaje" type="text" />
-                          </form>
+                          <asp:Label ID="Label_FechaInicio_Reservar0" runat="server" 
+                              style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <input name="CalendarCrearViajeFin" id="CalendarCrearViajeFinInput" type="text" />
+                          <asp:Button ID="ButtonCalendarCrearViajeFin" runat="server" 
+                              OnClientClick="return openCalendar()" Text="..." />
 
                           <br /> <br />
                           <asp:Button ID="Button_Crear_CrearViaje" runat="server" 
@@ -293,35 +321,31 @@
                              AutoPostBack="True" style="margin-left: 20px; margin-top: 10px;" Width="200px">
                              <asp:ListItem></asp:ListItem>
                          </asp:DropDownList>
-                         <br />
-                     
-                         <br />
-                         <br />
+                         <br /> <br />
                          <asp:Label ID="Label_FechaInicio_Propiedades" runat="server" 
                              style="margin-left: 10px; margin-top: 10px;" Text="Fecha Inicio:" />
                          &nbsp;&nbsp;
-                         <script src="http://www.snaphost.com/jquery/Calendar.aspx" 
-                             type="text/javascript">
-                         </script>
                          
-                         <br /> <br />
+
+
+                         <form action="MyBnB_Viajero.aspx.cs" method="post">
+                         <input name="CalendarPropiedadesInicio" id="CalendarPropiedadesInicioInput" type="text" />
+                         </form>
+                         <asp:Button ID="ButtonCalendarPropiedadesInicio" runat="server" OnClientClick="return openCalendar()" Text="..." /> &nbsp;<br /> <br />
+
                          <asp:Label ID="Label_FechaFin_Propiedades" runat="server" 
-                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" />
-                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                         <script type="text/javascript">
-                             $(function () {
-                                 $("#Calendar_Propiedades")
-                         .datepicker({ showOn: 'both', buttonImage: 'http://www.snaphost.com/jquery/calendar.gif',
-                             buttonImageOnly: true, changeMonth: true, showOtherMonths: true, selectOtherMonths: true
-                         });
-                         });</script>
-                         &nbsp;
-                         <input name="Calendar_Propiedades" id="Calendar_Propiedades" type="text" />
-                         <br />
-                             <asp:Label ID="Label_Viaje" runat="server" 
+                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          
+                          <form action="MyBnB_Viajero.aspx.cs" method="post">
+                               <input name="CalendarPropiedadesFin" id="CalendarInput2" type="text" />
+                          </form>
+                         <asp:Button ID="ButtonCalendarPropiedadesFin" runat="server" OnClientClick="return openCalendar()" Text="..." />
+                         <br /> <br />
+
+                         <asp:Label ID="Label_Viaje" runat="server" 
                              style="margin-left: 10px; margin-top: 10px;" Text="Viaje:" />
-                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                         <asp:DropDownList ID="DropDownList_Viaje_Propiedades" runat="server" onselectedindexchanged="CambioViaje" 
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList_Viaje_Propiedades" runat="server" 
+                             onselectedindexchanged="CambioViaje" 
                              style="margin-left: 20px; margin-top: 10px;" Width="200px">
                              <asp:ListItem></asp:ListItem>
                          </asp:DropDownList>
@@ -390,17 +414,41 @@
                              AutoPostBack="True" style="margin-left: 10px; margin-top: 10px;" Width="200px">
                              <asp:ListItem></asp:ListItem>
                          </asp:DropDownList>
-                         <br />
-                         <br />
-&nbsp;
+                         <br /> <br /> &nbsp;                         
+
+                         <div id="div1" style="display: none; position: absolute">
+                         <asp:Calendar ID="CalendarSolicitarAnfitrionInicio" runat="server" BackColor="White" 
+                         BorderColor="#999999" BorderStyle="Outset" BorderWidth="2px" CellPadding="4" 
+                         DayNameFormat="FirstLetter" Font-Names="Verdana" Font-Size="8pt" 
+                         ForeColor="Black" Height="180px"
+                         onselectionchanged="Calendar1_SelectionChanged" Width="200px">
+                         </asp:Calendar>
+                         </div>
+
                          <asp:Label ID="Label_FechaInicio_Propiedades0" runat="server" 
-                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Inicio:" />
-                         <br />
-                         <br />
+                             style="margin-left: 10px; margin-top: 10px;" Text="Fecha Inicio:" /> &nbsp;
+                         
+                         <input name="CalendarSolicitarAnfitrionInicio" id="CalendarSolicitarAnfitrionInicioInput" type="text" />                         
+                         <asp:Button ID="ButtonCalendarSolicitarAnfitrionInicio" runat="server" 
+                             OnClientClick="return openCalendar()" Text="..." />
+                         <br /> <br />
+
+                         <div id="div2" style="display: none; position: absolute">
+                         <asp:Calendar ID="CalendarSolicitarAnfitrionFin" runat="server" BackColor="White" 
+                         BorderColor="#999999" BorderStyle="Outset" BorderWidth="2px" CellPadding="4" 
+                         DayNameFormat="FirstLetter" Font-Names="Verdana" Font-Size="8pt" 
+                         ForeColor="Black" Height="180px"
+                         onselectionchanged="Calendar1_SelectionChanged" Width="200px">
+                         </asp:Calendar>
+                         </div>
+
                          &nbsp;&nbsp;<asp:Label ID="Label_FechaFin_Propiedades0" runat="server" 
                              style="margin-left: 10px; margin-top: 10px;" Text="Fecha Fin:" />
-                         <br />
-                         <br />
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <input name="CalendarSolocitarAnfitrionFin" id="CalendarSolocitarAnfitrionFinInput" type="text" />
+                         <asp:Button ID="ButtonCalendarSolocitarAnfitrionFin" runat="server" OnClientClick="return openCalendar()" Text="..." />
+
+                         <br /> <br /> <br />
                          <asp:Button ID="Button_Solicitar_SolicitarAnfitrion" runat="server" 
                              BackColor="#7AB428" ForeColor="White" Height="30px" 
                              onclick="Button_Solicitar_SolicitarAnfitrion_Click" 

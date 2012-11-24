@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="MyBnB - Registrarse" Language="C#" MasterPageFile="~/GUI/Site.Master" AutoEventWireup="true" CodeBehind="MyBnB_Register.aspx.cs" Inherits="MyBnb.GUI.MyBnB_Register" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <style type="text/css">
+        #Text1
+        {
+            width: 172px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     
@@ -56,15 +62,39 @@
             <br />
             <br />
             <asp:Label ID="Label_FechaNacimiento" runat="server" Text="Fecha de Nacimiento:     "
-                style="margin-left: 5px; margin-top: 10px" />&nbsp;<br />
-            <asp:Label ID="Label_Sexo" runat="server" Text="Genero:"
-                    style="margin-left: 5px; margin-top: 10px" />
-            <asp:DropDownList ID="DropDownList_Genero" runat="server" Width="200px"
-                           style="margin-left: 88px; margin-top: 10px">
+                style="margin-left: 5px; margin-top: 10px" />
+                
+            &nbsp;<script type="text/javascript">
+
+
+                function openCalendar() {
+                    if (divCalendar.style.display == "none")
+                        divCalendar.style.display = "inline";
+                    else
+                        divCalendar.style.display = "none";
+                }
+            </script><div ID="divCalendar" style="display: none; position: absolute">
+                <asp:Calendar ID="CalendarModificarUsuario" runat="server" BackColor="White" 
+                    BorderColor="#999999" BorderStyle="Outset" BorderWidth="2px" CellPadding="4" 
+                    DayNameFormat="FirstLetter" Font-Names="Verdana" Font-Size="8pt" 
+                    ForeColor="Black" Height="180px" 
+                    onselectionchanged="Calendar1_SelectionChanged" Width="200px">
+                </asp:Calendar>
+            </div>
+            <input name="CalendarModificarUsuario" id="Text1" type="text" />
+            <asp:Button ID="Button1" runat="server" OnClientClick="return openCalendar()" 
+                Text="..." />
+            <br />
+
+            <asp:Label ID="Label_Sexo" runat="server" 
+                style="margin-left: 5px; margin-top: 10px" Text="Genero:" />
+            <asp:DropDownList ID="DropDownList_Genero" runat="server" 
+                style="margin-left: 88px; margin-top: 10px" Width="200px">
                 <asp:ListItem></asp:ListItem>
                 <asp:ListItem>Femenino</asp:ListItem>
                 <asp:ListItem>Masculino</asp:ListItem>
-            </asp:DropDownList>                                   
+            </asp:DropDownList>
+&nbsp;<br />
 
             <br />
             <asp:Label ID="Label_Descripcion" runat="server" Text="Descripcion:"

@@ -35,5 +35,10 @@ namespace MyBnb.GUI
              _controllerUsuario.registrarUsuario(_datos);
              Response.Redirect("http://localhost:51088/GUI/MyBnB_Viajero.aspx"); 
         }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -427,16 +427,9 @@ namespace MyBnb.GUI
 
         }
 
-      
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
 
-  
-      
-
-        
-
-       
-
-     
-
+        }
     }
 }
